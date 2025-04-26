@@ -1,16 +1,71 @@
-// @mixin .hero-section{
+@import "../Abstract/variables";
+@import "../Base/typography";
+@import "../Base/reset";
+
+
+
+@mixin hero-section{
+    width: 100%;
+    height: 85vh;
+    background-color: $header-footer-color;
+    padding: 80px 80px 120px 80px;
+
+    h1{
+        font-size: $hero-heading-fontsize;
+        font-weight: 900;
+    }
+    .text-container{
+        font-size: $paragraph-fontsize;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        width: 60%;
+
+        .text-bottom{
+            button{
+                background-color: $contact-bg-color;
+                color: nth($text-colors, 1);
+                padding: 10px 20px;
+                border-radius: 10px;
+                font-size: $small-button-fontsize;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+
+}
+
+@mixin heading{
+    font-size: $heading-fontsize;
     
-// }
+    .heading{
+        display: flex;
+    }
 
-// @mixin .heading{
+    .with-bg{
+        background-color: nth($text-colors, 1);
+        mix-blend-mode: screen;
+        border-radius: 10px;
+        padding: 0px 10px;
+    }
 
-// }
+    .without-bg{
+        color: nth($text-colors, 1);
+        padding: 0px 10px;
+    }
 
-// @mixin .card{
+}
+
+// @mixin card{
 //     display: flex;
 // }
 
-// @mixin .circle{
+// @mixin circle{
 //     display: flex;
 // }
 
