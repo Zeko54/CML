@@ -1,0 +1,61 @@
+@import '../Abstract/variables';
+@import '../Base/reset';
+@import '../Base/typography';
+
+
+header {
+    background-color: $header-footer-color;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 5px 10px 1px #00000030;
+    z-index: 2;
+    
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 40px;
+        
+        .logo{
+            font-family: "Poppins", sans-serif;
+            font-size: $primary-logo-fontsize;
+            color: $logo-color;
+            font-weight:900;
+            
+        }
+        
+        ul{
+            display: flex;
+            width: 60%;
+            justify-content: space-between;
+            gap: 20px;
+            
+            li{
+                width: 25%;
+                text-align: center;
+                
+                a{
+                    font-weight: 500;
+                    color: nth($text-colors, 2);
+                    font-size: $small-button-fontsize;
+                    
+                }
+            }
+
+        }
+
+        button {
+            background-color: $contact-bg-color;
+            color: nth($text-colors, 1);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: $small-button-fontsize;
+            font-weight: 600;
+            cursor: pointer;
+            
+        }
+    }
+}
