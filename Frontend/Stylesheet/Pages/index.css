@@ -375,4 +375,30 @@ main .businesses-section hr {
 }
 main .businesses-section .businesses-container {
   margin-top: 40px;
+}
+main .products-section {
+  margin: 120px 80px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+main .products-section .heading {
+  display: flex;
+}
+main .products-section .with-bg {
+  background-color: #fff;
+  mix-blend-mode: screen;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+main .products-section .without-bg {
+  color: #fff;
+  padding: 0px 10px;
+}
+main .products-section hr {
+  width: 50%;
+  height: 3px;
+  background-color: white;
+  border: none;
+  padding: 0px 20px;
+  margin-top: 30px;
+  margin-left: -2px;
 }/*# sourceMappingURL=index.css.map */

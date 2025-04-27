@@ -87,5 +87,13 @@ main {
     }
   }
 
-  
+  .products-section {
+    margin: $desktop-spacing;
+    @include heading();
+    @include heading-underline();
+
+
+
+  }
+
 }
