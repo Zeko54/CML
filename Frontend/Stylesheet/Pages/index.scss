@@ -1,6 +1,8 @@
 @import '../Layout/header';
- @import '../Abstract/mixins';
- @import '../Layout/spacings';
+@import '../Abstract/mixins';
+@import '../Layout/spacings';
+@import '../Components/cards';
+
 
 body {
   background-color: $home-aboutus-primary-color;
