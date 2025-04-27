@@ -1,4 +1,6 @@
-@import "../main";
+@import '../Layout/header';
+ @import '../Abstract/mixins';
+ @import '../Layout/spacings';
 
 body {
   background-color: $home-aboutus-primary-color;
