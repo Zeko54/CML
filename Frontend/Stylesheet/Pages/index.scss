@@ -1,61 +1,58 @@
-@import '../Layout/header';
-@import '../Abstract/mixins';
-@import '../Layout/spacings';
+@import "../main";
 
-body{
-    background-color: $home-aboutus-primary-color;
+body {
+  background-color: $home-aboutus-primary-color;
 }
 
 main {
-    .intro-section{
-        @include hero-section()
+  .intro-section {
+    @include hero-section();
+  }
+
+  .aboutus-section {
+    margin: $desktop-spacing;
+    @include heading();
+
+    hr {
+      width: 50%;
+      height: 3px;
+      background-color: white;
+      border: none;
+      padding: 0px 20px;
+      margin-top: 30px;
+      margin-left: -2px;
     }
 
-    .aboutus-section{
-        margin: $desktop-spacing;
-        @include heading();
-        
-        hr{
-            width: 50%;
-            height: 3px;
-            background-color: white;
-            border: none;
-            padding: 0px 20px;;
-            margin-top: 30px;
-            margin-left: -2px;
-        }
-        
-        .aboutus-container{
-            margin-top: 40px;
-            display: grid;
-            grid-template-columns: repeat(2, 50%);
+    .aboutus-container {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
 
-            .image{
-                background-color: $header-footer-color;
-            }
+      .image {
+        background-color: $header-footer-color;
+      }
 
-            .desc{
-                padding: 40px;
-                background: rgba(255, 255, 255, 0.2);
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(5px);
-                font-size: $paragraph-fontsize;
-                border-radius: 0 81px 81px 0;
-                border: 1px solid rgba(255, 255, 255, 0.3);
-            }
+      .desc {
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        font-size: $paragraph-fontsize;
+        border-radius: 0 81px 81px 0;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
 
-            button{
-                background-color: nth($text-colors, 1);
-                color: nth($text-colors, 3);
-                width: 100%;
-                padding: 5px 0px;
-                border-radius: 26px;
-                font-size: $small-button-fontsize;
-                font-weight: 800;
-                cursor: pointer;
-                margin-top: 30px;
-            }
-        }
+      button {
+        background-color: nth($text-colors, 1);
+        color: nth($text-colors, 3);
+        width: 100%;
+        padding: 5px 0px;
+        border-radius: 26px;
+        font-size: $small-button-fontsize;
+        font-weight: 800;
+        cursor: pointer;
+        margin-top: 30px;
+      }
     }
+  }
 }
-
