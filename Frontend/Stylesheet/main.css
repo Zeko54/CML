@@ -1,4 +1,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -81,7 +169,7 @@ header nav ul li a {
   color: #000;
   font-size: clamp(1rem, 3vw, 1.5rem);
 }
-header nav button {
+.red-button, header nav button {
   background-color: #FF6B6B;
   color: #fff;
   padding: 10px 20px;
@@ -89,4 +177,23 @@ header nav button {
   font-size: clamp(1rem, 3vw, 1.5rem);
   font-weight: 600;
   cursor: pointer;
+}
+
+.white-button {
+  background-color: #fff;
+  color: #FF4545;
+  width: 100%;
+  padding: 5px 0px;
+  border-radius: 26px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.border-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-template-rows: 470px;
 }/*# sourceMappingURL=main.css.map */
