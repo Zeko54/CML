@@ -54,7 +54,7 @@ select {
   cursor: pointer;
 }
 
-.white-button {
+.white-button, .border-card .each-card .each-img .each-button button {
   background-color: #fff;
   color: #FF4545;
   width: 100%;
@@ -201,7 +201,29 @@ header nav ul li a {
   cursor: pointer;
 }
 
-.white-button {
+.white-button, .border-card .each-card .each-img .each-button button {
+  background-color: #fff;
+  color: #FF4545;
+  width: 100%;
+  padding: 5px 0px;
+  border-radius: 26px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.red-button, header nav button {
+  background-color: #FF6B6B;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.white-button, .border-card .each-card .each-img .each-button button {
   background-color: #fff;
   color: #FF4545;
   width: 100%;
@@ -215,7 +237,62 @@ header nav ul li a {
 
 .border-card {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  grid-template-rows: 470px;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 80px;
+  grid-template-rows: 500px;
+}
+.border-card .each-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #ED4540;
+  border-radius: 24px;
+  padding: 20px;
+  position: relative;
+}
+.border-card .each-card .each-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: hsl(92, 100%, 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.border-card .each-card .each-img .each-text h3 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  text-align: center;
+}
+.border-card .each-card .each-img .each-button {
+  position: absolute;
+  bottom: 40px;
+  width: 80%;
+  z-index: 3;
+}
+.border-card .each-card .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: #ED4540;
+  border-radius: 24px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.border-card .each-card .overlay p {
+  color: #fff;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+.border-card .each-card .each-img:hover .overlay {
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */
