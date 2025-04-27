@@ -1,4 +1,6 @@
-@import "../main.scss";
+@import '../Abstract/variables';
+@import '../Base/reset';
+@import '../Base/typography';
 
 header {
   background-color: $header-footer-color;
