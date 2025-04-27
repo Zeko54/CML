@@ -1,3 +1,5 @@
+@import "../main.scss";
+
 header {
   background-color: $header-footer-color;
   position: fixed;
@@ -42,13 +44,8 @@ header {
     }
 
     button {
-      background-color: $contact-bg-color;
-      color: nth($text-colors, 1);
-      padding: 10px 20px;
-      border-radius: 10px;
-      font-size: $small-button-fontsize;
-      font-weight: 600;
-      cursor: pointer;
+      @extend .red-button;
     }
+    
   }
 }

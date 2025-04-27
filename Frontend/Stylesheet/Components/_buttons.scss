@@ -1,0 +1,21 @@
+.red-button {
+    background-color: $contact-bg-color;
+    color: nth($text-colors, 1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: $small-button-fontsize;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.white-button {
+    background-color: nth($text-colors, 1);
+    color: nth($text-colors, 3);
+    width: 100%;
+    padding: 5px 0px;
+    border-radius: 26px;
+    font-size: $small-button-fontsize;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 30px;
+  }
