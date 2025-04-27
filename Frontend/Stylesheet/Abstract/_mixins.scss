@@ -1,3 +1,7 @@
+@import "../Abstract/variables";
+ @import "../Base/typography";
+ @import "../Base/reset";
+
 @mixin hero-section {
   width: 100%;
   height: 100vh;
@@ -10,23 +14,10 @@
   }
 
   .text-container {
-    font-size: $paragraph-fontsize;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-    width: 60%;
+    
 
     .text-bottom {
-      button {
-        background-color: $contact-bg-color;
-        color: nth($text-colors, 1);
-        padding: 10px 20px;
-        border-radius: 10px;
-        font-size: $small-button-fontsize;
-        font-weight: 600;
-        cursor: pointer;
-      }
+      @extend .red-button;
     }
   }
 }
@@ -48,6 +39,18 @@
   .without-bg {
     color: nth($text-colors, 1);
     padding: 0px 10px;
+  }
+}
+
+@mixin heading-underline {
+  hr {
+    width: 50%;
+    height: 3px;
+    background-color: white;
+    border: none;
+    padding: 0px 20px;
+    margin-top: 30px;
+    margin-left: -2px;
   }
 }
 
