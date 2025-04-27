@@ -2,11 +2,14 @@
 @import '../Abstract/mixins';
 @import '../Layout/spacings';
 @import '../Components/cards';
+@import '../Base/reset';
 
 
 body {
   background-color: $home-aboutus-primary-color;
 }
+
+
 
 main {
   .intro-section {
@@ -61,8 +64,26 @@ main {
     .businesses-container {
       margin-top: 40px;
       @extend .border-card;
-
       
+      .business-card{
+        @extend .each-card;
+
+        .image{
+          @extend .each-img;
+
+          .text{
+            @extend .each-text;
+          }
+
+          .button{
+            @extend .each-button;
+          }
+        }
+
+        .overlay {
+          @extend .overlay;
+        }
+      }
     }
   }
 

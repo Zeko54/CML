@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -135,7 +136,29 @@ select {
   cursor: pointer;
 }
 
-.white-button, main .aboutus-section .aboutus-container button {
+.white-button, main .aboutus-section .aboutus-container button, .border-card .each-card .each-img .each-button button, main .businesses-section .businesses-container .each-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .image .each-button button, main .businesses-section .businesses-container .business-card .image .button button {
+  background-color: #fff;
+  color: #FF4545;
+  width: 100%;
+  padding: 5px 0px;
+  border-radius: 26px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.red-button, main .intro-section .text-container .text-bottom button, header nav button {
+  background-color: #FF6B6B;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.white-button, main .aboutus-section .aboutus-container button, .border-card .each-card .each-img .each-button button, main .businesses-section .businesses-container .each-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .image .each-button button, main .businesses-section .businesses-container .business-card .image .button button {
   background-color: #fff;
   color: #FF4545;
   width: 100%;
@@ -149,9 +172,107 @@ select {
 
 .border-card, main .businesses-section .businesses-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  grid-template-rows: 470px;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 80px;
+  grid-template-rows: 500px;
+}
+.border-card .each-card, .border-card main .businesses-section .businesses-container .business-card, main .businesses-section .businesses-container .border-card .business-card, main .businesses-section .businesses-container .each-card, main .businesses-section .businesses-container .business-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #ED4540;
+  border-radius: 24px;
+  padding: 20px;
+  position: relative;
+}
+.border-card .each-card .each-img, main .businesses-section .businesses-container .each-card .each-img, main .businesses-section .businesses-container .business-card .each-img, main .businesses-section .businesses-container .business-card .image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: hsl(92, 100%, 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.border-card .each-card .each-img .each-text h3, main .businesses-section .businesses-container .each-card .each-img .each-text h3, main .businesses-section .businesses-container .business-card .each-img .each-text h3, main .businesses-section .businesses-container .business-card .image .each-text h3, main .businesses-section .businesses-container .business-card .image .text h3 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  text-align: center;
+}
+.border-card .each-card .each-img .each-button, main .businesses-section .businesses-container .each-card .each-img .each-button, main .businesses-section .businesses-container .business-card .each-img .each-button, main .businesses-section .businesses-container .business-card .image .each-button, main .businesses-section .businesses-container .business-card .image .button {
+  position: absolute;
+  bottom: 40px;
+  width: 80%;
+  z-index: 3;
+}
+.border-card .each-card .overlay, main .businesses-section .businesses-container .each-card .overlay, main .businesses-section .businesses-container .business-card .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: #ED4540;
+  border-radius: 24px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.border-card .each-card .overlay p, main .businesses-section .businesses-container .each-card .overlay p, main .businesses-section .businesses-container .business-card .overlay p {
+  color: #fff;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+.border-card .each-card .each-img:hover .overlay, main .businesses-section .businesses-container .each-card .each-img:hover .overlay, main .businesses-section .businesses-container .business-card .each-img:hover .overlay, main .businesses-section .businesses-container .business-card .image:hover .overlay {
+  opacity: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
 }
 
 body {
