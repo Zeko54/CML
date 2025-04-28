@@ -1,7 +1,3 @@
-@import '../Abstract/variables';
-@import '../Base/reset';
-@import '../Base/typography';
-
 header {
   background-color: $header-footer-color;
   position: fixed;
@@ -48,6 +44,5 @@ header {
     button {
       @extend .red-button;
     }
-    
   }
 }

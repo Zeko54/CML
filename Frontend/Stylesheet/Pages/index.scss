@@ -1,15 +1,8 @@
-@import '../Layout/header';
-@import '../Abstract/mixins';
-@import '../Layout/spacings';
-@import '../Components/cards';
-@import '../Base/reset';
-
+@import "../global";
 
 body {
   background-color: $home-aboutus-primary-color;
 }
-
-
 
 main {
   .intro-section {
@@ -49,33 +42,31 @@ main {
   .businesses-section {
     margin: $desktop-spacing;
 
-    
     @include heading();
-    .heading{
-      flex-direction: row-reverse
+    .heading {
+      flex-direction: row-reverse;
     }
-    
-    
+
     @include heading-underline();
-    hr{
+    hr {
       margin-left: 50%;
     }
 
     .businesses-container {
       margin-top: 40px;
       @extend .border-card;
-      
-      .business-card{
+
+      .business-card {
         @extend .each-card;
 
-        .image{
+        .image {
           @extend .each-img;
 
-          .text{
+          .text {
             @extend .each-text;
           }
 
-          .button{
+          .button {
             @extend .each-button;
           }
         }
@@ -92,53 +83,48 @@ main {
     @include heading();
     @include heading-underline();
 
-    .product-container{
+    .product-container {
       margin-top: 40px;
       @extend .selling-card;
-        
-        .product-card {
-          @extend .sell-cards;
 
+      .product-card {
+        @extend .sell-cards;
 
-          .image{
-            @extend .sell-image;
+        .image {
+          @extend .sell-image;
+        }
+
+        .product-desc {
+          @extend .sell-desc;
+
+          .product-top {
+            @extend .desc-top;
           }
 
-          .product-desc {
-            @extend .sell-desc;
-
-            .product-top{
-              @extend .desc-top;
-            }
-
-            .product-bottom{
-              @extend .desc-bottom;
-            }
+          .product-bottom {
+            @extend .desc-bottom;
           }
+        }
+      }
 
-        }
-        
-        .card-1{
-          grid-area: product-1;
-          grid-template-areas:
-        "images desc";
-        }
-        
-        .card-2{
-          grid-area: product-2;
-          grid-template-areas:
-        "images images" 
-        "desc desc";
-        }
-        
-        .card-3{
-          grid-area: product-3;
-          grid-template-areas:
-        "images images " 
-        "desc desc";
-        }
+      .card-1 {
+        grid-area: product-1;
+        grid-template-areas: "images desc";
+      }
 
+      .card-2 {
+        grid-area: product-2;
+        grid-template-areas:
+          "images images"
+          "desc desc";
+      }
 
+      .card-3 {
+        grid-area: product-3;
+        grid-template-areas:
+          "images images "
+          "desc desc";
+      }
 
       // .product-card{
       //   @extend .each-sell;
@@ -162,23 +148,20 @@ main {
       //   .card-3{
       //     @extend .card-3;
       //   }
-        
+
       // }
-
-      
-
     }
   }
 
-  .performers-section{
+  .performers-section {
     margin: $desktop-spacing;
     @include heading();
-    .heading{
+    .heading {
       flex-direction: row-reverse;
     }
 
     @include heading-underline();
-    hr{
+    hr {
       margin-left: 50%;
     }
 
@@ -262,5 +245,4 @@ main {
       }
     }
   }
-
 }

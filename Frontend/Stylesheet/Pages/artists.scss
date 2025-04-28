@@ -1,10 +1,11 @@
-@import "../Layout/header";
-@import "../Abstract/mixins";
-@import "../Layout/spacings";
-@import "../Base/reset";
-@import "../Abstract/animations";
-@import "../Components/circles";
+@import "../global";
 
 body {
   background: $artist-primary-color;
+}
+
+main {
+  .intro-section {
+    @include hero-section();
+  }
 }

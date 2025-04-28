@@ -1,9 +1,3 @@
-@import "../Abstract/variables";
-@import "../Base/typography";
-@import "../Base/reset";
-@import "../Components/buttons";
-
-
 @mixin hero-section {
   width: 100%;
   height: 100vh;
@@ -17,17 +11,16 @@
 
   .text-container {
     font-size: $paragraph-fontsize;
-         display: flex;
-         flex-direction: column;
-         height: 100%;
-         justify-content: space-between;
-         width: 60%;
-         
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    width: 60%;
+
     .text-bottom {
-      button{
+      button {
         @extend .red-button;
       }
-        
     }
   }
 }

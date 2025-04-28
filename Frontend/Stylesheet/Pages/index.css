@@ -1,6 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(2vw, -2vh);
+  }
+}
+.circle {
+  animation: float 15s ease-in-out infinite alternate;
+}
+.circle:nth-child(odd) {
+  animation-delay: 2s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -83,71 +96,6 @@ header nav ul li a {
   color: #000;
   font-size: clamp(1rem, 3vw, 1.5rem);
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Urbanist", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-img,
-video,
-svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  background: none;
-  border: none;
-  font: inherit;
-  cursor: pointer;
-}
-
-input,
-textarea,
-select {
-  font: inherit;
-}
-
-.red-button, main .intro-section .text-container .text-bottom button, header nav button {
-  background-color: #ff6b6b;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.white-button, main .aboutus-section .aboutus-container button, .selling-card .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .product-card .sell-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .product-bottom button, .border-card .each-card .each-img .each-button button, main .businesses-section .businesses-container .each-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .image .each-button button, main .businesses-section .businesses-container .business-card .image .button button {
-  background-color: #fff;
-  color: #ff4545;
-  width: 100%;
-  padding: 5px 0px;
-  border-radius: 26px;
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  font-weight: 800;
-  cursor: pointer;
-  margin-top: 30px;
-}
-
 .red-button, main .intro-section .text-container .text-bottom button, header nav button {
   background-color: #ff6b6b;
   color: #fff;
@@ -181,7 +129,7 @@ select {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: #ED4540;
+  background: #ed4540;
   border-radius: 24px;
   padding: 20px;
   position: relative;
@@ -217,7 +165,7 @@ select {
   width: 100%;
   opacity: 0;
   transition: 0.3s ease;
-  background-color: #ED4540;
+  background-color: #ed4540;
   border-radius: 24px;
   z-index: 2;
   display: flex;
@@ -286,47 +234,38 @@ select {
   grid-template-areas: "images images " "desc desc";
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.circle-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
 }
 
-body {
-  font-family: "Urbanist", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 1;
+  background: linear-gradient(45deg, #fff, #ccc);
 }
 
-img,
-video,
-svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.artist-page .circle {
+  background: linear-gradient(135deg, #4e2079, #8e3d8e);
 }
 
-ul,
-ol {
-  list-style: none;
+.consult-page .circle {
+  background: linear-gradient(135deg, #8d6ac0, #ff93e0);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.product-page .circle {
+  background: linear-gradient(135deg, #046969, #3bd9d9);
 }
 
-button {
-  background: none;
-  border: none;
-  font: inherit;
-  cursor: pointer;
-}
-
-input,
-textarea,
-select {
-  font: inherit;
+.home-page .circle {
+  background: linear-gradient(135deg, #ff4545, #e4866d);
 }
 
 body {
