@@ -118,6 +118,28 @@ header nav ul li a {
   margin-top: 30px;
 }
 
+.red-button, main .intro-section .text-container .text-bottom button, header nav button {
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.white-button, main .aboutus-section .aboutus-container button, .selling-card .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .product-card .sell-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .product-bottom button, .border-card .each-card .each-img .each-button button, main .businesses-section .businesses-container .each-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .image .each-button button, main .businesses-section .businesses-container .business-card .image .button button {
+  background-color: #fff;
+  color: #ff4545;
+  width: 100%;
+  padding: 5px 0px;
+  border-radius: 26px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
 .border-card, main .businesses-section .businesses-container {
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
