@@ -478,7 +478,8 @@ main .performers-section .swiper-slide {
   justify-content: center;
   position: relative;
   gap: 40px;
-  background-color: aquamarine;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
   padding: 40px;
   height: 85vh;
   z-index: 1;
