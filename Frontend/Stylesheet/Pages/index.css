@@ -502,4 +502,67 @@ main .performers-section hr {
 }
 main .performers-section hr {
   margin-left: 50%;
+}
+main .performers-section .swiper {
+  margin-top: 40px;
+  width: 100%;
+  height: 95vh;
+  position: relative;
+  z-index: 1;
+}
+main .performers-section .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 40px;
+  background-color: aquamarine;
+  padding: 40px;
+  height: 85vh;
+  z-index: 1;
+}
+main .performers-section .swiper-slide .performers-name {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .performers-section .swiper-slide .performers-name h1 {
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  text-align: center;
+}
+main .performers-section .swiper-slide .image {
+  padding: 40px;
+  width: 100%;
+  height: 500px;
+  background-color: cadetblue;
+}
+main .performers-section .swiper-scrollbar {
+  border-radius: 10px;
+  height: 20px;
+  padding: 5px;
+  background-color: 255, 255, 255, 0.2;
+  overflow: hidden;
+  width: 25%;
+  left: 37%;
+  z-index: 100;
+}
+main .performers-section .swiper-scrollbar-drag {
+  background-color: black;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 769px) {
+  main .performers-section .swiper-slide:first-child {
+    transition: transform 100ms;
+  }
+  main .performers-section .swiper-slide:first-child img {
+    transition: box-shadow 500ms;
+  }
+  main .performers-section .swiper[dir=rtl] .swiper-slide.swiper-slide-active:first-child {
+    transform: translateX(-50%);
+  }
+  main .performers-section .swiper[dir=rtl] .swiper-slide.swiper-slide-next:nth-child(2) {
+    transform: translateX(-55%);
+  }
 }/*# sourceMappingURL=index.css.map */
