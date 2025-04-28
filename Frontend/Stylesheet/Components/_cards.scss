@@ -2,6 +2,7 @@
 @import "../Base/typography";
 @import '../Components/buttons';
 
+// busniess-card
 .border-card {
     display:grid;
     grid-template-columns: repeat(3, minmax(100px, 1fr));
@@ -158,6 +159,8 @@
     
 // }
 
+
+// Products-card
 .selling-card {
     display: grid;
       grid-template-columns: repeat(2, minmax(100px, 1fr));
