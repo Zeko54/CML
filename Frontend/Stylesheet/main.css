@@ -54,7 +54,7 @@ select {
   cursor: pointer;
 }
 
-.white-button, .border-card .each-card .each-img .each-button button {
+.white-button, .selling-card .sell-cards .sell-desc .desc-bottom button, .border-card .each-card .each-img .each-button button {
   background-color: #fff;
   color: #ff4545;
   width: 100%;
@@ -216,7 +216,7 @@ header nav ul li a {
   cursor: pointer;
 }
 
-.white-button, .border-card .each-card .each-img .each-button button {
+.white-button, .selling-card .sell-cards .sell-desc .desc-bottom button, .border-card .each-card .each-img .each-button button {
   background-color: #fff;
   color: #ff4545;
   width: 100%;
@@ -238,7 +238,7 @@ header nav ul li a {
   cursor: pointer;
 }
 
-.white-button, .border-card .each-card .each-img .each-button button {
+.white-button, .selling-card .sell-cards .sell-desc .desc-bottom button, .border-card .each-card .each-img .each-button button {
   background-color: #fff;
   color: #ff4545;
   width: 100%;
@@ -310,4 +310,58 @@ header nav ul li a {
 }
 .border-card .each-card .each-img:hover .overlay {
   opacity: 1;
+}
+
+.selling-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  gap: 40px;
+  grid-template-areas: "product-1 product-1" "product-2 product-3";
+}
+.selling-card .sell-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  gap: 40px;
+}
+.selling-card .sell-cards .sell-image {
+  grid-area: images;
+  background-color: aqua;
+  border-radius: 20px;
+  width: 100%;
+  aspect-ratio: 1/0.6;
+}
+.selling-card .sell-cards .sell-desc {
+  width: 100%;
+  grid-area: desc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.selling-card .sell-cards .sell-desc .desc-top h2 {
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+}
+.selling-card .sell-cards .sell-desc .desc-top p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+.selling-card .sell-cards .sell-desc .desc-bottom h2 {
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+}
+.selling-card .sell-cards .sell-desc .desc-bottom button {
+  margin-top: 10px;
+}
+.selling-card .sell-cards .card-1 {
+  grid-area: product-1;
+  grid-template-areas: "images desc";
+}
+.selling-card .sell-cards .card-2 {
+  grid-area: product-2;
+  grid-template-areas: "images images" "desc desc";
+}
+.selling-card .sell-cards .card-3 {
+  grid-area: product-3;
+  grid-template-areas: "images images " "desc desc";
 }/*# sourceMappingURL=main.css.map */
