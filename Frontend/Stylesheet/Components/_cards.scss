@@ -82,3 +82,154 @@
     }
     
 }
+
+// .selling-card{
+//     display:grid;
+//     grid-template-columns: repeat(2, minmax(100px, 1fr));
+//     gap: 80px;
+//     grid-template-rows: 500px;
+//     grid-template-areas:
+//         "product-1 product-1"
+//         "product-2 product-3";
+
+//     .card-1{
+        
+//         grid-area: product-1;
+//         grid-template-areas:
+//         "images desc";
+
+//     }
+
+//     .card-2{
+//         display: grid;
+//         grid-area: product-2;
+//         grid-template-areas:
+//         "images" 
+//         "desc";
+
+//     }
+
+//     .card-3{
+//         display: grid;
+//         grid-area: product-3;
+//         grid-template-areas:
+//         "images" 
+//         "desc";
+//     }
+
+//     .each-sell {
+//         display: grid;
+//         grid-template-columns: repeat(2, 50%);
+
+
+
+//         .image-sell {
+//             display: flex;
+//             flex-wrap: 1;
+//             height: 100%;
+//             border-radius: 20px;
+//             background-color: hsl(92, 100%, 50%);
+//             grid-area: images;
+
+
+//         .text-sell {
+//             width: 50%;
+//             grid-area: desc;
+            
+//             h3 {
+//                 font-size: $heading-fontsize;
+//                 text-align: center;
+//             }
+//         }
+
+//             .button-sell {
+//                 position: absolute;
+//                 bottom: 40px;
+//                 width: 80%;
+//                 z-index: 3;
+
+//                 button {
+//                     @extend .white-button;
+//                 }
+//             }
+//         }
+//     }
+
+    
+// }
+
+.selling-card {
+    display: grid;
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+      gap: 40px;
+      grid-template-areas:
+        "product-1 product-1"
+        "product-2 product-3";
+        
+        .sell-cards {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(100px, 1fr));
+          padding: 40px;
+          background: rgba(255, 255, 255, 0.2);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          border-radius: 24px;
+          gap:40px;
+
+          .sell-image{
+            grid-area: images;
+            background-color: aqua;
+            border-radius: 20px;
+            width:100%;
+            aspect-ratio: 1 / 0.6;
+          }
+
+          .sell-desc {
+            width: 100%;
+            grid-area: desc;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .desc-top{
+                h2{
+                  font-size: $sub-heading-fontsize;
+                }
+                p{
+                  font-size: $paragraph-fontsize;
+                }
+              }
+  
+            .desc-bottom{
+                h2{
+                  font-size: $sub-heading-fontsize;
+                }
+  
+                button {
+                  @extend .white-button;
+                  margin-top: 10px;
+                }
+            }
+        }
+
+        .card-1{
+            grid-area: product-1;
+            grid-template-areas:
+          "images desc";
+          }
+          
+          .card-2{
+            grid-area: product-2;
+            grid-template-areas:
+          "images images" 
+          "desc desc";
+          }
+          
+          .card-3{
+            grid-area: product-3;
+            grid-template-areas:
+          "images images " 
+          "desc desc";
+          }
+    }
+
+}
