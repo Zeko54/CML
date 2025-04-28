@@ -1,0 +1,16 @@
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(2vw, -2vh); // smaller movement
+  }
+}
+
+.circle {
+  animation: float 15s ease-in-out infinite alternate;
+  &:nth-child(odd) {
+    animation-delay: 2s;
+  }
+}

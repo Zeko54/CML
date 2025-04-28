@@ -1,0 +1,10 @@
+@import "../Layout/header";
+@import "../Abstract/mixins";
+@import "../Layout/spacings";
+@import "../Base/reset";
+@import "../Abstract/animations";
+@import "../Components/circles";
+
+body {
+  background: $artist-primary-color;
+}

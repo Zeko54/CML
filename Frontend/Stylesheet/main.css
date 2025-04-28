@@ -45,7 +45,7 @@ select {
 }
 
 .red-button, header nav button {
-  background-color: #FF6B6B;
+  background-color: #ff6b6b;
   color: #fff;
   padding: 10px 20px;
   border-radius: 10px;
@@ -56,7 +56,7 @@ select {
 
 .white-button, .border-card .each-card .each-img .each-button button {
   background-color: #fff;
-  color: #FF4545;
+  color: #ff4545;
   width: 100%;
   padding: 5px 0px;
   border-radius: 26px;
@@ -64,6 +64,21 @@ select {
   font-weight: 800;
   cursor: pointer;
   margin-top: 30px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(2vw, -2vh);
+  }
+}
+.circle {
+  animation: float 15s ease-in-out infinite alternate;
+}
+.circle:nth-child(odd) {
+  animation-delay: 2s;
 }
 
 * {
@@ -153,7 +168,7 @@ select {
 }
 
 header {
-  background-color: #E4E4E4;
+  background-color: #e4e4e4;
   position: fixed;
   top: 0;
   display: flex;
@@ -173,7 +188,7 @@ header nav {
 header nav .logo {
   font-family: "Poppins", sans-serif;
   font-size: clamp(2rem, 6vw, 3rem);
-  color: #0A2463;
+  color: #0a2463;
   font-weight: 900;
 }
 header nav ul {
@@ -192,7 +207,7 @@ header nav ul li a {
   font-size: clamp(1rem, 3vw, 1.5rem);
 }
 .red-button, header nav button {
-  background-color: #FF6B6B;
+  background-color: #ff6b6b;
   color: #fff;
   padding: 10px 20px;
   border-radius: 10px;
@@ -203,7 +218,7 @@ header nav ul li a {
 
 .white-button, .border-card .each-card .each-img .each-button button {
   background-color: #fff;
-  color: #FF4545;
+  color: #ff4545;
   width: 100%;
   padding: 5px 0px;
   border-radius: 26px;
@@ -214,7 +229,7 @@ header nav ul li a {
 }
 
 .red-button, header nav button {
-  background-color: #FF6B6B;
+  background-color: #ff6b6b;
   color: #fff;
   padding: 10px 20px;
   border-radius: 10px;
@@ -225,7 +240,7 @@ header nav ul li a {
 
 .white-button, .border-card .each-card .each-img .each-button button {
   background-color: #fff;
-  color: #FF4545;
+  color: #ff4545;
   width: 100%;
   padding: 5px 0px;
   border-radius: 26px;

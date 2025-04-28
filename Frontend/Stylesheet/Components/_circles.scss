@@ -1,0 +1,52 @@
+@import "../Abstract/variables";
+
+.circle-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 1;
+  background: linear-gradient(45deg, #fff, #ccc);
+}
+
+// Different page color themes
+.artist-page .circle {
+  background: linear-gradient(
+    135deg,
+    $artist-secondary-color,
+    $artist-tertiary-color
+  );
+}
+
+.consult-page .circle {
+  background: linear-gradient(
+    135deg,
+    $consult-secondary-color,
+    $consult-tertiary-color
+  );
+}
+
+.product-page .circle {
+  background: linear-gradient(
+    135deg,
+    $product-secondary-color,
+    $product-tertiary-color
+  );
+}
+
+.home-page .circle {
+  background: linear-gradient(
+    135deg,
+    $home-aboutus-secondary-color,
+    $home-aboutus-tertiary-color
+  );
+}
