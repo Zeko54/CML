@@ -2,7 +2,7 @@ var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     centeredSlides: false,
     slidesPerGroupSkip: 1,
-    spaceBetween: 30,
+    spaceBetween: 80,
     grabCursor: true,
     keyboard: {
       enabled: true,
