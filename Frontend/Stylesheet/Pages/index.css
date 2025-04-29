@@ -355,6 +355,8 @@ main .aboutus-section .aboutus-container .desc {
   font-size: clamp(1rem, 3vw, 1.5rem);
   border-radius: 0 81px 81px 0;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #000;
+  font-weight: 500;
 }
 main .businesses-section {
   margin: 120px 80px;
