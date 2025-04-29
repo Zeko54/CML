@@ -15,7 +15,7 @@ main {
     @include heading-underline();
 
     .artist-wrapper {
-      margin-top: 40px;
+      margin-top: 50px;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -28,8 +28,8 @@ main {
       }
 
       .artistSwiper {
-        width: 510px;
-        height: 510px;
+        width: 400px;
+        height: 400px;
 
         .swiper-wrapper {
           display: flex;
@@ -47,8 +47,8 @@ main {
             }
 
             .artist-circle {
-              width: 500px;
-              height: 500px;
+              width: 400px;
+              height: 400px;
               border-radius: 50%;
               background-color: #ccc;
               border: 3px solid white;
@@ -66,6 +66,8 @@ main {
         text-align: justify;
         backdrop-filter: blur(10px);
         color: white;
+        margin-top: 10px;
+        margin-bottom: 40px;
 
         .artist-description {
           font-size: $paragraph-fontsize;

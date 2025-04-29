@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0);
   }
   50% {
@@ -180,7 +181,9 @@ footer .copyright {
   background-color: #fff;
 }
 
-.red-button, main .intro-section .text-container .text-bottom button, header nav button {
+.red-button,
+main .intro-section .text-container .text-bottom button,
+header nav button {
   background-color: #ff6b6b;
   color: #fff;
   padding: 10px 20px;
@@ -190,7 +193,67 @@ footer .copyright {
   cursor: pointer;
 }
 
-.white-button, main .consultant-section .consultant-container .left-side button, main .aboutus-section .aboutus-container button, .selling-card .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .product-card .sell-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .product-bottom button, .border-card .each-card .each-img .each-button button, main .businesses-section .businesses-container .each-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .image .each-button button, main .businesses-section .businesses-container .business-card .image .button button {
+.white-button,
+main .consultant-section .consultant-container .left-side button,
+main .aboutus-section .aboutus-container button,
+.selling-card .sell-cards .sell-desc .desc-bottom button,
+main
+  .products-section
+  .product-container
+  .sell-cards
+  .sell-desc
+  .desc-bottom
+  button,
+main
+  .products-section
+  .product-container
+  .product-card
+  .sell-desc
+  .desc-bottom
+  button,
+main
+  .products-section
+  .product-container
+  .product-card
+  .product-desc
+  .desc-bottom
+  button,
+main
+  .products-section
+  .product-container
+  .product-card
+  .product-desc
+  .product-bottom
+  button,
+.border-card .each-card .each-img .each-button button,
+main
+  .businesses-section
+  .businesses-container
+  .each-card
+  .each-img
+  .each-button
+  button,
+main
+  .businesses-section
+  .businesses-container
+  .business-card
+  .each-img
+  .each-button
+  button,
+main
+  .businesses-section
+  .businesses-container
+  .business-card
+  .image
+  .each-button
+  button,
+main
+  .businesses-section
+  .businesses-container
+  .business-card
+  .image
+  .button
+  button {
   background-color: #fff;
   color: #ff4545;
   width: 100%;
@@ -202,13 +265,18 @@ footer .copyright {
   margin-top: 30px;
 }
 
-.border-card, main .businesses-section .businesses-container {
+.border-card,
+main .businesses-section .businesses-container {
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
   gap: 80px;
   grid-template-rows: 500px;
 }
-.border-card .each-card, .border-card main .businesses-section .businesses-container .business-card, main .businesses-section .businesses-container .border-card .business-card, main .businesses-section .businesses-container .each-card, main .businesses-section .businesses-container .business-card {
+.border-card .each-card,
+.border-card main .businesses-section .businesses-container .business-card,
+main .businesses-section .businesses-container .border-card .business-card,
+main .businesses-section .businesses-container .each-card,
+main .businesses-section .businesses-container .business-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -218,7 +286,10 @@ footer .copyright {
   padding: 20px;
   position: relative;
 }
-.border-card .each-card .each-img, main .businesses-section .businesses-container .each-card .each-img, main .businesses-section .businesses-container .business-card .each-img, main .businesses-section .businesses-container .business-card .image {
+.border-card .each-card .each-img,
+main .businesses-section .businesses-container .each-card .each-img,
+main .businesses-section .businesses-container .business-card .each-img,
+main .businesses-section .businesses-container .business-card .image {
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -229,17 +300,60 @@ footer .copyright {
   align-items: center;
   z-index: 1;
 }
-.border-card .each-card .each-img .each-text h3, main .businesses-section .businesses-container .each-card .each-img .each-text h3, main .businesses-section .businesses-container .business-card .each-img .each-text h3, main .businesses-section .businesses-container .business-card .image .each-text h3, main .businesses-section .businesses-container .business-card .image .text h3 {
+.border-card .each-card .each-img .each-text h3,
+main
+  .businesses-section
+  .businesses-container
+  .each-card
+  .each-img
+  .each-text
+  h3,
+main
+  .businesses-section
+  .businesses-container
+  .business-card
+  .each-img
+  .each-text
+  h3,
+main
+  .businesses-section
+  .businesses-container
+  .business-card
+  .image
+  .each-text
+  h3,
+main .businesses-section .businesses-container .business-card .image .text h3 {
   font-size: clamp(1.5rem, 4vw, 2rem);
   text-align: center;
 }
-.border-card .each-card .each-img .each-button, main .businesses-section .businesses-container .each-card .each-img .each-button, main .businesses-section .businesses-container .business-card .each-img .each-button, main .businesses-section .businesses-container .business-card .image .each-button, main .businesses-section .businesses-container .business-card .image .button {
+.border-card .each-card .each-img .each-button,
+main
+  .businesses-section
+  .businesses-container
+  .each-card
+  .each-img
+  .each-button,
+main
+  .businesses-section
+  .businesses-container
+  .business-card
+  .each-img
+  .each-button,
+main
+  .businesses-section
+  .businesses-container
+  .business-card
+  .image
+  .each-button,
+main .businesses-section .businesses-container .business-card .image .button {
   position: absolute;
   bottom: 40px;
   width: 80%;
   z-index: 3;
 }
-.border-card .each-card .overlay, main .businesses-section .businesses-container .each-card .overlay, main .businesses-section .businesses-container .business-card .overlay {
+.border-card .each-card .overlay,
+main .businesses-section .businesses-container .each-card .overlay,
+main .businesses-section .businesses-container .business-card .overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -256,21 +370,46 @@ footer .copyright {
   justify-content: center;
   align-items: center;
 }
-.border-card .each-card .overlay p, main .businesses-section .businesses-container .each-card .overlay p, main .businesses-section .businesses-container .business-card .overlay p {
+.border-card .each-card .overlay p,
+main .businesses-section .businesses-container .each-card .overlay p,
+main .businesses-section .businesses-container .business-card .overlay p {
   color: #fff;
   font-size: clamp(1rem, 3vw, 1.5rem);
 }
-.border-card .each-card .each-img:hover .overlay, main .businesses-section .businesses-container .each-card .each-img:hover .overlay, main .businesses-section .businesses-container .business-card .each-img:hover .overlay, main .businesses-section .businesses-container .business-card .image:hover .overlay {
+.border-card .each-card .each-img:hover .overlay,
+main
+  .businesses-section
+  .businesses-container
+  .each-card
+  .each-img:hover
+  .overlay,
+main
+  .businesses-section
+  .businesses-container
+  .business-card
+  .each-img:hover
+  .overlay,
+main
+  .businesses-section
+  .businesses-container
+  .business-card
+  .image:hover
+  .overlay {
   opacity: 1;
 }
 
-.selling-card, main .products-section .product-container {
+.selling-card,
+main .products-section .product-container {
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
   gap: 40px;
   grid-template-areas: "product-1 product-1" "product-2 product-3";
 }
-.selling-card .sell-cards, .selling-card main .products-section .product-container .product-card, main .products-section .product-container .selling-card .product-card, main .products-section .product-container .sell-cards, main .products-section .product-container .product-card {
+.selling-card .sell-cards,
+.selling-card main .products-section .product-container .product-card,
+main .products-section .product-container .selling-card .product-card,
+main .products-section .product-container .sell-cards,
+main .products-section .product-container .product-card {
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
   padding: 40px;
@@ -279,41 +418,141 @@ footer .copyright {
   border-radius: 24px;
   gap: 40px;
 }
-.selling-card .sell-cards .sell-image, main .products-section .product-container .sell-cards .sell-image, main .products-section .product-container .product-card .sell-image, main .products-section .product-container .product-card .image {
+.selling-card .sell-cards .sell-image,
+main .products-section .product-container .sell-cards .sell-image,
+main .products-section .product-container .product-card .sell-image,
+main .products-section .product-container .product-card .image {
   grid-area: images;
   background-color: aqua;
   border-radius: 20px;
   width: 100%;
   aspect-ratio: 1/0.6;
 }
-.selling-card .sell-cards .sell-desc, main .products-section .product-container .sell-cards .sell-desc, main .products-section .product-container .product-card .sell-desc, main .products-section .product-container .product-card .product-desc {
+.selling-card .sell-cards .sell-desc,
+main .products-section .product-container .sell-cards .sell-desc,
+main .products-section .product-container .product-card .sell-desc,
+main .products-section .product-container .product-card .product-desc {
   width: 100%;
   grid-area: desc;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.selling-card .sell-cards .sell-desc .desc-top h2, main .products-section .product-container .sell-cards .sell-desc .desc-top h2, main .products-section .product-container .product-card .sell-desc .desc-top h2, main .products-section .product-container .product-card .product-desc .desc-top h2, main .products-section .product-container .product-card .product-desc .product-top h2 {
+.selling-card .sell-cards .sell-desc .desc-top h2,
+main .products-section .product-container .sell-cards .sell-desc .desc-top h2,
+main .products-section .product-container .product-card .sell-desc .desc-top h2,
+main
+  .products-section
+  .product-container
+  .product-card
+  .product-desc
+  .desc-top
+  h2,
+main
+  .products-section
+  .product-container
+  .product-card
+  .product-desc
+  .product-top
+  h2 {
   font-size: clamp(1.75rem, 4.5vw, 2.5rem);
 }
-.selling-card .sell-cards .sell-desc .desc-top p, main .products-section .product-container .sell-cards .sell-desc .desc-top p, main .products-section .product-container .product-card .sell-desc .desc-top p, main .products-section .product-container .product-card .product-desc .desc-top p, main .products-section .product-container .product-card .product-desc .product-top p {
+.selling-card .sell-cards .sell-desc .desc-top p,
+main .products-section .product-container .sell-cards .sell-desc .desc-top p,
+main .products-section .product-container .product-card .sell-desc .desc-top p,
+main
+  .products-section
+  .product-container
+  .product-card
+  .product-desc
+  .desc-top
+  p,
+main
+  .products-section
+  .product-container
+  .product-card
+  .product-desc
+  .product-top
+  p {
   font-size: clamp(1rem, 3vw, 1.5rem);
 }
-.selling-card .sell-cards .sell-desc .desc-bottom h2, main .products-section .product-container .sell-cards .sell-desc .desc-bottom h2, main .products-section .product-container .product-card .sell-desc .desc-bottom h2, main .products-section .product-container .product-card .product-desc .desc-bottom h2, main .products-section .product-container .product-card .product-desc .product-bottom h2 {
+.selling-card .sell-cards .sell-desc .desc-bottom h2,
+main
+  .products-section
+  .product-container
+  .sell-cards
+  .sell-desc
+  .desc-bottom
+  h2,
+main
+  .products-section
+  .product-container
+  .product-card
+  .sell-desc
+  .desc-bottom
+  h2,
+main
+  .products-section
+  .product-container
+  .product-card
+  .product-desc
+  .desc-bottom
+  h2,
+main
+  .products-section
+  .product-container
+  .product-card
+  .product-desc
+  .product-bottom
+  h2 {
   font-size: clamp(1.75rem, 4.5vw, 2.5rem);
 }
-.selling-card .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .product-card .sell-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .product-bottom button {
+.selling-card .sell-cards .sell-desc .desc-bottom button,
+main
+  .products-section
+  .product-container
+  .sell-cards
+  .sell-desc
+  .desc-bottom
+  button,
+main
+  .products-section
+  .product-container
+  .product-card
+  .sell-desc
+  .desc-bottom
+  button,
+main
+  .products-section
+  .product-container
+  .product-card
+  .product-desc
+  .desc-bottom
+  button,
+main
+  .products-section
+  .product-container
+  .product-card
+  .product-desc
+  .product-bottom
+  button {
   margin-top: 10px;
 }
-.selling-card .sell-cards .card-1, main .products-section .product-container .sell-cards .card-1, main .products-section .product-container .product-card .card-1 {
+.selling-card .sell-cards .card-1,
+main .products-section .product-container .sell-cards .card-1,
+main .products-section .product-container .product-card .card-1 {
   grid-area: product-1;
   grid-template-areas: "images desc";
 }
-.selling-card .sell-cards .card-2, main .products-section .product-container .sell-cards .card-2, main .products-section .product-container .product-card .card-2 {
+.selling-card .sell-cards .card-2,
+main .products-section .product-container .sell-cards .card-2,
+main .products-section .product-container .product-card .card-2 {
   grid-area: product-2;
   grid-template-areas: "images images" "desc desc";
 }
-.selling-card .sell-cards .card-3, main .products-section .product-container .sell-cards .card-3, main .products-section .product-container .product-card .card-3 {
+.selling-card .sell-cards .card-3,
+main .products-section .product-container .sell-cards .card-3,
+main .products-section .product-container .product-card .card-3 {
   grid-area: product-3;
   grid-template-areas: "images images " "desc desc";
 }
@@ -413,7 +652,7 @@ main .aboutus-section .aboutus-container .desc {
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   font-size: clamp(1rem, 3vw, 1.5rem);
   border-radius: 0 81px 81px 0;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -585,10 +824,16 @@ main .performers-section .swiper-scrollbar-drag {
   main .performers-section .swiper-slide:first-child img {
     transition: box-shadow 500ms;
   }
-  main .performers-section .swiper[dir=rtl] .swiper-slide.swiper-slide-active:first-child {
+  main
+    .performers-section
+    .swiper[dir="rtl"]
+    .swiper-slide.swiper-slide-active:first-child {
     transform: translateX(-50%);
   }
-  main .performers-section .swiper[dir=rtl] .swiper-slide.swiper-slide-next:nth-child(2) {
+  main
+    .performers-section
+    .swiper[dir="rtl"]
+    .swiper-slide.swiper-slide-next:nth-child(2) {
     transform: translateX(-55%);
   }
 }
@@ -720,4 +965,4 @@ main .client-section .client-img {
   100% {
     transform: translateX(-50%);
   }
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
