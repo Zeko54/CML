@@ -190,31 +190,8 @@ footer .copyright {
   cursor: pointer;
 }
 
-.white-button, main .performers-section .artist-wrapper .artist-wrapper .artist-info-box .button-group .learn-more-btn,
-main .performers-section .artist-wrapper .artist-wrapper .artist-info-box .button-group .quote-btn, .selling-card .sell-cards .sell-desc .desc-bottom button, .border-card .each-card .each-img .each-button button {
-  background-color: #fff;
-  color: #ff4545;
-  width: 100%;
-  padding: 5px 0px;
-  border-radius: 26px;
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  font-weight: 800;
-  cursor: pointer;
-  margin-top: 30px;
-}
-
-.red-button, main .intro-section .text-container .text-bottom button, header nav button {
-  background-color: #ff6b6b;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.white-button, main .performers-section .artist-wrapper .artist-wrapper .artist-info-box .button-group .learn-more-btn,
-main .performers-section .artist-wrapper .artist-wrapper .artist-info-box .button-group .quote-btn, .selling-card .sell-cards .sell-desc .desc-bottom button, .border-card .each-card .each-img .each-button button {
+.white-button, main .performers-section .artist-wrapper .artist-info-box .button-group .learn-more-btn,
+main .performers-section .artist-wrapper .artist-info-box .button-group .quote-btn, .selling-card .sell-cards .sell-desc .desc-bottom button, .border-card .each-card .each-img .each-button button {
   background-color: #fff;
   color: #ff4545;
   width: 100%;
@@ -424,7 +401,7 @@ main .performers-section hr {
   margin-top: 30px;
   margin-left: -2px;
 }
-main .performers-section .artist-wrapper .artist-wrapper {
+main .performers-section .artist-wrapper {
   margin-top: 40px;
   text-align: center;
   display: flex;
@@ -433,35 +410,35 @@ main .performers-section .artist-wrapper .artist-wrapper {
   justify-content: center;
   color: #fff;
 }
-main .performers-section .artist-wrapper .artist-wrapper .artist-name {
+main .performers-section .artist-wrapper .artist-name {
   font-size: clamp(2.5rem, 4.5vw, 3.75rem);
 }
-main .performers-section .artist-wrapper .artist-wrapper .artistSwiper {
+main .performers-section .artist-wrapper .artistSwiper {
   width: 510px;
   height: 510px;
 }
-main .performers-section .artist-wrapper .artist-wrapper .artistSwiper .swiper-wrapper {
+main .performers-section .artist-wrapper .artistSwiper .swiper-wrapper {
   display: flex;
   align-items: center;
 }
-main .performers-section .artist-wrapper .artist-wrapper .artistSwiper .swiper-wrapper .swiper-slide {
+main .performers-section .artist-wrapper .artistSwiper .swiper-wrapper .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   visibility: hidden;
 }
-main .performers-section .artist-wrapper .artist-wrapper .artistSwiper .swiper-wrapper .swiper-slide.swiper-slide-active {
+main .performers-section .artist-wrapper .artistSwiper .swiper-wrapper .swiper-slide.swiper-slide-active {
   visibility: visible;
   pointer-events: all;
 }
-main .performers-section .artist-wrapper .artist-wrapper .artistSwiper .swiper-wrapper .swiper-slide .artist-circle {
+main .performers-section .artist-wrapper .artistSwiper .swiper-wrapper .swiper-slide .artist-circle {
   width: 500px;
   height: 500px;
   border-radius: 50%;
   background-color: #ccc;
   border: 3px solid white;
 }
-main .performers-section .artist-wrapper .artist-wrapper .artist-info-box {
+main .performers-section .artist-wrapper .artist-info-box {
   width: 80%;
   max-width: 1000px;
   padding: 3rem;
@@ -472,17 +449,17 @@ main .performers-section .artist-wrapper .artist-wrapper .artist-info-box {
           backdrop-filter: blur(10px);
   color: white;
 }
-main .performers-section .artist-wrapper .artist-wrapper .artist-info-box .artist-description {
+main .performers-section .artist-wrapper .artist-info-box .artist-description {
   font-size: clamp(1rem, 3vw, 1.5rem);
   margin-bottom: 1.5rem;
 }
-main .performers-section .artist-wrapper .artist-wrapper .artist-info-box .button-group {
+main .performers-section .artist-wrapper .artist-info-box .button-group {
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
-main .performers-section .artist-wrapper .artist-wrapper .artist-info-box .button-group .learn-more-btn,
-main .performers-section .artist-wrapper .artist-wrapper .artist-info-box .button-group .quote-btn {
+main .performers-section .artist-wrapper .artist-info-box .button-group .learn-more-btn,
+main .performers-section .artist-wrapper .artist-info-box .button-group .quote-btn {
   color: #8e3d8e;
 }
 

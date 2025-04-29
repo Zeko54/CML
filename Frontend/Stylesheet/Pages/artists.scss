@@ -15,74 +15,72 @@ main {
     @include heading-underline();
 
     .artist-wrapper {
-      .artist-wrapper {
-        margin-top: 40px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: nth($text-colors, 1);
+      margin-top: 40px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: nth($text-colors, 1);
 
-        .artist-name {
-          font-size: clamp(2.5rem, 4.5vw, 3.75rem);
-        }
+      .artist-name {
+        font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+      }
 
-        .artistSwiper {
-          width: 510px;
-          height: 510px;
+      .artistSwiper {
+        width: 510px;
+        height: 510px;
 
-          .swiper-wrapper {
-            display: flex;
-            align-items: center;
+        .swiper-wrapper {
+          display: flex;
+          align-items: center;
 
-            .swiper-slide {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              visibility: hidden;
-
-              &.swiper-slide-active {
-                visibility: visible;
-                pointer-events: all;
-              }
-
-              .artist-circle {
-                width: 500px;
-                height: 500px;
-                border-radius: 50%;
-                background-color: #ccc;
-                border: 3px solid white;
-              }
-            }
-          }
-        }
-
-        .artist-info-box {
-          width: 80%;
-          max-width: 1000px;
-          padding: 3rem;
-          background-color: rgba(255, 255, 255, 0.31);
-          border-radius: 1.5rem;
-          text-align: justify;
-          backdrop-filter: blur(10px);
-          color: white;
-
-          .artist-description {
-            font-size: $paragraph-fontsize;
-            margin-bottom: 1.5rem;
-          }
-
-          .button-group {
+          .swiper-slide {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            align-items: center;
+            visibility: hidden;
 
-            .learn-more-btn,
-            .quote-btn {
-              @extend .white-button;
-              color: $artist-tertiary-color;
+            &.swiper-slide-active {
+              visibility: visible;
+              pointer-events: all;
             }
+
+            .artist-circle {
+              width: 500px;
+              height: 500px;
+              border-radius: 50%;
+              background-color: #ccc;
+              border: 3px solid white;
+            }
+          }
+        }
+      }
+
+      .artist-info-box {
+        width: 80%;
+        max-width: 1000px;
+        padding: 3rem;
+        background-color: rgba(255, 255, 255, 0.31);
+        border-radius: 1.5rem;
+        text-align: justify;
+        backdrop-filter: blur(10px);
+        color: white;
+
+        .artist-description {
+          font-size: $paragraph-fontsize;
+          margin-bottom: 1.5rem;
+        }
+
+        .button-group {
+          display: flex;
+          justify-content: center;
+          gap: 2rem;
+
+          .learn-more-btn,
+          .quote-btn {
+            @extend .white-button;
+            color: $artist-tertiary-color;
           }
         }
       }

@@ -170,17 +170,17 @@ main {
     @include performer-slider();
   }
 
-  .consultant-section{
+  .consultant-section {
     margin: $desktop-spacing;
     @include heading();
     @include heading-underline();
 
-    .consultant-container{
+    .consultant-container {
       margin-top: 40px;
       display: grid;
       grid-template-columns: repeat(2, 50%);
 
-      .left-side{
+      .left-side {
         background-color: rgba(255, 255, 255, 0.2);
         border-radius: 25px 0px 0px 25px;
         padding: 40px;
@@ -188,91 +188,88 @@ main {
         flex-direction: column;
         justify-content: space-between;
 
-        .text{
-          h3{
+        .text {
+          h3 {
             text-align: center;
           }
         }
 
-        button{
+        button {
           @extend .white-button;
         }
       }
 
-      .right-side{
+      .right-side {
         display: grid;
         grid-template-areas:
-        "bar-1"
-        "bar-2"
-        "bar-3";
-        gap:40px;
+          "bar-1"
+          "bar-2"
+          "bar-3";
+        gap: 40px;
         padding: 40px;
         background-color: nth($text-colors, 1);
 
-        .vertical-bar{
-          display:grid;
+        .vertical-bar {
+          display: grid;
           grid-template-rows: 100px;
           background-color: $header-footer-color;
         }
 
-
-        .bar-1{
+        .bar-1 {
           grid-area: bar-1;
         }
 
-        .bar-2{
+        .bar-2 {
           grid-area: bar-2;
         }
 
-        .bar-3{
+        .bar-3 {
           grid-area: bar-3;
         }
       }
     }
   }
 
-  .client-section{
+  .client-section {
     @include heading();
-    .heading{
+    .heading {
       justify-content: center;
     }
-    .with-bg{
-      background-color: #FF4545;
-      mix-blend-mode:normal;
+    .with-bg {
+      background-color: #ff4545;
+      mix-blend-mode: normal;
       color: nth($text-colors, 1);
-      
     }
     @include heading-underline();
-    hr{
+    hr {
       margin: 0 auto;
       margin-top: 30px;
-      background-color: #FF4545;
+      background-color: #ff4545;
     }
 
-    padding: 40px 80px ;
+    padding: 40px 80px;
     background-color: nth($text-colors, 1);
-    
 
     .client-slider {
       margin-top: 80px;
       overflow: hidden;
       width: 100%;
     }
-    
+
     .client-images {
       display: flex;
       gap: 40px;
       animation: scroll 30s linear infinite;
       width: max-content;
     }
-    
+
     .client-img {
       width: 180px;
       height: 180px;
       background-color: #ccc; // Replace with logo or image background
       border-radius: 50%;
     }
-    
+
     // Keyframes for scrolling animation
     @keyframes scroll {
       0% {
@@ -282,6 +279,5 @@ main {
         transform: translateX(-50%);
       }
     }
-
   }
 }
