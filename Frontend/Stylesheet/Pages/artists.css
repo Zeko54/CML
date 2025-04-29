@@ -150,6 +150,8 @@ header nav ul li a {
 
 .white-button, main .performers-section .artist-wrapper .artist-info-box .button-group .learn-more-btn,
 main .performers-section .artist-wrapper .artist-info-box .button-group .quote-btn, .selling-card .sell-cards .sell-desc .desc-bottom button, .border-card .each-card .each-img .each-button button {
+.white-button, main .performers-section .artist-wrapper .artist-info-box .button-group .learn-more-btn,
+main .performers-section .artist-wrapper .artist-info-box .button-group .quote-btn, .selling-card .sell-cards .sell-desc .desc-bottom button, .border-card .each-card .each-img .each-button button {
   background-color: #fff;
   color: #ff4545;
   width: 100%;
@@ -171,6 +173,8 @@ main .performers-section .artist-wrapper .artist-info-box .button-group .quote-b
   cursor: pointer;
 }
 
+.white-button, main .performers-section .artist-wrapper .artist-info-box .button-group .learn-more-btn,
+main .performers-section .artist-wrapper .artist-info-box .button-group .quote-btn, .selling-card .sell-cards .sell-desc .desc-bottom button, .border-card .each-card .each-img .each-button button {
 .white-button, main .performers-section .artist-wrapper .artist-info-box .button-group .learn-more-btn,
 main .performers-section .artist-wrapper .artist-info-box .button-group .quote-btn, .selling-card .sell-cards .sell-desc .desc-bottom button, .border-card .each-card .each-img .each-button button {
   background-color: #fff;
@@ -357,12 +361,15 @@ main .intro-section .text-container {
   width: 60%;
 }
 main .performers-section {
+main .performers-section {
   margin: 120px 80px;
   font-size: clamp(1.5rem, 4vw, 2rem);
 }
 main .performers-section .heading {
+main .performers-section .heading {
   display: flex;
 }
+main .performers-section .with-bg {
 main .performers-section .with-bg {
   background-color: #fff;
   mix-blend-mode: screen;
@@ -370,9 +377,11 @@ main .performers-section .with-bg {
   padding: 0px 10px;
 }
 main .performers-section .without-bg {
+main .performers-section .without-bg {
   color: #fff;
   padding: 0px 10px;
 }
+main .performers-section hr {
 main .performers-section hr {
   width: 50%;
   height: 3px;
@@ -382,6 +391,7 @@ main .performers-section hr {
   margin-top: 30px;
   margin-left: -2px;
 }
+main .performers-section .artist-wrapper {
 main .performers-section .artist-wrapper {
   margin-top: 40px;
   text-align: center;
@@ -393,7 +403,29 @@ main .performers-section .artist-wrapper {
 }
 main .performers-section .artist-wrapper .artist-name {
   font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
+main .performers-section .artist-wrapper .artist-name {
+  font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+}
+main .performers-section .artist-wrapper .artistSwiper {
+  width: 510px;
+  height: 510px;
+}
+main .performers-section .artist-wrapper .artistSwiper .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+main .performers-section .artist-wrapper .artistSwiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
 main .performers-section .artist-wrapper .artistSwiper {
   width: 510px;
   height: 510px;
@@ -432,6 +464,26 @@ main .performers-section .artist-wrapper .artist-info-box {
 }
 main .performers-section .artist-wrapper .artist-info-box .artist-description {
   font-size: clamp(1rem, 3vw, 1.5rem);
+  margin-bottom: 1.5rem;
+}
+main .performers-section .artist-wrapper .artist-info-box .button-group {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+main .performers-section .artist-wrapper .artist-info-box .button-group .learn-more-btn,
+main .performers-section .artist-wrapper .artist-info-box .button-group .quote-btn {
+  color: #8e3d8e;
+}
+
+.performers-section.bandperformer .heading,
+.performers-section.djplayer .heading {
+  justify-content: flex-end;
+}
+
+.performers-section.bandperformer hr,
+.performers-section.djplayer hr {
+  margin-left: auto;
   margin-bottom: 1.5rem;
 }
 main .performers-section .artist-wrapper .artist-info-box .button-group {

@@ -10,10 +10,12 @@ main {
   }
 
   .performers-section {
+  .performers-section {
     margin: $desktop-spacing;
     @include heading();
     @include heading-underline();
 
+    .artist-wrapper {
     .artist-wrapper {
       margin-top: 40px;
       text-align: center;
@@ -86,6 +88,16 @@ main {
       }
     }
   }
+}
+
+.performers-section.bandperformer .heading,
+.performers-section.djplayer .heading {
+  justify-content: flex-end;
+}
+
+.performers-section.bandperformer hr,
+.performers-section.djplayer hr {
+  margin-left: auto;
 }
 
 .performers-section.bandperformer .heading,
