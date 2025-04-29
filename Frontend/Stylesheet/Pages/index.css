@@ -128,7 +128,7 @@ header nav ul li a {
   cursor: pointer;
 }
 
-.white-button, main .aboutus-section .aboutus-container button, .selling-card .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .product-card .sell-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .product-bottom button, .border-card .each-card .each-img .each-button button, main .businesses-section .businesses-container .each-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .image .each-button button, main .businesses-section .businesses-container .business-card .image .button button {
+.white-button, main .consultant-section .consultant-container .left-side button, main .aboutus-section .aboutus-container button, .selling-card .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .product-card .sell-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .product-bottom button, .border-card .each-card .each-img .each-button button, main .businesses-section .businesses-container .each-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .image .each-button button, main .businesses-section .businesses-container .business-card .image .button button {
   background-color: #fff;
   color: #ff4545;
   width: 100%;
@@ -528,5 +528,134 @@ main .performers-section .swiper-scrollbar-drag {
   }
   main .performers-section .swiper[dir=rtl] .swiper-slide.swiper-slide-next:nth-child(2) {
     transform: translateX(-55%);
+  }
+}
+main .consultant-section {
+  margin: 120px 80px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+main .consultant-section .heading {
+  display: flex;
+}
+main .consultant-section .with-bg {
+  background-color: #fff;
+  mix-blend-mode: screen;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+main .consultant-section .without-bg {
+  color: #fff;
+  padding: 0px 10px;
+}
+main .consultant-section hr {
+  width: 50%;
+  height: 3px;
+  background-color: white;
+  border: none;
+  padding: 0px 20px;
+  margin-top: 30px;
+  margin-left: -2px;
+}
+main .consultant-section .consultant-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+main .consultant-section .consultant-container .left-side {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 25px 0px 0px 25px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .consultant-section .consultant-container .left-side .text h3 {
+  text-align: center;
+}
+main .consultant-section .consultant-container .right-side {
+  display: grid;
+  grid-template-areas: "bar-1" "bar-2" "bar-3";
+  gap: 40px;
+  padding: 40px;
+  background-color: #fff;
+}
+main .consultant-section .consultant-container .right-side .vertical-bar {
+  display: grid;
+  grid-template-rows: 100px;
+  background-color: #e4e4e4;
+}
+main .consultant-section .consultant-container .right-side .bar-1 {
+  grid-area: bar-1;
+}
+main .consultant-section .consultant-container .right-side .bar-2 {
+  grid-area: bar-2;
+}
+main .consultant-section .consultant-container .right-side .bar-3 {
+  grid-area: bar-3;
+}
+main .client-section {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  padding: 40px 80px;
+  background-color: #fff;
+}
+main .client-section .heading {
+  display: flex;
+}
+main .client-section .with-bg {
+  background-color: #fff;
+  mix-blend-mode: screen;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+main .client-section .without-bg {
+  color: #fff;
+  padding: 0px 10px;
+}
+main .client-section .heading {
+  justify-content: center;
+}
+main .client-section .with-bg {
+  background-color: #FF4545;
+  mix-blend-mode: normal;
+  color: #fff;
+}
+main .client-section hr {
+  width: 50%;
+  height: 3px;
+  background-color: white;
+  border: none;
+  padding: 0px 20px;
+  margin-top: 30px;
+  margin-left: -2px;
+}
+main .client-section hr {
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #FF4545;
+}
+main .client-section .client-slider {
+  margin-top: 80px;
+  overflow: hidden;
+  width: 100%;
+}
+main .client-section .client-images {
+  display: flex;
+  gap: 40px;
+  animation: scroll 30s linear infinite;
+  width: -moz-max-content;
+  width: max-content;
+}
+main .client-section .client-img {
+  width: 180px;
+  height: 180px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }/*# sourceMappingURL=index.css.map */
