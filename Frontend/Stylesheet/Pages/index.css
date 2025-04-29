@@ -495,6 +495,7 @@ main .performers-section .swiper-slide .performers-name {
 main .performers-section .swiper-slide .performers-name h1 {
   font-size: clamp(1.75rem, 4.5vw, 2.5rem);
   text-align: center;
+  font-weight: 500;
 }
 main .performers-section .swiper-slide .image {
   padding: 40px;
@@ -508,8 +509,8 @@ main .performers-section .swiper-scrollbar {
   padding: 5px;
   background-color: 255, 255, 255, 0.2;
   overflow: hidden;
-  width: 25%;
-  left: 37%;
+  width: 15%;
+  left: 42%;
   z-index: 100;
 }
 main .performers-section .swiper-scrollbar-drag {
