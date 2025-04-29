@@ -46,7 +46,7 @@ main {
 
     @include heading();
     .heading {
-      flex-direction: row-reverse;
+      justify-content: flex-end;
     }
 
     @include heading-underline();
@@ -159,7 +159,7 @@ main {
     margin: $desktop-spacing;
     @include heading();
     .heading {
-      flex-direction: row-reverse;
+      justify-content: flex-end;
     }
 
     @include heading-underline();
