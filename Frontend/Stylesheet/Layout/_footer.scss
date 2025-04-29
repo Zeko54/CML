@@ -1,0 +1,47 @@
+footer{
+    background-color: $header-footer-color;
+
+    .footer-top{
+        padding: 80px 80px 0px 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .cml-logo{
+            font-size: $primary-logo-fontsize;
+            font-weight: 900;
+        }
+
+        .social-media{
+            display: flex;
+            gap: 20px;
+            .app{
+                width: 80px;
+                height: 80px;
+                background-color: black;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .footer-bottom{
+        padding: 0px 80px;
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
+        gap:100px;
+        font-size: $paragraph-fontsize;
+
+        h3{
+            height: 100px;
+        }
+    }
+
+    .copyright{
+        margin-top: 150px;
+        text-align: center;
+        font-size: $small-button-fontsize;
+        color: nth($text-colors, 2);
+        background-color: nth($text-colors, 1);
+    }
+}

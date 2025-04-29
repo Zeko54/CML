@@ -96,6 +96,48 @@ header nav ul li a {
   color: #000;
   font-size: clamp(1rem, 3vw, 1.5rem);
 }
+footer {
+  background-color: #e4e4e4;
+}
+footer .footer-top {
+  padding: 80px 80px 0px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-top .cml-logo {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 900;
+}
+footer .footer-top .social-media {
+  display: flex;
+  gap: 20px;
+}
+footer .footer-top .social-media .app {
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border-radius: 50%;
+}
+footer .footer-bottom {
+  padding: 0px 80px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  gap: 100px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+footer .footer-bottom h3 {
+  height: 100px;
+}
+footer .copyright {
+  margin-top: 150px;
+  text-align: center;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: #000;
+  background-color: #fff;
+}
+
 .red-button, main .intro-section .text-container .text-bottom button, header nav button {
   background-color: #ff6b6b;
   color: #fff;
@@ -106,7 +148,7 @@ header nav ul li a {
   cursor: pointer;
 }
 
-.white-button, main .aboutus-section .aboutus-container button, .selling-card .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .product-card .sell-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .product-bottom button, .border-card .each-card .each-img .each-button button, main .businesses-section .businesses-container .each-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .image .each-button button, main .businesses-section .businesses-container .business-card .image .button button {
+.white-button, main .consultant-section .consultant-container .left-side button, main .aboutus-section .aboutus-container button, .selling-card .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .product-card .sell-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .product-bottom button, .border-card .each-card .each-img .each-button button, main .businesses-section .businesses-container .each-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .image .each-button button, main .businesses-section .businesses-container .business-card .image .button button {
   background-color: #fff;
   color: #ff4545;
   width: 100%;
