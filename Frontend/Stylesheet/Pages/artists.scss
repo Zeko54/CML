@@ -57,6 +57,25 @@ main {
         }
       }
 
+      .custom-pagination {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin: 20px 0;
+
+        .pagination-dot {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.5);
+          cursor: pointer;
+
+          &.active {
+            background: white;
+          }
+        }
+      }
+
       .artist-info-box {
         width: 80%;
         max-width: 1000px;
@@ -67,7 +86,7 @@ main {
         backdrop-filter: blur(10px);
         color: white;
         margin-top: 10px;
-        margin-bottom: 40px;
+        margin-bottom: 5px;
 
         .artist-description {
           font-size: $paragraph-fontsize;

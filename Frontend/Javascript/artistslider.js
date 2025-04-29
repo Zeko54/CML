@@ -61,102 +61,175 @@ const performers = {
   ],
 };
 
-const swiperElements = document.querySelectorAll(".swiper");
-
-swiperElements.forEach((swiperEl) => {
+document.querySelectorAll(".swiper").forEach((swiperEl) => {
   const swiperClass = [...swiperEl.classList].find((cls) =>
     cls.endsWith("-swiper")
   );
-  const artistList = performers[swiperClass];
+  const artists = performers[swiperClass];
   const section = swiperEl.closest(".performers-section");
   const nameBox = section.querySelector(".artist-name");
   const descBox = section.querySelector(".artist-description");
+  const wrapper = swiperEl.querySelector(".swiper-wrapper");
+  const infoBox = section.querySelector(".artist-info-box");
 
-  const swiperWrapper = swiperEl.querySelector(".swiper-wrapper");
-  swiperWrapper.innerHTML = "";
+  // Create pagination container
+  const pagination = document.createElement("div");
+  pagination.className = "custom-pagination";
+
+  // Clear existing slides but keep structure
+  wrapper.innerHTML = "";
+
+  // Variables for drag functionality
+  let isDragging = false;
+  let startPos = 0;
+  let currentIndex = 0;
 
   // Create slides
-  artistList.forEach((artist, index) => {
+  artists.forEach((artist, index) => {
     const slide = document.createElement("div");
-    slide.classList.add("swiper-slide");
+    slide.className = "swiper-slide";
+    slide.style.visibility = index === 0 ? "visible" : "hidden";
+    slide.style.display = index === 0 ? "flex" : "none";
+    slide.style.justifyContent = "center";
+    slide.style.alignItems = "center";
 
     const circle = document.createElement("div");
-    circle.classList.add("artist-circle");
-    circle.style.opacity = "0"; // Start all circles hidden
+    circle.className = "artist-circle";
+    circle.style.width = "400px";
+    circle.style.height = "400px";
+    circle.style.borderRadius = "50%";
+    circle.style.backgroundColor = "#ccc";
+    circle.style.border = "3px solid white";
+    circle.style.transition = "all 0.6s ease-in"; // Add transition for animation
+
+    // Set initial animation state
+    if (index === 0) {
+      circle.style.opacity = "1";
+      circle.style.transform = "scale(0.85)";
+    } else {
+      circle.style.opacity = "0";
+      circle.style.transform = "scale(0.75)";
+    }
 
     slide.appendChild(circle);
-    swiperWrapper.appendChild(slide);
+    wrapper.appendChild(slide);
+
+    // Create pagination dot
+    const dot = document.createElement("div");
+    dot.className = "pagination-dot";
+    if (index === 0) dot.classList.add("active");
+
+    dot.addEventListener("click", () => goToSlide(index));
+    pagination.appendChild(dot);
   });
 
-  const swiper = new Swiper(`.${swiperClass}`, {
-    loop: true,
-    slidesPerView: 1,
-    centeredSlides: true,
-    speed: 600,
-    grabCursor: true,
-    effect: "slide",
-    allowTouchMove: true,
-    resistanceRatio: 0.7, // Smoother drag
+  // Add drag events
+  wrapper.addEventListener("mousedown", dragStart);
+  wrapper.addEventListener("touchstart", dragStart, { passive: true });
+  wrapper.addEventListener("mousemove", drag);
+  wrapper.addEventListener("touchmove", drag, { passive: false });
+  wrapper.addEventListener("mouseup", dragEnd);
+  wrapper.addEventListener("mouseleave", dragEnd);
+  wrapper.addEventListener("touchend", dragEnd);
 
-    on: {
-      init: function () {
-        // Show only initial active circle
-        this.slides.forEach((slide, i) => {
-          const circle = slide.querySelector(".artist-circle");
-          circle.style.opacity = i === this.activeIndex ? "1" : "0";
-        });
-      },
-      sliderMove: function () {
-        // Hide all circles during drag
-        this.slides.forEach((slide) => {
-          slide.querySelector(".artist-circle").style.opacity = "0";
-        });
-      },
-      touchEnd: function () {
-        updateContent(this.realIndex);
-      },
-      slideChangeTransitionEnd: function () {
-        if (!this.isDragging) {
-          updateContent(this.realIndex);
-        }
-      },
-    },
-  });
+  // Add pagination to DOM
+  infoBox.parentNode.insertBefore(pagination, infoBox.nextSibling);
 
-  function updateContent(currentIndex) {
-    // Hide all circles first
-    swiper.slides.forEach((slide) => {
-      slide.querySelector(".artist-circle").style.opacity = "0";
-    });
+  // Initialize first artist
+  if (artists.length > 0) {
+    updateArtist(0);
+    // Force show first circle with animation
+    const firstCircle = wrapper.querySelector(".artist-circle");
+    firstCircle.style.opacity = "1";
+    firstCircle.style.transform = "scale(0.85)";
+  }
 
-    // Text fade out
+  function dragStart(e) {
+    if (artists.length <= 1) return;
+
+    isDragging = true;
+    startPos = e.type.includes("mouse") ? e.clientX : e.touches[0].clientX;
+    wrapper.style.cursor = "grabbing";
+  }
+
+  function drag(e) {
+    if (!isDragging) return;
+    e.preventDefault();
+
+    const currentPosition = e.type.includes("mouse")
+      ? e.clientX
+      : e.touches[0].clientX;
+    const diff = currentPosition - startPos;
+  }
+
+  function dragEnd(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    wrapper.style.cursor = "grab";
+
+    const movedBy =
+      (e.type.includes("mouse") ? e.clientX : e.changedTouches[0].clientX) -
+      startPos;
+
+    if (movedBy < -50 && currentIndex < artists.length - 1) {
+      goToSlide(currentIndex + 1);
+    } else if (movedBy > 50 && currentIndex > 0) {
+      goToSlide(currentIndex - 1);
+    }
+  }
+
+  function goToSlide(index) {
+    if (index < 0 || index >= artists.length || index === currentIndex) return;
+
+    const slides = wrapper.querySelectorAll(".swiper-slide");
+    const circles = wrapper.querySelectorAll(".artist-circle");
+    const dots = pagination.querySelectorAll(".pagination-dot");
+
+    // Animate out current circle
+    circles[currentIndex].style.opacity = "0";
+    circles[currentIndex].style.transform = "scale(0.75)";
+
+    setTimeout(() => {
+      // Hide current slide
+      slides[currentIndex].style.display = "none";
+      slides[currentIndex].style.visibility = "hidden";
+      dots[currentIndex].classList.remove("active");
+
+      // Show new slide
+      slides[index].style.display = "flex";
+      slides[index].style.visibility = "visible";
+      dots[index].classList.add("active");
+
+      // Animate in new circle
+      circles[index].style.opacity = "1";
+      circles[index].style.transform = "scale(0.85)";
+
+      updateArtist(index);
+      currentIndex = index;
+    }, 300); // Match animation duration
+  }
+
+  function updateArtist(index) {
+    // Start fade out
     nameBox.classList.add("fade-out");
     descBox.classList.add("fade-out");
 
     setTimeout(() => {
-      // Update text
-      nameBox.innerHTML = artistList[currentIndex].name;
-      descBox.innerHTML = artistList[currentIndex].description;
+      // Update content
+      nameBox.innerHTML = artists[index].name;
+      descBox.innerHTML = artists[index].description;
 
-      // Text fade in
+      // Start fade in
       nameBox.classList.remove("fade-out");
       descBox.classList.remove("fade-out");
       nameBox.classList.add("fade-in");
       descBox.classList.add("fade-in");
 
-      // Show only current circle with animation
-      const activeCircle =
-        swiper.slides[swiper.activeIndex].querySelector(".artist-circle");
-      activeCircle.style.opacity = "1";
-      activeCircle.classList.add("circle-fade-in");
-
-      // Remove animation class after it completes
+      // Remove fade-in class after animation
       setTimeout(() => {
-        activeCircle.classList.remove("circle-fade-in");
-      }, 600);
-    }, 150);
+        nameBox.classList.remove("fade-in");
+        descBox.classList.remove("fade-in");
+      }, 400);
+    }, 250);
   }
-
-  // Initialize first slide
-  updateContent(0);
 });

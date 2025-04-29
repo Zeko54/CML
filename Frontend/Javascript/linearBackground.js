@@ -1,13 +1,12 @@
 const container = document.querySelector(".circle-container");
 
 const circles = [
-  { top: "5%", left: "80%", size: "40vmin" },
-  { top: "20%", left: "20%", size: "30vmin" },
-  { top: "40%", left: "60%", size: "50vmin" },
-  { top: "60%", left: "25%", size: "35vmin" },
-  { top: "80%", left: "65%", size: "45vmin" },
-  { top: "35%", left: "45%", size: "30vmin" },
-  { top: "15%", left: "50%", size: "25vmin" },
+  { top: "0%", left: "85%", size: "60vmin" },
+  { top: "60%", right: "80%", size: "60vmin" },
+  { top: "8%", right: "80%", size: "40vmin" },
+  { top: "30%", left: "55%", size: "40vmin" },
+  { top: "80%", left: "70%", size: "30vmin" },
+  { top: "60%", right: "60%", size: "30vmin" },
 ];
 
 circles.forEach((data) => {
@@ -18,6 +17,7 @@ circles.forEach((data) => {
   circle.style.height = data.size;
   circle.style.top = data.top;
   circle.style.left = data.left;
+  circle.style.right = data.right;
 
   container.appendChild(circle);
 });
