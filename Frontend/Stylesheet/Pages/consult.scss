@@ -32,6 +32,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
 
         .image{
             background-color: $header-footer-color;
@@ -64,6 +65,7 @@ main {
       margin-top: 40px;
       display: grid;
       grid-template-columns: repeat(3, minmax(100px, 1fr));
+      gap: 120px;
 
       .each-product{
         color: white;
@@ -71,9 +73,9 @@ main {
         flex-direction: column;
         align-items: center;
         background-color: rgba(255, 255, 255, 0.2);
-        margin: 40px 60px;
         padding: 20px;
         border-radius: 50px;
+        width: 100%;
 
 
         .image{
