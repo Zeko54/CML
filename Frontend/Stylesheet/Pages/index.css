@@ -274,9 +274,9 @@ footer .copyright {
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
   padding: 40px;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(248, 73, 67, 0.36);
   border-radius: 24px;
+  color: #fff;
   gap: 40px;
 }
 .selling-card .sell-cards .sell-image, main .products-section .product-container .sell-cards .sell-image, main .products-section .product-container .product-card .sell-image, main .products-section .product-container .product-card .image {
@@ -410,14 +410,13 @@ main .aboutus-section .aboutus-container .image {
 }
 main .aboutus-section .aboutus-container .desc {
   padding: 40px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(248, 73, 67, 0.6);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   font-size: clamp(1rem, 3vw, 1.5rem);
   border-radius: 0 81px 81px 0;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #000;
+  color: #fff;
   font-weight: 500;
 }
 main .businesses-section {
@@ -541,14 +540,14 @@ main .performers-section .swiper-slide {
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.2);
+  background: rgba(248, 73, 67, 0.36);
   border-radius: 24px;
-  padding: 40px;
+  padding: 30px;
   height: 600px;
   z-index: 1;
 }
 main .performers-section .swiper-slide .performers-name {
-  height: 180px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -557,6 +556,7 @@ main .performers-section .swiper-slide .performers-name h1 {
   font-size: clamp(1.75rem, 4.5vw, 2.5rem);
   text-align: center;
   font-weight: 500;
+  color: #fff;
 }
 main .performers-section .swiper-slide .image {
   padding: 40px;
@@ -568,7 +568,7 @@ main .performers-section .swiper-scrollbar {
   border-radius: 10px;
   height: 20px;
   padding: 5px;
-  background-color: 255, 255, 255, 0.2;
+  background-color: 255, 255, 255, 0;
   overflow: hidden;
   width: 15%;
   left: 42%;

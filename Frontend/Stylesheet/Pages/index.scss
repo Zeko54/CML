@@ -25,13 +25,13 @@ main {
 
       .desc {
         padding: 40px;
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(248, 73, 67, 0.6);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         font-size: $paragraph-fontsize;
         border-radius: 0 81px 81px 0;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        color: nth($text-colors, 2);
+        // border: 1px solid rgba(255, 255, 255, 0.3);
+        color: nth($text-colors, 1);
         font-weight: 500;
       }
 
