@@ -275,9 +275,9 @@ main .performers-section .artist-wrapper .artist-info-box .button-group .quote-b
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
   padding: 40px;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(248, 73, 67, 0.36);
   border-radius: 24px;
+  color: #fff;
   gap: 40px;
 }
 .selling-card .sell-cards .sell-image {
