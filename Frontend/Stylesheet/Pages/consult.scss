@@ -207,8 +207,9 @@ main {
         }
 
         .name{
-            grid-area: names;
-            text-align: center;
+          font-size: $paragraph-fontsize;
+          grid-area: names;
+          text-align: center;
         }
 
         .quotation{

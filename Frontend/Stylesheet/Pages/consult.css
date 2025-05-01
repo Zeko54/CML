@@ -625,6 +625,7 @@ main .testimonial-section .testimonial-container .testimonial-box .text {
   grid-area: texts;
 }
 main .testimonial-section .testimonial-container .testimonial-box .name {
+  font-size: clamp(1rem, 3vw, 1.5rem);
   grid-area: names;
   text-align: center;
 }
