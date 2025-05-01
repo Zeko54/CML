@@ -1,0 +1,104 @@
+@import "../global";
+
+body {
+    background-color: $home-aboutus-primary-color;
+}
+
+main {
+    .intro-section {
+        @include hero-section();
+    }
+
+    .story-section {
+        margin: $desktop-spacing;
+        @include heading();
+        @include heading-underline();
+
+        .top-container {
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(100px, 1fr));
+            gap: 40px;
+            grid-template-rows: 400px;
+            color: white;
+            
+            .image {
+                    background-color: $header-footer-color;
+                    width: 100%;
+                    border-radius: 25px;
+            }
+
+            .desc{
+                h1{
+                    font-size: $sub-heading-fontsize
+                }
+
+                p{
+                    font-size: $paragraph-fontsize;
+                }
+            }
+        }
+
+        .bottom-container {
+            margin-top: 120px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(100px, 1fr));
+            gap: 40px;
+            color: white;
+            
+
+            .box{
+                h1{
+                    font-size: $sub-heading-fontsize;
+                    text-align: center;
+                }
+
+                p{
+                    font-size: $paragraph-fontsize;
+                    text-align: center;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .team-section {
+        margin: $desktop-spacing;
+        @include heading();
+        @include heading-underline();
+        margin-bottom: 40px;
+
+        .swiper {
+            margin-top: 40px;
+            width: 80%;
+          }
+      
+          .swiper-slide {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .members{
+                width: 40%;
+                background-color: $header-footer-color; 
+                height: 500px;
+            }
+          }
+      
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+      
+          .swiper {
+            margin-left: auto;
+            margin-right: auto;
+          }
+    
+    }
+
+    
+}
