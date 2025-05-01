@@ -467,14 +467,14 @@ main .product-section .product-container {
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
-  gap: 120px;
+  gap: 80px;
 }
 main .product-section .product-container .each-product {
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(252, 146, 224, 0.6);
   padding: 20px;
   border-radius: 50px;
   width: 100%;
@@ -487,7 +487,154 @@ main .product-section .product-container .each-product .image {
 }
 main .product-section .product-container .each-product .text {
   margin-top: 40px;
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
   width: 100%;
   aspect-ratio: 1/0.4;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+}
+main .example-section {
+  margin: 120px 80px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+main .example-section .heading {
+  display: flex;
+}
+main .example-section .with-bg {
+  background-color: #fff;
+  mix-blend-mode: screen;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+main .example-section .without-bg {
+  color: #fff;
+  padding: 0px 10px;
+}
+main .example-section .heading {
+  justify-content: center;
+}
+main .example-section hr {
+  width: 50%;
+  height: 3px;
+  background-color: white;
+  border: none;
+  padding: 0px 20px;
+  margin-top: 30px;
+  margin-left: -2px;
+}
+main .example-section hr {
+  margin: 0 auto;
+  margin-top: 30px;
+}
+main .example-section .example-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 400px 200px;
+  grid-template-areas: "images side" "desc desc";
+  gap: 40px;
+}
+main .example-section .example-container .images, main .example-section .example-container .side, main .example-section .example-container .desc {
+  background-color: #e4e4e4;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .example-section .example-container .images p, main .example-section .example-container .side p, main .example-section .example-container .desc p {
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+}
+main .example-section .example-container .images {
+  grid-area: images;
+}
+main .example-section .example-container .side {
+  grid-area: side;
+}
+main .example-section .example-container .desc {
+  grid-area: desc;
+  font-weight: 700;
+  background-color: rgba(252, 146, 224, 0.6);
+}
+main .testimonial-section {
+  margin: 120px 80px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+main .testimonial-section .heading {
+  display: flex;
+}
+main .testimonial-section .with-bg {
+  background-color: #fff;
+  mix-blend-mode: screen;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+main .testimonial-section .without-bg {
+  color: #fff;
+  padding: 0px 10px;
+}
+main .testimonial-section .heading {
+  justify-content: center;
+}
+main .testimonial-section hr {
+  width: 50%;
+  height: 3px;
+  background-color: white;
+  border: none;
+  padding: 0px 20px;
+  margin-top: 30px;
+  margin-left: -2px;
+}
+main .testimonial-section hr {
+  margin: 0 auto;
+  margin-top: 30px;
+}
+main .testimonial-section .testimonial-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 40px;
+}
+main .testimonial-section .testimonial-container .testimonial-box {
+  color: black;
+  align-items: center;
+  background-color: rgba(252, 146, 224, 0.6);
+  padding: 20px;
+  border-radius: 50px;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "quotation" "texts" "images" "names";
+}
+main .testimonial-section .testimonial-container .testimonial-box .image {
+  background-color: #e4e4e4;
+  width: 30%;
+  border-radius: 50%;
+  grid-area: images;
+  background-color: #e4e4e4;
+  aspect-ratio: 1/1;
+  justify-self: center;
+  margin: 30px 0px;
+}
+main .testimonial-section .testimonial-container .testimonial-box .text {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 700;
+  width: 100%;
+  color: black;
+  text-align: center;
+  grid-area: texts;
+}
+main .testimonial-section .testimonial-container .testimonial-box .name {
+  grid-area: names;
+  text-align: center;
+}
+main .testimonial-section .testimonial-container .testimonial-box .quotation {
+  width: 100%;
+  grid-area: quotation;
+  display: flex;
+  justify-content: center;
+}
+main .testimonial-section .testimonial-container .testimonial-box .quotation img {
+  max-width: 30%;
+  aspect-ratio: 1/1;
 }/*# sourceMappingURL=consult.css.map */
