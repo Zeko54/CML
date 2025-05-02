@@ -13,13 +13,13 @@ main {
     margin: $desktop-spacing;
     @include heading();
     .heading {
-        justify-content: center;
-      }
+      justify-content: center;
+    }
     @include heading-underline();
     hr {
-        margin: 0 auto;
-        margin-top: 30px;
-      }
+      margin: 0 auto;
+      margin-top: 30px;
+    }
 
     .service-container {
       margin-top: 80px;
@@ -27,23 +27,23 @@ main {
       grid-template-columns: repeat(3, minmax(100px, 1fr));
       gap: 80px 0px;
 
-      .each-service{
+      .each-service {
         color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
 
-        .image{
-            background-color: $header-footer-color;
-            height: 200px;
-            aspect-ratio: 1/1;
-            border-radius: 50%;
+        .image {
+          background-color: $header-footer-color;
+          height: 200px;
+          aspect-ratio: 1/1;
+          border-radius: 50%;
         }
 
-        .text{
-            margin-top: 40px;
-            font-size: $paragraph-fontsize
+        .text {
+          margin-top: 40px;
+          font-size: $paragraph-fontsize;
         }
       }
     }
@@ -53,13 +53,13 @@ main {
     margin: $desktop-spacing;
     @include heading();
     .heading {
-        justify-content: center;
-      }
+      justify-content: center;
+    }
     @include heading-underline();
     hr {
-        margin: 0 auto;
-        margin-top: 30px;
-      }
+      margin: 0 auto;
+      margin-top: 30px;
+    }
 
     .product-container {
       margin-top: 40px;
@@ -67,33 +67,32 @@ main {
       grid-template-columns: repeat(3, minmax(100px, 1fr));
       gap: 80px;
 
-      .each-product{
+      .each-product {
         color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: rgb(252, 146, 224,0.6);
+        background-color: rgb(252, 146, 224, 0.6);
         padding: 20px;
         border-radius: 50px;
         width: 100%;
 
-
-        .image{
-            background-color: $header-footer-color;;
-            width: 100%;
-            aspect-ratio: 1/1;
-            border-radius: 50px;
+        .image {
+          background-color: $header-footer-color;
+          width: 100%;
+          aspect-ratio: 1/1;
+          border-radius: 50px;
         }
 
-        .text{
-            margin-top: 40px;
-            font-size: $heading-fontsize;
-            font-weight: 700;
-            width: 100%;
-            aspect-ratio: 1/0.4;
-            color: black;
-            text-align: center;
-            text-transform: uppercase;
+        .text {
+          margin-top: 40px;
+          font-size: $heading-fontsize;
+          font-weight: 700;
+          width: 100%;
+          aspect-ratio: 1/0.4;
+          color: black;
+          text-align: center;
+          text-transform: uppercase;
         }
       }
     }
@@ -103,65 +102,66 @@ main {
     margin: $desktop-spacing;
     @include heading();
     .heading {
-        justify-content: center;
-      }
+      justify-content: center;
+    }
     @include heading-underline();
     hr {
-        margin: 0 auto;
-        margin-top: 30px;
-      }
+      margin: 0 auto;
+      margin-top: 30px;
+    }
 
     .example-container {
       margin-top: 40px;
       display: grid;
       grid-template-columns: 75% 25%;
       grid-template-rows: 400px 200px;
-      grid-template-areas: 
-      'images side'
-      'desc desc'
-      ;
+      grid-template-areas:
+        "images side"
+        "desc desc";
       gap: 40px;
 
-      .images, .side, .desc{
+      .images,
+      .side,
+      .desc {
         background-color: $header-footer-color;
         border-radius: 25px;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        p{
+        p {
           font-size: $sub-heading-fontsize;
         }
-        }
+      }
 
-        .images{
-            grid-area: images;
-        }
+      .images {
+        grid-area: images;
+      }
 
-        .side{
-            grid-area: side;
-        }
+      .side {
+        grid-area: side;
+      }
 
-        .desc{
-            grid-area: desc;
-            font-weight: 700;
-            background-color: rgb(252, 146, 224,0.6);
-        }
+      .desc {
+        grid-area: desc;
+        font-weight: 700;
+        background-color: rgb(252, 146, 224, 0.6);
+      }
     }
   }
-  
+
   .testimonial-section {
     margin: $desktop-spacing;
     @include heading();
     .heading {
-        justify-content: center;
-      }
+      justify-content: center;
+    }
 
     @include heading-underline();
     hr {
-        margin: 0 auto;
-        margin-top: 30px;
-      }
+      margin: 0 auto;
+      margin-top: 30px;
+    }
 
     .testimonial-container {
       margin-top: 40px;
@@ -169,63 +169,58 @@ main {
       grid-template-columns: repeat(3, minmax(100px, 1fr));
       gap: 40px;
 
-
-      .testimonial-box{
+      .testimonial-box {
         color: black;
         align-items: center;
-        background-color: rgb(252, 146, 224,0.6);
+        background-color: rgb(252, 146, 224, 0.6);
         padding: 20px;
         border-radius: 50px;
         width: 100%;
         display: grid;
-        grid-template-areas: 
-        'quotation'
-        'texts'
-        'images'
-        'names';
+        grid-template-areas:
+          "quotation"
+          "texts"
+          "images"
+          "names";
 
-
-
-        .image{
-            background-color: $header-footer-color;;
-            width: 30%;
-            border-radius: 50%;
-            grid-area: images;
-            background-color: $header-footer-color;
-            aspect-ratio: 1/1;
-            justify-self: center;
-            margin: 30px 0px;
+        .image {
+          background-color: $header-footer-color;
+          width: 30%;
+          border-radius: 50%;
+          grid-area: images;
+          background-color: $header-footer-color;
+          aspect-ratio: 1/1;
+          justify-self: center;
+          margin: 30px 0px;
         }
 
-        .text{
-            font-size: $paragraph-fontsize;
-            font-weight: 700;
-            width: 100%;
-            color: black;
-            text-align: center;
-            grid-area: texts;
+        .text {
+          font-size: $paragraph-fontsize;
+          font-weight: 700;
+          width: 100%;
+          color: black;
+          text-align: center;
+          grid-area: texts;
         }
 
-        .name{
+        .name {
           font-size: $paragraph-fontsize;
           grid-area: names;
           text-align: center;
         }
 
-        .quotation{
-            width: 100%;
-            grid-area: quotation;
-            display: flex;
-            justify-content: center;
+        .quotation {
+          width: 100%;
+          grid-area: quotation;
+          display: flex;
+          justify-content: center;
 
-            img{
-              max-width: 30%;
-              aspect-ratio: 1/1;
-            }
+          img {
+            max-width: 30%;
+            aspect-ratio: 1/1;
+          }
         }
-
       }
     }
   }
-
 }

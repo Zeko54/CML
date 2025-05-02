@@ -14,14 +14,6 @@
   animation-delay: 1s;
 }
 
-.fade-in {
-  animation: fadeIn 0.4s ease-in forwards;
-}
-
-.fade-out {
-  animation: fadeOut 0.25s ease-out forwards;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -42,6 +34,14 @@
     transform: translateY(-10px);
   }
 }
+.fade-in {
+  animation: fadeIn 0.4s ease-in forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.25s ease-out forwards;
+}
+
 @keyframes circleFadeIn {
   from {
     opacity: 0;
@@ -536,14 +536,18 @@ main .example-section .example-container {
   grid-template-areas: "images side" "desc desc";
   gap: 40px;
 }
-main .example-section .example-container .images, main .example-section .example-container .side, main .example-section .example-container .desc {
+main .example-section .example-container .images,
+main .example-section .example-container .side,
+main .example-section .example-container .desc {
   background-color: #e4e4e4;
   border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main .example-section .example-container .images p, main .example-section .example-container .side p, main .example-section .example-container .desc p {
+main .example-section .example-container .images p,
+main .example-section .example-container .side p,
+main .example-section .example-container .desc p {
   font-size: clamp(1.75rem, 4.5vw, 2.5rem);
 }
 main .example-section .example-container .images {

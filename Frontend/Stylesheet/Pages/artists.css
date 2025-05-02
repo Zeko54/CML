@@ -14,14 +14,6 @@
   animation-delay: 1s;
 }
 
-.fade-in {
-  animation: fadeIn 0.4s ease-in forwards;
-}
-
-.fade-out {
-  animation: fadeOut 0.25s ease-out forwards;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -42,6 +34,14 @@
     transform: translateY(-10px);
   }
 }
+.fade-in {
+  animation: fadeIn 0.4s ease-in forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.25s ease-out forwards;
+}
+
 @keyframes circleFadeIn {
   from {
     opacity: 0;
@@ -411,53 +411,57 @@ main .performers-section .artist-wrapper {
   color: #fff;
 }
 main .performers-section .artist-wrapper .artist-name {
-  font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
 }
 main .performers-section .artist-wrapper .artistSwiper {
-  width: 400px;
-  height: 400px;
+  position: relative;
+  width: 320px;
+  height: 320px;
 }
 main .performers-section .artist-wrapper .artistSwiper .swiper-wrapper {
-  display: flex;
-  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 main .performers-section .artist-wrapper .artistSwiper .swiper-wrapper .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-}
-main .performers-section .artist-wrapper .artistSwiper .swiper-wrapper .swiper-slide.swiper-slide-active {
-  visibility: visible;
-  pointer-events: all;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 main .performers-section .artist-wrapper .artistSwiper .swiper-wrapper .swiper-slide .artist-circle {
-  width: 400px;
-  height: 400px;
+  width: 325px;
+  height: 325px;
   border-radius: 50%;
   background-color: #ccc;
-  border: 3px solid white;
+  background-size: cover;
+  background-position: center;
+  margin-left: 10px;
 }
-main .performers-section .artist-wrapper .custom-pagination {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin: 20px 0;
-}
-main .performers-section .artist-wrapper .custom-pagination .pagination-dot {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
+main .performers-section .artist-wrapper .artistSwiper .arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  border: none;
+  font-size: 2rem;
+  background-color: #fff;
+  mix-blend-mode: screen;
   cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
 }
-main .performers-section .artist-wrapper .custom-pagination .pagination-dot.active {
-  background: white;
+main .performers-section .artist-wrapper .artistSwiper .arrow-button:hover {
+  opacity: 0.7;
+}
+main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-left {
+  left: -21rem;
+}
+main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-right {
+  right: -21rem;
 }
 main .performers-section .artist-wrapper .artist-info-box {
   width: 80%;
   max-width: 1000px;
-  padding: 3rem;
+  padding: 1.5rem;
   background-color: rgba(255, 255, 255, 0.31);
   border-radius: 1.5rem;
   text-align: justify;
@@ -479,6 +483,10 @@ main .performers-section .artist-wrapper .artist-info-box .button-group {
 main .performers-section .artist-wrapper .artist-info-box .button-group .learn-more-btn,
 main .performers-section .artist-wrapper .artist-info-box .button-group .quote-btn {
   color: #8e3d8e;
+}
+main .performers-section .artist-wrapper .artist-info-box .button-group .learn-more-btn:hover,
+main .performers-section .artist-wrapper .artist-info-box .button-group .quote-btn:hover {
+  opacity: 0.7;
 }
 
 .performers-section.bandperformer .heading,

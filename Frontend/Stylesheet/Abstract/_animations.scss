@@ -17,13 +17,6 @@
 
 //text fade animation//
 
-.fade-in {
-  animation: fadeIn 0.4s ease-in forwards;
-}
-.fade-out {
-  animation: fadeOut 0.25s ease-out forwards;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -45,6 +38,14 @@
     transform: translateY(-10px);
   }
 }
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in forwards;
+}
+.fade-out {
+  animation: fadeOut 0.25s ease-out forwards;
+}
+
 //end//
 
 //circle fade animation//
@@ -62,4 +63,5 @@
 .circle-fade-in {
   animation: circleFadeIn 0.6s ease-in forwards;
 }
+
 //end//
