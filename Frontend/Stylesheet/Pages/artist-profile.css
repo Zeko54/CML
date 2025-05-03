@@ -190,8 +190,7 @@ footer .copyright {
   cursor: pointer;
 }
 
-.white-button, main .performers-section .artist-wrapper .artist-info-box .button-group .learn-more-btn,
-main .performers-section .artist-wrapper .artist-info-box .button-group .quote-btn, .selling-card .sell-cards .sell-desc .desc-bottom button, .border-card .each-card .each-img .each-button button {
+.white-button, .selling-card .sell-cards .sell-desc .desc-bottom button, .border-card .each-card .each-img .each-button button {
   background-color: #fff;
   color: #ff4545;
   width: 100%;
@@ -375,24 +374,34 @@ main .intro-section .text-container {
   justify-content: space-between;
   width: 60%;
 }
-main .performers-section {
+main .intro-section h1 {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+main .intro-section span {
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 3.5rem;
+}
+main .members-section {
   margin: 120px 80px;
   font-size: clamp(1.5rem, 4vw, 2rem);
 }
-main .performers-section .heading {
+main .members-section .heading {
   display: flex;
 }
-main .performers-section .with-bg {
+main .members-section .with-bg {
   background-color: #fff;
   mix-blend-mode: screen;
   border-radius: 10px;
   padding: 0px 10px;
 }
-main .performers-section .without-bg {
+main .members-section .without-bg {
   color: #fff;
   padding: 0px 10px;
 }
-main .performers-section hr {
+main .members-section hr {
   width: 50%;
   height: 3px;
   background-color: white;
@@ -401,99 +410,210 @@ main .performers-section hr {
   margin-top: 30px;
   margin-left: -2px;
 }
-main .performers-section .artist-wrapper {
-  margin-top: 50px;
-  text-align: center;
+main .members-section .heading {
+  justify-content: center;
+}
+main .members-section hr {
+  margin: 30px auto;
+  width: 90%;
+  max-width: 1440px;
+}
+main .members-section .member-box {
+  display: flex;
+  color: #fff;
+  margin: 80px auto;
+  background-color: rgba(255, 255, 255, 0.31);
+  border-radius: 60px;
+}
+main .members-section .member-box .member-info {
+  width: 50%;
+  padding: 25px 60px 40px 60px;
+  text-align: justify;
+}
+main .members-section .member-box .member-info h1 {
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  padding-bottom: 20px;
+}
+main .members-section .member-box .member-info p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+main .members-section .member-box .member-pic {
+  width: 50%;
+  background-color: aliceblue;
+  border-radius: 0px 60px 60px 0px;
+}
+main .artist-gallery {
+  margin: 120px 80px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+main .artist-gallery .heading {
+  display: flex;
+}
+main .artist-gallery .with-bg {
+  background-color: #fff;
+  mix-blend-mode: screen;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+main .artist-gallery .without-bg {
+  color: #fff;
+  padding: 0px 10px;
+}
+main .artist-gallery hr {
+  width: 50%;
+  height: 3px;
+  background-color: white;
+  border: none;
+  padding: 0px 20px;
+  margin-top: 30px;
+  margin-left: -2px;
+}
+main .artist-gallery .heading {
+  justify-content: center;
+}
+main .artist-gallery hr {
+  margin: 30px auto;
+  width: 90%;
+  max-width: 1440px;
+}
+main .artist-gallery .gallery-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 65px auto;
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+main .artist-gallery .gallery-container .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+main .artist-gallery .gallery-container .swiper-wrapper .swiper-slide {
+  width: 500px;
+  height: 500px;
+  flex-shrink: 0;
+}
+main .artist-gallery .gallery-container .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+main .artist-gallery .gallery-container .swiper-scrollbar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 80%;
+  height: 8px;
+  background: #fff;
+}
+main .artist-gallery .gallery-container .swiper-scrollbar .swiper-scrollbar-drag {
+  background: black;
+  height: 100%;
+  position: relative;
+  cursor: grab;
+}
+main .artist-gallery .gallery-container .swiper-scrollbar .swiper-scrollbar-drag:active {
+  cursor: grabbing;
+}
+main .artist-videos {
+  margin: 120px 80px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+main .artist-videos .heading {
+  display: flex;
+}
+main .artist-videos .with-bg {
+  background-color: #fff;
+  mix-blend-mode: screen;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+main .artist-videos .without-bg {
+  color: #fff;
+  padding: 0px 10px;
+}
+main .artist-videos hr {
+  width: 50%;
+  height: 3px;
+  background-color: white;
+  border: none;
+  padding: 0px 20px;
+  margin-top: 30px;
+  margin-left: -2px;
+}
+main .artist-videos .heading {
+  justify-content: center;
+}
+main .artist-videos hr {
+  margin: 30px auto;
+  width: 90%;
+  max-width: 1440px;
+}
+main .artist-videos .video-container {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+}
+main .artist-videos .video-container .swiper-wrapper {
+  width: 100%;
+  padding-right: 60px;
+}
+main .artist-videos .video-container .swiper-wrapper .swiper-slide {
+  padding: 40px;
+}
+main .artist-videos .video-container .swiper-wrapper .swiper-slide:nth-child(odd) .video-box {
+  flex-direction: row;
+}
+main .artist-videos .video-container .swiper-wrapper .swiper-slide:nth-child(even) .video-box {
+  flex-direction: row-reverse;
+}
+main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-iframe {
+  width: 50%;
+  aspect-ratio: 16/9;
+  border: none;
+}
+main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-info {
+  width: 50%;
+  color: #fff;
+}
+main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-info h1 {
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  margin-bottom: 10px;
+}
+main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-info p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+main .artist-videos .video-container .video-pagination {
+  position: absolute;
+  left: 95%;
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: #fff;
+  gap: 10px;
+  width: auto;
 }
-main .performers-section .artist-wrapper .artist-name {
-  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+main .artist-videos .video-container .video-pagination .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  transition: opacity 0.3s ease;
 }
-main .performers-section .artist-wrapper .artistSwiper {
-  position: relative;
-  width: 320px;
-  height: 320px;
-}
-main .performers-section .artist-wrapper .artistSwiper .swiper-wrapper {
-  width: 100%;
-  height: 100%;
-}
-main .performers-section .artist-wrapper .artistSwiper .swiper-wrapper .swiper-slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-main .performers-section .artist-wrapper .artistSwiper .swiper-wrapper .swiper-slide .artist-circle {
-  width: 325px;
-  height: 325px;
-  border-radius: 50%;
-  background-color: #ccc;
-  background-size: cover;
-  background-position: center;
-}
-main .performers-section .artist-wrapper .artistSwiper .arrow-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  border: none;
-  font-size: 2rem;
-  background-color: #fff;
-  mix-blend-mode: screen;
-  cursor: pointer;
-  padding: 0.5rem 0.8rem;
-  border-radius: 0.5rem;
-}
-main .performers-section .artist-wrapper .artistSwiper .arrow-button:hover {
-  opacity: 0.7;
-}
-main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-left {
-  left: -21rem;
-}
-main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-right {
-  right: -21rem;
-}
-main .performers-section .artist-wrapper .artist-info-box {
-  width: 80%;
-  max-width: 1000px;
-  padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.31);
-  border-radius: 1.5rem;
-  text-align: justify;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  color: white;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-main .performers-section .artist-wrapper .artist-info-box .artist-description {
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  margin-bottom: 1.5rem;
-}
-main .performers-section .artist-wrapper .artist-info-box .button-group {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-main .performers-section .artist-wrapper .artist-info-box .button-group .learn-more-btn,
-main .performers-section .artist-wrapper .artist-info-box .button-group .quote-btn {
-  color: #8e3d8e;
-}
-main .performers-section .artist-wrapper .artist-info-box .button-group .learn-more-btn:hover,
-main .performers-section .artist-wrapper .artist-info-box .button-group .quote-btn:hover {
-  opacity: 0.7;
-}
-
-.performers-section.bandperformer .heading,
-.performers-section.djplayer .heading {
-  justify-content: flex-end;
-}
-
-.performers-section.bandperformer hr,
-.performers-section.djplayer hr {
-  margin-left: auto;
-}/*# sourceMappingURL=artists.css.map */
+main .artist-videos .video-container .video-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #000;
+  transform: scale(1.2);
+}/*# sourceMappingURL=artist-profile.css.map */
