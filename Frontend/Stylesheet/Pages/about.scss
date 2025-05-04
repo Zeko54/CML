@@ -165,5 +165,153 @@ main {
     }
   }
 
-  margin-bottom: 120px;
+  .contact-section {
+    margin: 160px 200px;
+
+    .contact-container{
+      background: rgba(255, 179, 58, 0.335);
+      padding: 80px 80px;
+      border-radius: 20px;
+
+      h1{
+        font-size: $sub-heading-fontsize;
+        color: white;
+        text-align: center;
+      }
+
+      form{
+        margin-top: 40px;
+        
+        .first-row{
+          display: grid;
+          grid-template-columns: repeat(2, minmax(100px, 1fr));
+          gap:40px;
+
+          label{
+            background-color: $header-footer-color;
+            display: flex;
+            gap: 10px;
+            padding: 10px 20px;
+            border-radius: 20px;
+
+            input{
+              width: 100%;
+              background-color: $header-footer-color;
+              border: none;
+              padding: 5px;
+              font-size: $paragraph-fontsize;
+              
+              &::placeholder{
+                color: black;
+              }
+
+              &:focus {
+                outline: none;
+            }
+              
+            }
+
+            .icon{
+              width: 45px;
+              display: flex;
+              align-items: center;
+              img{
+                max-width: 100%
+              }
+            }
+          }
+        }
+
+        .second-row {
+          margin-top: 2rem;
+          width: 100%;
+        
+          label {
+            position: relative;
+            display: block;
+            width: 100%;
+            background-color: $header-footer-color;
+            border-radius: 1.25rem;
+        
+            select {
+              width: 100%;
+              padding: 1rem 2.75rem 1rem 1rem; // space for the arrow
+              font-size: 1rem;
+              border: none;
+              border-radius: 20px;
+              background-color: $header-footer-color;
+              font-size: $paragraph-fontsize;
+        
+              appearance: none;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+
+              &:focus {
+                outline: none;
+            }
+        
+            }
+        
+            .icon {
+              position: absolute;
+              top: 50%;
+              right: 1rem;
+              transform: translateY(-50%);
+              width: 2.5rem;
+              height: 2.5rem;
+              pointer-events: none;
+        
+              img {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: contain;
+              }
+            }
+          }
+        }
+
+        .third-row{
+          margin-top: 40px;
+          label{
+            border-radius: 20px;
+            width: 100%;
+
+            textarea{
+              width: 100%;
+              border-radius: 20px;
+              background-color: $header-footer-color;
+              border: none;
+              padding: 10px 20px;
+              height: 200px;
+              font-size: $paragraph-fontsize;
+              resize: vertical; 
+              
+              &::placeholder{
+                color: black;
+              }
+            }
+          }
+        }
+
+        .buttons{
+          margin-top: 40px;
+          display: flex;
+          justify-content: space-between;
+
+          button, input[type=submit]{
+            @extend .red-button;
+          }
+
+          button{
+            background-color: black;
+          }
+
+          input[type=submit]{
+            border: none;
+          }
+        }
+      }
+    }
+  }
 }

@@ -180,7 +180,7 @@ footer .copyright {
   background-color: #fff;
 }
 
-.red-button, main .intro-section .text-container .text-bottom button, header nav button {
+.red-button, main .contact-section .contact-container form .buttons button, main .contact-section .contact-container form .buttons input[type=submit], main .intro-section .text-container .text-bottom button, header nav button {
   background-color: #ff6b6b;
   color: #fff;
   padding: 10px 20px;
@@ -356,9 +356,6 @@ body {
   background-color: #ffb33a;
 }
 
-main {
-  margin-bottom: 120px;
-}
 main .intro-section {
   width: 100%;
   height: 100vh;
@@ -566,4 +563,132 @@ main .location-section .location-container .desc h1 {
 }
 main .location-section .location-container .desc p {
   font-size: clamp(1rem, 3vw, 1.5rem);
+}
+main .contact-section {
+  margin: 160px 200px;
+}
+main .contact-section .contact-container {
+  background: rgba(255, 179, 58, 0.335);
+  padding: 80px 80px;
+  border-radius: 20px;
+}
+main .contact-section .contact-container h1 {
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  color: white;
+  text-align: center;
+}
+main .contact-section .contact-container form {
+  margin-top: 40px;
+}
+main .contact-section .contact-container form .first-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  gap: 40px;
+}
+main .contact-section .contact-container form .first-row label {
+  background-color: #e4e4e4;
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+main .contact-section .contact-container form .first-row label input {
+  width: 100%;
+  background-color: #e4e4e4;
+  border: none;
+  padding: 5px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+main .contact-section .contact-container form .first-row label input::-moz-placeholder {
+  color: black;
+}
+main .contact-section .contact-container form .first-row label input::placeholder {
+  color: black;
+}
+main .contact-section .contact-container form .first-row label input:focus {
+  outline: none;
+}
+main .contact-section .contact-container form .first-row label .icon {
+  width: 45px;
+  display: flex;
+  align-items: center;
+}
+main .contact-section .contact-container form .first-row label .icon img {
+  max-width: 100%;
+}
+main .contact-section .contact-container form .second-row {
+  margin-top: 2rem;
+  width: 100%;
+}
+main .contact-section .contact-container form .second-row label {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: #e4e4e4;
+  border-radius: 1.25rem;
+}
+main .contact-section .contact-container form .second-row label select {
+  width: 100%;
+  padding: 1rem 2.75rem 1rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #e4e4e4;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+main .contact-section .contact-container form .second-row label select:focus {
+  outline: none;
+}
+main .contact-section .contact-container form .second-row label .icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  pointer-events: none;
+}
+main .contact-section .contact-container form .second-row label .icon img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .contact-section .contact-container form .third-row {
+  margin-top: 40px;
+}
+main .contact-section .contact-container form .third-row label {
+  border-radius: 20px;
+  width: 100%;
+}
+main .contact-section .contact-container form .third-row label textarea {
+  width: 100%;
+  border-radius: 20px;
+  background-color: #e4e4e4;
+  border: none;
+  padding: 10px 20px;
+  height: 200px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  resize: vertical;
+}
+main .contact-section .contact-container form .third-row label textarea::-moz-placeholder {
+  color: black;
+}
+main .contact-section .contact-container form .third-row label textarea::placeholder {
+  color: black;
+}
+main .contact-section .contact-container form .buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+main .contact-section .contact-container form .buttons button {
+  background-color: black;
+}
+main .contact-section .contact-container form .buttons input[type=submit] {
+  border: none;
 }/*# sourceMappingURL=about.css.map */
