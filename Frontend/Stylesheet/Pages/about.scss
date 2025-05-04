@@ -294,6 +294,10 @@ main {
               &::placeholder{
                 color: black;
               }
+
+              &:focus {
+                outline: none;
+            }
             }
           }
         }

@@ -685,6 +685,9 @@ main .contact-section .contact-container form .third-row label textarea::-moz-pl
 main .contact-section .contact-container form .third-row label textarea::placeholder {
   color: black;
 }
+main .contact-section .contact-container form .third-row label textarea:focus {
+  outline: none;
+}
 main .contact-section .contact-container form .buttons {
   margin-top: 40px;
   display: flex;
