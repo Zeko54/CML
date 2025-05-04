@@ -352,6 +352,10 @@ footer .copyright {
   background: linear-gradient(135deg, #ff4545, #e4866d);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #ffb33a;
 }

@@ -1,5 +1,9 @@
 @import "../global";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $home-aboutus-primary-color;
 }
