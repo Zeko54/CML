@@ -133,4 +133,38 @@ main {
       background-color: white;
     }
   }
+
+  .location-section{
+    margin: $desktop-spacing;
+    @include heading();
+    @include heading-underline();
+    margin-bottom: 40px;
+
+    .location-container {
+      margin-top: 80px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+      gap: 40px;
+      grid-template-rows: 400px;
+      color: white;
+
+      .image {
+        background-color: $header-footer-color;
+        width: 100%;
+        border-radius: 25px;
+      }
+
+      .desc {
+        h1 {
+          font-size: $sub-heading-fontsize;
+        }
+
+        p {
+          font-size: $paragraph-fontsize;
+        }
+      }
+    }
+  }
+
+  margin-bottom: 120px;
 }

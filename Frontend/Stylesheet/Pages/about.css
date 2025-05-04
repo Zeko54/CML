@@ -356,6 +356,9 @@ body {
   background-color: #ffb33a;
 }
 
+main {
+  margin-bottom: 120px;
+}
 main .intro-section {
   width: 100%;
   height: 100vh;
@@ -517,4 +520,50 @@ main .team-section .arrow-right {
 }
 main .team-section .swiper-pagination-bullet-active {
   background-color: white;
+}
+main .location-section {
+  margin: 120px 80px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 40px;
+}
+main .location-section .heading {
+  display: flex;
+}
+main .location-section .with-bg {
+  background-color: #fff;
+  mix-blend-mode: screen;
+  border-radius: 10px;
+  padding: 0px 10px;
+}
+main .location-section .without-bg {
+  color: #fff;
+  padding: 0px 10px;
+}
+main .location-section hr {
+  width: 50%;
+  height: 3px;
+  background-color: white;
+  border: none;
+  padding: 0px 20px;
+  margin-top: 30px;
+  margin-left: -2px;
+}
+main .location-section .location-container {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  gap: 40px;
+  grid-template-rows: 400px;
+  color: white;
+}
+main .location-section .location-container .image {
+  background-color: #e4e4e4;
+  width: 100%;
+  border-radius: 25px;
+}
+main .location-section .location-container .desc h1 {
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+}
+main .location-section .location-container .desc p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }/*# sourceMappingURL=about.css.map */
