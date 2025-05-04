@@ -80,46 +80,36 @@ main {
       width: 100%;
       max-width: 1440px;
       margin: 65px auto;
-      padding-bottom: 30px;
-      overflow: hidden;
+      padding-bottom: 60px;
 
       .swiper-wrapper {
-        display: flex;
-        align-items: center;
-        height: auto;
-
         .swiper-slide {
           width: 500px;
-          height: 500px;
-          flex-shrink: 0;
+          height: 600px;
 
           img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
+            border-radius: 15px;
           }
         }
       }
 
       .swiper-scrollbar {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 0;
-        width: 80%;
-        height: 8px;
+        border-radius: 10px;
+        height: 20px;
+        padding: 5px;
+        width: 10%;
+        margin: 0 auto;
+        position: relative;
+        top: 30px;
         background: nth($text-colors, 1);
 
         .swiper-scrollbar-drag {
           background: black;
-          height: 100%;
-          position: relative;
-          cursor: grab;
-
-          &:active {
-            cursor: grabbing;
-          }
+          width: 40px !important;
         }
       }
     }
@@ -141,50 +131,47 @@ main {
     }
 
     .video-container {
-      position: relative;
       max-width: 1440px;
-      margin: 0 auto;
-      display: flex;
+      margin: 65px auto;
+      padding-bottom: 60px;
 
       .swiper-wrapper {
-        width: 100%;
-        padding-right: 60px;
-
         .swiper-slide {
-          padding: 40px;
-
-          // Odd slides (video left, info right)
           &:nth-child(odd) .video-box {
             flex-direction: row;
           }
 
-          // Even slides (video right, info left)
           &:nth-child(even) .video-box {
             flex-direction: row-reverse;
           }
 
           .video-box {
             display: flex;
-            gap: 40px;
-            align-items: center;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.31);
+            border-radius: 30px;
 
             .video-iframe {
               width: 50%;
+              border-radius: 25px;
               aspect-ratio: 16/9;
               border: none;
             }
 
             .video-info {
+              padding: 40px 80px 0px 40px;
               width: 50%;
               color: nth($text-colors, 1);
 
               h1 {
                 font-size: $sub-heading-fontsize;
-                margin-bottom: 10px;
+                margin-bottom: 50px;
               }
 
               p {
                 font-size: $paragraph-fontsize;
+                text-align: justify;
+                font-weight: 300;
               }
             }
           }
@@ -192,29 +179,15 @@ main {
       }
 
       .video-pagination {
-        position: absolute;
-        left: 95%;
-        top: 60%;
-        transform: translateY(-50%);
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        width: auto;
-
         .swiper-pagination-bullet {
           background: nth($text-colors, 1);
           opacity: 0.5;
           width: 12px;
           height: 12px;
-          margin: 0;
-          transition: opacity 0.3s ease;
 
           &-active {
             opacity: 1;
             background: nth($text-colors, 2);
-            transform: scale(1.2);
           }
         }
       }

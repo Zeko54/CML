@@ -480,18 +480,11 @@ main .artist-gallery .gallery-container {
   width: 100%;
   max-width: 1440px;
   margin: 65px auto;
-  padding-bottom: 30px;
-  overflow: hidden;
-}
-main .artist-gallery .gallery-container .swiper-wrapper {
-  display: flex;
-  align-items: center;
-  height: auto;
+  padding-bottom: 60px;
 }
 main .artist-gallery .gallery-container .swiper-wrapper .swiper-slide {
   width: 500px;
-  height: 500px;
-  flex-shrink: 0;
+  height: 600px;
 }
 main .artist-gallery .gallery-container .swiper-wrapper .swiper-slide img {
   width: 100%;
@@ -499,24 +492,21 @@ main .artist-gallery .gallery-container .swiper-wrapper .swiper-slide img {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+  border-radius: 15px;
 }
 main .artist-gallery .gallery-container .swiper-scrollbar {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  width: 80%;
-  height: 8px;
+  border-radius: 10px;
+  height: 20px;
+  padding: 5px;
+  width: 10%;
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
   background: #fff;
 }
 main .artist-gallery .gallery-container .swiper-scrollbar .swiper-scrollbar-drag {
   background: black;
-  height: 100%;
-  position: relative;
-  cursor: grab;
-}
-main .artist-gallery .gallery-container .swiper-scrollbar .swiper-scrollbar-drag:active {
-  cursor: grabbing;
+  width: 40px !important;
 }
 main .artist-videos {
   margin: 120px 80px;
@@ -553,17 +543,9 @@ main .artist-videos hr {
   max-width: 1440px;
 }
 main .artist-videos .video-container {
-  position: relative;
   max-width: 1440px;
-  margin: 0 auto;
-  display: flex;
-}
-main .artist-videos .video-container .swiper-wrapper {
-  width: 100%;
-  padding-right: 60px;
-}
-main .artist-videos .video-container .swiper-wrapper .swiper-slide {
-  padding: 40px;
+  margin: 65px auto;
+  padding-bottom: 60px;
 }
 main .artist-videos .video-container .swiper-wrapper .swiper-slide:nth-child(odd) .video-box {
   flex-direction: row;
@@ -573,47 +555,37 @@ main .artist-videos .video-container .swiper-wrapper .swiper-slide:nth-child(eve
 }
 main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box {
   display: flex;
-  gap: 40px;
-  align-items: center;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.31);
+  border-radius: 30px;
 }
 main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-iframe {
   width: 50%;
+  border-radius: 25px;
   aspect-ratio: 16/9;
   border: none;
 }
 main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-info {
+  padding: 40px 80px 0px 40px;
   width: 50%;
   color: #fff;
 }
 main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-info h1 {
   font-size: clamp(1.75rem, 4.5vw, 2.5rem);
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-info p {
   font-size: clamp(1rem, 3vw, 1.5rem);
-}
-main .artist-videos .video-container .video-pagination {
-  position: absolute;
-  left: 95%;
-  top: 60%;
-  transform: translateY(-50%);
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: auto;
+  text-align: justify;
+  font-weight: 300;
 }
 main .artist-videos .video-container .video-pagination .swiper-pagination-bullet {
   background: #fff;
   opacity: 0.5;
   width: 12px;
   height: 12px;
-  margin: 0;
-  transition: opacity 0.3s ease;
 }
 main .artist-videos .video-container .video-pagination .swiper-pagination-bullet-active {
   opacity: 1;
   background: #000;
-  transform: scale(1.2);
 }/*# sourceMappingURL=artist-profile.css.map */

@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollbar: {
       el: ".gallery-scrollbar",
       draggable: true,
+      dragSize: 50,
     },
   });
 
