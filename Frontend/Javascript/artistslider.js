@@ -5,7 +5,7 @@ const performers = {
       description:
         "D & A Acoustic Duo is the perfect harmony of two souls, blending their unique styles into a sound that’s intimate, raw, and deeply moving. With every strum and every note, they weave genres together, turning familiar melodies into something uniquely theirs. <br /><br />More than just performers, they are storytellers—creating music that feels personal, timeless, and effortlessly connected.",
       image: "",
-      link: "/Frontend/Pages/artists/D&A.html",
+      link: "Frontend/Pages/artists/D&A.html",
     },
     {
       name: "SKA & MASH <br> DUO",
