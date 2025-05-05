@@ -90,12 +90,36 @@ document.querySelectorAll(".swiper").forEach((swiperEl) => {
   const nameBox = section.querySelector(".artist-name");
   const descBox = section.querySelector(".artist-description");
   const learnMoreBtn = section.querySelector(".learn-more-btn");
+  const quoteBtn = section.querySelector(".quote-btn");
+  const modal = document.querySelector(".modal-overlay");
+  const closeModalBtn = document.querySelector(".modal-close");
+  const bandSelect = document.getElementById("bandSelect");
   const wrapper = swiperEl.querySelector(".swiper-wrapper");
 
   wrapper.innerHTML = "";
   let currentIndex = 0;
 
-  // Create slides
+  function populateBandSelect() {
+    bandSelect.innerHTML = "";
+
+    const allArtists = [
+      ...performers["duo-swiper"],
+      ...performers["band-swiper"],
+      ...performers["solo-swiper"],
+      ...performers["dj-swiper"],
+      ...performers["group-swiper"],
+    ];
+
+    allArtists.forEach((artist, index) => {
+      const option = document.createElement("option");
+      option.value = index;
+      option.textContent = artist.name.replace(/<br>/g, " ");
+      bandSelect.appendChild(option);
+    });
+  }
+
+  populateBandSelect();
+
   artists.forEach((artist, index) => {
     const slide = document.createElement("div");
     slide.className = "swiper-slide";
@@ -110,7 +134,6 @@ document.querySelectorAll(".swiper").forEach((swiperEl) => {
     wrapper.appendChild(slide);
   });
 
-  // Arrow controls
   const leftArrow = document.createElement("button");
   leftArrow.className = "arrow-button arrow-left";
   leftArrow.innerHTML = "&#10094;";
@@ -124,7 +147,6 @@ document.querySelectorAll(".swiper").forEach((swiperEl) => {
   swiperEl.appendChild(leftArrow);
   swiperEl.appendChild(rightArrow);
 
-  // Initial content
   updateArtist(0);
 
   function goToSlide(index) {
@@ -136,24 +158,20 @@ document.querySelectorAll(".swiper").forEach((swiperEl) => {
     const currentCircle = currentSlide.querySelector(".artist-circle");
     const nextCircle = nextSlide.querySelector(".artist-circle");
 
-    // Apply fade-out animations
     nameBox.classList.add("fade-out");
     descBox.classList.add("fade-out");
     currentCircle.classList.add("fade-out");
 
     setTimeout(() => {
-      // Update content
       nameBox.innerHTML = artists[index].name;
       descBox.innerHTML = artists[index].description;
       learnMoreBtn.onclick = () => {
         window.location.href = artists[index].link;
       };
 
-      // Show new slide
       currentSlide.classList.add("hidden");
       nextSlide.classList.remove("hidden");
 
-      // Apply fade-in animations
       nameBox.classList.remove("fade-out");
       descBox.classList.remove("fade-out");
       nameBox.classList.add("fade-in");
@@ -161,18 +179,16 @@ document.querySelectorAll(".swiper").forEach((swiperEl) => {
       nextCircle.classList.remove("fade-out");
       nextCircle.classList.add("circle-fade-in");
 
-      // Clean up after animations complete
       setTimeout(() => {
         nameBox.classList.remove("fade-in");
         descBox.classList.remove("fade-in");
         nextCircle.classList.remove("circle-fade-in");
-      }, 600); // Match longest animation duration
-    }, 250); // Match fadeOut duration
+      }, 600);
+    }, 250);
     currentIndex = index;
   }
 
   function updateArtist(index) {
-    // Initial load - just show first slide with animations
     const firstSlide = wrapper.querySelector(".swiper-slide:not(.hidden)");
     const firstCircle = firstSlide?.querySelector(".artist-circle");
 
@@ -189,4 +205,13 @@ document.querySelectorAll(".swiper").forEach((swiperEl) => {
       }, 600);
     }
   }
+
+  quoteBtn.addEventListener("click", () => {
+    modal.classList.add("open-modal");
+    populateBandSelect();
+  });
+
+  closeModalBtn.addEventListener("click", () => {
+    modal.classList.remove("open-modal");
+  });
 });
