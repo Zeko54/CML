@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="../Stylesheet/Pages/products.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="product-page">
+    <div class="circle-container"></div>
+    <header id="header">
+      <div class="logo">
+        <a href="../index.html">CML</a>
+      </div>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <button
+          class="close-btn"
+          onclick="toggleMobileMenu()"
+          aria-label="Close mobile menu"
+        >
+          <i class="fa fa-times"></i>
+        </button>
+        <div class="links">
+          <a href="../Pages/artist.html">ARTISTS</a>
+          <a href="../Pages/consulting.html">CONSULTING</a>
+          <a href="#">PRODUCTS</a>
+          <a href="../Pages/about.html">ABOUT US</a>
+        </div>
+        <div class="button">
+          <button>
+            <a href="../Pages/about.html#contact">CONTACT US</a>
+          </button>
+        </div>
+      </nav>
+
+      <button
+        class="hamburger"
+        aria-label="Toggle mobile menu"
+        onclick="toggleMobileMenu()"
+      >
+        <i class="fa fa-bars"></i>
+      </button>
+    </header>
+    <main>
+      <section class="intro-section">
+        <div class="text-container">
+          <div class="text-top">
+            <h1>PRODUCTS</h1>
+            <p>
+              CML is a company that consulting, dropshipping, and events
+              company. Our mission is to bring joy to customers and help small
+              Filipino business thrive in the UAE market
+            </p>
+          </div>
+
+          <div class="text-bottom">
+            <button>
+              <a href="../Pages/about.html">ABOUT US</a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="promoDeals-section">
+        <div class="heading">
+          <h3 class="with-bg">PROMOTIONAL</h3>
+          <h3 class="without-bg">DEALS</h3>
+        </div>
+
+        <hr />
+
+        <div class="promoDeals-container swiper">
+          <div class="swiper-wrapper Deals-wrapper"></div>
+          <div class="swiper-pagination promoDeals-pagination"></div>
+        </div>
+      </section>
+
+      <section class="ourProducts-section">
+        <div class="heading">
+          <h3 class="without-bg">OUR</h3>
+          <h3 class="with-bg">PRODUCTS</h3>
+        </div>
+
+        <hr />
+
+        <div class="ourProducts-Gallerycontainer swiper">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-wrapper Gallery-wrapper"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="ourProducts-Videocontainer swiper">
+          <div class="swiper-wrapper Video-wrapper"></div>
+          <div class="swiper-scrollbar ourProducts-scrollbar"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-top">
+        <div class="cml-logo">
+          <h1>CML</h1>
+        </div>
+        <div class="social-media">
+          <div class="app"></div>
+          <div class="app"></div>
+          <div class="app"></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="service">
+          <h3>SERVICE WE PROVIDE</h3>
+          <p>################ ################ ################ ###########</p>
+        </div>
+
+        <div class="company">
+          <h3>COMPANY</h3>
+          <p>################ ################ ################ ###########</p>
+        </div>
+
+        <div class="quick-links">
+          <h3>QUICK LINKS</h3>
+          <p>################ ################ ################ ###########</p>
+        </div>
+
+        <div class="head-office">
+          <h3>HEAD OFFICE</h3>
+          <p>################ ################ ################ ###########</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; CML</p>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../Javascript/linearBackground.js"></script>
+  <script src="../Javascript/header.js"></script>
+  <script src="../Javascript/products.js"></script>
+</html>
