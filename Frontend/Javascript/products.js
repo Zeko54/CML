@@ -25,9 +25,9 @@ const productData = {
     },
   ],
   productVideos: [
-    { src: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-    { src: "https://www.youtube.com/embed/3tmd-ClpJxA" },
-    { src: "https://www.youtube.com/embed/3tmd-ClpJxA" },
+    { src: "https://youtu.be/jn5UNG1FPk8?si=FpdEkNfi-71o9X9x" },
+    { src: "https://youtu.be/zKAiTPjtLpo?si=hdn-BZcz-MCTXOJc" },
+    { src: "https://youtu.be/jn5UNG1FPk8?si=FpdEkNfi-71o9X9x" },
   ],
 };
 
