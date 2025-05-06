@@ -1,202 +1,140 @@
-.border-card {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  gap: 80px;
-  grid-template-rows: 500px;
+@mixin businessess{
+  .businesses-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 80px;
+    grid-template-rows: 500px;
 
-  .each-card {
-    display: flex;
-
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background: #ed4540;
-    border-radius: 24px;
-    padding: 20px;
-    position: relative;
-
-    .each-img {
-      width: 100%;
-      height: 100%;
-      border-radius: 20px;
-      background-color: hsl(92, 100%, 50%);
+    .business-card {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      z-index: 1;
-
-      .each-text {
-        h3 {
-          font-size: $heading-fontsize;
-          text-align: center;
-        }
-      }
-
-      .each-button {
-        position: absolute;
-        bottom: 40px;
-        width: 80%;
-        z-index: 3;
-
-        button {
-          @extend .white-button;
-        }
-      }
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      width: 100%;
-      opacity: 0;
-      transition: 0.3s ease;
-      background-color: #ed4540;
+      background: #ed4540;
       border-radius: 24px;
-      z-index: 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      padding: 20px;
+      position: relative;
+      @include shadow();
 
-      p {
-        color: nth($text-colors, 1);
-        font-size: $small-button-fontsize;
+      .image {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background-color: hsl(92, 100%, 50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+
+        .text {
+          h3 {
+            font-size: $heading-fontsize;
+            text-align: center;
+          }
+        }
+
+        .button {
+          position: absolute;
+          bottom: 40px;
+          width: 80%;
+          z-index: 3;
+
+          button {
+            @extend .white-button;
+          }
+        }
       }
-    }
 
-    .each-img:hover .overlay {
-      opacity: 1;
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.3s ease;
+        background-color: #ed4540;
+        border-radius: 24px;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          color: nth($text-colors, 1);
+          font-size: $small-button-fontsize;
+        }
+      }
+
+      &:hover .overlay {
+        opacity: 1;
+      }
     }
   }
 }
 
-// .selling-card{
-//     display:grid;
-//     grid-template-columns: repeat(2, minmax(100px, 1fr));
-//     gap: 80px;
-//     grid-template-rows: 500px;
-//     grid-template-areas:
-//         "product-1 product-1"
-//         "product-2 product-3";
 
-//     .card-1{
 
-//         grid-area: product-1;
-//         grid-template-areas:
-//         "images desc";
-
-//     }
-
-//     .card-2{
-//         display: grid;
-//         grid-area: product-2;
-//         grid-template-areas:
-//         "images"
-//         "desc";
-
-//     }
-
-//     .card-3{
-//         display: grid;
-//         grid-area: product-3;
-//         grid-template-areas:
-//         "images"
-//         "desc";
-//     }
-
-//     .each-sell {
-//         display: grid;
-//         grid-template-columns: repeat(2, 50%);
-
-//         .image-sell {
-//             display: flex;
-//             flex-wrap: 1;
-//             height: 100%;
-//             border-radius: 20px;
-//             background-color: hsl(92, 100%, 50%);
-//             grid-area: images;
-
-//         .text-sell {
-//             width: 50%;
-//             grid-area: desc;
-
-//             h3 {
-//                 font-size: $heading-fontsize;
-//                 text-align: center;
-//             }
-//         }
-
-//             .button-sell {
-//                 position: absolute;
-//                 bottom: 40px;
-//                 width: 80%;
-//                 z-index: 3;
-
-//                 button {
-//                     @extend .white-button;
-//                 }
-//             }
-//         }
-//     }
-
-// }
-
-// Products-card
-.selling-card {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
-  gap: 40px;
-  grid-template-areas:
-    "product-1 product-1"
-    "product-2 product-3";
-
-  .sell-cards {
+@mixin featured-products {
+  .product-container {
+    margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
-    padding: 40px;
-    background: rgba(248, 73, 67, 0.36);
-    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 24px;
-    color: nth($text-colors, 1);
     gap: 40px;
-    // reminder to me to use grid-template-rows
+    grid-template-areas:
+      "product-1 product-1"
+      "product-2 product-3";
 
-    .sell-image {
-      grid-area: images;
-      background-color: aqua;
-      border-radius: 20px;
-      width: 100%;
-      aspect-ratio: 1 / 0.6;
-    }
+    .product-card {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+      padding: 40px;
+      background: rgba(248, 73, 67, 0.4);
+      backdrop-filter: blur(5px);
+      // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 24px;
+      color: nth($text-colors, 1);
+      gap: 40px;
+      // reminder to me to use grid-template-rows
+      @include shadow();
 
-    .sell-desc {
-      width: 100%;
-      grid-area: desc;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      .desc-top {
-        h2 {
-          font-size: $sub-heading-fontsize;
-        }
-        p {
-          font-size: $paragraph-fontsize;
-        }
+      .image {
+        grid-area: images;
+        background-color: aqua;
+        border-radius: 20px;
+        width: 100%;
+        aspect-ratio: 1 / 0.6;
       }
 
-      .desc-bottom {
-        h2 {
-          font-size: $sub-heading-fontsize;
+      .product-desc {
+        width: 100%;
+        grid-area: desc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .product-top {
+          h2 {
+            font-size: $sub-heading-fontsize;
+          }
+          p {
+            font-size: $paragraph-fontsize;
+          }
         }
 
-        button {
-          @extend .white-button;
-          margin-top: 10px;
+        .product-bottom {
+          h2 {
+            font-size: $sub-heading-fontsize;
+          }
+
+          button {
+            @extend .white-button;
+            margin-top: 10px;
+          }
         }
       }
     }

@@ -190,7 +190,7 @@ footer .copyright {
   cursor: pointer;
 }
 
-.white-button, main .consultant-section .consultant-container .left-side button, main .aboutus-section .aboutus-container button, .selling-card .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .product-card .sell-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .product-bottom button, .border-card .each-card .each-img .each-button button, main .businesses-section .businesses-container .each-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .each-img .each-button button, main .businesses-section .businesses-container .business-card .image .each-button button, main .businesses-section .businesses-container .business-card .image .button button {
+.white-button, main .consultant-section .consultant-container .left-side button, main .products-section .product-container .product-card .product-desc .product-bottom button, main .businesses-section .businesses-container .business-card .image .button button, main .aboutus-section .aboutus-container button {
   background-color: #fff;
   color: #ff4545;
   width: 100%;
@@ -200,122 +200,6 @@ footer .copyright {
   font-weight: 800;
   cursor: pointer;
   margin-top: 30px;
-}
-
-.border-card, main .businesses-section .businesses-container {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  gap: 80px;
-  grid-template-rows: 500px;
-}
-.border-card .each-card, .border-card main .businesses-section .businesses-container .business-card, main .businesses-section .businesses-container .border-card .business-card, main .businesses-section .businesses-container .each-card, main .businesses-section .businesses-container .business-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background: #ed4540;
-  border-radius: 24px;
-  padding: 20px;
-  position: relative;
-}
-.border-card .each-card .each-img, main .businesses-section .businesses-container .each-card .each-img, main .businesses-section .businesses-container .business-card .each-img, main .businesses-section .businesses-container .business-card .image {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  background-color: hsl(92, 100%, 50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-.border-card .each-card .each-img .each-text h3, main .businesses-section .businesses-container .each-card .each-img .each-text h3, main .businesses-section .businesses-container .business-card .each-img .each-text h3, main .businesses-section .businesses-container .business-card .image .each-text h3, main .businesses-section .businesses-container .business-card .image .text h3 {
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  text-align: center;
-}
-.border-card .each-card .each-img .each-button, main .businesses-section .businesses-container .each-card .each-img .each-button, main .businesses-section .businesses-container .business-card .each-img .each-button, main .businesses-section .businesses-container .business-card .image .each-button, main .businesses-section .businesses-container .business-card .image .button {
-  position: absolute;
-  bottom: 40px;
-  width: 80%;
-  z-index: 3;
-}
-.border-card .each-card .overlay, main .businesses-section .businesses-container .each-card .overlay, main .businesses-section .businesses-container .business-card .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.3s ease;
-  background-color: #ed4540;
-  border-radius: 24px;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.border-card .each-card .overlay p, main .businesses-section .businesses-container .each-card .overlay p, main .businesses-section .businesses-container .business-card .overlay p {
-  color: #fff;
-  font-size: clamp(1rem, 3vw, 1.5rem);
-}
-.border-card .each-card .each-img:hover .overlay, main .businesses-section .businesses-container .each-card .each-img:hover .overlay, main .businesses-section .businesses-container .business-card .each-img:hover .overlay, main .businesses-section .businesses-container .business-card .image:hover .overlay {
-  opacity: 1;
-}
-
-.selling-card, main .products-section .product-container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
-  gap: 40px;
-  grid-template-areas: "product-1 product-1" "product-2 product-3";
-}
-.selling-card .sell-cards, .selling-card main .products-section .product-container .product-card, main .products-section .product-container .selling-card .product-card, main .products-section .product-container .sell-cards, main .products-section .product-container .product-card {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
-  padding: 40px;
-  background: rgba(248, 73, 67, 0.36);
-  border-radius: 24px;
-  color: #fff;
-  gap: 40px;
-}
-.selling-card .sell-cards .sell-image, main .products-section .product-container .sell-cards .sell-image, main .products-section .product-container .product-card .sell-image, main .products-section .product-container .product-card .image {
-  grid-area: images;
-  background-color: aqua;
-  border-radius: 20px;
-  width: 100%;
-  aspect-ratio: 1/0.6;
-}
-.selling-card .sell-cards .sell-desc, main .products-section .product-container .sell-cards .sell-desc, main .products-section .product-container .product-card .sell-desc, main .products-section .product-container .product-card .product-desc {
-  width: 100%;
-  grid-area: desc;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.selling-card .sell-cards .sell-desc .desc-top h2, main .products-section .product-container .sell-cards .sell-desc .desc-top h2, main .products-section .product-container .product-card .sell-desc .desc-top h2, main .products-section .product-container .product-card .product-desc .desc-top h2, main .products-section .product-container .product-card .product-desc .product-top h2 {
-  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
-}
-.selling-card .sell-cards .sell-desc .desc-top p, main .products-section .product-container .sell-cards .sell-desc .desc-top p, main .products-section .product-container .product-card .sell-desc .desc-top p, main .products-section .product-container .product-card .product-desc .desc-top p, main .products-section .product-container .product-card .product-desc .product-top p {
-  font-size: clamp(1rem, 3vw, 1.5rem);
-}
-.selling-card .sell-cards .sell-desc .desc-bottom h2, main .products-section .product-container .sell-cards .sell-desc .desc-bottom h2, main .products-section .product-container .product-card .sell-desc .desc-bottom h2, main .products-section .product-container .product-card .product-desc .desc-bottom h2, main .products-section .product-container .product-card .product-desc .product-bottom h2 {
-  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
-}
-.selling-card .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .sell-cards .sell-desc .desc-bottom button, main .products-section .product-container .product-card .sell-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .desc-bottom button, main .products-section .product-container .product-card .product-desc .product-bottom button {
-  margin-top: 10px;
-}
-.selling-card .sell-cards .card-1, main .products-section .product-container .sell-cards .card-1, main .products-section .product-container .product-card .card-1 {
-  grid-area: product-1;
-  grid-template-areas: "images desc";
-}
-.selling-card .sell-cards .card-2, main .products-section .product-container .sell-cards .card-2, main .products-section .product-container .product-card .card-2 {
-  grid-area: product-2;
-  grid-template-areas: "images images" "desc desc";
-}
-.selling-card .sell-cards .card-3, main .products-section .product-container .sell-cards .card-3, main .products-section .product-container .product-card .card-3 {
-  grid-area: product-3;
-  grid-template-areas: "images images " "desc desc";
 }
 
 .circle-container {
@@ -404,6 +288,8 @@ main .aboutus-section .aboutus-container {
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(2, 50%);
+  border-radius: 0 81px 81px 0;
+  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
 }
 main .aboutus-section .aboutus-container .image {
   background-color: #e4e4e4;
@@ -411,7 +297,6 @@ main .aboutus-section .aboutus-container .image {
 main .aboutus-section .aboutus-container .desc {
   padding: 40px;
   background: rgba(248, 73, 67, 0.6);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   font-size: clamp(1rem, 3vw, 1.5rem);
@@ -453,6 +338,66 @@ main .businesses-section hr {
 }
 main .businesses-section .businesses-container {
   margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 80px;
+  grid-template-rows: 500px;
+}
+main .businesses-section .businesses-container .business-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #ed4540;
+  border-radius: 24px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
+}
+main .businesses-section .businesses-container .business-card .image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: hsl(92, 100%, 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+main .businesses-section .businesses-container .business-card .image .text h3 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  text-align: center;
+}
+main .businesses-section .businesses-container .business-card .image .button {
+  position: absolute;
+  bottom: 40px;
+  width: 80%;
+  z-index: 3;
+}
+main .businesses-section .businesses-container .business-card .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: #ed4540;
+  border-radius: 24px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .businesses-section .businesses-container .business-card .overlay p {
+  color: #fff;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+main .businesses-section .businesses-container .business-card:hover .overlay {
+  opacity: 1;
 }
 main .products-section {
   margin: 120px 80px;
@@ -482,6 +427,48 @@ main .products-section hr {
 }
 main .products-section .product-container {
   margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  gap: 40px;
+  grid-template-areas: "product-1 product-1" "product-2 product-3";
+}
+main .products-section .product-container .product-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  padding: 40px;
+  background: rgba(248, 73, 67, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 24px;
+  color: #fff;
+  gap: 40px;
+  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
+}
+main .products-section .product-container .product-card .image {
+  grid-area: images;
+  background-color: aqua;
+  border-radius: 20px;
+  width: 100%;
+  aspect-ratio: 1/0.6;
+}
+main .products-section .product-container .product-card .product-desc {
+  width: 100%;
+  grid-area: desc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .products-section .product-container .product-card .product-desc .product-top h2 {
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+}
+main .products-section .product-container .product-card .product-desc .product-top p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+main .products-section .product-container .product-card .product-desc .product-bottom h2 {
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+}
+main .products-section .product-container .product-card .product-desc .product-bottom button {
+  margin-top: 10px;
 }
 main .products-section .product-container .card-1 {
   grid-area: product-1;
@@ -540,11 +527,14 @@ main .performers-section .swiper-slide {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: rgba(248, 73, 67, 0.36);
+  background: rgba(248, 73, 67, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   border-radius: 24px;
   padding: 30px;
   height: 600px;
   z-index: 1;
+  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
 }
 main .performers-section .swiper-slide .performers-name {
   padding-bottom: 20px;
@@ -555,7 +545,7 @@ main .performers-section .swiper-slide .performers-name {
 main .performers-section .swiper-slide .performers-name h1 {
   font-size: clamp(1.75rem, 4.5vw, 2.5rem);
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
 }
 main .performers-section .swiper-slide .image {
@@ -622,6 +612,8 @@ main .consultant-section .consultant-container {
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(2, 50%);
+  border-radius: 25px 0px 0px 25px;
+  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
 }
 main .consultant-section .consultant-container .left-side {
   background-color: rgba(255, 255, 255, 0.2);

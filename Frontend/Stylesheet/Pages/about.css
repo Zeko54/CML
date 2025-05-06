@@ -190,7 +190,7 @@ footer .copyright {
   cursor: pointer;
 }
 
-.white-button, .selling-card .sell-cards .sell-desc .desc-bottom button, .border-card .each-card .each-img .each-button button {
+.white-button {
   background-color: #fff;
   color: #ff4545;
   width: 100%;
@@ -200,122 +200,6 @@ footer .copyright {
   font-weight: 800;
   cursor: pointer;
   margin-top: 30px;
-}
-
-.border-card {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  gap: 80px;
-  grid-template-rows: 500px;
-}
-.border-card .each-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background: #ed4540;
-  border-radius: 24px;
-  padding: 20px;
-  position: relative;
-}
-.border-card .each-card .each-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  background-color: hsl(92, 100%, 50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-.border-card .each-card .each-img .each-text h3 {
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  text-align: center;
-}
-.border-card .each-card .each-img .each-button {
-  position: absolute;
-  bottom: 40px;
-  width: 80%;
-  z-index: 3;
-}
-.border-card .each-card .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.3s ease;
-  background-color: #ed4540;
-  border-radius: 24px;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.border-card .each-card .overlay p {
-  color: #fff;
-  font-size: clamp(1rem, 3vw, 1.5rem);
-}
-.border-card .each-card .each-img:hover .overlay {
-  opacity: 1;
-}
-
-.selling-card {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
-  gap: 40px;
-  grid-template-areas: "product-1 product-1" "product-2 product-3";
-}
-.selling-card .sell-cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
-  padding: 40px;
-  background: rgba(248, 73, 67, 0.36);
-  border-radius: 24px;
-  color: #fff;
-  gap: 40px;
-}
-.selling-card .sell-cards .sell-image {
-  grid-area: images;
-  background-color: aqua;
-  border-radius: 20px;
-  width: 100%;
-  aspect-ratio: 1/0.6;
-}
-.selling-card .sell-cards .sell-desc {
-  width: 100%;
-  grid-area: desc;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.selling-card .sell-cards .sell-desc .desc-top h2 {
-  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
-}
-.selling-card .sell-cards .sell-desc .desc-top p {
-  font-size: clamp(1rem, 3vw, 1.5rem);
-}
-.selling-card .sell-cards .sell-desc .desc-bottom h2 {
-  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
-}
-.selling-card .sell-cards .sell-desc .desc-bottom button {
-  margin-top: 10px;
-}
-.selling-card .sell-cards .card-1 {
-  grid-area: product-1;
-  grid-template-areas: "images desc";
-}
-.selling-card .sell-cards .card-2 {
-  grid-area: product-2;
-  grid-template-areas: "images images" "desc desc";
-}
-.selling-card .sell-cards .card-3 {
-  grid-area: product-3;
-  grid-template-areas: "images images " "desc desc";
 }
 
 .circle-container {
@@ -488,6 +372,7 @@ main .team-section .swiper-slide .members {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
 }
 main .team-section .swiper-slide img {
   display: block;
@@ -572,9 +457,12 @@ main .contact-section {
   margin: 160px 200px;
 }
 main .contact-section .contact-container {
-  background: rgba(255, 179, 58, 0.335);
+  background: rgba(248, 73, 67, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   padding: 80px 80px;
   border-radius: 20px;
+  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
 }
 main .contact-section .contact-container h1 {
   font-size: clamp(1.75rem, 4.5vw, 2.5rem);

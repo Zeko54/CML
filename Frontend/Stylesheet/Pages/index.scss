@@ -18,6 +18,8 @@ main {
       margin-top: 40px;
       display: grid;
       grid-template-columns: repeat(2, 50%);
+      border-radius: 0 81px 81px 0;
+      @include shadow();
 
       .image {
         background-color: $header-footer-color;
@@ -26,7 +28,6 @@ main {
       .desc {
         padding: 40px;
         background: rgba(248, 73, 67, 0.6);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         font-size: $paragraph-fontsize;
         border-radius: 0 81px 81px 0;
@@ -45,124 +46,39 @@ main {
     margin: $desktop-spacing;
 
     @include heading();
+
     .heading {
       justify-content: flex-end;
     }
 
     @include heading-underline();
+
     hr {
       margin-left: 50%;
     }
 
-    .businesses-container {
-      margin-top: 40px;
-      @extend .border-card;
-
-      .business-card {
-        @extend .each-card;
-
-        .image {
-          @extend .each-img;
-
-          .text {
-            @extend .each-text;
-          }
-
-          .button {
-            @extend .each-button;
-          }
-        }
-
-        .overlay {
-          @extend .overlay;
-        }
-      }
-    }
+    @include businessess();
   }
+
 
   .products-section {
     margin: $desktop-spacing;
     @include heading();
     @include heading-underline();
 
-    .product-container {
-      margin-top: 40px;
-      @extend .selling-card;
-
-      .product-card {
-        @extend .sell-cards;
-
-        .image {
-          @extend .sell-image;
-        }
-
-        .product-desc {
-          @extend .sell-desc;
-
-          .product-top {
-            @extend .desc-top;
-          }
-
-          .product-bottom {
-            @extend .desc-bottom;
-          }
-        }
-      }
-
-      .card-1 {
-        grid-area: product-1;
-        grid-template-areas: "images desc";
-      }
-
-      .card-2 {
-        grid-area: product-2;
-        grid-template-areas:
-          "images images"
-          "desc desc";
-      }
-
-      .card-3 {
-        grid-area: product-3;
-        grid-template-areas:
-          "images images "
-          "desc desc";
-      }
-
-      // .product-card{
-      //   @extend .each-sell;
-
-      //   .image{
-      //     @extend .image-sell;
-      //   }
-
-      //   .product-desc{
-      //       @extend .text-sell;
-      //   }
-
-      //   .card-1{
-      //     @extend .card-1;
-      //   }
-
-      //   .card-2{
-      //     @extend .card-2;
-      //   }
-
-      //   .card-3{
-      //     @extend .card-3;
-      //   }
-
-      // }
-    }
+    @include featured-products();
   }
 
   .performers-section {
     margin: $desktop-spacing;
     @include heading();
+
     .heading {
       justify-content: flex-end;
     }
 
     @include heading-underline();
+
     hr {
       margin-left: 50%;
     }
@@ -179,6 +95,8 @@ main {
       margin-top: 40px;
       display: grid;
       grid-template-columns: repeat(2, 50%);
+      border-radius: 25px 0px 0px 25px;
+      @include shadow();
 
       .left-side {
         background-color: rgba(255, 255, 255, 0.2);
@@ -232,15 +150,19 @@ main {
 
   .client-section {
     @include heading();
+
     .heading {
       justify-content: center;
     }
+
     .with-bg {
       background-color: #ff4545;
       mix-blend-mode: normal;
       color: nth($text-colors, 1);
     }
+
     @include heading-underline();
+
     hr {
       margin: 0 auto;
       margin-top: 30px;
@@ -275,6 +197,7 @@ main {
       0% {
         transform: translateX(0%);
       }
+
       100% {
         transform: translateX(-50%);
       }

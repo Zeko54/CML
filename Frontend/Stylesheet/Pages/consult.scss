@@ -76,6 +76,7 @@ main {
         padding: 20px;
         border-radius: 50px;
         width: 100%;
+        @include shadow();
 
         .image {
           background-color: $header-footer-color;
@@ -146,6 +147,7 @@ main {
         grid-area: desc;
         font-weight: 700;
         background-color: rgb(252, 146, 224, 0.6);
+        @include shadow();
       }
     }
   }
@@ -173,6 +175,7 @@ main {
         color: black;
         align-items: center;
         background-color: rgb(252, 146, 224, 0.6);
+        @include shadow();
         padding: 20px;
         border-radius: 50px;
         width: 100%;
