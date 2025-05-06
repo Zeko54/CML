@@ -9,27 +9,36 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
   <body class="home-page">
     <div class="circle-container"></div>
 
-    <header id="navbar">
-      <nav>
-        <div class="logo">
-          <a href="../index.html">CML</a>
-        </div>
-
-        <ul>
-          <li><a href="../Pages/artist.html">ARTISTS</a></li>
-          <li><a href="../Pages/consulting.html">CONSULTING</a></li>
-          <li><a href="">PRODUCTS</a></li>
-          <li><a href="#">ABOUT US</a></li>
-        </ul>
-
-        <button>
-          <a href="#contact">CONTACT US</a>
+    <header id="header">
+      <div class="logo">
+        <a href="../index.html">CML</a>
+      </div>
+    
+      <nav class="nav-links" aria-label="Main Navigation">
+        <button class="close-btn" onclick="toggleMobileMenu()" aria-label="Close mobile menu">
+          <i class="fa fa-times"></i>
         </button>
+        <div class="links">
+          <a href="./Pages/artist.html">ARTISTS</a>
+          <a href="./Pages/consulting.html">CONSULTING</a>
+          <a href="#">PRODUCTS</a>
+          <a href="./Pages/about.html">ABOUT US</a>
+        </div>
+        <div class="button">
+          <button>
+            <a href="./Pages/about.html#contact">CONTACT US</a>
+          </button>
+        </div>
       </nav>
+    
+      <button class="hamburger" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">
+        <i class="fa fa-bars"></i>
+      </button>
     </header>
 
     <main>
@@ -272,4 +281,5 @@
   <script src="../Javascript/linearBackground.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="../Javascript/teamslider.js"></script>
+  <script src="../Javascript/header.js"></script>
 </html>
