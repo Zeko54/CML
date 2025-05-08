@@ -583,7 +583,6 @@ main .performers-section .swiper {
   margin-top: 40px;
   width: 100%;
   height: 650px;
-  position: relative;
   z-index: 1;
 }
 main .performers-section .swiper-slide {
@@ -600,6 +599,7 @@ main .performers-section .swiper-slide {
   height: 600px;
   z-index: 1;
   box-shadow: 0px 20px 20px 3px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
 }
 main .performers-section .swiper-slide .performers-name {
   padding-bottom: 20px;
@@ -625,13 +625,17 @@ main .performers-section .swiper-scrollbar {
   padding: 5px;
   background-color: 255, 255, 255, 0;
   overflow: hidden;
-  width: 15%;
-  left: 42%;
-  z-index: 100;
+  width: 100%;
+  max-width: 200px;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 main .performers-section .swiper-scrollbar-drag {
   background-color: black;
   border-radius: 10px;
+  width: 40px !important;
 }
 @media only screen and (min-width: 769px) {
   main .performers-section .swiper-slide:first-child {
