@@ -75,6 +75,19 @@
       }
     }
   }
+  
+  @media screen and (max-width: 1023px) {
+    .businesses-container{
+      grid-template-columns: repeat(1, minmax(100px, 1fr));
+      grid-template-rows: auto;
+      .business-card{
+        .image{
+          aspect-ratio: 1/1;
+        }
+      }
+
+    }
+  }
 }
 
 
@@ -158,4 +171,15 @@
         "desc desc";
     }
   }
+
+  @media screen and (max-width: 719px) {
+    .product-container{
+      grid-template-columns: repeat(1, minmax(100px, 1fr));
+      grid-template-areas:
+      "product-1"
+      "product-2"
+      "product-3";
+    }
+  }
 }
+

@@ -8,8 +8,16 @@ var swiper = new Swiper(".mySwiper", {
     enabled: true,
   },
   breakpoints: {
-    769: {
-      slidesPerView: 3,
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    720: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+    },
+    1024: {
+      slidesPerView: 3, // ✅ for laptops and above
       slidesPerGroup: 1,
     },
   },

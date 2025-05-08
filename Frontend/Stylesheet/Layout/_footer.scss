@@ -45,3 +45,42 @@ footer {
     background-color: nth($text-colors, 1);
   }
 }
+
+@media (max-width: 1023px){
+  footer {
+    
+    .footer-bottom{
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+
+      .company, .service, .quick-links, .head-office{
+        h3{
+          height:initial;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 719px){
+  footer{
+    .footer-top{
+      flex-direction: column;
+
+      .social-media {
+        margin-top: 20px;
+        .app {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+    .footer-bottom{
+      margin-top: 80px;
+      grid-template-columns: repeat(1, minmax(100px, 1fr));
+      gap: 30px;
+    }
+  }
+}

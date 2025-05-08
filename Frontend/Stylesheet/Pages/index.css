@@ -245,6 +245,32 @@ footer .copyright {
   background-color: #fff;
 }
 
+@media (max-width: 1023px) {
+  footer .footer-bottom {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+  footer .footer-bottom .company h3, footer .footer-bottom .service h3, footer .footer-bottom .quick-links h3, footer .footer-bottom .head-office h3 {
+    height: initial;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 719px) {
+  footer .footer-top {
+    flex-direction: column;
+  }
+  footer .footer-top .social-media {
+    margin-top: 20px;
+  }
+  footer .footer-top .social-media .app {
+    width: 50px;
+    height: 50px;
+  }
+  footer .footer-bottom {
+    margin-top: 80px;
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+    gap: 30px;
+  }
+}
 .red-button, main .intro-section .text-container .text-bottom button, .button button {
   background-color: #ff6b6b;
   color: #fff;
@@ -309,7 +335,7 @@ main .intro-section {
   width: 100%;
   height: 100vh;
   background-color: #e4e4e4;
-  padding: 150px 80px 120px 80px;
+  padding: 150px 80px 50px 80px;
 }
 main .intro-section h1 {
   font-size: clamp(3rem, 10vw, 6rem);
@@ -322,6 +348,26 @@ main .intro-section .text-container {
   height: 100%;
   justify-content: space-between;
   width: 60%;
+}
+@media screen and (max-width: 1023px) {
+  main .intro-section .text-container {
+    width: 100%;
+    height: 55%;
+  }
+}
+@media screen and (max-width: 719px) {
+  main .intro-section {
+    padding: 150px 40px 50px 40px;
+  }
+  main .intro-section h1, main .intro-section .text-container {
+    text-align: center;
+  }
+  main .intro-section h1 {
+    margin-bottom: 30px;
+  }
+  main .intro-section .text-container {
+    height: 90%;
+  }
 }
 main .aboutus-section {
   margin: 120px 80px;
@@ -464,6 +510,15 @@ main .businesses-section .businesses-container .business-card .overlay p {
 main .businesses-section .businesses-container .business-card:hover .overlay {
   opacity: 1;
 }
+@media screen and (max-width: 1023px) {
+  main .businesses-section .businesses-container {
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+    grid-template-rows: auto;
+  }
+  main .businesses-section .businesses-container .business-card .image {
+    aspect-ratio: 1/1;
+  }
+}
 main .products-section {
   margin: 120px 80px;
   font-size: clamp(1.5rem, 4vw, 2rem);
@@ -546,6 +601,12 @@ main .products-section .product-container .card-2 {
 main .products-section .product-container .card-3 {
   grid-area: product-3;
   grid-template-areas: "images images " "desc desc";
+}
+@media screen and (max-width: 719px) {
+  main .products-section .product-container {
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+    grid-template-areas: "product-1" "product-2" "product-3";
+  }
 }
 main .performers-section {
   margin: 120px 80px;
