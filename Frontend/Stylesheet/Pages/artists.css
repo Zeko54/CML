@@ -369,9 +369,6 @@ main .intro-section .text-container .text-top hr {
     height: 100%;
     text-align: justify;
   }
-  main .intro-section .text-container .text-top p {
-    font-size: clamp(0.9rem, 1.5vw, 1.125rem);
-  }
   main .intro-section .text-container .text-top hr {
     display: block;
     margin-top: 15px;
@@ -382,6 +379,11 @@ main .intro-section .text-container .text-top hr {
   main .intro-section .text-container .text-bottom {
     margin-top: 20px;
     text-align: center;
+  }
+}
+@media screen and (max-width: 539px) {
+  main .intro-section .text-container .text-top p {
+    font-size: clamp(0.9rem, 1.5vw, 1.5rem);
   }
 }
 main .performers-section {

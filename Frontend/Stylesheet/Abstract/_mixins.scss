@@ -49,9 +49,6 @@
       text-align: justify;
 
       .text-top{
-        p{
-          font-size: clamp(0.9rem, 1.5vw, 1.125rem);
-        }
 
         hr{
           display: block;
@@ -69,6 +66,16 @@
       }
     }
     
+  }
+
+  @media screen and (max-width: 539px){
+    .text-container{
+      .text-top{
+        p{
+          font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+        }
+      }
+    }
   }
 }
 
