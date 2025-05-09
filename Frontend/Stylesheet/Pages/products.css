@@ -349,6 +349,9 @@ main .intro-section .text-container {
   justify-content: space-between;
   width: 60%;
 }
+main .intro-section .text-container .text-top hr {
+  display: none;
+}
 @media screen and (max-width: 1023px) {
   main .intro-section .text-container {
     width: 100%;
@@ -357,16 +360,25 @@ main .intro-section .text-container {
 }
 @media screen and (max-width: 719px) {
   main .intro-section {
-    padding: 150px 40px 50px 40px;
+    padding: 100px 40px 50px 40px;
   }
   main .intro-section h1, main .intro-section .text-container {
     text-align: center;
   }
-  main .intro-section h1 {
-    margin-bottom: 30px;
-  }
   main .intro-section .text-container {
-    height: 90%;
+    height: 100%;
+    text-align: justify;
+  }
+  main .intro-section .text-container .text-top hr {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 2px;
+    background-color: black;
+  }
+  main .intro-section .text-container .text-bottom {
+    margin-top: 20px;
+    text-align: center;
   }
 }
 main .intro-section h1 {

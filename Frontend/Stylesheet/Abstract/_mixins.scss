@@ -17,6 +17,12 @@
     justify-content: space-between;
     width: 60%;
 
+    .text-top{
+      hr{
+        display: none;
+      }
+    }
+
     .text-bottom {
       button {
         @extend .red-button;
@@ -32,18 +38,35 @@
   }
 
   @media screen and (max-width: 719px){
-    padding: 150px 40px 50px 40px;
+    padding: 100px 40px 50px 40px;
 
     h1, .text-container{
       text-align: center;
     }
 
     h1{
-      margin-bottom: 30px;
+      
     }
 
     .text-container {
-      height: 90%;
+      height: 100%;
+      text-align: justify;
+
+      .text-top{
+        hr{
+          display: block;
+          margin-top: 15px;
+          margin-bottom: 15px;
+          height: 2px;
+          background-color: black;
+          
+        }
+      }
+      
+      .text-bottom{
+        margin-top: 20px;
+        text-align: center;
+      }
     }
     
   }
