@@ -53,12 +53,11 @@ main {
         }
 
         .arrow-button {
+          top: 43%;
           position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
           z-index: 2;
           border: none;
-          font-size: 2rem;
+          font-size: clamp(1.5rem, 3vw, 2rem);
           background-color: nth($text-colors, 1);
           mix-blend-mode: screen;
           cursor: pointer;
@@ -70,11 +69,59 @@ main {
           }
 
           &.arrow-left {
-            left: -21rem;
+            left: calc(-100%);
           }
 
           &.arrow-right {
-            right: -21rem;
+            right: calc(-100%);
+          }
+
+          // Responsive adjustments
+          @media (max-width: 1440px) {
+            &.arrow-left {
+              left: calc(-80% + (100% - 80%) * (1440px - 100vw) / (1440 - 360));
+            }
+            &.arrow-right {
+              right: calc(
+                -80% + (100% - 80%) * (1440px - 100vw) / (1440 - 360)
+              );
+            }
+          }
+
+          @media (max-width: 1024px) {
+            &.arrow-left {
+              left: -60%;
+            }
+            &.arrow-right {
+              right: -60%;
+            }
+          }
+
+          @media (max-width: 768px) {
+            &.arrow-left {
+              left: -40%;
+            }
+            &.arrow-right {
+              right: -40%;
+            }
+          }
+
+          @media (max-width: 480px) {
+            &.arrow-left {
+              left: -20%;
+            }
+            &.arrow-right {
+              right: -20%;
+            }
+          }
+
+          @media (max-width: 360px) {
+            &.arrow-left {
+              left: -10%;
+            }
+            &.arrow-right {
+              right: -10%;
+            }
           }
         }
       }

@@ -447,12 +447,11 @@ main .performers-section .artist-wrapper .artistSwiper .swiper-wrapper .swiper-s
   background-position: center;
 }
 main .performers-section .artist-wrapper .artistSwiper .arrow-button {
+  top: 43%;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   z-index: 2;
   border: none;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   background-color: #fff;
   mix-blend-mode: screen;
   cursor: pointer;
@@ -463,10 +462,50 @@ main .performers-section .artist-wrapper .artistSwiper .arrow-button:hover {
   opacity: 0.7;
 }
 main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-left {
-  left: -21rem;
+  left: -100%;
 }
 main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-right {
-  right: -21rem;
+  right: -100%;
+}
+@media (max-width: 1440px) {
+  main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-left {
+    left: calc(-80% + 20% * (1440px - 100vw) / 1080);
+  }
+  main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-right {
+    right: calc(-80% + 20% * (1440px - 100vw) / 1080);
+  }
+}
+@media (max-width: 1024px) {
+  main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-left {
+    left: -60%;
+  }
+  main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-right {
+    right: -60%;
+  }
+}
+@media (max-width: 768px) {
+  main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-left {
+    left: -40%;
+  }
+  main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-right {
+    right: -40%;
+  }
+}
+@media (max-width: 480px) {
+  main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-left {
+    left: -20%;
+  }
+  main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-right {
+    right: -20%;
+  }
+}
+@media (max-width: 360px) {
+  main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-left {
+    left: -10%;
+  }
+  main .performers-section .artist-wrapper .artistSwiper .arrow-button.arrow-right {
+    right: -10%;
+  }
 }
 main .performers-section .artist-wrapper .artist-info-box {
   width: 80%;
