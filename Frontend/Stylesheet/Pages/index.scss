@@ -203,4 +203,40 @@ main {
       }
     }
   }
+
+  @media (max-width: 1023px){
+    .aboutus-section, .businesses-section, .products-section, .performers-section, .consultant-section{
+      margin: $tablet-spacing;
+    }
+
+    .aboutus-section{
+      .aboutus-container{
+
+        .desc{
+          padding: 20px;
+          font-size: clamp(1rem, 1.5vw, 1.125rem);
+          border-radius: 0 40px 40px 0;
+        }
+
+        button {
+          @extend .white-button;
+          font-size: clamp(1rem, 1.5vw, 1.125rem);
+        }
+      }
+    }
+
+    .consultant-section{
+      .consultant-container{
+
+        .left-side{
+          padding: 20px;
+        }
+
+        .right-side{
+          gap: 20px;
+          padding: 20px;
+        }
+      }
+    }
+  }
 }

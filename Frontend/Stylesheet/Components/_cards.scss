@@ -13,7 +13,7 @@
       align-items: center;
       background: #ed4540;
       border-radius: 24px;
-      padding: 20px;
+      padding: 10px;
       position: relative;
       @include shadow();
 
@@ -75,8 +75,34 @@
       }
     }
   }
+
+  @media screen and  (max-width: 1170px){
+    .businesses-container{
+      gap: 40px;
+
+      .business-card{
+
+        .image{
+          .text{
+            h3{
+              font-size: clamp(1.5rem, 2.5vw, 2rem);
+            }
+          }
+
+          .button{
+            bottom: 20px;
+
+            button {
+              @extend .white-button;
+              font-size: clamp(1rem, 1.5vw, 1.5rem);
+            }
+          }
+        }
+      }
+    }
+  }
   
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 719px) {
     .businesses-container{
       grid-template-columns: repeat(1, minmax(100px, 1fr));
       grid-template-rows: auto;

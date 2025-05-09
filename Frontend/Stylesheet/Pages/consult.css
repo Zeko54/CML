@@ -347,7 +347,7 @@ main .intro-section .text-container {
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
-  width: 60%;
+  width: 80%;
 }
 main .intro-section .text-container .text-top hr {
   display: none;
@@ -355,12 +355,10 @@ main .intro-section .text-container .text-top hr {
 @media screen and (max-width: 1023px) {
   main .intro-section .text-container {
     width: 100%;
-    height: 55%;
   }
 }
 @media screen and (max-width: 719px) {
   main .intro-section {
-    height: 110vh;
     padding: 100px 40px 50px 40px;
   }
   main .intro-section h1, main .intro-section .text-container {

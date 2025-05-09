@@ -65,7 +65,6 @@
     width: 40px !important;
   }
 
-
   @media only screen and (min-width: 769px) {
     .swiper-slide:first-child {
       transition: transform 100ms;
@@ -81,6 +80,35 @@
 
     .swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
       transform: translateX(-55%);
+    }
+  }
+
+  @media screen and (max-width: 1023px){
+    .swiper-slide {
+  
+      .performers-name {
+        h1{
+          display: flex;
+          align-items: center;
+          height: 160px;
+        }
+      }
+    }
+
+  }
+
+  @media screen and (max-width: 719px){
+    .swiper {
+      height: 500px;
+    }
+
+    .swiper-slide {
+  
+      .performers-name {
+        h1{
+          height:initial;
+        }
+      }
     }
   }
 }
