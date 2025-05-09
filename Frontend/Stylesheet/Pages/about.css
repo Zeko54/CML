@@ -371,6 +371,7 @@ main .intro-section .text-container .text-top hr {
   main .intro-section .text-container {
     height: 100%;
     text-align: justify;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
   }
   main .intro-section .text-container .text-top hr {
     display: block;

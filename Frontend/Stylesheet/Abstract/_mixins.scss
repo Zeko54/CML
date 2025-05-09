@@ -47,6 +47,7 @@
     .text-container {
       height: 100%;
       text-align: justify;
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
 
       .text-top{
         hr{
