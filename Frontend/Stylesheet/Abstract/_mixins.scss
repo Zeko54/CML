@@ -47,16 +47,19 @@
     .text-container {
       height: 100%;
       text-align: justify;
-      font-size: clamp(1rem, 1.5vw, 1.125rem);
 
       .text-top{
+        p{
+          font-size: clamp(1rem, 1.5vw, 1.125rem);
+        }
+
         hr{
           display: block;
           margin-top: 15px;
           margin-bottom: 15px;
           height: 2px;
           background-color: black;
-          
+        
         }
       }
       

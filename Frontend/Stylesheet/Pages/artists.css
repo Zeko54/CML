@@ -368,6 +368,8 @@ main .intro-section .text-container .text-top hr {
   main .intro-section .text-container {
     height: 100%;
     text-align: justify;
+  }
+  main .intro-section .text-container .text-top p {
     font-size: clamp(1rem, 1.5vw, 1.125rem);
   }
   main .intro-section .text-container .text-top hr {
