@@ -16,7 +16,7 @@ var swiper = new Swiper(".mySwiper", {
       slidesPerView: 2,
       slidesPerGroup: 1,
     },
-    1024: {
+    1070: {
       slidesPerView: 3, // ✅ for laptops and above
       slidesPerGroup: 1,
     },

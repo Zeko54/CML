@@ -37,8 +37,8 @@
 
         .button {
           position: absolute;
-          bottom: 40px;
-          width: 80%;
+          bottom: 20px;
+          width: 90%;
           z-index: 3;
 
           button {
@@ -91,6 +91,7 @@
 
           .button{
             bottom: 20px;
+            width: 85%;
 
             button {
               @extend .white-button;
@@ -138,15 +139,12 @@
       border-radius: 24px;
       color: nth($text-colors, 1);
       gap: 40px;
-      // reminder to me to use grid-template-rows
       @include shadow();
 
       .image {
         grid-area: images;
         background-color: aqua;
         border-radius: 20px;
-        width: 100%;
-        aspect-ratio: 1 / 0.6;
       }
 
       .product-desc {
@@ -162,6 +160,7 @@
           }
           p {
             font-size: $paragraph-fontsize;
+            margin: 10px auto;
           }
         }
 
@@ -172,7 +171,7 @@
 
           button {
             @extend .white-button;
-            margin-top: 10px;
+            margin-top: 20px;
           }
         }
       }
@@ -188,23 +187,75 @@
       grid-template-areas:
         "images images"
         "desc desc";
+        grid-template-rows: 350px 1fr;
     }
 
     .card-3 {
       grid-area: product-3;
       grid-template-areas:
-        "images images "
+        "images images"
         "desc desc";
+        grid-template-rows: 350px 1fr;
     }
   }
 
+  @media (max-width: 1023px){
+    .product-container{
+      gap: 20px;
+
+      .product-card{
+        padding: 20px;
+        gap: 20px;
+
+        .product-desc{
+          .product-top{
+            p{
+              font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+            }
+          }
+        }
+      }
+    }
+  }
+
+
   @media screen and (max-width: 719px) {
     .product-container{
+      gap: 10px;
+      
       grid-template-columns: repeat(1, minmax(100px, 1fr));
       grid-template-areas:
       "product-1"
       "product-2"
       "product-3";
+
+      .product-card{
+        padding: 10px;
+        gap: 10px;
+
+        .product-desc{
+          .product-top, .product-bottom{
+            p{
+              font-size: clamp(1rem, 1.5vw, 1.5rem);
+            }
+
+            h2{
+              $sub-heading-fontsize: clamp(1.25rem, 2vw, 1.5rem);
+            }
+
+            button {
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
+          }
+          }
+        }
+      }
+
+      .card-1, .card-2, .card-3{
+        grid-template-areas: 
+        "images images"
+        "desc desc";
+        grid-template-rows: 200px 1fr;
+      }
     }
   }
 }

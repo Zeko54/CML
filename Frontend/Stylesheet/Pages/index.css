@@ -498,8 +498,8 @@ main .businesses-section .businesses-container .business-card .image .text h3 {
 }
 main .businesses-section .businesses-container .business-card .image .button {
   position: absolute;
-  bottom: 40px;
-  width: 80%;
+  bottom: 20px;
+  width: 90%;
   z-index: 3;
 }
 main .businesses-section .businesses-container .business-card .overlay {
@@ -535,6 +535,7 @@ main .businesses-section .businesses-container .business-card:hover .overlay {
   }
   main .businesses-section .businesses-container .business-card .image .button {
     bottom: 20px;
+    width: 85%;
   }
   main .businesses-section .businesses-container .business-card .image .button button {
     font-size: clamp(1rem, 1.5vw, 1.5rem);
@@ -598,8 +599,6 @@ main .products-section .product-container .product-card .image {
   grid-area: images;
   background-color: aqua;
   border-radius: 20px;
-  width: 100%;
-  aspect-ratio: 1/0.6;
 }
 main .products-section .product-container .product-card .product-desc {
   width: 100%;
@@ -613,12 +612,13 @@ main .products-section .product-container .product-card .product-desc .product-t
 }
 main .products-section .product-container .product-card .product-desc .product-top p {
   font-size: clamp(1rem, 3vw, 1.5rem);
+  margin: 10px auto;
 }
 main .products-section .product-container .product-card .product-desc .product-bottom h2 {
   font-size: clamp(1.75rem, 4.5vw, 2.5rem);
 }
 main .products-section .product-container .product-card .product-desc .product-bottom button {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 main .products-section .product-container .card-1 {
   grid-area: product-1;
@@ -627,15 +627,44 @@ main .products-section .product-container .card-1 {
 main .products-section .product-container .card-2 {
   grid-area: product-2;
   grid-template-areas: "images images" "desc desc";
+  grid-template-rows: 350px 1fr;
 }
 main .products-section .product-container .card-3 {
   grid-area: product-3;
-  grid-template-areas: "images images " "desc desc";
+  grid-template-areas: "images images" "desc desc";
+  grid-template-rows: 350px 1fr;
+}
+@media (max-width: 1023px) {
+  main .products-section .product-container {
+    gap: 20px;
+  }
+  main .products-section .product-container .product-card {
+    padding: 20px;
+    gap: 20px;
+  }
+  main .products-section .product-container .product-card .product-desc .product-top p {
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  }
 }
 @media screen and (max-width: 719px) {
   main .products-section .product-container {
+    gap: 10px;
     grid-template-columns: repeat(1, minmax(100px, 1fr));
     grid-template-areas: "product-1" "product-2" "product-3";
+  }
+  main .products-section .product-container .product-card {
+    padding: 10px;
+    gap: 10px;
+  }
+  main .products-section .product-container .product-card .product-desc .product-top p, main .products-section .product-container .product-card .product-desc .product-bottom p {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+  }
+  main .products-section .product-container .product-card .product-desc .product-top button, main .products-section .product-container .product-card .product-desc .product-bottom button {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+  }
+  main .products-section .product-container .card-1, main .products-section .product-container .card-2, main .products-section .product-container .card-3 {
+    grid-template-areas: "images images" "desc desc";
+    grid-template-rows: 200px 1fr;
   }
 }
 main .performers-section {
@@ -752,6 +781,9 @@ main .performers-section .swiper-scrollbar-drag {
 @media screen and (max-width: 719px) {
   main .performers-section .swiper {
     height: 500px;
+  }
+  main .performers-section .swiper-slide {
+    height: 450px;
   }
   main .performers-section .swiper-slide .performers-name h1 {
     height: initial;
@@ -889,7 +921,11 @@ main .client-section .client-img {
   }
 }
 @media (max-width: 1023px) {
-  main .aboutus-section, main .businesses-section, main .products-section, main .performers-section, main .consultant-section {
+  main .aboutus-section,
+  main .businesses-section,
+  main .products-section,
+  main .performers-section,
+  main .consultant-section {
     margin: 80px 40px;
   }
   main .aboutus-section .aboutus-container .desc {
@@ -906,5 +942,50 @@ main .client-section .client-img {
   main .consultant-section .consultant-container .right-side {
     gap: 20px;
     padding: 20px;
+  }
+  main .client-section {
+    padding: 40px 40px;
+  }
+  main .client-section .client-slider {
+    margin-top: 40px;
+    overflow: hidden;
+    width: 100%;
+  }
+  main .client-section .client-images {
+    gap: 20px;
+  }
+  main .client-section .client-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 719px) {
+  main .aboutus-section,
+  main .businesses-section,
+  main .products-section,
+  main .performers-section,
+  main .consultant-section {
+    margin: 40px 20px;
+  }
+  main .aboutus-section .aboutus-container {
+    grid-template-columns: 1fr;
+    border-radius: 20px;
+  }
+  main .aboutus-section .aboutus-container .desc {
+    border-radius: 20px;
+  }
+  main .consultant-section .consultant-container .left-side {
+    padding: 10px;
+  }
+  main .consultant-section .consultant-container .right-side {
+    gap: 10px;
+    padding: 10px;
+  }
+  main .client-section {
+    padding: 40px 40px;
+  }
+  main .client-section .client-img {
+    width: 80px;
+    height: 80px;
   }
 }/*# sourceMappingURL=index.css.map */

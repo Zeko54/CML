@@ -204,15 +204,20 @@ main {
     }
   }
 
-  @media (max-width: 1023px){
-    .aboutus-section, .businesses-section, .products-section, .performers-section, .consultant-section{
+  @media (max-width: 1023px) {
+
+    .aboutus-section,
+    .businesses-section,
+    .products-section,
+    .performers-section,
+    .consultant-section {
       margin: $tablet-spacing;
     }
 
-    .aboutus-section{
-      .aboutus-container{
+    .aboutus-section {
+      .aboutus-container {
 
-        .desc{
+        .desc {
           padding: 20px;
           font-size: clamp(1rem, 1.5vw, 1.125rem);
           border-radius: 0 40px 40px 0;
@@ -225,18 +230,84 @@ main {
       }
     }
 
-    .consultant-section{
-      .consultant-container{
+    .consultant-section {
+      .consultant-container {
 
-        .left-side{
+        .left-side {
           padding: 20px;
         }
 
-        .right-side{
+        .right-side {
           gap: 20px;
           padding: 20px;
         }
       }
     }
+
+    .client-section {
+      padding: 40px 40px;
+
+      .client-slider {
+        margin-top: 40px;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .client-images {
+        gap: 20px;
+      }
+
+      .client-img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  @media (max-width: 719px) {
+
+    .aboutus-section,
+    .businesses-section,
+    .products-section,
+    .performers-section,
+    .consultant-section {
+      margin: $mobile-spacing;
+    }
+
+    .aboutus-section {
+      .aboutus-container {
+        grid-template-columns: 1fr;
+        border-radius: 20px;
+
+        .desc {
+          border-radius: 20px;
+        }
+
+      }
+    }
+
+    .consultant-section {
+        .consultant-container {
+
+          .left-side {
+            padding: 10px;
+          }
+
+          .right-side {
+            gap: 10px;
+            padding: 10px;
+          }
+        }
+      }
+
+    .client-section {
+      padding: 40px 40px;
+
+      .client-img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    
   }
 }
