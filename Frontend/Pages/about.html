@@ -1,314 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ABOUT US</title>
-    <link rel="stylesheet" href="../Stylesheet/Pages/about.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body class="home-page">
-    <div class="circle-container"></div>
 
-    <header id="header">
-      <div class="logo">
-        <a href="../index.html">CML</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABOUT US</title>
+  <link rel="stylesheet" href="../Stylesheet/Pages/about.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body class="home-page">
+  <div class="circle-container"></div>
+
+  <header id="header">
+    <div class="logo">
+      <a href="../index.html">CML</a>
+    </div>
+
+    <nav class="nav-links" aria-label="Main Navigation">
+      <button class="close-btn" onclick="toggleMobileMenu()" aria-label="Close mobile menu">
+        <i class="fa fa-times"></i>
+      </button>
+      <div class="links">
+        <a href="../Pages/artist.html">ARTISTS</a>
+        <a href="../Pages/consulting.html">CONSULTING</a>
+        <a href="../Pages/Products.html">PRODUCTS</a>
+        <a href="../Pages/about.html">ABOUT US</a>
       </div>
-
-      <nav class="nav-links" aria-label="Main Navigation">
-        <button
-          class="close-btn"
-          onclick="toggleMobileMenu()"
-          aria-label="Close mobile menu"
-        >
-          <i class="fa fa-times"></i>
+      <div class="button">
+        <button onclick="location.href='#contact'">
+          CONTACT US
         </button>
-        <div class="links">
-          <a href="../Pages/artist.html">ARTISTS</a>
-          <a href="../Pages/consulting.html">CONSULTING</a>
-          <a href="../Pages/Products.html">PRODUCTS</a>
-          <a href="../Pages/about.html">ABOUT US</a>
+      </div>
+    </nav>
+
+    <button class="hamburger" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">
+      <i class="fa fa-bars"></i>
+    </button>
+  </header>
+
+  <main>
+    <section class="intro-section">
+      <div class="text-container">
+        <div class="text-top">
+          <h1>Who are we</h1>
+          <hr>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            doloribus vero optio, voluptatum amet sed asperiores saepe cumque
+            aliquid, architecto distinctio velit ipsum debitis qui, aliquam
+            maiores perferendis odio dicta nihil quis dolores a deserunt at
+            voluptatibus. At, explicabo voluptatem, nam animi ipsum ab
+            voluptate iure cupiditate laudantium, quasi incidunt?
+          </p>
         </div>
-        <div class="button">
-          <button>
-            <a href="#contact">CONTACT US</a>
+
+        <div class="text-bottom">
+          <button onclick="location.href='#'">
+            ABOUT US
           </button>
         </div>
-      </nav>
+      </div>
+    </section>
 
-      <button
-        class="hamburger"
-        aria-label="Toggle mobile menu"
-        onclick="toggleMobileMenu()"
-      >
-        <i class="fa fa-bars"></i>
-      </button>
-    </header>
-
-    <main>
-      <section class="intro-section">
-        <div class="text-container">
-          <div class="text-top">
-            <h1>Who are we</h1>
-            <hr>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              doloribus vero optio, voluptatum amet sed asperiores saepe cumque
-              aliquid, architecto distinctio velit ipsum debitis qui, aliquam
-              maiores perferendis odio dicta nihil quis dolores a deserunt at
-              voluptatibus. At, explicabo voluptatem, nam animi ipsum ab
-              voluptate iure cupiditate laudantium, quasi incidunt?
-            </p>
-          </div>
-
-          <div class="text-bottom">
-                <button onclick="location.href='#'">
-                  <a href="">ABOUT US</a>
-                </button>
-              </div>
-        </div>
-      </section>
-
-      <section class="story-section">
-        <div class="heading">
-          <h3 class="without-bg">OUR</h3>
-          <h3 class="with-bg">STORY</h3>
-        </div>
-
-        <hr />
-
-        <div class="top-container">
-          <div class="image"></div>
-          <div class="desc">
-            <h1>OUR MISSION</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque
-              eaque sequi eius aut! Nisi quam repellat, laborum nostrum mollitia
-              esse omnis dicta rerum atque architecto, asperiores, reiciendis
-              magnam tempora voluptatum? Culpa accusamus fuga suscipit
-              explicabo!
-            </p>
-          </div>
-        </div>
-
-        <div class="bottom-container">
-          <div class="box">
-            <h1>Heading</h1>
-            <p>Paragraph</p>
-          </div>
-
-          <div class="box">
-            <h1>Heading</h1>
-            <p>Paragraph</p>
-          </div>
-
-          <div class="box">
-            <h1>Heading</h1>
-            <p>Paragraph</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="team-section">
-        <div class="heading">
-          <h3 class="without-bg">OUR</h3>
-          <h3 class="with-bg">TEAM</h3>
-        </div>
-
-        <hr />
-
-        <div class="swiper mySwiper">
-          <!-- Swiper wrapper -->
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="members">
-                <!-- <h4>Team Member 1</h4>
-                <p>Role / Description</p> -->
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="members">
-                <!-- <h4>Team Member 2</h4>
-                <p>Role / Description</p> -->
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="members">
-                <!-- <h4>Team Member 3</h4>
-                <p>Role / Description</p> -->
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="members">
-                <!-- <h4>Team Member 4</h4>
-                <p>Role / Description</p> -->
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="members">
-                <!-- <h4>Team Member 5</h4>
-                <p>Role / Description</p> -->
-              </div>
-            </div>
-          </div>
-
-          <!-- Swiper arrows and pagination -->
-          <button class="arrow-button arrow-left">&#10094;</button>
-          <button class="arrow-button arrow-right">&#10095;</button>
-          <div class="swiper-pagination"></div>
-        </div>
-      </section>
-
-      <section class="location-section">
-        <div class="heading">
-          <h3 class="without-bg">OUR</h3>
-          <h3 class="with-bg">LOCATION</h3>
-        </div>
-
-        <hr />
-
-        <div class="location-container">
-          <div class="desc">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque
-              eaque sequi eius aut! Nisi quam repellat, laborum nostrum mollitia
-              esse omnis dicta rerum atque architecto, asperiores, reiciendis
-              magnam tempora voluptatum? Culpa accusamus fuga suscipit
-              explicabo!
-            </p>
-          </div>
-
-          <div class="image"></div>
-        </div>
-      </section>
-
-      <section class="contact-section" id="contact">
-        <div class="contact-container">
-          <h1>CONTACT US</h1>
-          <form>
-            <div class="first-row">
-              <label for="name">
-                <input type="text" id="name" required placeholder="FULL NAME" />
-                <div class="icon">
-                  <img src="../Images/profile.png" alt="" />
-                </div>
-              </label>
-
-              <label for="email">
-                <input
-                  type="email"
-                  id="email"
-                  required
-                  placeholder="EMAIL ADDRESS"
-                />
-                <div class="icon">
-                  <img src="../Images/email.png" alt="" />
-                </div>
-              </label>
-            </div>
-
-            <div class="second-row">
-              <label for="subject">
-                <select id="subject">
-                  <option value="">CHOOSE SUBJECT</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                </select>
-                <div class="icon">
-                  <img src="../Images/down.png" alt="" />
-                </div>
-              </label>
-            </div>
-
-            <div class="third-row">
-              <label for="message">
-                <textarea
-                  id="message"
-                  required
-                  placeholder="YOUR MESSAGE
-                "
-                ></textarea>
-              </label>
-            </div>
-
-            <div class="buttons">
-              <button>
-                <a href="./Pages/about.html">BACK TO HOME</a>
-              </button>
-
-              <input type="submit" value="SUBMIT NOW" id="submit" />
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-top">
-        <div class="cml-logo">
-          <h1>CML</h1>
-        </div>
-        <div class="social-media">
-          <div class="app"></div>
-          <div class="app"></div>
-          <div class="app"></div>
-        </div>
+    <section class="story-section">
+      <div class="heading">
+        <h3 class="without-bg">OUR</h3>
+        <h3 class="with-bg">STORY</h3>
       </div>
 
-      <div class="footer-bottom">
-        <div class="service">
-          <h3>SERVICE WE PROVIDE</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem,
-            fugiat?
-          </p>
-        </div>
+      <hr />
 
-        <div class="company">
-          <h3>COMPANY</h3>
+      <div class="top-container">
+        <div class="image"></div>
+        <div class="desc">
+          <h1>OUR MISSION</h1>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem,
-            fugiat?
-          </p>
-        </div>
-
-        <div class="quick-links">
-          <h3>QUICK LINKS</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem,
-            fugiat?
-          </p>
-        </div>
-
-        <div class="head-office">
-          <h3>HEAD OFFICE</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem,
-            fugiat?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque
+            eaque sequi eius aut! Nisi quam repellat, laborum nostrum mollitia
+            esse omnis dicta rerum atque architecto, asperiores, reiciendis
+            magnam tempora voluptatum? Culpa accusamus fuga suscipit
+            explicabo!
           </p>
         </div>
       </div>
 
-      <div class="copyright">
-        <p>&copy; CML</p>
+      <div class="bottom-container">
+        <div class="box">
+          <h1>Heading</h1>
+          <p>Paragraph</p>
+        </div>
+
+        <div class="box">
+          <h1>Heading</h1>
+          <p>Paragraph</p>
+        </div>
+
+        <div class="box">
+          <h1>Heading</h1>
+          <p>Paragraph</p>
+        </div>
       </div>
-    </footer>
-  </body>
-  <script src="../Javascript/linearBackground.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="../Javascript/teamslider.js"></script>
-  <script src="../Javascript/header.js"></script>
+    </section>
+
+    <section class="team-section">
+      <div class="heading">
+        <h3 class="without-bg">OUR</h3>
+        <h3 class="with-bg">TEAM</h3>
+      </div>
+
+      <hr />
+
+      <div class="swiper mySwiper">
+        <!-- Swiper wrapper -->
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="members">
+              <!-- <h4>Team Member 1</h4>
+                <p>Role / Description</p> -->
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="members">
+              <!-- <h4>Team Member 2</h4>
+                <p>Role / Description</p> -->
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="members">
+              <!-- <h4>Team Member 3</h4>
+                <p>Role / Description</p> -->
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="members">
+              <!-- <h4>Team Member 4</h4>
+                <p>Role / Description</p> -->
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="members">
+              <!-- <h4>Team Member 5</h4>
+                <p>Role / Description</p> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Swiper arrows and pagination -->
+        <button class="arrow-button arrow-left">&#10094;</button>
+        <button class="arrow-button arrow-right">&#10095;</button>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="location-section">
+      <div class="heading">
+        <h3 class="without-bg">OUR</h3>
+        <h3 class="with-bg">LOCATION</h3>
+      </div>
+
+      <hr />
+
+      <div class="location-container">
+        <div class="desc">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque
+            eaque sequi eius aut! Nisi quam repellat, laborum nostrum mollitia
+            esse omnis dicta rerum atque architecto, asperiores, reiciendis
+            magnam tempora voluptatum? Culpa accusamus fuga suscipit
+            explicabo!
+          </p>
+        </div>
+
+        <div class="image"></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
+        <h1>CONTACT US</h1>
+        <form>
+          <div class="first-row">
+            <label for="name">
+              <input type="text" id="name" required placeholder="FULL NAME" />
+              <div class="icon">
+                <img src="../Images/profile.png" alt="" />
+              </div>
+            </label>
+
+            <label for="email">
+              <input type="email" id="email" required placeholder="EMAIL ADDRESS" />
+              <div class="icon">
+                <img src="../Images/email.png" alt="" />
+              </div>
+            </label>
+          </div>
+
+          <div class="second-row">
+            <label for="subject">
+              <select id="subject">
+                <option value="">CHOOSE SUBJECT</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <div class="icon">
+                <img src="../Images/down.png" alt="" />
+              </div>
+            </label>
+          </div>
+
+          <div class="third-row">
+            <label for="message">
+              <textarea id="message" required placeholder="YOUR MESSAGE
+                "></textarea>
+            </label>
+          </div>
+
+          <div class="buttons">
+            <button>
+              <a href="./Pages/about.html">BACK TO HOME</a>
+            </button>
+
+            <input type="submit" value="SUBMIT NOW" id="submit" />
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div class="cml-logo">
+        <h1>CML</h1>
+      </div>
+      <div class="social-media">
+        <div class="app"></div>
+        <div class="app"></div>
+        <div class="app"></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="service">
+        <h3>SERVICE WE PROVIDE</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem,
+          fugiat?
+        </p>
+      </div>
+
+      <div class="company">
+        <h3>COMPANY</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem,
+          fugiat?
+        </p>
+      </div>
+
+      <div class="quick-links">
+        <h3>QUICK LINKS</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem,
+          fugiat?
+        </p>
+      </div>
+
+      <div class="head-office">
+        <h3>HEAD OFFICE</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem,
+          fugiat?
+        </p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; CML</p>
+    </div>
+  </footer>
+</body>
+<script src="../Javascript/linearBackground.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../Javascript/teamslider.js"></script>
+<script src="../Javascript/header.js"></script>
+
 </html>
