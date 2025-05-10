@@ -352,3 +352,23 @@ main {
 .performers-section.djplayer hr {
   margin-left: auto;
 }
+
+@media screen and (min-width: $tablet) and (max-width: $desktop) {
+  main {
+    .performers-section {
+      margin: $tablet-spacing;
+    }
+
+    .performers-modal {
+      .modal-overlay {
+        .modal {
+          max-width: 600px;
+
+          .modal-close {
+            left: 41pc;
+          }
+        }
+      }
+    }
+  }
+}

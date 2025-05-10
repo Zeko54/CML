@@ -713,4 +713,16 @@ main .performers-modal .modal-overlay .modal .modal-form .modal-submit:hover {
 .performers-section.bandperformer hr,
 .performers-section.djplayer hr {
   margin-left: auto;
+}
+
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+  main .performers-section {
+    margin: 80px 40px;
+  }
+  main .performers-modal .modal-overlay .modal {
+    max-width: 600px;
+  }
+  main .performers-modal .modal-overlay .modal .modal-close {
+    left: 41pc;
+  }
 }/*# sourceMappingURL=artists.css.map */
