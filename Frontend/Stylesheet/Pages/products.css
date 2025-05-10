@@ -345,7 +345,7 @@ main .intro-section .text-container {
   font-size: clamp(1rem, 3vw, 1.5rem);
   display: flex;
   flex-direction: column;
-  height: 90%;
+  height: 80%;
   justify-content: space-between;
   width: 80%;
 }
