@@ -1,316 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artist</title>
-    <link rel="stylesheet" href="../Stylesheet/Pages/artists.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body class="artist-page">
-    <div class="circle-container"></div>
-    <header id="header">
-      <div class="logo">
-        <a href="../index.html">CML</a>
-      </div>
 
-      <nav class="nav-links" aria-label="Main Navigation">
-        <button
-          class="close-btn"
-          onclick="toggleMobileMenu()"
-          aria-label="Close mobile menu"
-        >
-          <i class="fa fa-times"></i>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artist</title>
+  <link rel="stylesheet" href="../Stylesheet/Pages/artists.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body class="artist-page">
+  <div class="circle-container"></div>
+  <header id="header">
+    <div class="logo">
+      <a href="../index.html">CML</a>
+    </div>
+
+    <nav class="nav-links" aria-label="Main Navigation">
+      <button class="close-btn" onclick="toggleMobileMenu()" aria-label="Close mobile menu">
+        <i class="fa fa-times"></i>
+      </button>
+      <div class="links">
+        <a href="../Pages/artist.html">ARTISTS</a>
+        <a href="../Pages/consulting.html">CONSULTING</a>
+        <a href="../Pages/Products.html">PRODUCTS</a>
+        <a href="../Pages/about.html">ABOUT US</a>
+      </div>
+      <div class="button">
+        <button>
+          <a href="../Pages/about.html#contact">CONTACT US</a>
         </button>
-        <div class="links">
-          <a href="../Pages/artist.html">ARTISTS</a>
-          <a href="../Pages/consulting.html">CONSULTING</a>
-          <a href="../Pages/Products.html">PRODUCTS</a>
-          <a href="../Pages/about.html">ABOUT US</a>
+      </div>
+    </nav>
+
+    <button class="hamburger" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">
+      <i class="fa fa-bars"></i>
+    </button>
+  </header>
+
+  <main>
+    <section class="intro-section">
+      <div class="text-container">
+        <div class="text-top">
+          <h1>ARTIST</h1>
+          <hr>
+          <p>
+            CML is a company that consulting, dropshipping, and events
+            company. Our mission is to bring joy to customers and help small
+            Filipino business thrive in the UAE market
+          </p>
         </div>
-        <div class="button">
-          <button>
-            <a href="../Pages/about.html#contact">CONTACT US</a>
+
+        <div class="text-bottom">
+          <button onclick="location.href='../Pages/about.html#contact'">
+            CONTACT US
           </button>
         </div>
-      </nav>
+      </div>
+    </section>
 
-      <button
-        class="hamburger"
-        aria-label="Toggle mobile menu"
-        onclick="toggleMobileMenu()"
-      >
-        <i class="fa fa-bars"></i>
-      </button>
-    </header>
-
-    <main>
-      <section class="intro-section">
-        <div class="text-container">
-          <div class="text-top">
-            <h1>ARTIST</h1>
-            <hr>
-            <p>
-              CML is a company that consulting, dropshipping, and events
-              company. Our mission is to bring joy to customers and help small
-              Filipino business thrive in the UAE market
-            </p>
-          </div>
-
-          <div class="text-bottom">
-            <button>
-              <a href="../Pages/about.html">ABOUT US</a>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section class="performers-section duoperformer">
-        <div class="heading">
-          <h3 class="without-bg">Duo</h3>
-          <h3 class="with-bg">Performers</h3>
-        </div>
-
-        <hr />
-
-        <div class="artist-wrapper">
-          <h1 class="artist-name"></h1>
-
-          <div class="swiper artistSwiper duo-swiper">
-            <div class="swiper-wrapper"></div>
-          </div>
-
-          <div class="artist-info-box duo-info">
-            <p class="artist-description"></p>
-            <div class="button-group">
-              <button class="learn-more-btn">Learn more</button>
-              <button class="quote-btn">Get a quote</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="performers-section bandperformer">
-        <div class="heading">
-          <h3 class="without-bg">BAND</h3>
-          <h3 class="with-bg">Performers</h3>
-        </div>
-
-        <hr />
-
-        <div class="artist-wrapper">
-          <h1 class="artist-name"></h1>
-
-          <div class="swiper artistSwiper band-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="artist-circle"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="artist-info-box duo-info">
-            <p class="artist-description"></p>
-            <div class="button-group">
-              <button class="learn-more-btn">Learn more</button>
-              <button class="quote-btn">Get a quote</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="performers-section soloperformer">
-        <div class="heading">
-          <h3 class="without-bg">SOLO</h3>
-          <h3 class="with-bg">Performers</h3>
-        </div>
-
-        <hr />
-
-        <div class="artist-wrapper">
-          <h1 class="artist-name">
-            SHAMIKSHA <br />
-            THE VIOLINIST
-          </h1>
-
-          <div class="swiper artistSwiper solo-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="artist-circle"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="artist-info-box duo-info">
-            <p class="artist-description">
-              Her violin doesn’t just play notes—it tells stories, evokes
-              emotions, and leaves audiences breathless. Whether it’s a
-              classical masterpiece or a modern fusion, Shamiksha brings a
-              unique energy and passion to every performance. <br /><br />Her
-              style is more than technique; it’s an experience. Each note is a
-              journey, every melody a memory waiting to be made.
-            </p>
-            <div class="button-group">
-              <button class="learn-more-btn">Learn more</button>
-              <button class="quote-btn">Get a quote</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="performers-section djplayer">
-        <div class="heading">
-          <h3 class="without-bg">DJ</h3>
-          <h3 class="with-bg">PLAYER</h3>
-        </div>
-
-        <hr />
-
-        <div class="artist-wrapper">
-          <h1 class="artist-name">DJ AYA</h1>
-
-          <div class="swiper artistSwiper dj-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="artist-circle"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="artist-info-box duo-info">
-            <p class="artist-description">
-              A DJ, a performer, a storyteller, and a musical sorceress who
-              transports audiences into fantastical realms with her electrifying
-              sets. Known for blending high-energy beats with an immersive
-              cosplay experience, DJ Aya stands at the intersection of music,
-              gaming, anime, and pop culture. <br /><br />With every
-              performance, she transforms into iconic characters, turning the DJ
-              booth into a stage where sound and spectacle collide.
-            </p>
-            <div class="button-group">
-              <button class="learn-more-btn">Learn more</button>
-              <button class="quote-btn">Get a quote</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="performers-section groupdancers">
-        <div class="heading">
-          <h3 class="without-bg">GROUP</h3>
-          <h3 class="with-bg">DANCERS</h3>
-        </div>
-
-        <hr />
-
-        <div class="artist-wrapper">
-          <h1 class="artist-name">G-SWAG DANCERS</h1>
-
-          <div class="swiper artistSwiper group-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="artist-circle"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="artist-info-box duo-info">
-            <p class="artist-description">
-              The G-Swag Dancers are the embodiment of movement, rhythm, and
-              modern dance culture. Blending hip-hop, krumping, popping, and the
-              latest dance trends, they bring an electrifying energy to every
-              performance. <br /><br />With innovative choreography and a
-              passion for self-expression, they don’t just follow the beat—they
-              set it, redefining what it means to move in style.
-            </p>
-            <div class="button-group">
-              <button class="learn-more-btn">Learn more</button>
-              <button class="quote-btn">Get a quote</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="performers-modal">
-        <div class="modal-overlay">
-          <div class="modal">
-            <button class="modal-close">&times;</button>
-            <div class="modal-whatsapp">
-              <img src="/assets/icons/whatsapp.svg" alt="WhatsApp" />
-              <span>you can message us on Whatsapp</span>
-            </div>
-            <form class="modal-form">
-              <select name="band" id="bandSelect"></select>
-
-              <input type="text" name="name" placeholder="Name" />
-              <input type="text" name="Email" placeholder="Email" />
-              <textarea placeholder="Write your message here..."></textarea>
-
-              <div class="modal-options">
-                <button type="button" class="option-btn">
-                  Special Occasion
-                </button>
-                <button type="button" class="option-btn">
-                  Corporate Events
-                </button>
-                <button type="button" class="option-btn">
-                  winter theme festivals
-                </button>
-                <button type="button" class="option-btn">
-                  indoor/outdoor events
-                </button>
-                <button type="button" class="option-btn">Mall events</button>
-              </div>
-              <button type="submit" class="modal-submit">SUBMIT</button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer-top">
-        <div class="cml-logo">
-          <h1>CML</h1>
-        </div>
-        <div class="social-media">
-          <div class="app"></div>
-          <div class="app"></div>
-          <div class="app"></div>
-        </div>
+    <section class="performers-section duoperformer">
+      <div class="heading">
+        <h3 class="without-bg">Duo</h3>
+        <h3 class="with-bg">Performers</h3>
       </div>
 
-      <div class="footer-bottom">
-        <div class="service">
-          <h3>SERVICE WE PROVIDE</h3>
-          <p>################ ################ ################ ###########</p>
+      <hr />
+
+      <div class="artist-wrapper">
+        <h1 class="artist-name"></h1>
+
+        <div class="swiper artistSwiper duo-swiper">
+          <div class="swiper-wrapper"></div>
         </div>
 
-        <div class="company">
-          <h3>COMPANY</h3>
-          <p>################ ################ ################ ###########</p>
-        </div>
-
-        <div class="quick-links">
-          <h3>QUICK LINKS</h3>
-          <p>################ ################ ################ ###########</p>
-        </div>
-
-        <div class="head-office">
-          <h3>HEAD OFFICE</h3>
-          <p>################ ################ ################ ###########</p>
+        <div class="artist-info-box duo-info">
+          <p class="artist-description"></p>
+          <div class="button-group">
+            <button class="learn-more-btn">Learn more</button>
+            <button class="quote-btn">Get a quote</button>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="copyright">
-        <p>&copy; CML</p>
+    <section class="performers-section bandperformer">
+      <div class="heading">
+        <h3 class="without-bg">BAND</h3>
+        <h3 class="with-bg">Performers</h3>
       </div>
-    </footer>
-  </body>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="../Javascript/linearBackground.js"></script>
-  <script src="../Javascript/header.js"></script>
-  <script src="../Javascript/artistslider.js"></script>
+
+      <hr />
+
+      <div class="artist-wrapper">
+        <h1 class="artist-name"></h1>
+
+        <div class="swiper artistSwiper band-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="artist-circle"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="artist-info-box duo-info">
+          <p class="artist-description"></p>
+          <div class="button-group">
+            <button class="learn-more-btn">Learn more</button>
+            <button class="quote-btn">Get a quote</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="performers-section soloperformer">
+      <div class="heading">
+        <h3 class="without-bg">SOLO</h3>
+        <h3 class="with-bg">Performers</h3>
+      </div>
+
+      <hr />
+
+      <div class="artist-wrapper">
+        <h1 class="artist-name">
+          SHAMIKSHA <br />
+          THE VIOLINIST
+        </h1>
+
+        <div class="swiper artistSwiper solo-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="artist-circle"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="artist-info-box duo-info">
+          <p class="artist-description">
+            Her violin doesn’t just play notes—it tells stories, evokes
+            emotions, and leaves audiences breathless. Whether it’s a
+            classical masterpiece or a modern fusion, Shamiksha brings a
+            unique energy and passion to every performance. <br /><br />Her
+            style is more than technique; it’s an experience. Each note is a
+            journey, every melody a memory waiting to be made.
+          </p>
+          <div class="button-group">
+            <button class="learn-more-btn">Learn more</button>
+            <button class="quote-btn">Get a quote</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="performers-section djplayer">
+      <div class="heading">
+        <h3 class="without-bg">DJ</h3>
+        <h3 class="with-bg">PLAYER</h3>
+      </div>
+
+      <hr />
+
+      <div class="artist-wrapper">
+        <h1 class="artist-name">DJ AYA</h1>
+
+        <div class="swiper artistSwiper dj-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="artist-circle"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="artist-info-box duo-info">
+          <p class="artist-description">
+            A DJ, a performer, a storyteller, and a musical sorceress who
+            transports audiences into fantastical realms with her electrifying
+            sets. Known for blending high-energy beats with an immersive
+            cosplay experience, DJ Aya stands at the intersection of music,
+            gaming, anime, and pop culture. <br /><br />With every
+            performance, she transforms into iconic characters, turning the DJ
+            booth into a stage where sound and spectacle collide.
+          </p>
+          <div class="button-group">
+            <button class="learn-more-btn">Learn more</button>
+            <button class="quote-btn">Get a quote</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="performers-section groupdancers">
+      <div class="heading">
+        <h3 class="without-bg">GROUP</h3>
+        <h3 class="with-bg">DANCERS</h3>
+      </div>
+
+      <hr />
+
+      <div class="artist-wrapper">
+        <h1 class="artist-name">G-SWAG DANCERS</h1>
+
+        <div class="swiper artistSwiper group-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="artist-circle"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="artist-info-box duo-info">
+          <p class="artist-description">
+            The G-Swag Dancers are the embodiment of movement, rhythm, and
+            modern dance culture. Blending hip-hop, krumping, popping, and the
+            latest dance trends, they bring an electrifying energy to every
+            performance. <br /><br />With innovative choreography and a
+            passion for self-expression, they don’t just follow the beat—they
+            set it, redefining what it means to move in style.
+          </p>
+          <div class="button-group">
+            <button class="learn-more-btn">Learn more</button>
+            <button class="quote-btn">Get a quote</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="performers-modal">
+      <div class="modal-overlay">
+        <div class="modal">
+          <button class="modal-close">&times;</button>
+          <div class="modal-whatsapp">
+            <img src="/assets/icons/whatsapp.svg" alt="WhatsApp" />
+            <span>you can message us on Whatsapp</span>
+          </div>
+          <form class="modal-form">
+            <select name="band" id="bandSelect"></select>
+
+            <input type="text" name="name" placeholder="Name" />
+            <input type="text" name="Email" placeholder="Email" />
+            <textarea placeholder="Write your message here..."></textarea>
+
+            <div class="modal-options">
+              <button type="button" class="option-btn">
+                Special Occasion
+              </button>
+              <button type="button" class="option-btn">
+                Corporate Events
+              </button>
+              <button type="button" class="option-btn">
+                winter theme festivals
+              </button>
+              <button type="button" class="option-btn">
+                indoor/outdoor events
+              </button>
+              <button type="button" class="option-btn">Mall events</button>
+            </div>
+            <button type="submit" class="modal-submit">SUBMIT</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-top">
+      <div class="cml-logo">
+        <h1>CML</h1>
+      </div>
+      <div class="social-media">
+        <div class="app"></div>
+        <div class="app"></div>
+        <div class="app"></div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="service">
+        <h3>SERVICE WE PROVIDE</h3>
+        <p>################ ################ ################ ###########</p>
+      </div>
+
+      <div class="company">
+        <h3>COMPANY</h3>
+        <p>################ ################ ################ ###########</p>
+      </div>
+
+      <div class="quick-links">
+        <h3>QUICK LINKS</h3>
+        <p>################ ################ ################ ###########</p>
+      </div>
+
+      <div class="head-office">
+        <h3>HEAD OFFICE</h3>
+        <p>################ ################ ################ ###########</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; CML</p>
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../Javascript/linearBackground.js"></script>
+<script src="../Javascript/header.js"></script>
+<script src="../Javascript/artistslider.js"></script>
+
 </html>
