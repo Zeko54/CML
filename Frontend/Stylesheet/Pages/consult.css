@@ -629,7 +629,7 @@ main .testimonial-section .testimonial-container .testimonial-box .quotation img
     font-size: clamp(1.25rem, 2vw, 1.5rem);
   }
   main .product-section .product-container .each-product .text p {
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
   }
 }
 @media (max-width: 719px) {
@@ -648,6 +648,9 @@ main .testimonial-section .testimonial-container .testimonial-box .quotation img
   }
   main .product-section .product-container .each-product .text h4 {
     font-size: clamp(1rem, 2vw, 1.5rem);
+  }
+  main .product-section .product-container .each-product .text p {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
   }
   main .testimonial-section .testimonial-container {
     grid-template-columns: auto;
