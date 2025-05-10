@@ -462,7 +462,7 @@ main .story-section .bottom-container .box p {
 main .team-section {
   margin: 120px 80px;
   font-size: clamp(1.5rem, 4vw, 2rem);
-  margin-bottom: 40px;
+  margin-bottom: 200px;
 }
 main .team-section .heading {
   display: flex;
@@ -486,62 +486,27 @@ main .team-section hr {
   margin-top: 30px;
   margin-left: -2px;
 }
-main .team-section .swiper {
+main .team-section .team-container {
   margin-top: 80px;
-  width: 60%;
-  height: 550px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-template-rows: 500px;
+  gap: 20%;
 }
-main .team-section .swiper:active {
-  cursor: grabbing;
+main .team-section .team-container .team-info {
+  border-radius: 20px;
 }
-main .team-section .swiper-slide {
-  width: 40%;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-}
-main .team-section .swiper-slide .members {
-  width: 40%;
+main .team-section .team-container .team-info .image {
   background-color: #e4e4e4;
-  border-radius: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
-}
-main .team-section .swiper-slide img {
-  display: block;
-  width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: 100%;
+  border-radius: 20px;
 }
-main .team-section .arrow-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-80%);
-  z-index: 10;
-  border: none;
-  font-size: 2rem;
-  background-color: white;
-  color: #ffb33a;
-  cursor: pointer;
-  padding: 0.5rem 0.8rem;
-  border-radius: 0.5rem;
-  opacity: 1;
-}
-main .team-section .arrow-button:hover {
-  opacity: 0.7;
-}
-main .team-section .arrow-left {
-  left: 0;
-}
-main .team-section .arrow-right {
-  right: 0;
-}
-main .team-section .swiper-pagination-bullet-active {
-  background-color: white;
+main .team-section .team-container .team-info .name {
+  margin-top: 20px;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: black;
+  text-align: center;
 }
 main .location-section {
   margin: 120px 80px;
@@ -593,7 +558,7 @@ main .location-section .location-container .desc p {
   font-size: clamp(1rem, 3vw, 1.5rem);
 }
 main .contact-section {
-  margin: 160px 200px;
+  margin: 120px 80px;
 }
 main .contact-section .contact-container {
   background: rgba(248, 73, 67, 0.3);
