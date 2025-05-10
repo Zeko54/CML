@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const bgImages = [
+    "/Frontend/Images/ArtistPage/bg-1.jpg",
+    "/Frontend/Images/ArtistPage/bg-2.jpg",
+    "/Frontend/Images/ArtistPage/bg-3.jpg",
+    "/Frontend/Images/ArtistPage/bg-4.jpg",
+  ];
+
+  bgImages.forEach((img) => {
+    new Image().src = img;
+  });
+});
+
 const performers = {
   "duo-swiper": [
     {
