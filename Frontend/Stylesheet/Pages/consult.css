@@ -517,7 +517,6 @@ main .product-section .product-container .each-product .text h4 {
   justify-content: center;
 }
 main .product-section .product-container .each-product .text p {
-  margin-top: 10px;
   font-size: clamp(1rem, 3vw, 1.5rem);
 }
 main .testimonial-section {
