@@ -352,6 +352,9 @@ main .intro-section .text-container {
 main .intro-section .text-container .text-top hr {
   display: none;
 }
+main .intro-section .text-container .text-top p {
+  margin-top: 20px;
+}
 main .intro-section .text-container .text-bottom {
   margin-top: 80px;
 }
@@ -438,14 +441,15 @@ main .service-section .service-container .each-service {
   width: 100%;
 }
 main .service-section .service-container .each-service .image {
-  background-color: #e4e4e4;
-  height: 200px;
+  width: 50%;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  max-width: 200px;
 }
 main .service-section .service-container .each-service .text {
   margin-top: 40px;
   font-size: clamp(1rem, 3vw, 1.5rem);
+  text-align: center;
 }
 main .product-section {
   margin: 120px 80px;
@@ -492,93 +496,28 @@ main .product-section .product-container .each-product {
   flex-direction: column;
   align-items: center;
   background-color: rgba(252, 146, 224, 0.6);
-  padding: 20px;
-  border-radius: 50px;
+  padding: 40px;
+  border-radius: 30px;
   width: 100%;
   box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
-}
-main .product-section .product-container .each-product .image {
-  background-color: #e4e4e4;
-  width: 100%;
-  aspect-ratio: 1/1;
-  border-radius: 50px;
 }
 main .product-section .product-container .each-product .text {
-  margin-top: 40px;
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  font-weight: 700;
-  width: 100%;
-  aspect-ratio: 1/0.4;
-  color: black;
-  text-align: center;
-  text-transform: uppercase;
-}
-main .example-section {
-  margin: 120px 80px;
-  font-size: clamp(1.5rem, 4vw, 2rem);
-}
-main .example-section .heading {
-  display: flex;
-}
-main .example-section .with-bg {
-  background-color: #fff;
-  mix-blend-mode: screen;
-  border-radius: 10px;
-  padding: 0px 10px;
-}
-main .example-section .without-bg {
-  color: #fff;
-  padding: 0px 10px;
-}
-main .example-section .heading {
-  justify-content: center;
-}
-main .example-section hr {
-  width: 50%;
-  height: 3px;
-  background-color: white;
-  border: none;
-  padding: 0px 20px;
-  margin-top: 30px;
-  margin-left: -2px;
-}
-main .example-section hr {
-  margin: 0 auto;
-  margin-top: 30px;
-}
-main .example-section .example-container {
-  margin-top: 40px;
   display: grid;
-  grid-template-columns: 75% 25%;
-  grid-template-rows: 400px 200px;
-  grid-template-areas: "images side" "desc desc";
-  gap: 40px;
+  grid-template-rows: 150px 1fr;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+  text-align: center;
 }
-main .example-section .example-container .images,
-main .example-section .example-container .side,
-main .example-section .example-container .desc {
-  background-color: #e4e4e4;
-  border-radius: 25px;
+main .product-section .product-container .each-product .text h4 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-main .example-section .example-container .images p,
-main .example-section .example-container .side p,
-main .example-section .example-container .desc p {
-  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
-}
-main .example-section .example-container .images {
-  grid-area: images;
-}
-main .example-section .example-container .side {
-  grid-area: side;
-}
-main .example-section .example-container .desc {
-  grid-area: desc;
-  font-weight: 700;
-  background-color: rgba(252, 146, 224, 0.6);
-  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
+main .product-section .product-container .each-product .text p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 main .testimonial-section {
   margin: 120px 80px;
@@ -625,7 +564,7 @@ main .testimonial-section .testimonial-container .testimonial-box {
   background-color: rgba(252, 146, 224, 0.6);
   box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
   padding: 20px;
-  border-radius: 50px;
+  border-radius: 30px;
   width: 100%;
   display: grid;
   grid-template-areas: "quotation" "texts" "images" "names";
@@ -662,4 +601,67 @@ main .testimonial-section .testimonial-container .testimonial-box .quotation {
 main .testimonial-section .testimonial-container .testimonial-box .quotation img {
   max-width: 30%;
   aspect-ratio: 1/1;
+}
+@media (max-width: 1023px) {
+  main .service-section, main .product-section, main .testimonial-section {
+    margin: 80px 40px;
+  }
+  main .service-section .service-container {
+    gap: 40px 0px;
+  }
+  main .service-section .service-container .each-service .text {
+    margin-top: 20px;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+  }
+  main .product-section .product-container {
+    gap: 40px;
+  }
+  main .product-section .product-container .each-product {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  main .product-section .product-container .each-product .text h4 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+  }
+  main .product-section .product-container .each-product .text p {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+  }
+}
+@media (max-width: 719px) {
+  main .service-section, main .product-section, main .testimonial-section {
+    margin: 40px 20px;
+  }
+  main .service-section .service-container {
+    gap: 20px;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+  main .product-section .product-container {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 20px;
+  }
+  main .product-section .product-container .each-product .text h4 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+  }
+  main .testimonial-section .testimonial-container {
+    grid-template-columns: auto;
+  }
+  main .testimonial-section .testimonial-container .testimonial-box {
+    grid-template-columns: 25% 75%;
+    grid-template-areas: "images quotation" "images texts" "names texts";
+    gap: 10px 20px;
+  }
+  main .testimonial-section .testimonial-container .testimonial-box .text {
+    text-align: left;
+    align-self: self-start;
+  }
+  main .testimonial-section .testimonial-container .testimonial-box .image {
+    width: 100%;
+    margin: 0px 0px;
+  }
+  main .testimonial-section .testimonial-container .testimonial-box .quotation {
+    width: 10%;
+  }
+  main .testimonial-section .testimonial-container .testimonial-box .quotation img {
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=consult.css.map */

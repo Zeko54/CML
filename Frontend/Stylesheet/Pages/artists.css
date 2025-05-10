@@ -353,6 +353,9 @@ main .intro-section .text-container {
 main .intro-section .text-container .text-top hr {
   display: none;
 }
+main .intro-section .text-container .text-top p {
+  margin-top: 20px;
+}
 main .intro-section .text-container .text-bottom {
   margin-top: 80px;
 }

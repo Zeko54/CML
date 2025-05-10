@@ -12,10 +12,13 @@ main {
   .service-section {
     margin: $desktop-spacing;
     @include heading();
+
     .heading {
       justify-content: center;
     }
+
     @include heading-underline();
+
     hr {
       margin: 0 auto;
       margin-top: 30px;
@@ -35,15 +38,16 @@ main {
         width: 100%;
 
         .image {
-          background-color: $header-footer-color;
-          height: 200px;
-          aspect-ratio: 1/1;
-          border-radius: 50%;
+          width: 50%; 
+          aspect-ratio: 1 / 1; 
+          border-radius: 50%; 
+          max-width: 200px; 
         }
 
         .text {
           margin-top: 40px;
           font-size: $paragraph-fontsize;
+          text-align: center;
         }
       }
     }
@@ -52,10 +56,13 @@ main {
   .product-section {
     margin: $desktop-spacing;
     @include heading();
+
     .heading {
       justify-content: center;
     }
+
     @include heading-underline();
+
     hr {
       margin: 0 auto;
       margin-top: 30px;
@@ -73,81 +80,31 @@ main {
         flex-direction: column;
         align-items: center;
         background-color: rgb(252, 146, 224, 0.6);
-        padding: 20px;
-        border-radius: 50px;
+        padding: 40px;
+        border-radius: 30px;
         width: 100%;
         @include shadow();
 
-        .image {
-          background-color: $header-footer-color;
-          width: 100%;
-          aspect-ratio: 1/1;
-          border-radius: 50px;
-        }
-
         .text {
-          margin-top: 40px;
-          font-size: $heading-fontsize;
-          font-weight: 700;
+          display: grid;
+          grid-template-rows: 150px 1fr;
+          justify-content: space-between;
           width: 100%;
-          aspect-ratio: 1/0.4;
-          color: black;
+          color: white;
           text-align: center;
-          text-transform: uppercase;
+
+          h4 {
+            font-size: $heading-fontsize;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          p {
+            font-size: $paragraph-fontsize;
+          }
         }
-      }
-    }
-  }
-
-  .example-section {
-    margin: $desktop-spacing;
-    @include heading();
-    .heading {
-      justify-content: center;
-    }
-    @include heading-underline();
-    hr {
-      margin: 0 auto;
-      margin-top: 30px;
-    }
-
-    .example-container {
-      margin-top: 40px;
-      display: grid;
-      grid-template-columns: 75% 25%;
-      grid-template-rows: 400px 200px;
-      grid-template-areas:
-        "images side"
-        "desc desc";
-      gap: 40px;
-
-      .images,
-      .side,
-      .desc {
-        background-color: $header-footer-color;
-        border-radius: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        p {
-          font-size: $sub-heading-fontsize;
-        }
-      }
-
-      .images {
-        grid-area: images;
-      }
-
-      .side {
-        grid-area: side;
-      }
-
-      .desc {
-        grid-area: desc;
-        font-weight: 700;
-        background-color: rgb(252, 146, 224, 0.6);
-        @include shadow();
       }
     }
   }
@@ -155,11 +112,13 @@ main {
   .testimonial-section {
     margin: $desktop-spacing;
     @include heading();
+
     .heading {
       justify-content: center;
     }
 
     @include heading-underline();
+
     hr {
       margin: 0 auto;
       margin-top: 30px;
@@ -177,7 +136,7 @@ main {
         background-color: rgb(252, 146, 224, 0.6);
         @include shadow();
         padding: 20px;
-        border-radius: 50px;
+        border-radius: 30px;
         width: 100%;
         display: grid;
         grid-template-areas:
@@ -226,4 +185,112 @@ main {
       }
     }
   }
+
+  @media (max-width: 1023px){
+    .service-section, .product-section, .testimonial-section {
+      margin: $tablet-spacing;
+    }
+
+    .service-section{
+      .service-container{
+        gap: 40px 0px;
+
+        .each-service{
+          .text{
+            margin-top: 20px;
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+          }
+        }
+      }
+    }
+
+    .product-section{
+      .product-container{
+        gap: 40px;
+
+        .each-product{
+          padding: 20px;
+          border-radius: 20px;
+
+          .text{
+            h4{
+              font-size: clamp(1.25rem, 2vw, 1.5rem);;
+            }
+
+            p{
+              font-size: clamp(1rem, 1.5vw, 1.5rem);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 719px) {
+
+    .service-section, .product-section, .testimonial-section {
+      margin: $mobile-spacing;
+    }
+
+    .service-section {
+      .service-container {
+        gap: 20px;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+
+      }
+    }
+
+    .product-section {
+        .product-container {
+          grid-template-columns: repeat(2, minmax(100px, 1fr));
+          gap: 20px;
+
+          .each-product{
+
+          .text{
+            h4{
+              font-size: clamp(1rem, 2vw, 1.5rem);;
+            }
+          }
+
+        }
+      }
+    }
+
+    .testimonial-section{
+      .testimonial-container{
+        grid-template-columns: auto;
+
+        .testimonial-box{
+          grid-template-columns: 25% 75%;
+          grid-template-areas:
+          "images quotation"
+          "images texts"
+          "names texts";
+          gap: 10px 20px;
+
+          .text {
+          text-align:left;
+          align-self: self-start;
+        }
+
+          .image{
+            width: 100%;
+            margin: 0px 0px;
+          }
+
+          .quotation{
+            width: 10%;
+
+            img{
+              max-width: 100%;
+            }
+          }
+        }
+      }
+      
+    }
+    
+  }
+
 }

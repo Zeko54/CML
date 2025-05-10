@@ -240,7 +240,7 @@
             }
 
             h2{
-              $sub-heading-fontsize: clamp(1.25rem, 2vw, 1.5rem);
+              font-size: clamp(1.25rem, 2vw, 1.5rem);
             }
 
             button {

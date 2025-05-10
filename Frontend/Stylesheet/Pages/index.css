@@ -352,6 +352,9 @@ main .intro-section .text-container {
 main .intro-section .text-container .text-top hr {
   display: none;
 }
+main .intro-section .text-container .text-top p {
+  margin-top: 20px;
+}
 main .intro-section .text-container .text-bottom {
   margin-top: 80px;
 }
@@ -664,6 +667,9 @@ main .products-section .product-container .card-3 {
   }
   main .products-section .product-container .product-card .product-desc .product-top p, main .products-section .product-container .product-card .product-desc .product-bottom p {
     font-size: clamp(1rem, 1.5vw, 1.5rem);
+  }
+  main .products-section .product-container .product-card .product-desc .product-top h2, main .products-section .product-container .product-card .product-desc .product-bottom h2 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
   }
   main .products-section .product-container .product-card .product-desc .product-top button, main .products-section .product-container .product-card .product-desc .product-bottom button {
     font-size: clamp(1rem, 1.5vw, 1.5rem);
