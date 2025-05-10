@@ -637,7 +637,7 @@ main .testimonial-section .testimonial-container .testimonial-box .quotation img
     margin: 40px 20px;
   }
   main .service-section .service-container {
-    gap: 20px;
+    gap: 40px 20px;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
   main .product-section .product-container {
