@@ -603,6 +603,11 @@ main .testimonial-section .testimonial-container .testimonial-box .quotation img
   max-width: 30%;
   aspect-ratio: 1/1;
 }
+@media (max-width: 1200px) {
+  main .product-section .product-container {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+}
 @media (max-width: 1023px) {
   main .service-section, main .product-section, main .testimonial-section {
     margin: 80px 40px;
@@ -637,8 +642,10 @@ main .testimonial-section .testimonial-container .testimonial-box .quotation img
     grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
   main .product-section .product-container {
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
     gap: 20px;
+  }
+  main .product-section .product-container .each-product .text {
+    grid-template-rows: 100px 1fr;
   }
   main .product-section .product-container .each-product .text h4 {
     font-size: clamp(1rem, 2vw, 1.5rem);

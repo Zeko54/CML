@@ -187,6 +187,15 @@ main {
     }
   }
 
+  @media (max-width: 1200px){
+    .product-section{
+      .product-container{
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+      }
+    }
+
+  }
+
   @media (max-width: 1023px){
     .service-section, .product-section, .testimonial-section {
       margin: $tablet-spacing;
@@ -243,12 +252,12 @@ main {
 
     .product-section {
         .product-container {
-          grid-template-columns: repeat(2, minmax(100px, 1fr));
           gap: 20px;
 
           .each-product{
 
           .text{
+            grid-template-rows: 100px 1fr;
             h4{
               font-size: clamp(1rem, 2vw, 1.5rem);;
             }
