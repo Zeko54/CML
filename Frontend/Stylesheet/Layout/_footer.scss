@@ -35,6 +35,14 @@ footer {
     h3 {
       height: 100px;
     }
+
+    .service{
+      ul{
+        li::marker{
+          
+        }
+      }
+    }
   }
 
   .copyright {
