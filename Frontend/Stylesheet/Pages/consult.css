@@ -503,7 +503,7 @@ main .product-section .product-container .each-product {
 }
 main .product-section .product-container .each-product .text {
   display: grid;
-  grid-template-rows: 150px 1fr;
+  grid-template-rows: 160px 1fr;
   justify-content: space-between;
   width: 100%;
   color: white;
