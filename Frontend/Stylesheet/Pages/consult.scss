@@ -186,6 +186,12 @@ main {
     }
   }
 
+  @include arrow();
+  #arrowBtn{
+    background-color: #c97fd1;
+  }
+
+
   @media (max-width: 1200px){
     .product-section{
       .product-container{
@@ -223,7 +229,7 @@ main {
 
           .text{
             h4{
-              font-size: clamp(1.25rem, 2vw, 1.5rem);;
+              font-size: clamp(1.25rem, 2vw, 1.5rem);
             }
 
             p{

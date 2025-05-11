@@ -63,10 +63,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 0px 50px;
 
         p {
           color: nth($text-colors, 1);
           font-size: $small-button-fontsize;
+          text-align: center;
         }
       }
 
@@ -145,6 +147,13 @@
         grid-area: images;
         background-color: aqua;
         border-radius: 20px;
+
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px;
+        }
       }
 
       .product-desc {

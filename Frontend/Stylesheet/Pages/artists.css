@@ -280,6 +280,9 @@ footer .copyright {
   font-weight: 600;
   cursor: pointer;
 }
+.red-button:hover, main .intro-section .text-container .text-bottom button:hover, .button button:hover {
+  opacity: 0.7;
+}
 
 .white-button, main .performers-section .artist-wrapper .artist-info-box .button-group .learn-more-btn,
 main .performers-section .artist-wrapper .artist-info-box .button-group .quote-btn {
@@ -292,6 +295,10 @@ main .performers-section .artist-wrapper .artist-info-box .button-group .quote-b
   font-weight: 800;
   cursor: pointer;
   margin-top: 30px;
+}
+.white-button:hover, main .performers-section .artist-wrapper .artist-info-box .button-group .learn-more-btn:hover,
+main .performers-section .artist-wrapper .artist-info-box .button-group .quote-btn:hover {
+  opacity: 0.7;
 }
 
 .circle-container {

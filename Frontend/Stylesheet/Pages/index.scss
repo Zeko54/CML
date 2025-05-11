@@ -1,5 +1,9 @@
 @import "../global";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $home-aboutus-primary-color;
 }
@@ -203,6 +207,8 @@ main {
       }
     }
   }
+
+  @include arrow();
 
   @media (max-width: 1023px) {
 
