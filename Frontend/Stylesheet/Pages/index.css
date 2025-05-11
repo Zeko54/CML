@@ -504,16 +504,28 @@ main .businesses-section .businesses-container .business-card .image {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  background-color: hsl(92, 100%, 50%);
+  background-image: url("/Frontend/Images/ArtistPage/bg-3.jpg");
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 1;
+  position: relative;
+}
+main .businesses-section .businesses-container .business-card .image .text {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(237, 70, 64, 0.7);
 }
 main .businesses-section .businesses-container .business-card .image .text h3 {
   font-size: clamp(1.5rem, 4vw, 2rem);
   text-align: center;
+  color: white;
 }
 main .businesses-section .businesses-container .business-card .image .button {
   position: absolute;
@@ -532,12 +544,12 @@ main .businesses-section .businesses-container .business-card .overlay {
   opacity: 0;
   transition: 0.3s ease;
   background-color: #ed4540;
-  border-radius: 24px;
+  border-radius: 18px;
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 50px;
+  padding: 0px 40px;
 }
 main .businesses-section .businesses-container .business-card .overlay p {
   color: #fff;
@@ -655,12 +667,12 @@ main .products-section .product-container .card-1 {
 main .products-section .product-container .card-2 {
   grid-area: product-2;
   grid-template-areas: "images images" "desc desc";
-  grid-template-rows: 350px 1fr;
+  grid-template-rows: auto 1fr;
 }
 main .products-section .product-container .card-3 {
   grid-area: product-3;
   grid-template-areas: "images images" "desc desc";
-  grid-template-rows: 350px 1fr;
+  grid-template-rows: auto 1fr;
 }
 @media (max-width: 1023px) {
   main .products-section .product-container {
@@ -684,18 +696,23 @@ main .products-section .product-container .card-3 {
     padding: 10px;
     gap: 10px;
   }
-  main .products-section .product-container .product-card .product-desc .product-top p, main .products-section .product-container .product-card .product-desc .product-bottom p {
+  main .products-section .product-container .product-card .product-desc .product-top p,
+  main .products-section .product-container .product-card .product-desc .product-bottom p {
     font-size: clamp(1rem, 1.5vw, 1.5rem);
   }
-  main .products-section .product-container .product-card .product-desc .product-top h2, main .products-section .product-container .product-card .product-desc .product-bottom h2 {
+  main .products-section .product-container .product-card .product-desc .product-top h2,
+  main .products-section .product-container .product-card .product-desc .product-bottom h2 {
     font-size: clamp(1.25rem, 2vw, 1.5rem);
   }
-  main .products-section .product-container .product-card .product-desc .product-top button, main .products-section .product-container .product-card .product-desc .product-bottom button {
+  main .products-section .product-container .product-card .product-desc .product-top button,
+  main .products-section .product-container .product-card .product-desc .product-bottom button {
     font-size: clamp(1rem, 1.5vw, 1.5rem);
   }
-  main .products-section .product-container .card-1, main .products-section .product-container .card-2, main .products-section .product-container .card-3 {
+  main .products-section .product-container .card-1,
+  main .products-section .product-container .card-2,
+  main .products-section .product-container .card-3 {
     grid-template-areas: "images images" "desc desc";
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: auto 1fr;
   }
 }
 main .performers-section {
@@ -740,7 +757,6 @@ main .performers-section .swiper-slide {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: relative;
   background: rgba(248, 73, 67, 0.4);
   -webkit-backdrop-filter: blur(5px);
@@ -767,6 +783,7 @@ main .performers-section .swiper-slide .performers-name h1 {
 main .performers-section .swiper-slide .image {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 main .performers-section .swiper-slide .image img {
   width: 100%;

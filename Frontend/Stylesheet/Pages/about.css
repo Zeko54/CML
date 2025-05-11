@@ -520,7 +520,6 @@ main .team-section .team-container .team-info .name {
 main .location-section {
   margin: 120px 80px;
   font-size: clamp(1.5rem, 4vw, 2rem);
-  margin-bottom: 40px;
 }
 main .location-section .heading {
   display: flex;
@@ -545,7 +544,7 @@ main .location-section hr {
   margin-left: -2px;
 }
 main .location-section .location-container {
-  margin-top: 80px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
   gap: 40px;

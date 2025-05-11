@@ -106,10 +106,9 @@ main {
     margin: $desktop-spacing;
     @include heading();
     @include heading-underline();
-    margin-bottom: 40px;
 
     .location-container {
-      margin-top: 80px;
+      margin-top: 40px;
       display: grid;
       grid-template-columns: repeat(2, minmax(100px, 1fr));
       gap: 40px;
