@@ -79,25 +79,34 @@ main {
 
       .artistSwiper {
         position: relative;
-        width: 320px;
-        height: 320px;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
 
         .swiper-wrapper {
           width: 100%;
           height: 100%;
 
           .swiper-slide {
-            position: absolute;
             width: 100%;
             height: 100%;
 
+            &.hidden {
+              opacity: 0;
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+
             .artist-circle {
-              width: 325px;
-              height: 325px;
+              width: 100%;
+              max-width: 325px;
+              height: auto;
               border-radius: 50%;
               background-color: #ccc;
               background-size: cover;
               background-position: center;
+              aspect-ratio: 1/1;
             }
           }
         }
@@ -126,19 +135,26 @@ main {
             right: calc(-100%);
           }
 
-          // Responsive adjustments
-          @media (max-width: 1440px) {
+          // Responsive adjustments //
+          @media (max-width: 1024px) {
             &.arrow-left {
-              left: calc(-80% + (100% - 80%) * (1440px - 100vw) / (1440 - 360));
+              left: -80%;
             }
             &.arrow-right {
-              right: calc(
-                -80% + (100% - 80%) * (1440px - 100vw) / (1440 - 360)
-              );
+              right: -80%;
             }
           }
 
-          @media (max-width: 1024px) {
+          @media (max-width: 910px) {
+            &.arrow-left {
+              left: -70%;
+            }
+            &.arrow-right {
+              right: -70%;
+            }
+          }
+
+          @media (max-width: 845px) {
             &.arrow-left {
               left: -60%;
             }
@@ -147,7 +163,52 @@ main {
             }
           }
 
-          @media (max-width: 768px) {
+          @media (max-width: 775px) {
+            &.arrow-left {
+              left: -50%;
+            }
+            &.arrow-right {
+              right: -50%;
+            }
+          }
+
+          @media (max-width: 720px) {
+            &.arrow-left {
+              left: -90%;
+            }
+            &.arrow-right {
+              right: -90%;
+            }
+          }
+
+          @media (max-width: 660px) {
+            &.arrow-left {
+              left: -70%;
+            }
+            &.arrow-right {
+              right: -70%;
+            }
+          }
+
+          @media (max-width: 570px) {
+            &.arrow-left {
+              left: -60%;
+            }
+            &.arrow-right {
+              right: -60%;
+            }
+          }
+
+          @media (max-width: 530px) {
+            &.arrow-left {
+              left: -50%;
+            }
+            &.arrow-right {
+              right: -50%;
+            }
+          }
+
+          @media (max-width: 490px) {
             &.arrow-left {
               left: -40%;
             }
@@ -156,21 +217,12 @@ main {
             }
           }
 
-          @media (max-width: 480px) {
+          @media (max-width: 445px) {
             &.arrow-left {
-              left: -20%;
+              left: -30%;
             }
             &.arrow-right {
-              right: -20%;
-            }
-          }
-
-          @media (max-width: 360px) {
-            &.arrow-left {
-              left: -10%;
-            }
-            &.arrow-right {
-              right: -10%;
+              right: -30%;
             }
           }
         }
@@ -183,8 +235,6 @@ main {
         background-color: rgba(255, 255, 255, 0.31);
         border-radius: 1.5rem;
         text-align: justify;
-        backdrop-filter: blur(10px);
-        color: white;
         margin-top: 10px;
         margin-bottom: 5px;
 
@@ -355,17 +405,132 @@ main {
 
 @media screen and (min-width: $tablet) and (max-width: $desktop) {
   main {
+    .intro-section {
+      .text-container {
+        width: 100%;
+
+        p {
+          text-align: justify;
+        }
+      }
+    }
+
     .performers-section {
       margin: $tablet-spacing;
+
+      hr {
+        margin-top: 25px;
+      }
+
+      .artist-wrapper {
+        .artistSwiper {
+          max-width: 280px;
+        }
+
+        .artist-info-box {
+          width: 90%;
+
+          .artist-description {
+            margin-bottom: 0.5rem;
+          }
+
+          .button-group {
+            gap: 1rem;
+          }
+        }
+      }
     }
 
     .performers-modal {
       .modal-overlay {
         .modal {
-          max-width: 600px;
+          max-width: 700px;
 
           .modal-close {
-            left: 41pc;
+            left: 40pc;
+          }
+
+          .modal-form {
+            .modal-options {
+              gap: 0.2rem;
+              margin: 0rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+  main {
+    .intro-section {
+      min-height: 87vh;
+      background-color: transparent;
+
+      .background-slideshow {
+        height: 87vh;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .text-container {
+        width: 100%;
+        max-width: 700px;
+        gap: 70px;
+
+        p {
+          text-align: justify;
+        }
+      }
+    }
+
+    .performers-section {
+      margin: $mobile-spacing;
+
+      .heading {
+        justify-content: center;
+      }
+
+      hr {
+        margin: 15px auto;
+        width: 85%;
+      }
+
+      .artist-wrapper {
+        .artistSwiper {
+          max-width: 220px;
+        }
+
+        .artist-info-box {
+          width: 100%;
+          padding: 1rem;
+
+          .artist-description {
+            margin-bottom: 0rem;
+          }
+
+          .button-group {
+            gap: 0.6rem;
+          }
+        }
+      }
+    }
+
+    .performers-modal {
+      .modal-overlay {
+        .modal {
+          max-width: 450px;
+
+          .modal-close {
+            left: 25pc;
+          }
+
+          .modal-form {
+            .modal-options {
+              gap: 0.2rem;
+              margin: 0rem 0;
+            }
           }
         }
       }
