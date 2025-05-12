@@ -10,19 +10,19 @@ const bandData = {
     ],
     videos: [
       {
-        src: "https://youtu.be/dQw4w9WgXcQ?si=fMH0xYc8SR_ySwuW",
+        src: "https://www.youtube.com/embed/dQw4w9WgXcQ?si=7ZVacYN6HMM0pC0M",
         title: "Corporate Christmas Party",
         description:
           "It was a pleasure to play live music for the 250 employees of Prime Projects @ Grand Plaza Movenpick DMC last Dec.21,2023",
       },
       {
-        src: "https://youtu.be/dh3Hb004RVE?si=YheYxVh9zKkUY-mo",
+        src: "https://www.youtube.com/embed/dh3Hb004RVE?si=JnD-tLBmGf-xYxjq",
         title: "OASIS CANTINA BAR & BISTRO",
         description:
           "We are regular every Saturday night from 10:30pm to 2:30am @ Radisson Red Hotel Dubai Silicon Oasis. 3 sets of non-stop live band music..",
       },
       {
-        src: "https://youtu.be/-2RAq5o5pwc?si=ZGgzu17W9lnNuwyl",
+        src: "https://www.youtube.com/embed/-2RAq5o5pwc?si=Mw95Ym9uW_FzYmjh",
         title: "Alyana's 16th Birthday Party",
         description:
           "Taking part of Alyana's birthday @Jumeirah Creekside Hotel with the whole families & friends last September 2023.",
