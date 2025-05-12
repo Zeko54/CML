@@ -144,7 +144,7 @@ main {
           "bar-1 bar-4"
           "bar-2 bar-5"
           "bar-3 bar-6";
-        gap: 0px 50px;
+        gap: 0px 40px;
         align-items: self-start;
         align-content: space-between;
        
@@ -219,7 +219,7 @@ main {
       background-color: #ff4545;
     }
 
-    padding: 40px 80px;
+    padding: 40px 0px;
     background-color: nth($text-colors, 1);
 
     .client-slider {

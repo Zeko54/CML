@@ -919,7 +919,7 @@ main .consultant-section .consultant-container .right-side {
   grid-area: right-side;
   display: grid;
   grid-template-areas: "bar-1 bar-4" "bar-2 bar-5" "bar-3 bar-6";
-  gap: 0px 50px;
+  gap: 0px 40px;
   align-items: self-start;
   align-content: space-between;
 }
@@ -954,7 +954,7 @@ main .consultant-section .consultant-container .right-side .bar-6 {
 }
 main .client-section {
   font-size: clamp(1.5rem, 4vw, 2rem);
-  padding: 40px 80px;
+  padding: 40px 0px;
   background-color: #fff;
 }
 main .client-section .heading {
