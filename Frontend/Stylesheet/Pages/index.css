@@ -1006,17 +1006,21 @@ main .client-section .client-images {
   width: max-content;
 }
 main .client-section .client-img {
-  width: 180px;
   height: 180px;
-  background-color: #ccc;
   border-radius: 50%;
+}
+main .client-section .client-img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
 }
 @keyframes scroll {
   0% {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-75%);
   }
 }
 main #arrowBtn {
@@ -1078,7 +1082,7 @@ main #arrowBtn:hover {
     font-size: clamp(1rem, 1.5vw, 1.125rem);
   }
   main .client-section {
-    padding: 40px 40px;
+    padding: 40px 0px;
   }
   main .client-section .client-slider {
     margin-top: 40px;
@@ -1089,7 +1093,6 @@ main #arrowBtn:hover {
     gap: 20px;
   }
   main .client-section .client-img {
-    width: 100px;
     height: 100px;
   }
 }
@@ -1120,11 +1123,7 @@ main #arrowBtn:hover {
   main .consultant-section .consultant-container .right-side {
     gap: 15px 30px;
   }
-  main .client-section {
-    padding: 40px 40px;
-  }
   main .client-section .client-img {
-    width: 80px;
     height: 80px;
   }
 }/*# sourceMappingURL=index.css.map */
