@@ -120,6 +120,12 @@ header {
   font-weight: 900;
   text-decoration: none;
 }
+.logo a img {
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(2.5) translateY(7%) translateX(10%);
+}
 
 .nav-links {
   display: flex;
@@ -226,6 +232,15 @@ footer .footer-top .social-media .app {
   background-color: black;
   border-radius: 50%;
 }
+footer .footer-top .social-media .app a img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  transform: scale(1);
+}
 footer .footer-bottom {
   padding: 0px 80px;
   margin-top: 40px;
@@ -331,6 +346,10 @@ footer .copyright {
 
 .home-page .circle {
   background: linear-gradient(135deg, #ff4545, #e4866d);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -501,7 +520,7 @@ main .product-section .product-container .each-product {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(252, 146, 224, 0.6);
+  background-color: rgba(252, 146, 224, 0.5);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   padding: 40px;

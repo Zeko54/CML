@@ -90,63 +90,109 @@ main {
     @include performer-slider();
   }
 
-  .consultant-section {
+    .consultant-section {
     margin: $desktop-spacing;
     @include heading();
     @include heading-underline();
 
+
     .consultant-container {
+      background: rgba(248, 73, 67, 0.6);
+      backdrop-filter: blur(5px);
       margin-top: 40px;
       display: grid;
       grid-template-columns: repeat(2, 50%);
-      border-radius: 25px 0px 0px 25px;
+      grid-template-areas:
+      "left-side right-side"
+      "button right-side";
+      gap:60px;
+      border-radius: 25px;
       @include shadow();
+      padding: 40px;
 
-      .left-side {
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 25px 0px 0px 25px;
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
 
-        .text {
-          h3 {
-            text-align: center;
-          }
-        }
-
-        button {
+      .consult-button {
+        grid-area: button;
+        button{
           @extend .white-button;
         }
       }
 
+
+      .left-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-area: left-side;
+
+
+        .text {
+          p {
+            font-size: $paragraph-fontsize;
+            font-weight: 500;
+            color: white;
+            text-align: justify
+          }
+        }
+      }
+
+
       .right-side {
+        grid-area: right-side;
         display: grid;
         grid-template-areas:
-          "bar-1"
-          "bar-2"
-          "bar-3";
-        gap: 40px;
-        padding: 40px;
-        background-color: nth($text-colors, 1);
+          "bar-1 bar-4"
+          "bar-2 bar-5"
+          "bar-3 bar-6";
+        gap: 0px 50px;
+        align-items: self-start;
+        align-content: space-between;
+       
+
 
         .vertical-bar {
           display: grid;
-          grid-template-rows: 100px;
-          background-color: $header-footer-color;
+          font-weight: 500;
+          color: white;
+
+          ul{
+            list-style-type: disc;
+          }
+
+          li{
+            font-size: $paragraph-fontsize;
+          }
+
         }
+
 
         .bar-1 {
           grid-area: bar-1;
         }
 
+
         .bar-2 {
           grid-area: bar-2;
         }
 
+
         .bar-3 {
           grid-area: bar-3;
+        }
+
+
+        .bar-4 {
+          grid-area: bar-4;
+        }
+
+
+        .bar-5 {
+          grid-area: bar-5;
+        }
+
+
+        .bar-6 {
+          grid-area: bar-6;
         }
       }
     }
@@ -238,14 +284,43 @@ main {
 
     .consultant-section {
       .consultant-container {
+        gap:20px;
+        padding: 20px;
+
+        .consult-button{
+          button{
+          @extend .white-button;
+          font-size: clamp(1rem, 1.5vw, 1.125rem);
+          }
+        }
 
         .left-side {
           padding: 20px;
+
+          .text{
+            p{
+              font-size: clamp(1rem, 1.5vw, 1.125rem);
+            }
+          }
         }
 
         .right-side {
           gap: 20px;
           padding: 20px;
+
+          .vertical-bar{
+            ul{
+              li{
+              font-size: clamp(1rem, 1.5vw, 1.125rem);
+            }
+            }
+          }
+        }
+
+        .consult-button{
+          button{
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+          }
         }
       }
     }
@@ -294,14 +369,20 @@ main {
 
     .consultant-section {
         .consultant-container {
+          grid-template-columns: repeat(1, 100%);
+          grid-template-areas:
+          "left-side"
+          "right-side"
+          "button";
+          gap:0px;
+          padding: 10px;
 
           .left-side {
             padding: 10px;
           }
 
           .right-side {
-            gap: 10px;
-            padding: 10px;
+            gap: 15px 30px;
           }
         }
       }

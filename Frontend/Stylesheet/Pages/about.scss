@@ -19,7 +19,11 @@ main {
     @include heading-underline();
 
     .top-container {
+      padding: 40px;
+      background: rgba(248, 73, 67, 0.6);
+      backdrop-filter: blur(5px);
       margin-top: 40px;
+      border-radius: 25px 25px 0px 0px;
       display: grid;
       grid-template-columns: repeat(2, minmax(100px, 1fr));
       gap: 40px;
@@ -34,31 +38,42 @@ main {
       .desc {
         h1 {
           font-size: $sub-heading-fontsize;
+
         }
 
         p {
           font-size: $paragraph-fontsize;
+          font-weight: 500;
         }
       }
     }
 
     .bottom-container {
-      margin-top: 80px;
+      padding: 40px;
+      background: rgba(248, 73, 67, 0.6);
+      backdrop-filter: blur(5px);
+      border-radius: 0px 0px 25px 25px;
+      padding: auto 120px;
+      padding-top: 40px;
       display: grid;
-      grid-template-columns: repeat(3, minmax(100px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+      gap: 100px;
       color: white;
 
       .box {
         h3 {
-          font-size: $heading-fontsize;
+          font-size: clamp(1.25rem, 2vw, 1.5rem);
           text-align: center;
         }
 
         p {
-          font-size: $paragraph-fontsize;
+          font-size: clamp(1rem, 1.5vw, 1.25rem);
           text-align: center;
           color: black;
+          font-weight: 500;
+          margin-top: 10px;
+          font-weight: 500;
+          color: white;
         }
       }
     }
@@ -69,14 +84,14 @@ main {
     @include heading();
     @include heading-underline();
 
-    .team-container{
+    .team-container {
       margin-top: 40px;
       display: grid;
-      grid-template-columns:  repeat(2, minmax(100px, 1fr));
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
       grid-template-rows: 500px;
       gap: 20%;
 
-      .team-info{
+      .team-info {
         border-radius: 20px;
         margin: 0px 50px;
         border-radius: 20px;
@@ -84,17 +99,25 @@ main {
         flex-direction: column;
         align-items: center;
 
-        .image{
+        .image {
           background-color: $header-footer-color;
           height: 100%;
           width: 100%;
           border-radius: 20px;
+          overflow: hidden;
+
+          img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+          }
         }
 
-        .name{
+        .name {
           margin-top: 20px;
           font-size: clamp(1.5rem, 2.5vw, 2rem);
-          color: black;
+          color: white;
           text-align: center;
         }
 
@@ -119,7 +142,7 @@ main {
         width: 100%;
         border-radius: 25px;
 
-        iframe{
+        iframe {
           border-radius: 25px;
         }
       }
@@ -130,6 +153,7 @@ main {
         }
 
         p {
+          font-weight: 500;
           font-size: $paragraph-fontsize;
         }
       }
@@ -139,56 +163,57 @@ main {
   .contact-section {
     margin: $desktop-spacing;
 
-    .contact-container{
+    .contact-container {
       background: rgba(248, 73, 67, 0.3);
       backdrop-filter: blur(5px);
       padding: 80px 80px;
       border-radius: 20px;
       @include shadow();
 
-      h1{
+      h1 {
         font-size: $sub-heading-fontsize;
         color: white;
         text-align: center;
       }
 
-      form{
+      form {
         margin-top: 40px;
-        
-        .first-row{
+
+        .first-row {
           display: grid;
           grid-template-columns: repeat(2, minmax(100px, 1fr));
-          gap:40px;
+          gap: 40px;
 
-          label{
+          label {
             background-color: $header-footer-color;
             display: flex;
             gap: 10px;
             padding: 10px 20px;
             border-radius: 20px;
 
-            input{
+            input {
               width: 100%;
               background-color: $header-footer-color;
               border: none;
               padding: 5px;
               font-size: $paragraph-fontsize;
-              
-              &::placeholder{
+
+              &::placeholder {
                 color: black;
               }
 
               &:focus {
                 outline: none;
-            }
-              
+              }
+
             }
 
-            .icon{
+            .icon {
               width: 45px;
               display: flex;
               align-items: center;
-              img{
+
+              img {
                 max-width: 100%
               }
             }
@@ -198,14 +223,14 @@ main {
         .second-row {
           margin-top: 40px;
           width: 100%;
-        
+
           label {
             position: relative;
             display: block;
             width: 100%;
             background-color: $header-footer-color;
             border-radius: 1.25rem;
-        
+
             select {
               width: 100%;
               padding: 1rem 2.75rem 1rem 1rem; // space for the arrow
@@ -214,17 +239,17 @@ main {
               border-radius: 20px;
               background-color: $header-footer-color;
               font-size: $paragraph-fontsize;
-        
+
               appearance: none;
               -webkit-appearance: none;
               -moz-appearance: none;
 
               &:focus {
                 outline: none;
+              }
+
             }
-        
-            }
-        
+
             .icon {
               position: absolute;
               top: 50%;
@@ -233,7 +258,7 @@ main {
               width: 2.5rem;
               height: 2.5rem;
               pointer-events: none;
-        
+
               img {
                 width: 100%;
                 height: auto;
@@ -244,13 +269,14 @@ main {
           }
         }
 
-        .third-row{
+        .third-row {
           margin-top: 40px;
-          label{
+
+          label {
             border-radius: 20px;
             width: 100%;
 
-            textarea{
+            textarea {
               width: 100%;
               border-radius: 20px;
               background-color: $header-footer-color;
@@ -258,33 +284,34 @@ main {
               padding: 10px 20px;
               height: 200px;
               font-size: $paragraph-fontsize;
-              resize: vertical; 
-              
-              &::placeholder{
+              resize: vertical;
+
+              &::placeholder {
                 color: black;
               }
 
               &:focus {
                 outline: none;
-            }
+              }
             }
           }
         }
 
-        .buttons{
+        .buttons {
           margin-top: 40px;
           display: flex;
           justify-content: space-between;
 
-          button, input[type=submit]{
+          button,
+          input[type=submit] {
             @extend .red-button;
           }
 
-          button{
+          button {
             background-color: black;
           }
 
-          input[type=submit]{
+          input[type=submit] {
             border: none;
           }
         }
@@ -294,74 +321,87 @@ main {
 
   @include arrow();
 
-  @media (max-width: 1023px){
-    .story-section, .team-section, .location-section, .contact-section{
+  @media (max-width: 1023px) {
+
+    .story-section,
+    .team-section,
+    .location-section,
+    .contact-section {
       margin: $tablet-spacing;
     }
 
-    .story-section{
-      .top-container{
-        gap:20px;
+    .story-section {
+      .top-container {
+        padding: 20px;
+        gap: 20px;
 
-        .desc{
-          p{
-            font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+        .desc {
+          p {
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
           }
         }
       }
+
+      .bottom-container {
+        padding: 20px;
+        margin: auto 0px;
+      }
     }
 
-    .team-section{
-      .team-container{
-        .team-info{
+    .team-section {
+      .team-container {
+        .team-info {
           margin: 0px;
 
-          .name{
+          .name {
             height: 100px;
           }
         }
       }
     }
 
-    .location-section{
-      .location-container{
-        gap:20px;
+    .location-section {
+      .location-container {
+        gap: 20px;
 
-        .desc{
-          p{
+        .desc {
+          p {
             font-size: clamp(1.25rem, 1.5vw, 1.5rem);
           }
         }
       }
     }
 
-    .contact-section{
-      .contact-container{
+    .contact-section {
+      .contact-container {
         padding: 40px 40px;
 
-        form{
-          .first-row{
-            label{
-              input{
-                font-size: clamp(1.25rem, 1.5vw, 1.5rem);;
+        form {
+          .first-row {
+            label {
+              input {
+                font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+                ;
               }
             }
           }
 
-          .second-row{
-            label{
-              select{
-                font-size: clamp(1.25rem, 1.5vw, 1.5rem);;
+          .second-row {
+            label {
+              select {
+                font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+                ;
               }
             }
           }
 
-          .third-row{
+          .third-row {
             margin-top: 40px;
 
-            label{
-              textarea{
-                font-size: clamp(1.25rem, 1.5vw, 1.5rem);;
+            label {
+              textarea {
+                font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+                ;
               }
             }
           }
@@ -370,94 +410,104 @@ main {
     }
   }
 
-   @media (max-width: 719px){
-    .story-section, .team-section, .location-section, .contact-section{
+  @media (max-width: 719px) {
+
+    .story-section,
+    .team-section,
+    .location-section,
+    .contact-section {
       margin: $mobile-spacing;
     }
 
-    .story-section{
-      .top-container{
+    .story-section {
+      text-align: center;
+      .top-container {
 
         grid-template-columns: repeat(1, minmax(100px, 1fr));
-        grid-template-rows: 200px 1fr;;
+        grid-template-rows: 200px 1fr;
+        ;
 
-        .desc{
-          p{
+        .desc {
+          p {
             font-size: clamp(1.25rem, 1.5vw, 1.5rem);
           }
         }
       }
 
-      .bottom-container{
-        margin-top: 40px;
+      .bottom-container {
         grid-template-columns: repeat(1, minmax(100px, 1fr));
+        gap: 20px;
+        padding: 20px;
       }
     }
 
-    .team-section{
-      .team-container{
-        grid-template-columns:  repeat(1, minmax(100px, 1fr));
+    .team-section {
+      .team-container {
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
         grid-template-rows: auto auto;
         gap: 0;
 
-        .team-info{
+        .team-info {
           margin: 0px;
 
-          .image{
+          .image {
             aspect-ratio: 1/1;
           }
         }
       }
     }
 
-    .location-section{
-      .location-container{
+    .location-section {
+      .location-container {
         display: flex;
         flex-direction: column-reverse;
-        gap:20px;
+        gap: 20px;
 
-        .desc{
-          p{
+        .desc {
+          p {
             font-size: clamp(1.25rem, 1.5vw, 1.5rem);
           }
         }
 
-        .image{
+        .image {
           aspect-ratio: 1/1;
         }
-        
+
       }
     }
 
-    .contact-section{
-      .contact-container{
+    .contact-section {
+      .contact-container {
         padding: 20px 20px;
 
-        h1{
+        h1 {
           margin-top: 20px;
         }
 
-        form{
-          .first-row{
+        form {
+          .first-row {
             grid-template-columns: repeat(1, minmax(100px, 1fr));
-            gap:20px;
+            gap: 20px;
           }
 
-          .second-row{
+          .second-row {
             margin-top: 20px;
-            label{
-              select{
-                font-size: clamp(1.25rem, 1.5vw, 1.5rem);;
+
+            label {
+              select {
+                font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+                ;
               }
             }
           }
 
-          .third-row{
+          .third-row {
             margin-top: 20px;
 
-            label{
-              textarea{
-                font-size: clamp(1.25rem, 1.5vw, 1.5rem);;
+            label {
+              textarea {
+                font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+                ;
               }
             }
           }

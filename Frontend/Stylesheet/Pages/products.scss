@@ -1,10 +1,21 @@
 @import "../global";
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   background: $product-primary-color;
 }
 
 main {
+
+  @include arrow();
+  #arrowBtn{
+    background-color: #189191;
+  }
+
   .intro-section {
     @include hero-section();
     h1 {

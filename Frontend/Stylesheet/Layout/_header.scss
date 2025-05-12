@@ -18,6 +18,12 @@ header {
   color: $logo-color;       /* replace with $logo-color */
   font-weight: 900;
   text-decoration: none;
+
+  img{
+    height: 50px;
+    object-fit: cover;
+    transform: scale(2.5) translateY(7%) translateX(10%);
+  }
 }
 
 .nav-links {

@@ -1,10 +1,19 @@
 @import "../global";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: $artist-primary-color;
 }
 
 main {
+  @include arrow();
+  #arrowBtn{
+    background-color: #5d277e;
+  }
+  
   .intro-section {
     @include hero-section();
     background-image: url("/Images/ArtistProfile/Abcph/heroimg.png");

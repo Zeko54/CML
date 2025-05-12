@@ -13,12 +13,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
   <body class="artist-page artist-profile-page" data-artist="sweet-soul">
     <div class="circle-container"></div>
     <header id="header">
       <div class="logo">
-        <a href="/index.html">CML</a>
+        <a href="/index.html"><img src="../../Images/Logo/CML.png" alt=""></a>
       </div>
 
       <nav class="nav-links" aria-label="Main Navigation">
@@ -180,6 +181,10 @@
           <div class="swiper-pagination video-pagination"></div>
         </div>
       </section>
+
+      <button onclick="topFunction()" id="arrowBtn" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
     </main>
     <footer>
       <div class="footer-top">
@@ -187,9 +192,15 @@
           <h1>CML</h1>
         </div>
         <div class="social-media">
-          <div class="app"></div>
-          <div class="app"></div>
-          <div class="app"></div>
+         <div class="app">
+          <a href="https://www.tiktok.com/@citrincollection06" target="_blank"><img src="../../Images/Social Media/Tiktok logo.png" alt=""></a>
+        </div>
+        <div class="app">
+          <a href="http://facebook.com/citrinsnappedupshop" target="_blank"><img src="../../Images/Social Media/Facebook logo.webp" alt=""></a>
+        </div>
+        <div class="app">
+          <a href="www.instagram.com/citrin_collections" target="_blank"><img src="../../Images/Social Media/Instagram logo.webp" alt=""></a>
+        </div>
         </div>
       </div>
 
@@ -239,6 +250,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="/Javascript/linearBackground.js"></script>
   <script src="/Javascript/header.js"></script>
+  <script src="/Javascript/scroll_up.js"></script>
   <script type="module" src="/Javascript/bandData.js"></script>
   <script type="module" src="/Javascript/data-artist.js"></script>
 </html>
