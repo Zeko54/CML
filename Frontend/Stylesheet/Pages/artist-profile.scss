@@ -8,6 +8,8 @@ main {
   .intro-section {
     @include hero-section();
     background-image: url("/Images/ArtistProfile/Abcph/heroimg.png");
+    background-size: cover;
+    background-position: center;
 
     .text-container {
       color: nth($text-colors, 1);
@@ -43,33 +45,38 @@ main {
       margin: 80px auto;
       background-color: rgba(255, 255, 255, 0.31);
       border-radius: 60px;
+      max-height: 600px;
+      overflow: hidden;
 
       .member-info {
         width: 50%;
         padding: 25px 60px 40px 60px;
-        text-align: justify;
+        display: flex;
+        flex-direction: column;
 
         h1 {
           font-size: $sub-heading-fontsize;
           padding-bottom: 20px;
         }
+
         p {
-          font-size: $paragraph-fontsize;
+          font-size: clamp(0.6rem, calc(0.4rem + 1vw), 1.4rem);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
         }
       }
 
       .member-pic {
         width: 50%;
         border-radius: 0px 60px 60px 0px;
-        height: 100%;
-        min-height: 500px;
-        max-height: 600px;
 
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          object-position: center;
+          object-position: 100% 0%;
         }
       }
     }
@@ -173,13 +180,13 @@ main {
             }
 
             .video-info {
-              padding: 40px 80px 0px 40px;
+              padding: 40px 80px 40px 40px;
               width: 50%;
               color: nth($text-colors, 1);
 
               h1 {
                 font-size: $sub-heading-fontsize;
-                margin-bottom: 50px;
+                padding-bottom: 30px;
               }
 
               p {
@@ -202,6 +209,216 @@ main {
           &-active {
             opacity: 1;
             background: nth($text-colors, 2);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: $desktop) {
+  main {
+    .members-section {
+      margin: $tablet-spacing;
+
+      .member-box {
+        max-height: 450px;
+
+        .member-info {
+          padding: 25px 50px 20px 50px;
+        }
+      }
+    }
+
+    .artist-gallery {
+      margin: $tablet-spacing;
+
+      .gallery-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            height: 450px;
+          }
+        }
+
+        .swiper-scrollbar {
+          width: 15%;
+        }
+      }
+    }
+
+    .artist-videos {
+      margin: $tablet-spacing;
+
+      .video-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            .video-box {
+              .video-info {
+                padding: 20px 40px 30px 20px;
+
+                h1 {
+                  font-size: calc($sub-heading-fontsize * 0.8);
+                }
+
+                p {
+                  font-size: calc($paragraph-fontsize * 0.8);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+  main {
+    .intro-section {
+      min-height: 70vh;
+
+      .text-container {
+        width: 100%;
+        max-width: 700px;
+        gap: 40px;
+
+        p {
+          text-align: justify;
+        }
+
+        h1 {
+          line-height: normal;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .members-section {
+      margin: $mobile-spacing;
+
+      .member-box {
+        position: relative;
+        height: 450px;
+        width: 100%;
+        max-width: 700px;
+        border-radius: 30px;
+        margin: 40px auto;
+
+        &.flipped {
+          .member-info {
+            transform: rotateY(0deg);
+          }
+          .member-pic {
+            transform: rotateY(180deg);
+          }
+        }
+
+        .member-info,
+        .member-pic {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          transition: transform 0.8s ease;
+        }
+
+        .member-info {
+          background-color: rgba(255, 255, 255, 0.31);
+          transform: rotateY(180deg);
+          text-align: center;
+          padding: 20px;
+
+          h1 {
+            font-size: 1.7rem;
+          }
+
+          p {
+            font-size: 0.9rem;
+          }
+        }
+
+        .member-pic {
+          &::before {
+            content: attr(data-name);
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(78, 32, 121, 0.6);
+            color: white;
+            padding: 6px 12px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+          }
+
+          &::after {
+            content: "Tap to view profile";
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(182, 56, 128, 0.6);
+            color: white;
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            border-radius: 5px;
+          }
+        }
+
+        .member-pic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .artist-gallery {
+      margin: $mobile-spacing;
+
+      .gallery-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            height: 450px;
+          }
+        }
+
+        .swiper-scrollbar {
+          width: 25%;
+        }
+      }
+    }
+
+    .artist-videos {
+      margin: $mobile-spacing;
+
+      .video-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            &:nth-child(odd) .video-box {
+              flex-direction: column;
+            }
+
+            &:nth-child(even) .video-box {
+              flex-direction: column;
+            }
+
+            .video-box {
+              .video-iframe {
+                width: 100%;
+                height: 250px;
+                border-radius: 25px 25px 0px 0px;
+              }
+
+              .video-info {
+                padding: 20px 40px 30px 20px;
+                width: 100%;
+                height: 250px;
+              }
+            }
           }
         }
       }

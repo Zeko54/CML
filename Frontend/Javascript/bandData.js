@@ -80,6 +80,14 @@ document.addEventListener("DOMContentLoaded", () => {
       draggable: true,
       dragSize: 50,
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      720: {
+        slidesPerView: 2,
+      },
+    },
   });
 
   new Swiper(".video-container", {
@@ -90,5 +98,14 @@ document.addEventListener("DOMContentLoaded", () => {
       clickable: true,
       type: "bullets",
     },
+  });
+
+  document.querySelectorAll(".member-box").forEach((box) => {
+    const name = box.querySelector(".member-info h1")?.textContent || "Artist";
+    box.querySelector(".member-pic")?.setAttribute("data-name", name);
+
+    box.addEventListener("click", () => {
+      box.classList.toggle("flipped");
+    });
   });
 });

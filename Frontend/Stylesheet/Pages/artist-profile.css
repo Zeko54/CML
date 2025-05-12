@@ -343,6 +343,8 @@ main .intro-section {
   background-color: #e4e4e4;
   padding: 150px 80px 50px 80px;
   background-image: url("/Images/ArtistProfile/Abcph/heroimg.png");
+  background-size: cover;
+  background-position: center;
 }
 main .intro-section h1 {
   font-size: clamp(3rem, 10vw, 6rem);
@@ -454,33 +456,37 @@ main .members-section .member-box {
   margin: 80px auto;
   background-color: rgba(255, 255, 255, 0.31);
   border-radius: 60px;
+  max-height: 600px;
+  overflow: hidden;
 }
 main .members-section .member-box .member-info {
   width: 50%;
   padding: 25px 60px 40px 60px;
-  text-align: justify;
+  display: flex;
+  flex-direction: column;
 }
 main .members-section .member-box .member-info h1 {
   font-size: clamp(1.75rem, 4.5vw, 2.5rem);
   padding-bottom: 20px;
 }
 main .members-section .member-box .member-info p {
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(0.6rem, 0.4rem + 1vw, 1.4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 main .members-section .member-box .member-pic {
   width: 50%;
   border-radius: 0px 60px 60px 0px;
-  height: 100%;
-  min-height: 500px;
-  max-height: 600px;
 }
 main .members-section .member-box .member-pic img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: 100% 0%;
+     object-position: 100% 0%;
 }
 main .artist-gallery {
   margin: 120px 80px;
@@ -606,13 +612,13 @@ main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .v
   border: none;
 }
 main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-info {
-  padding: 40px 80px 0px 40px;
+  padding: 40px 80px 40px 40px;
   width: 50%;
   color: #fff;
 }
 main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-info h1 {
   font-size: clamp(1.75rem, 4.5vw, 2.5rem);
-  margin-bottom: 50px;
+  padding-bottom: 30px;
 }
 main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-info p {
   font-size: clamp(1rem, 3vw, 1.5rem);
@@ -628,4 +634,151 @@ main .artist-videos .video-container .video-pagination .swiper-pagination-bullet
 main .artist-videos .video-container .video-pagination .swiper-pagination-bullet-active {
   opacity: 1;
   background: #000;
+}
+
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+  main .members-section {
+    margin: 80px 40px;
+  }
+  main .members-section .member-box {
+    max-height: 450px;
+  }
+  main .members-section .member-box .member-info {
+    padding: 25px 50px 20px 50px;
+  }
+  main .artist-gallery {
+    margin: 80px 40px;
+  }
+  main .artist-gallery .gallery-container .swiper-wrapper .swiper-slide {
+    height: 450px;
+  }
+  main .artist-gallery .gallery-container .swiper-scrollbar {
+    width: 15%;
+  }
+  main .artist-videos {
+    margin: 80px 40px;
+  }
+  main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-info {
+    padding: 20px 40px 30px 20px;
+  }
+  main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-info h1 {
+    font-size: calc(clamp(1.75rem, 4.5vw, 2.5rem) * 0.8);
+  }
+  main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-info p {
+    font-size: calc(clamp(1rem, 3vw, 1.5rem) * 0.8);
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  main .intro-section {
+    min-height: 70vh;
+  }
+  main .intro-section .text-container {
+    width: 100%;
+    max-width: 700px;
+    gap: 40px;
+  }
+  main .intro-section .text-container p {
+    text-align: justify;
+  }
+  main .intro-section .text-container h1 {
+    line-height: normal;
+  }
+  main .intro-section .text-container span {
+    display: none;
+  }
+  main .members-section {
+    margin: 40px 20px;
+  }
+  main .members-section .member-box {
+    position: relative;
+    height: 450px;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 30px;
+    margin: 40px auto;
+  }
+  main .members-section .member-box.flipped .member-info {
+    transform: rotateY(0deg);
+  }
+  main .members-section .member-box.flipped .member-pic {
+    transform: rotateY(180deg);
+  }
+  main .members-section .member-box .member-info,
+  main .members-section .member-box .member-pic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.8s ease;
+  }
+  main .members-section .member-box .member-info {
+    background-color: rgba(255, 255, 255, 0.31);
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 20px;
+  }
+  main .members-section .member-box .member-info h1 {
+    font-size: 1.7rem;
+  }
+  main .members-section .member-box .member-info p {
+    font-size: 0.9rem;
+  }
+  main .members-section .member-box .member-pic::before {
+    content: attr(data-name);
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(78, 32, 121, 0.6);
+    color: white;
+    padding: 6px 12px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+  }
+  main .members-section .member-box .member-pic::after {
+    content: "Tap to view profile";
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(182, 56, 128, 0.6);
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+  }
+  main .members-section .member-box .member-pic img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .artist-gallery {
+    margin: 40px 20px;
+  }
+  main .artist-gallery .gallery-container .swiper-wrapper .swiper-slide {
+    height: 450px;
+  }
+  main .artist-gallery .gallery-container .swiper-scrollbar {
+    width: 25%;
+  }
+  main .artist-videos {
+    margin: 40px 20px;
+  }
+  main .artist-videos .video-container .swiper-wrapper .swiper-slide:nth-child(odd) .video-box {
+    flex-direction: column;
+  }
+  main .artist-videos .video-container .swiper-wrapper .swiper-slide:nth-child(even) .video-box {
+    flex-direction: column;
+  }
+  main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 25px 25px 0px 0px;
+  }
+  main .artist-videos .video-container .swiper-wrapper .swiper-slide .video-box .video-info {
+    padding: 20px 40px 30px 20px;
+    width: 100%;
+    height: 250px;
+  }
 }/*# sourceMappingURL=artist-profile.css.map */
