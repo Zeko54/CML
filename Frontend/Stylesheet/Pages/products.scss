@@ -4,29 +4,30 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   background: $product-primary-color;
 }
 
 main {
-
   @include arrow();
-  #arrowBtn{
+  #arrowBtn {
     background-color: #189191;
   }
 
   .intro-section {
     @include hero-section();
-    h1 {
-      display: flex;
-      flex-direction: column;
-      line-height: 1;
-    }
-    span {
-      font-size: $sub-heading-fontsize;
-      font-weight: 600;
-      margin-bottom: 3.5rem;
+    .text-container {
+      gap: 30px;
+
+      h1 {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+      }
+
+      p {
+        text-align: justify;
+      }
     }
   }
 
@@ -39,28 +40,35 @@ main {
       padding-top: 65px;
 
       .Deals-wrapper {
+        height: 600px;
         .swiper-slide {
-          border-radius: 1rem;
-          overflow: hidden;
-          background: white;
-          border: 10px solid $product-secondary-color;
+          border-radius: 2rem;
+          background: rgba(4, 105, 105, 0.5);
+          padding: 25px;
 
           img {
             width: 100%;
-            height: auto;
-            display: block;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1.5rem;
           }
         }
       }
 
-      .swiper-pagination {
+      .swiper-scrollbar {
         position: relative;
-        padding-top: 30px;
+        height: 20px;
+        padding: 5px;
+        max-width: 280px;
+        width: 100%;
+        background: rgba(4, 105, 105, 0.5);
+        border-radius: 10px;
+        margin: 30px auto 0;
 
-        .swiper-pagination-bullet {
-          background: $product-secondary-color;
-          height: 15px;
-          width: 15px;
+        .swiper-scrollbar-drag {
+          background: $product-primary-color;
+          height: 100%;
+          width: 40px !important;
         }
       }
     }
@@ -85,77 +93,253 @@ main {
       padding-top: 65px;
       max-width: 1200px;
       position: static;
+      width: 90%;
 
       .Gallery-wrapper {
+        height: 450px;
         .swiper-slide {
-          border-radius: 1rem;
-          overflow: hidden;
-          background: white;
-          border: 10px solid $product-secondary-color;
+          border-radius: 2rem;
+          background: rgba(4, 105, 105, 0.5);
+          padding: 25px;
 
           img {
             width: 100%;
-            height: auto;
-            display: block;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1.5rem;
           }
         }
       }
 
       .swiper-button-prev,
       .swiper-button-next {
-        color: black;
+        top: 34%;
         position: absolute;
-        top: 35%;
-        z-index: 10;
-        width: 40px;
-        height: 40px;
+        background: rgba(4, 105, 105, 0.5);
+        cursor: pointer;
+        padding: 1.5rem 1.3rem;
+        border-radius: 0.5rem;
+
+        &::after {
+          display: none;
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      .swiper-button-prev::before {
+        content: "\276E";
+        color: $product-primary-color;
+      }
+
+      .swiper-button-next::before {
+        content: "\276F";
+        color: $product-primary-color;
       }
 
       .swiper-button-prev {
-        left: calc((100% - 1200px) / 2 - 50px);
+        left: 0;
       }
 
       .swiper-button-next {
-        right: calc((100% - 1200px) / 2 - 50px);
+        right: 0;
+      }
+
+      .swiper-button-disabled {
+        opacity: 1 !important;
       }
     }
 
     .ourProducts-Videocontainer {
       padding-top: 100px;
-      padding-bottom: 30px;
 
       .Video-wrapper {
-        height: 300px;
-        width: 600px;
+        height: 350px;
 
         .swiper-slide {
-          border-radius: 1rem;
-          overflow: hidden;
-          background: white;
+          border-radius: 2rem;
+          background: rgba(4, 105, 105, 0.5);
+          padding: 25px;
 
           iframe {
             width: 100%;
             height: 100%;
-            display: block;
+            border-radius: 1.5rem;
           }
         }
       }
 
-      .swiper-scrollbar {
-        display: block;
+      .swiper-pagination {
         position: relative;
-        margin: 30px auto 0 auto;
-        height: 20px;
-        padding: 5px;
-        max-width: 280px;
-        width: 100%;
-        background: $product-secondary-color;
-        border-radius: 10px;
+        margin: 20px auto 0;
 
-        .swiper-scrollbar-drag {
-          background: $product-primary-color;
-          height: 100%;
-          width: 40px !important;
+        .swiper-pagination-bullet {
+          background: rgba(4, 105, 105, 0.5);
+          height: 15px;
+          width: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: $desktop) {
+  main {
+    .intro-section {
+      .text-container {
+        width: 100%;
+      }
+    }
+
+    .promoDeals-section {
+      margin: $tablet-spacing;
+
+      .promoDeals-container {
+        padding-top: 50px;
+
+        .Deals-wrapper {
+          height: 450px;
+
+          .swiper-slide {
+            padding: 12px;
+          }
+        }
+
+        .swiper-scrollbar {
+          max-width: 220px;
+        }
+      }
+    }
+
+    .ourProducts-section {
+      margin: $tablet-spacing;
+
+      .ourProducts-Gallerycontainer {
+        padding-top: 50px;
+
+        .Gallery-wrapper {
+          height: 350px;
+
+          .swiper-slide {
+            padding: 12px;
+          }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          top: 30%;
+        }
+
+        .swiper-button-prev {
+          left: -10px;
+        }
+
+        .swiper-button-next {
+          right: -10px;
+        }
+      }
+
+      .ourProducts-Videocontainer {
+        padding-top: 80px;
+
+        .Video-wrapper {
+          height: 300px;
+
+          .swiper-slide {
+            padding: 12px;
+          }
+        }
+
+        .swiper-pagination {
+          margin: 10px auto 0;
+          .swiper-pagination-bullet {
+            height: 12px;
+            width: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+  main {
+    .intro-section {
+      min-height: 76vh;
+      .text-container {
+        width: 100%;
+        gap: 50px;
+      }
+    }
+
+    .promoDeals-section {
+      margin: $mobile-spacing;
+
+      .promoDeals-container {
+        padding-top: 50px;
+
+        .Deals-wrapper {
+          height: 400px;
+
+          .swiper-slide {
+            padding: 10px;
+          }
+        }
+
+        .swiper-scrollbar {
+          max-width: 180px;
+        }
+      }
+    }
+
+    .ourProducts-section {
+      margin: 80px 20px;
+
+      .ourProducts-Gallerycontainer {
+        padding-top: 50px;
+
+        .Gallery-wrapper {
+          height: 300px;
+
+          .swiper-slide {
+            padding: 10px;
+          }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          top: 34%;
+          padding: 0.1rem 0.5rem;
+        }
+
+        .swiper-button-prev {
+          left: -15px;
+        }
+
+        .swiper-button-next {
+          right: -15px;
+        }
+      }
+
+      .ourProducts-Videocontainer {
+        padding-top: 50px;
+
+        .Video-wrapper {
+          height: 320px;
+
+          .swiper-slide {
+            padding: 10px;
+          }
+        }
+
+        .swiper-pagination {
+          margin: 10px auto 0;
+          .swiper-pagination-bullet {
+            height: 12px;
+            width: 12px;
+          }
         }
       }
     }
