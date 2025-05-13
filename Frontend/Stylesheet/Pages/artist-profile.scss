@@ -10,13 +10,12 @@ body {
 
 main {
   @include arrow();
-  #arrowBtn{
+  #arrowBtn {
     background-color: #5d277e;
   }
-  
+
   .intro-section {
     @include hero-section();
-    background-image: url("/Images/ArtistProfile/Abcph/heroimg.png");
     background-size: cover;
     background-position: center;
 

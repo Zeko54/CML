@@ -10,6 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
     ".video-container .swiper-wrapper"
   );
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const heroSection = document.querySelector(".intro-section");
+    if (heroSection) {
+      const bgImage = heroSection.dataset.bg;
+      if (bgImage) {
+        heroSection.style.backgroundImage = `url('${bgImage}')`;
+      }
+    }
+  });
+
   // Load Gallery
   function loadGallery() {
     const galleryImages = bandData[artist].gallery;
