@@ -856,7 +856,7 @@ main #arrowBtn:hover {
     gap: 20px;
   }
   main .location-section .location-container .desc p {
-    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
   }
   main .location-section .location-container .image {
     aspect-ratio: 1/1;
