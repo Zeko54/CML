@@ -31,7 +31,7 @@ main {
 
       .desc {
         padding: 40px;
-        background: rgba(248, 73, 67, 0.6);
+        background: rgba(248, 73, 67, 0.4);
         backdrop-filter: blur(5px);
         font-size: $paragraph-fontsize;
         border-radius: 0 81px 81px 0;
@@ -97,7 +97,7 @@ main {
 
 
     .consultant-container {
-      background: rgba(248, 73, 67, 0.6);
+      background: rgba(248, 73, 67, 0.4);
       backdrop-filter: blur(5px);
       margin-top: 40px;
       display: grid;

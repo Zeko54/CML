@@ -449,7 +449,7 @@ main .story-section hr {
 }
 main .story-section .top-container {
   padding: 40px;
-  background: rgba(248, 73, 67, 0.6);
+  background: rgba(248, 73, 67, 0.4);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   margin-top: 40px;
@@ -468,12 +468,13 @@ main .story-section .top-container .desc h1 {
   font-size: clamp(1.75rem, 4.5vw, 2.5rem);
 }
 main .story-section .top-container .desc p {
+  margin-top: 10px;
   font-size: clamp(1rem, 3vw, 1.5rem);
-  font-weight: 500;
+  font-weight: 400;
 }
 main .story-section .bottom-container {
   padding: 40px;
-  background: rgba(248, 73, 67, 0.6);
+  background: rgba(248, 73, 67, 0.4);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 0px 0px 25px 25px;
@@ -585,6 +586,11 @@ main .location-section hr {
   margin-left: -2px;
 }
 main .location-section .location-container {
+  padding: 40px;
+  border-radius: 25px;
+  background: rgba(248, 73, 67, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
@@ -784,6 +790,7 @@ main #arrowBtn:hover {
     height: 100px;
   }
   main .location-section .location-container {
+    padding: 20px;
     gap: 20px;
   }
   main .location-section .location-container .desc p {
@@ -839,6 +846,7 @@ main #arrowBtn:hover {
     aspect-ratio: 1/1;
   }
   main .location-section .location-container {
+    padding: 10px;
     display: flex;
     flex-direction: column-reverse;
     gap: 20px;
