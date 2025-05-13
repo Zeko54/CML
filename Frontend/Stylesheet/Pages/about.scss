@@ -431,11 +431,11 @@ main {
 
         grid-template-columns: repeat(1, minmax(100px, 1fr));
         grid-template-rows: 200px 1fr;
-        ;
 
         .desc {
           p {
-            font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+            font-size: clamp(1.15rem, 1.5vw, 1.5rem);
+            text-align: justify;
           }
         }
       }
@@ -444,6 +444,13 @@ main {
         grid-template-columns: repeat(1, minmax(100px, 1fr));
         gap: 20px;
         padding: 20px;
+
+
+        .box {
+          p {
+            text-align: justify;
+          }
+        }
       }
     }
 

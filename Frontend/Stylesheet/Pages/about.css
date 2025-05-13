@@ -827,12 +827,16 @@ main #arrowBtn:hover {
     grid-template-rows: 200px 1fr;
   }
   main .story-section .top-container .desc p {
-    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    font-size: clamp(1.15rem, 1.5vw, 1.5rem);
+    text-align: justify;
   }
   main .story-section .bottom-container {
     grid-template-columns: repeat(1, minmax(100px, 1fr));
     gap: 20px;
     padding: 20px;
+  }
+  main .story-section .bottom-container .box p {
+    text-align: justify;
   }
   main .team-section .team-container {
     grid-template-columns: repeat(1, minmax(100px, 1fr));
