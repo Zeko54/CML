@@ -490,7 +490,7 @@ main .story-section .top-container .image img {
      object-fit: cover;
   aspect-ratio: auto;
   overflow: hidden;
-  display: block;
+  display: grid;
 }
 main .story-section .top-container .desc {
   height: 100%;
@@ -942,7 +942,7 @@ main #arrowBtn:hover {
   }
   main .story-section .top-container {
     grid-template-columns: repeat(1, minmax(100px, 1fr));
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: 250px 1fr;
   }
   main .story-section .top-container .desc p {
     font-size: clamp(1.15rem, 1.5vw, 1.5rem);
@@ -961,7 +961,7 @@ main #arrowBtn:hover {
   }
   main .team-section .team-container {
     grid-template-columns: repeat(1, minmax(100px, 1fr));
-    grid-template-rows: 250px auto;
+    grid-template-rows: auto auto;
     gap: 0;
   }
   main .team-section .team-container .team-info {
