@@ -11,6 +11,9 @@ body {
 main {
   .intro-section {
     @include hero-section();
+    background-image: url("/Images/Location/Building_1");
+
+    
   }
 
   .service-section {

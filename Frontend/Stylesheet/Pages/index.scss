@@ -11,6 +11,21 @@ body {
 main {
   .intro-section {
     @include hero-section();
+    background-image: url("/Images/Location/Building_1");
+    padding: 0px;
+
+    .background{
+      background-color: rgb(0, 0, 0, 0.4);
+      min-height: 100svh;
+      width: 100%;
+      padding: 150px 80px 50px 80px;
+
+      .text-container{
+        color: white;
+      }
+    }
+
+
   }
 
   .aboutus-section {
@@ -261,7 +276,7 @@ main {
 
   @include arrow();
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
 
     .aboutus-section,
     .businesses-section,
@@ -349,7 +364,7 @@ main {
     }
   }
 
-  @media (max-width: 719px) {
+  @media (max-width: 720px) {
 
     .aboutus-section,
     .businesses-section,
