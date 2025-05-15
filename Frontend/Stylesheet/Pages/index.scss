@@ -11,16 +11,19 @@ body {
 main {
   .intro-section {
     @include hero-section();
-    background-image: url("/Images/Location/Building_1");
+    background-image: url("/Images/Location/Building.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding: 0px;
 
-    .background{
-      background-color: rgb(0, 0, 0, 0.4);
+    .background {
+      background-color: rgb(0, 0, 0, 0.55);
       min-height: 100svh;
       width: 100%;
       padding: 150px 80px 50px 80px;
 
-      .text-container{
+      .text-container {
         color: white;
       }
     }
@@ -105,7 +108,7 @@ main {
     @include performer-slider();
   }
 
-    .consultant-section {
+  .consultant-section {
     margin: $desktop-spacing;
     @include heading();
     @include heading-underline();
@@ -118,9 +121,9 @@ main {
       display: grid;
       grid-template-columns: repeat(2, 50%);
       grid-template-areas:
-      "left-side right-side"
-      "button right-side";
-      gap:60px;
+        "left-side right-side"
+        "button right-side";
+      gap: 60px;
       border-radius: 25px;
       @include shadow();
       padding: 40px;
@@ -128,7 +131,8 @@ main {
 
       .consult-button {
         grid-area: button;
-        button{
+
+        button {
           @extend .white-button;
         }
       }
@@ -162,7 +166,7 @@ main {
         gap: 0px 40px;
         align-items: self-start;
         align-content: space-between;
-       
+
 
 
         .vertical-bar {
@@ -171,11 +175,11 @@ main {
           color: white;
           padding-right: 20px;
 
-          ul{
+          ul {
             list-style-type: disc;
           }
 
-          li{
+          li {
             font-size: $paragraph-fontsize;
           }
 
@@ -254,8 +258,8 @@ main {
     .client-img {
       height: 180px;
       border-radius: 50%;
-      
-      img{
+
+      img {
         height: 100%;
         object-fit: cover;
         overflow: hidden;
@@ -286,6 +290,20 @@ main {
       margin: $tablet-spacing;
     }
 
+    .intro-section {
+      @include hero-section();
+      padding: 0px;
+
+      .background {
+        padding: 150px 80px 50px 80px;
+
+        .text-container {
+          color: white;
+        }
+      }
+    }
+
+
     .aboutus-section {
       .aboutus-container {
 
@@ -304,21 +322,21 @@ main {
 
     .consultant-section {
       .consultant-container {
-        gap:20px;
+        gap: 20px;
         padding: 20px;
 
-        .consult-button{
-          button{
-          @extend .white-button;
-          font-size: clamp(1rem, 1.5vw, 1.125rem);
+        .consult-button {
+          button {
+            @extend .white-button;
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
           }
         }
 
         .left-side {
           padding: 20px;
 
-          .text{
-            p{
+          .text {
+            p {
               font-size: clamp(1rem, 1.5vw, 1.125rem);
             }
           }
@@ -328,17 +346,17 @@ main {
           gap: 20px;
           padding: 20px;
 
-          .vertical-bar{
-            ul{
-              li{
-              font-size: clamp(1rem, 1.5vw, 1.125rem);
-            }
+          .vertical-bar {
+            ul {
+              li {
+                font-size: clamp(1rem, 1.5vw, 1.125rem);
+              }
             }
           }
         }
 
-        .consult-button{
-          button{
+        .consult-button {
+          button {
             font-size: clamp(1rem, 1.5vw, 1.125rem);
           }
         }
@@ -374,6 +392,19 @@ main {
       margin: $mobile-spacing;
     }
 
+    .intro-section {
+      padding: 0px;
+
+      .background {
+        padding: 100px 40px 50px 40px;
+
+        .text-container {
+          color: white;
+        }
+      }
+    }
+
+
     .aboutus-section {
       .aboutus-container {
         grid-template-columns: 1fr;
@@ -387,24 +418,24 @@ main {
     }
 
     .consultant-section {
-        .consultant-container {
-          grid-template-columns: repeat(1, 100%);
-          grid-template-areas:
+      .consultant-container {
+        grid-template-columns: repeat(1, 100%);
+        grid-template-areas:
           "left-side"
           "right-side"
           "button";
-          gap:0px;
+        gap: 0px;
+        padding: 10px;
+
+        .left-side {
           padding: 10px;
+        }
 
-          .left-side {
-            padding: 10px;
-          }
-
-          .right-side {
-            gap: 15px 30px;
-          }
+        .right-side {
+          gap: 15px 30px;
         }
       }
+    }
 
     .client-section {
 
@@ -412,6 +443,6 @@ main {
         height: 80px;
       }
     }
-    
+
   }
 }
