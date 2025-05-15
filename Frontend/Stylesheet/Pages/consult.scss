@@ -11,7 +11,22 @@ body {
 main {
   .intro-section {
     @include hero-section();
-    background-image: url("/Images/Location/Building_1");
+    background-image: url("/Images/Location/Building.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0px;
+
+    .background {
+      background-color: rgb(0, 0, 0, 0.6);
+      min-height: 100svh;
+      width: 100%;
+      padding: 150px 80px 50px 80px;
+
+      .text-container {
+        color: white;
+      }
+    }
 
     
   }
@@ -209,9 +224,22 @@ main {
 
   }
 
-  @media (max-width: 1023px){
+  @media (max-width: 1024px){
     .service-section, .product-section, .testimonial-section {
       margin: $tablet-spacing;
+    }
+
+    .intro-section {
+      @include hero-section();
+      padding: 0px;
+
+      .background {
+        padding: 150px 80px 50px 80px;
+
+        .text-container {
+          color: white;
+        }
+      }
     }
 
     .service-section{
@@ -249,10 +277,22 @@ main {
     }
   }
 
-  @media (max-width: 719px) {
+  @media (max-width: 720px) {
 
     .service-section, .product-section, .testimonial-section {
       margin: $mobile-spacing;
+    }
+
+    .intro-section {
+      padding: 0px;
+
+      .background {
+        padding: 100px 40px 50px 40px;
+
+        .text-container {
+          color: white;
+        }
+      }
     }
 
     .service-section {

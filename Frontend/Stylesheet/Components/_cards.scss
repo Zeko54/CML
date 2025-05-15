@@ -95,6 +95,12 @@
       }
     }
 
+    .card-2{
+      .image{
+        background-image: url("/Images/Location/Building.webp");
+      }
+    }
+
     .card-3{
       .image{
         background-image: url("/Images/Products/SOOSUL\ Cream.jpeg");
@@ -129,7 +135,7 @@
     }
   }
 
-  @media screen and (max-width: 719px) {
+  @media screen and (max-width: 720px) {
     .businesses-container {
       grid-template-columns: repeat(1, minmax(100px, 1fr));
       grid-template-rows: auto;

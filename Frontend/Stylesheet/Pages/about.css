@@ -172,7 +172,7 @@ header {
 }
 
 /* Responsive */
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .nav-links {
     position: fixed;
     top: 0;
@@ -260,7 +260,7 @@ footer .copyright {
   background-color: #fff;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   footer .footer-bottom {
     grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
@@ -269,7 +269,7 @@ footer .copyright {
     margin-bottom: 10px;
   }
 }
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 720px) {
   footer .footer-top {
     flex-direction: column;
   }
@@ -363,6 +363,11 @@ main .intro-section {
   min-height: 100svh;
   background-color: #e4e4e4;
   padding: 150px 80px 50px 80px;
+  background-image: url("/Images/Location/Building.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0px;
 }
 main .intro-section h1 {
   font-size: clamp(3rem, 10vw, 6rem);
@@ -421,6 +426,15 @@ main .intro-section .text-container .text-bottom {
     font-size: clamp(0.9rem, 1.5vw, 1.5rem);
   }
 }
+main .intro-section .background {
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100svh;
+  width: 100%;
+  padding: 150px 80px 50px 80px;
+}
+main .intro-section .background .text-container {
+  color: white;
+}
 main .story-section {
   margin: 120px 80px;
   font-size: clamp(1.5rem, 4vw, 2rem);
@@ -459,11 +473,27 @@ main .story-section .top-container {
   grid-template-columns: repeat(2, minmax(100px, 1fr));
   gap: 40px;
   color: white;
+  align-items: stretch;
 }
 main .story-section .top-container .image {
   background-color: #e4e4e4;
-  width: 100%;
+  overflow: hidden;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
   border-radius: 25px;
+}
+main .story-section .top-container .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: auto;
+  overflow: hidden;
+  display: block;
+}
+main .story-section .top-container .desc {
+  height: 100%;
 }
 main .story-section .top-container .desc h1 {
   font-size: clamp(1.75rem, 4.5vw, 2.5rem);
@@ -554,6 +584,10 @@ main .team-section .team-container .team-info .image img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
+}
+main .team-section .team-container .team-info .image-2 img {
+  -o-object-position: 0% 0%;
+     object-position: 0% 0%;
 }
 main .team-section .team-container .team-info .name {
   margin-top: 20px;
@@ -768,12 +802,84 @@ main #arrowBtn {
 main #arrowBtn:hover {
   opacity: 0.7;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   main .story-section,
   main .team-section,
   main .location-section,
   main .contact-section {
     margin: 80px 40px;
+  }
+  main .intro-section {
+    width: 100%;
+    min-height: 100svh;
+    background-color: #e4e4e4;
+    padding: 150px 80px 50px 80px;
+    padding: 0px;
+  }
+  main .intro-section h1 {
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 900;
+  }
+  main .intro-section .text-container {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-between;
+    width: 80%;
+  }
+  main .intro-section .text-container .text-top hr {
+    display: none;
+  }
+  main .intro-section .text-container .text-top p {
+    margin-top: 20px;
+  }
+  main .intro-section .text-container .text-bottom {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 1024px) {
+  main .intro-section .text-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 720px) {
+  main .intro-section {
+    padding: 100px 40px 50px 40px;
+  }
+  main .intro-section h1, main .intro-section .text-container {
+    text-align: center;
+  }
+  main .intro-section .text-container {
+    text-align: justify;
+  }
+  main .intro-section .text-container .text-top hr {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 2px;
+    background-color: white;
+  }
+  main .intro-section .text-container .text-bottom {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 540px) {
+  main .intro-section .text-container {
+    height: 90%;
+  }
+  main .intro-section .text-container .text-top p {
+    font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+  }
+}
+@media (max-width: 1024px) {
+  main .intro-section .background {
+    padding: 150px 80px 50px 80px;
+  }
+  main .intro-section .background .text-container {
+    color: white;
   }
   main .story-section .top-container {
     padding: 20px;
@@ -815,12 +921,21 @@ main #arrowBtn:hover {
     font-size: clamp(1.25rem, 1.5vw, 1.5rem);
   }
 }
-@media (max-width: 719px) {
+@media (max-width: 720px) {
   main .story-section,
   main .team-section,
   main .location-section,
   main .contact-section {
     margin: 40px 20px;
+  }
+  main .intro-section {
+    padding: 0px;
+  }
+  main .intro-section .background {
+    padding: 100px 40px 50px 40px;
+  }
+  main .intro-section .background .text-container {
+    color: white;
   }
   main .story-section {
     text-align: center;

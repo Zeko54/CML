@@ -173,7 +173,7 @@ header {
 }
 
 /* Responsive */
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .nav-links {
     position: fixed;
     top: 0;
@@ -261,7 +261,7 @@ footer .copyright {
   background-color: #fff;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   footer .footer-bottom {
     grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
@@ -270,7 +270,7 @@ footer .copyright {
     margin-bottom: 10px;
   }
 }
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 720px) {
   footer .footer-top {
     flex-direction: column;
   }
