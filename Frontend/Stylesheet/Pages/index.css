@@ -1215,6 +1215,9 @@ main #arrowBtn:hover {
     grid-template-columns: 1fr;
     border-radius: 20px;
   }
+  main .aboutus-section .aboutus-container .image {
+    display: none;
+  }
   main .aboutus-section .aboutus-container .desc {
     border-radius: 20px;
   }

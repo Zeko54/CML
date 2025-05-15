@@ -956,9 +956,12 @@ main #arrowBtn:hover {
   main .story-section .bottom-container .box p {
     text-align: justify;
   }
+  main .team-section {
+    border: 25px;
+  }
   main .team-section .team-container {
     grid-template-columns: repeat(1, minmax(100px, 1fr));
-    grid-template-rows: auto auto;
+    grid-template-rows: 250px auto;
     gap: 0;
   }
   main .team-section .team-container .team-info {

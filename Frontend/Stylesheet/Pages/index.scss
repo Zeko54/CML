@@ -414,6 +414,10 @@ main {
         grid-template-columns: 1fr;
         border-radius: 20px;
 
+        .image{
+          display: none;
+        }
+
         .desc {
           border-radius: 20px;
         }
