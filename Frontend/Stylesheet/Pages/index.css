@@ -425,7 +425,7 @@ main .intro-section .text-container .text-bottom {
   }
 }
 main .intro-section .background {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   min-height: 100svh;
   width: 100%;
   padding: 150px 80px 50px 80px;
