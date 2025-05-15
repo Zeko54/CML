@@ -385,13 +385,13 @@ main .intro-section .text-container .text-top p {
 main .intro-section .text-container .text-bottom {
   margin-top: 80px;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   main .intro-section .text-container {
     width: 100%;
     height: 100%;
   }
 }
-@media screen and (max-width: 719px) {
+@media screen and (max-width: 720px) {
   main .intro-section {
     padding: 100px 40px 50px 40px;
   }
@@ -413,7 +413,7 @@ main .intro-section .text-container .text-bottom {
     text-align: center;
   }
 }
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 540px) {
   main .intro-section .text-container {
     height: 90%;
   }
