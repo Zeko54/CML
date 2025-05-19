@@ -482,6 +482,9 @@ main .aboutus-section .aboutus-container .desc {
   border-radius: 0 81px 81px 0;
   color: #fff;
   font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 main .businesses-section {
   margin: 120px 80px;
