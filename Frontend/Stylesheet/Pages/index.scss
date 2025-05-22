@@ -44,11 +44,10 @@ main {
       @include shadow();
 
       .image {
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+        background-image: url('/Images/Team/Owner.png');
+        background-size: cover;
+        background-position: center;
+        background-position-y: top;
       }
 
       .desc {
@@ -227,64 +226,88 @@ main {
   }
 
   .client-section {
-    @include heading();
+  @include heading();
 
-    .heading {
-      justify-content: center;
-    }
+  .heading {
+    justify-content: center;
+  }
 
-    .with-bg {
-      background-color: #ff4545;
-      mix-blend-mode: normal;
-      color: nth($text-colors, 1);
-    }
+  .with-bg {
+    background-color: #ff4545;
+    mix-blend-mode: normal;
+    color: nth($text-colors, 1);
+  }
 
-    @include heading-underline();
+  @include heading-underline();
 
-    hr {
-      margin: 0 auto;
-      margin-top: 30px;
-      background-color: #ff4545;
-    }
+  hr {
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #ff4545;
+  }
 
-    padding: 40px 0px;
-    background-color: nth($text-colors, 1);
+  padding: 40px 0;
+  background-color: nth($text-colors, 1);
 
-    .client-slider {
-      margin-top: 80px;
-      overflow: hidden;
+  .client-slider {
+    margin-top: 80px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .client-images {
+    display: flex;
+    gap: 40px;
+    animation: scroll 20s linear infinite;
+    width: max-content;
+  }
+
+  .client-img {
+    flex-shrink: 0;
+    height: 140px;
+    
+    img {
+      height: 100%;
       width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  // Responsive tweaks
+  @media (max-width: 768px) {
+    .client-img {
+      height: 100px;
     }
 
     .client-images {
-      display: flex;
-      gap: 40px;
-      animation: scroll 30s linear infinite;
-      width: max-content;
-    }
-
-    .client-img {
-      height: 180px;
-      border-radius: 50%;
-
-      img {
-        height: 100%;
-        object-fit: cover;
-        overflow: hidden;
-      }
-    }
-
-    // Keyframes for scrolling animation
-    @keyframes scroll {
-      0% {
-        transform: translateX(0%);
-      }
-
-      100% {
-        transform: translateX(-75%);
-      }
+      gap: 20px;
+      animation-duration: 20s;
     }
   }
+
+  @media (max-width: 480px) {
+    .client-img {
+      height: 80px;
+    }
+
+    .client-images {
+      gap: 16px;
+      animation-duration: 20s;
+    }
+  }
+}
+
 
   @include arrow();
 

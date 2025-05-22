@@ -137,6 +137,8 @@
 
   @media screen and (max-width: 720px) {
     .businesses-container {
+      gap: 20px;
+
       grid-template-columns: repeat(1, minmax(100px, 1fr));
       grid-template-rows: auto;
 
@@ -262,7 +264,7 @@
 
   @media screen and (max-width: 719px) {
     .product-container {
-      gap: 10px;
+      gap: 20px;
 
       grid-template-columns: repeat(1, minmax(100px, 1fr));
       grid-template-areas:

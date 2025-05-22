@@ -36,6 +36,7 @@ main {
 
     .top-container {
       padding: 40px;
+      padding-bottom: 0%;
       background: rgba(248, 73, 67, 0.4);
       backdrop-filter: blur(5px);
       margin-top: 40px;
@@ -48,11 +49,15 @@ main {
 
       .image {
         background-color: $header-footer-color;
+        background-image: url('/Images/Team/about.jpg');
         overflow: hidden;
         max-width: 100%;
         height: 100%;
         display: flex;  
         border-radius: 25px;
+        background-size: cover;
+        background-position-x:left;
+        background-position-y: 60%;
 
         img {
           width: 100%;
@@ -120,45 +125,37 @@ main {
       margin-top: 40px;
       display: grid;
       grid-template-columns: repeat(2, minmax(100px, 1fr));
-      grid-template-rows: 500px;
-      gap: 20%;
+      gap:50px;
 
       .team-info {
         border-radius: 20px;
-        margin: 0px 50px;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         .image {
-          background-color: $header-footer-color;
-          height: 100%;
+          // background-color: $header-footer-color;
           width: 100%;
+          aspect-ratio: 1/0.5;
           border-radius: 20px;
           overflow: hidden;
 
-          img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 20px;
+          &-1 {
+            background-image: url('/Images/Team/team_1.jpg');
+            background-position: center;
+            background-size: cover;
           }
+      
 
           &-2 {
-            img {
-              object-position: 0% 0%;
-              ;
-            }
+            background-image: url('/Images/Team/team_2.jpg');
+            background-position: center;
+            background-size: cover;
           }
         }
 
-        .name {
-          margin-top: 20px;
-          font-size: clamp(1.5rem, 2.5vw, 2rem);
-          color: white;
-          text-align: center;
-        }
+        
 
       }
     }
@@ -406,12 +403,12 @@ main {
 
     .team-section {
       .team-container {
+        gap:20px;
+
         .team-info {
           margin: 0px;
 
-          .name {
-            height: 100px;
-          }
+          
         }
       }
     }
@@ -423,7 +420,7 @@ main {
 
         .desc {
           p {
-            font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
           }
         }
       }
@@ -496,6 +493,10 @@ main {
         grid-template-columns: repeat(1, minmax(100px, 1fr));
         grid-template-rows: 250px 1fr;
 
+        .image{
+          background-position-y: center;
+        }
+
         .desc {
           p {
             font-size: clamp(1.15rem, 1.5vw, 1.5rem);
@@ -523,14 +524,11 @@ main {
       .team-container {
         grid-template-columns: repeat(1, minmax(100px, 1fr));
         grid-template-rows: auto auto;
-        gap: 0;
+        gap: 20px;
 
         .team-info {
           margin: 0px;
 
-          .image {
-            aspect-ratio: 1/1;
-          }
         }
       }
     }
