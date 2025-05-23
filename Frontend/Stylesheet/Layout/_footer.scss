@@ -1,3 +1,4 @@
+// Styles for the website footer section
 footer {
   background-color: $header-footer-color;
 
@@ -57,6 +58,7 @@ footer {
   }
 }
 
+//Responsive layout adjustments for tablets
 @media (max-width: 1024px){
   footer {
     
@@ -74,6 +76,7 @@ footer {
   }
 }
 
+//Responsive layout adjustments for mobile screens
 @media screen and (max-width: 720px){
   footer{
     .footer-top{

@@ -1,3 +1,4 @@
+// Style for buttons with red background, used for big buttons
 .red-button {
   background-color: $contact-bg-color;
   color: nth($text-colors, 1);
@@ -12,6 +13,7 @@
   }
 }
 
+// Style for buttons with white background, used for small buttons
 .white-button {
   background-color: nth($text-colors, 1);
   color: nth($text-colors, 3);

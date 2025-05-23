@@ -1,17 +1,21 @@
+//Import Urbanist font from Google Fonts with all weights and italics
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
+//Reset margin and padding for all elements and set box-sizing to border-box for easier sizing
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+//Set default font family, base font size, and line height for the entire body
 body {
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 
+// Make images, videos, and SVGs responsive by limiting max width to their container and keeping aspect ratio
 img,
 video,
 svg {
@@ -20,16 +24,19 @@ svg {
   height: auto;
 }
 
+// Remove default bullet or number styles from unordered and ordered lists
 ul,
 ol {
   list-style: none;
 }
 
+// Remove underline from links and inherit text color from parent
 a {
   text-decoration: none;
   color: inherit;
 }
 
+// Reset button styles, remove background and border, inherit font styles, and add pointer cursor
 button {
   background: none;
   border: none;
@@ -37,6 +44,7 @@ button {
   cursor: pointer;
 }
 
+// Make form elements (input, textarea, select) inherit the font styles for consistency
 input,
 textarea,
 select {

@@ -102,7 +102,7 @@ select {
 
 header {
   width: 100%;
-  background-color: #e4e4e4; /* replace with $header-footer-color */
+  background-color: #e4e4e4;
   position: fixed;
   top: 0;
   left: 0;
@@ -116,8 +116,8 @@ header {
 }
 
 .logo a {
-  font-size: clamp(2rem, 6vw, 3rem); /* replace with $primary-logo-fontsize */
-  color: #0a2463; /* replace with $logo-color */
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: #0a2463;
   font-weight: 900;
   text-decoration: none;
 }
@@ -150,7 +150,6 @@ header {
   text-align: center;
 }
 
-/* Hamburger Icon */
 .hamburger {
   display: none;
   background: none;
@@ -172,7 +171,6 @@ header {
   cursor: pointer;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .nav-links {
     position: fixed;

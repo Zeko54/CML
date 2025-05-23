@@ -1,17 +1,23 @@
-// $heading-fontsize: 2rem;
-// $sub-heading-fontsize: 2.5rem;
-// $paragraph-fontsize: 1.5rem;
-// $hero-heading-fontsize: 6rem;
-// $big-button-fontsize: 2rem;
-// $small-button-fontsize: 1.5rem;
-// $primary-logo-fontsize: 3rem;
-// $secondary-logo-fontsize: 1.125rem;
-
+// Main heading font size: scales between 1.5rem and 2rem, responsive to viewport width (4vw)
 $heading-fontsize: clamp(1.5rem, 4vw, 2rem);
+
+// Sub-heading font size: slightly larger, scales between 1.75rem and 2.5rem with viewport width (4.5vw)
 $sub-heading-fontsize: clamp(1.75rem, 4.5vw, 2.5rem);
+
+// Paragraph text font size: comfortable reading size, scales between 1rem and 1.5rem responsive to 3vw
 $paragraph-fontsize: clamp(1rem, 3vw, 1.5rem);
+
+// Large hero section heading font size: very prominent, scales from 3rem up to 6rem with 10vw viewport width
 $hero-heading-fontsize: clamp(3rem, 10vw, 6rem);
+
+// Font size for large buttons: scales between 1.5rem and 2rem, with 4vw responsiveness
 $big-button-fontsize: clamp(1.5rem, 4vw, 2rem);
+
+// Font size for small buttons: scales between 1rem and 1.5rem, responsive to 3vw viewport width
 $small-button-fontsize: clamp(1rem, 3vw, 1.5rem);
+
+// Font size for the primary logo text: medium-large size, scales between 2rem and 3rem with 6vw
 $primary-logo-fontsize: clamp(2rem, 6vw, 3rem);
+
+// Font size for the secondary logo text or tagline: smaller font, scales between 0.875rem and 1.125rem with 2vw responsiveness
 $secondary-logo-fontsize: clamp(0.875rem, 2vw, 1.125rem);

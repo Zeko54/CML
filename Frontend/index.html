@@ -4,35 +4,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CML</title>
+  <title>CML</title>  <!-- Title of the page -->
+
+  <!-- Linking external stylesheets and libraries -->
   <link rel="stylesheet" href="./Stylesheet/Pages/index.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./Stylesheet/Pages/index.css" />
+
+  <!-- Favicon (logo on the tab) -->
   <link rel="icon" type="image/x-icon" href="./Images/Logo/CML.png">
 </head>
 
 <body class="home-page">
+  <!-- Decorative animated background (circle effects) -->
   <div class="circle-container"></div>
 
+  <!-- Main site header including logo and navigation -->
   <header id="header">
+    <!-- Company logo linked to homepage -->
     <div class="logo">
       <a href="index.html"><img src="./Images/Logo/CML.png" alt="CML"></a>
     </div>
 
+    <!-- Navigation menu for desktop and mobile -->
     <nav class="nav-links" aria-label="Main Navigation">
+      <!-- Button to close mobile menu -->
       <button class="close-btn" onclick="toggleMobileMenu()" aria-label="Close mobile menu">
         <i class="fa fa-times"></i>
       </button>
+      <!-- Navigation links to other pages -->
       <div class="links">
         <a href="./Pages/artist.html">ARTISTS</a>
         <a href="./Pages/consulting.html">CONSULTING</a>
         <a href="./Pages/Products.html">PRODUCTS</a>
         <a href="./Pages/about.html">ABOUT US</a>
       </div>
+      <!-- Button for contact navigation -->
       <div class="button">
         <button onclick="location.href='./Pages/about.html#contact'">
           CONTACT US
@@ -40,12 +50,14 @@
       </div>
     </nav>
 
+    <!-- Hamburger button for mobile navigation toggle -->
     <button class="hamburger" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">
       <i class="fa fa-bars"></i>
     </button>
   </header>
 
   <main>
+    <!-- Introductory section with company mission and overview -->
     <section class="intro-section">
       <div class="background">
       <div class="text-container" data-aos="fade-up" data-aos-duration="3000">
@@ -71,6 +83,7 @@
       </div>
     </section>
 
+    <!-- About us section -->
     <section class="aboutus-section">
       <div class="heading">
         <h3 class="with-bg">ABOUT</h3>
@@ -101,6 +114,7 @@ To us, success isn’t just about numbers—it’s about people. The good relati
       </div>
     </section>
 
+    <!-- What we do section showcasing services -->
     <section class="businesses-section">
       <div class="heading">
         <h3 class="without-bg">WHAT</h3>
@@ -169,6 +183,7 @@ To us, success isn’t just about numbers—it’s about people. The good relati
       </div>
     </section>
 
+    <!-- Product highlights section -->
     <section class="products-section">
       <div class="heading">
         <h3 class="without-bg">BEST</h3>
@@ -250,6 +265,7 @@ To us, success isn’t just about numbers—it’s about people. The good relati
       </div>
     </section>
 
+     <!-- Performers carousel section using Swiper -->
     <section class="performers-section">
       <div class="heading">
         <h3 class="without-bg">FEATURED</h3>
@@ -385,6 +401,7 @@ To us, success isn’t just about numbers—it’s about people. The good relati
       </div>
     </section>
 
+    <!-- Consultant Section -->
     <section class="consultant-section">
       <div class="heading">
         <h3 class="with-bg">CONSULTANT</h3>
@@ -428,6 +445,7 @@ To us, success isn’t just about numbers—it’s about people. The good relati
       </div>
     </section>
 
+    <!-- Client section with infinite scroll-->>
     <section class="client-section">
       <div class="heading">
         <h3 class="with-bg">OUR CLIENTS</h3>
@@ -496,11 +514,13 @@ To us, success isn’t just about numbers—it’s about people. The good relati
       </div>
     </section>
 
+    <!-- Back to Top Button -->
     <button onclick="topFunction()" id="arrowBtn" title="Go to top">
       <i class="fas fa-arrow-up"></i>
     </button>
   </main>
 
+  <!-- Footer Section -->
   <footer>
     <div class="footer-top">
       <div class="cml-logo">
@@ -562,11 +582,22 @@ To us, success isn’t just about numbers—it’s about people. The good relati
   </footer>
 </body>
 
+<!-- Swiper JS library for creating responsive sliders/carousels -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Custom JavaScript to handle custom scrollbar or Swiper slider behavior -->
 <script src="./Javascript/scrollbar-slider.js"></script>
+
+<!-- JavaScript for animating or generating the linear background effect -->
 <script src="./Javascript/linearBackground.js"></script>
+
+<!-- JavaScript for header interactions -->
 <script src="./Javascript/header.js"></script>
+
+<!-- JavaScript for scroll-to-top button or scroll-up animation behavior -->
 <script src="./Javascript/scroll_up.js"></script>
+
+<!-- AOS (Animate On Scroll) library for scroll-triggered animations -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();

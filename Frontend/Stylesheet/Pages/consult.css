@@ -101,7 +101,7 @@ select {
 
 header {
   width: 100%;
-  background-color: #e4e4e4; /* replace with $header-footer-color */
+  background-color: #e4e4e4;
   position: fixed;
   top: 0;
   left: 0;
@@ -115,8 +115,8 @@ header {
 }
 
 .logo a {
-  font-size: clamp(2rem, 6vw, 3rem); /* replace with $primary-logo-fontsize */
-  color: #0a2463; /* replace with $logo-color */
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: #0a2463;
   font-weight: 900;
   text-decoration: none;
 }
@@ -149,7 +149,6 @@ header {
   text-align: center;
 }
 
-/* Hamburger Icon */
 .hamburger {
   display: none;
   background: none;
@@ -171,7 +170,6 @@ header {
   cursor: pointer;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .nav-links {
     position: fixed;
@@ -562,90 +560,6 @@ main .product-section .product-container .each-product .text h4 {
 main .product-section .product-container .each-product .text p {
   font-size: clamp(1rem, 3vw, 1.5rem);
 }
-main .testimonial-section {
-  margin: 120px 80px;
-  font-size: clamp(1.5rem, 4vw, 2rem);
-}
-main .testimonial-section .heading {
-  display: flex;
-}
-main .testimonial-section .with-bg {
-  background-color: #fff;
-  mix-blend-mode: screen;
-  border-radius: 10px;
-  padding: 0px 10px;
-}
-main .testimonial-section .without-bg {
-  color: #fff;
-  padding: 0px 10px;
-}
-main .testimonial-section .heading {
-  justify-content: center;
-}
-main .testimonial-section hr {
-  width: 50%;
-  height: 3px;
-  background-color: white;
-  color: white;
-  border: none;
-  padding: 0px 20px;
-  margin-top: 30px;
-  margin-left: -2px;
-}
-main .testimonial-section hr {
-  margin: 0 auto;
-  margin-top: 30px;
-}
-main .testimonial-section .testimonial-container {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  gap: 40px;
-}
-main .testimonial-section .testimonial-container .testimonial-box {
-  color: black;
-  align-items: center;
-  background-color: rgba(252, 146, 224, 0.6);
-  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
-  padding: 20px;
-  border-radius: 30px;
-  width: 100%;
-  display: grid;
-  grid-template-areas: "quotation" "texts" "images" "names";
-}
-main .testimonial-section .testimonial-container .testimonial-box .image {
-  background-color: #e4e4e4;
-  width: 30%;
-  border-radius: 50%;
-  grid-area: images;
-  background-color: #e4e4e4;
-  aspect-ratio: 1/1;
-  justify-self: center;
-  margin: 30px 0px;
-}
-main .testimonial-section .testimonial-container .testimonial-box .text {
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  font-weight: 700;
-  width: 100%;
-  color: black;
-  text-align: center;
-  grid-area: texts;
-}
-main .testimonial-section .testimonial-container .testimonial-box .name {
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  grid-area: names;
-  text-align: center;
-}
-main .testimonial-section .testimonial-container .testimonial-box .quotation {
-  width: 100%;
-  grid-area: quotation;
-  display: flex;
-  justify-content: center;
-}
-main .testimonial-section .testimonial-container .testimonial-box .quotation img {
-  max-width: 30%;
-  aspect-ratio: 1/1;
-}
 main #arrowBtn {
   display: none;
   position: fixed;
@@ -798,27 +712,5 @@ main #arrowBtn {
   }
   main .product-section .product-container .each-product .text p {
     font-size: clamp(1rem, 1.5vw, 1.5rem);
-  }
-  main .testimonial-section .testimonial-container {
-    grid-template-columns: auto;
-  }
-  main .testimonial-section .testimonial-container .testimonial-box {
-    grid-template-columns: 25% 75%;
-    grid-template-areas: "images quotation" "images texts" "names texts";
-    gap: 10px 20px;
-  }
-  main .testimonial-section .testimonial-container .testimonial-box .text {
-    text-align: left;
-    align-self: self-start;
-  }
-  main .testimonial-section .testimonial-container .testimonial-box .image {
-    width: 100%;
-    margin: 0px 0px;
-  }
-  main .testimonial-section .testimonial-container .testimonial-box .quotation {
-    width: 10%;
-  }
-  main .testimonial-section .testimonial-container .testimonial-box .quotation img {
-    max-width: 100%;
   }
 }/*# sourceMappingURL=consult.css.map */

@@ -1,3 +1,4 @@
+// Mixin for the hero section styling
 @mixin hero-section {
   width: 100%;
   min-height: 100svh;
@@ -36,6 +37,7 @@
     }
   }
 
+  // Responsive adjustments for tablets
   @media screen and (max-width: 1024px){
 
     .text-container {
@@ -44,6 +46,7 @@
     }
   }
 
+  // Responsive adjustments for mobile
   @media screen and (max-width: 720px){
     padding: 100px 40px 50px 40px;
 
@@ -74,6 +77,7 @@
     
   }
 
+  // Responsive adjustments for smaller mobile
   @media screen and (max-width: 540px){
     .text-container{
       height: 90%;
@@ -86,6 +90,7 @@
   }
 }
 
+// Mixin for general heading styles
 @mixin heading {
   font-size: $heading-fontsize;
 
@@ -106,6 +111,7 @@
   }
 }
 
+// Mixin for heading underline style (a horizontal rule)
 @mixin heading-underline {
   hr {
     width: 50%;
@@ -119,10 +125,12 @@
   }
 }
 
+// Mixin for a shadow effect
 @mixin shadow{
   box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
 }
 
+// Mixin for arrow button styling (back to top button)
 @mixin arrow{
   #arrowBtn {
   display: none;
@@ -145,11 +153,3 @@
   opacity: 0.7;
 }
 }
-
-// @mixin card{
-//     display: flex;
-// }
-
-// @mixin circle{
-//     display: flex;
-// }

@@ -1,6 +1,10 @@
+// Styles for the header section with responsive navigation and logo
+// Fixed at the top with shadow and transition effects
+
+
 header {
   width: 100%;
-  background-color: $header-footer-color; /* replace with $header-footer-color */
+  background-color: $header-footer-color; 
   position: fixed;
   top: 0;
   left: 0;
@@ -13,9 +17,10 @@ header {
   transition: 0.5s;
 }
 
+// Logo styling
 .logo a {
-  font-size: $primary-logo-fontsize; /* replace with $primary-logo-fontsize */
-  color: $logo-color;       /* replace with $logo-color */
+  font-size: $primary-logo-fontsize; 
+  color: $logo-color;       
   font-weight: 900;
   text-decoration: none;
 
@@ -52,7 +57,7 @@ header {
   @extend .red-button;
 }
 
-/* Hamburger Icon */
+// Hamburger menu button hidden by default (shown in mobile)
 .hamburger {
   display: none;
   background: none;
@@ -74,7 +79,7 @@ header {
   cursor: pointer;
 }
 
-/* Responsive */
+// Responsive layout for tablets 
 @media (max-width: 1024px) {
   .nav-links {
     position: fixed;

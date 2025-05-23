@@ -1,14 +1,17 @@
-@import "../global";
+@import "../global";  // Import global styles and variables
 
+// Set smooth scrolling behavior for the entire page
 html {
   scroll-behavior: smooth;
 }
 
+// Set the background color of the whole body using a primary color variable
 body {
   background-color: $consult-primary-color;
 }
 
 main {
+  // Intro section styling
   .intro-section {
     @include hero-section();
     background-image: url("/Images/Location/Building.webp");
@@ -31,6 +34,7 @@ main {
     
   }
 
+  // Service section styling
   .service-section {
     margin: $desktop-spacing;
     @include heading();
@@ -75,6 +79,7 @@ main {
     }
   }
 
+  // Product section styling
   .product-section {
     margin: $desktop-spacing;
     @include heading();
@@ -132,89 +137,14 @@ main {
     }
   }
 
-  .testimonial-section {
-    margin: $desktop-spacing;
-    @include heading();
-
-    .heading {
-      justify-content: center;
-    }
-
-    @include heading-underline();
-
-    hr {
-      margin: 0 auto;
-      margin-top: 30px;
-    }
-
-    .testimonial-container {
-      margin-top: 40px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(100px, 1fr));
-      gap: 40px;
-
-      .testimonial-box {
-        color: black;
-        align-items: center;
-        background-color: rgb(252, 146, 224, 0.6);
-        @include shadow();
-        padding: 20px;
-        border-radius: 30px;
-        width: 100%;
-        display: grid;
-        grid-template-areas:
-          "quotation"
-          "texts"
-          "images"
-          "names";
-
-        .image {
-          background-color: $header-footer-color;
-          width: 30%;
-          border-radius: 50%;
-          grid-area: images;
-          background-color: $header-footer-color;
-          aspect-ratio: 1/1;
-          justify-self: center;
-          margin: 30px 0px;
-        }
-
-        .text {
-          font-size: $paragraph-fontsize;
-          font-weight: 700;
-          width: 100%;
-          color: black;
-          text-align: center;
-          grid-area: texts;
-        }
-
-        .name {
-          font-size: $paragraph-fontsize;
-          grid-area: names;
-          text-align: center;
-        }
-
-        .quotation {
-          width: 100%;
-          grid-area: quotation;
-          display: flex;
-          justify-content: center;
-
-          img {
-            max-width: 30%;
-            aspect-ratio: 1/1;
-          }
-        }
-      }
-    }
-  }
-
+  // Included arrow styles (probably for scroll or navigation)
   @include arrow();
   #arrowBtn{
     background-color: #c97fd1;
   }
 
-
+  // Media query for this screen size fot adjusting the size of product section
+  //and changed the grid-layout
   @media (max-width: 1200px){
     .product-section{
       .product-container{
@@ -224,11 +154,14 @@ main {
 
   }
 
+  // Media queries for tablet screen
   @media (max-width: 1024px){
+    // Adjusted margins on tablet screens
     .service-section, .product-section, .testimonial-section {
       margin: $tablet-spacing;
     }
 
+    // Adjusted margins on tablet screens
     .intro-section {
       @include hero-section();
       padding: 0px;
@@ -242,6 +175,7 @@ main {
       }
     }
 
+    //Adjusted the spacings and font-size
     .service-section{
       .service-container{
         gap: 40px 0px;
@@ -255,6 +189,7 @@ main {
       }
     }
 
+    //Adjusted the spacings and font-size
     .product-section{
       .product-container{
         gap: 40px;
@@ -277,12 +212,14 @@ main {
     }
   }
 
+  // Media queries for mobile screen
   @media (max-width: 720px) {
-
+    // Adjusted margins on mobile screens
     .service-section, .product-section, .testimonial-section {
       margin: $mobile-spacing;
     }
 
+    //Adjusted the spacings
     .intro-section {
       padding: 0px;
 
@@ -295,6 +232,8 @@ main {
       }
     }
 
+    //Adjusted the spacings
+    //and changed the grid-layout
     .service-section {
       .service-container {
         gap: 40px 20px;
@@ -303,6 +242,7 @@ main {
       }
     }
 
+    //Adjusted the spacings and font-size
     .product-section {
         .product-container {
           gap: 20px;
@@ -324,39 +264,6 @@ main {
       }
     }
 
-    .testimonial-section{
-      .testimonial-container{
-        grid-template-columns: auto;
-
-        .testimonial-box{
-          grid-template-columns: 25% 75%;
-          grid-template-areas:
-          "images quotation"
-          "images texts"
-          "names texts";
-          gap: 10px 20px;
-
-          .text {
-          text-align:left;
-          align-self: self-start;
-        }
-
-          .image{
-            width: 100%;
-            margin: 0px 0px;
-          }
-
-          .quotation{
-            width: 10%;
-
-            img{
-              max-width: 100%;
-            }
-          }
-        }
-      }
-      
-    }
     
   }
 

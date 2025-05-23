@@ -1,14 +1,17 @@
-@import "../global";
+@import "../global"; // Import global styles or variables
 
+// Set smooth scrolling behavior for the entire page
 html {
   scroll-behavior: smooth;
 }
 
+// Set background color from variable
 body {
   background-color: $home-aboutus-primary-color;
 }
 
 main {
+  // Intro section styling
   .intro-section {
     @include hero-section();
     background-image: url("/Images/Location/Building.webp");
@@ -29,6 +32,7 @@ main {
     }
   }
 
+  // Story section styling
   .story-section {
     margin: $desktop-spacing;
     @include heading();
@@ -118,6 +122,7 @@ main {
     }
   }
 
+  // Team section styling
   .team-section {
     margin: $desktop-spacing;
     @include heading();
@@ -163,6 +168,7 @@ main {
     }
   }
 
+  // Location section styling
   .location-section {
     margin: $desktop-spacing;
     @include heading();
@@ -202,6 +208,7 @@ main {
     }
   }
 
+  // Contact section styling with form and inputs
   .contact-section {
     margin: $desktop-spacing;
 
@@ -361,10 +368,12 @@ main {
     }
   }
 
+  // Included arrow styles (probably for scroll or navigation)
   @include arrow();
 
+  // Media queries for tablet screen
   @media (max-width: 1024px) {
-
+    // Adjusted margins on tablet screens
     .story-section,
     .team-section,
     .location-section,
@@ -372,6 +381,7 @@ main {
       margin: $tablet-spacing;
     }
 
+    //Adjusted the spacings
     .intro-section {
       @include hero-section();
       padding: 0px;
@@ -385,6 +395,7 @@ main {
       }
     }
 
+    //Adjusted the spacings and font-size
     .story-section {
       .top-container {
         padding: 20px;
@@ -403,6 +414,7 @@ main {
       }
     }
 
+    //Adjusted the spacings
     .team-section {
       .team-container {
         gap:20px;
@@ -415,6 +427,7 @@ main {
       }
     }
 
+    //Adjusted the spacings and font-size
     .location-section {
       .location-container {
         padding: 20px;
@@ -428,6 +441,7 @@ main {
       }
     }
 
+    //Adjusted the spacings and font-size
     .contact-section {
       .contact-container {
         padding: 40px 40px;
@@ -466,8 +480,9 @@ main {
     }
   }
 
+  // Media queries for mobile screen
   @media (max-width: 720px) {
-
+    // Adjusted margins on mobile screens
     .story-section,
     .team-section,
     .location-section,
@@ -475,6 +490,7 @@ main {
       margin: $mobile-spacing;
     }
 
+    //Adjusted the spacings 
     .intro-section {
       padding: 0px;
 
@@ -487,6 +503,8 @@ main {
       }
     }
 
+    //Adjusted the spacings and font-size 
+    //and changed the grid-layout
     .story-section {
       text-align: center;
 
@@ -521,6 +539,8 @@ main {
       }
     }
 
+    //Adjusted the spacings  
+    //and changed the grid-layout
     .team-section {
       border: 25px;
       .team-container {
@@ -555,6 +575,8 @@ main {
       }
     }
 
+    //Adjusted the spacings and font-size
+    //and changed the grid-layout
     .contact-section {
       .contact-container {
         padding: 20px 20px;

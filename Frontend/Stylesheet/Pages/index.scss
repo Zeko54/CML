@@ -1,14 +1,17 @@
-@import "../global";
+@import "../global"; // Import global styles or variables
 
+ // Set smooth scrolling behavior for the entire page
 html {
   scroll-behavior: smooth;
 }
 
+// Set background color from variable
 body {
   background-color: $home-aboutus-primary-color;
 }
 
 main {
+  // Intro Section
   .intro-section {
     @include hero-section();
     background-image: url("/Images/Location/Building.webp");
@@ -27,10 +30,9 @@ main {
         color: white;
       }
     }
-
-
   }
 
+  // About Us Section
   .aboutus-section {
     margin: $desktop-spacing;
     @include heading();
@@ -71,6 +73,7 @@ main {
     }
   }
 
+  // Businesses Section
   .businesses-section {
     margin: $desktop-spacing;
 
@@ -89,7 +92,7 @@ main {
     @include businessess();
   }
 
-
+  // Products Section
   .products-section {
     margin: $desktop-spacing;
     @include heading();
@@ -98,6 +101,7 @@ main {
     @include featured-products();
   }
 
+  // Performers Section
   .performers-section {
     margin: $desktop-spacing;
     @include heading();
@@ -115,6 +119,7 @@ main {
     @include performer-slider();
   }
 
+  // Consultant Section
   .consultant-section {
     margin: $desktop-spacing;
     @include heading();
@@ -225,6 +230,7 @@ main {
     }
   }
 
+  // Client Section with infinite scroll
   .client-section {
     @include heading();
 
@@ -284,12 +290,12 @@ main {
     }
   }
 
-
-
+  // Included arrow styles (probably for scroll or navigation)
   @include arrow();
 
+  // Media queries for tablet screen
   @media (max-width: 1024px) {
-
+    // Adjusted margins on tablet screens
     .aboutus-section,
     .businesses-section,
     .products-section,
@@ -298,6 +304,7 @@ main {
       margin: $tablet-spacing;
     }
 
+    //Adjusted the spacings
     .intro-section {
       @include hero-section();
       padding: 0px;
@@ -312,6 +319,7 @@ main {
     }
 
 
+    //Adjusted the spacings and font-size
     .aboutus-section {
       .aboutus-container {
 
@@ -328,6 +336,7 @@ main {
       }
     }
 
+    //Adjusted the spacings and font-size
     .consultant-section {
       .consultant-container {
         gap: 20px;
@@ -374,8 +383,9 @@ main {
 
   }
 
+  // Media queries for mobile screen
   @media (max-width: 720px) {
-
+    // Adjusted margins on mobile screens
     .aboutus-section,
     .businesses-section,
     .products-section,
@@ -384,6 +394,7 @@ main {
       margin: $mobile-spacing;
     }
 
+    //Adjusted the spacings 
     .intro-section {
       padding: 0px;
 
@@ -396,7 +407,8 @@ main {
       }
     }
 
-
+    //Adjusted the spacings 
+    //and changed the grid-layout
     .aboutus-section {
       .aboutus-container {
         grid-template-columns: 1fr;
@@ -413,6 +425,8 @@ main {
       }
     }
 
+    //Adjusted the spacings
+    //and changed the grid-layout
     .consultant-section {
       .consultant-container {
         grid-template-columns: repeat(1, 100%);

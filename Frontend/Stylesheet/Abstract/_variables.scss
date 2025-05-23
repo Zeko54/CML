@@ -1,25 +1,32 @@
+// Breakpoints for responsive design
 $desktop: 1024px;
 $tablet: 720px;
 $mobile: 320px;
 
+// Color palette for the Home/About Us spage
 $home-aboutus-primary-color: #ffb33a;
 $home-aboutus-secondary-color: #ff4545;
 $home-aboutus-tertiary-color: #e4866d;
 
+// Color palette for the Artist spage
 $artist-primary-color: #b63880;
 $artist-secondary-color: #4e2079;
 $artist-tertiary-color: #8e3d8e;
 
+// Color palette for the Consultation page
 $consult-primary-color: #3c0d66;
 $consult-secondary-color: #8d6ac0;
 $consult-tertiary-color: #ff93e0;
 
+// Color palette for the Product page
 $product-primary-color: #a8e6cf;
 $product-secondary-color: #046969;
 $product-tertiary-color: #3bd9d9;
 
+//header/footer bg color and button color
 $header-footer-color: #e4e4e4;
 $logo-color: #0a2463;
 $contact-bg-color: #ff6b6b;
 
+//list of font colors
 $text-colors: #fff #000 #ff4545 #d30086;
