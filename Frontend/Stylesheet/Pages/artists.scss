@@ -9,12 +9,10 @@ body {
 }
 
 main {
-
   @include arrow();
-  #arrowBtn{
+  #arrowBtn {
     background-color: #5d277e;
   }
-
 
   .intro-section {
     @include hero-section();
@@ -394,6 +392,12 @@ main {
 
               &:hover {
                 opacity: 0.5;
+              }
+
+              &.active {
+                background: $artist-tertiary-color;
+                color: #fff;
+                opacity: 1;
               }
             }
           }

@@ -795,6 +795,11 @@ main .performers-modal .modal-overlay .modal .modal-form .modal-options .option-
 main .performers-modal .modal-overlay .modal .modal-form .modal-options .option-btn:hover {
   opacity: 0.5;
 }
+main .performers-modal .modal-overlay .modal .modal-form .modal-options .option-btn.active {
+  background: #8e3d8e;
+  color: #fff;
+  opacity: 1;
+}
 main .performers-modal .modal-overlay .modal .modal-form .modal-submit {
   background: black;
   color: white;
