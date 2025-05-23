@@ -288,6 +288,12 @@ main {
   @media (max-width: 768px) {
     .client-img {
       height: 100px;
+      img {
+
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
     }
 
     .client-images {
@@ -304,6 +310,12 @@ main {
     .client-images {
       gap: 16px;
       animation-duration: 20s;
+
+      img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
     }
   }
 }
