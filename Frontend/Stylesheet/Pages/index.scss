@@ -288,34 +288,35 @@ main {
   @media (max-width: 768px) {
     .client-img {
       height: 100px;
-      img {
-
-      height: 100%;
       width: 100%;
-      object-fit: cover;
-    }
     }
 
     .client-images {
       gap: 20px;
       animation-duration: 20s;
     }
+
+    @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-75%);
+    }
   }
 
   @media (max-width: 480px) {
     .client-img {
       height: 80px;
+      width: 100%;
     }
 
     .client-images {
       gap: 16px;
       animation-duration: 20s;
 
-      img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
+      
     }
   }
 }

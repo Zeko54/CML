@@ -1057,12 +1057,7 @@ main .client-section .client-img img {
 @media (max-width: 768px) {
   main .client-section .client-img {
     height: 100px;
-  }
-  main .client-section .client-img img {
-    height: 100%;
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
   main .client-section .client-images {
     gap: 20px;
@@ -1072,16 +1067,11 @@ main .client-section .client-img img {
 @media (max-width: 480px) {
   main .client-section .client-img {
     height: 80px;
+    width: 100%;
   }
   main .client-section .client-images {
     gap: 16px;
     animation-duration: 20s;
-  }
-  main .client-section .client-images img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 main #arrowBtn {
