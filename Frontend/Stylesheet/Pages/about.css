@@ -874,14 +874,14 @@ main #arrowBtn:hover {
   main .intro-section .background .text-container {
     color: white;
   }
-  main .story-section .top-container {
+  main .story-section .story-container .top-container {
     padding: 20px;
     gap: 20px;
   }
-  main .story-section .top-container .desc p {
+  main .story-section .story-container .top-container .desc p {
     font-size: clamp(1rem, 1.5vw, 1.125rem);
   }
-  main .story-section .bottom-container {
+  main .story-section .story-container .bottom-container {
     padding: 20px;
     margin: auto 0px;
   }
@@ -933,23 +933,23 @@ main #arrowBtn:hover {
   main .story-section {
     text-align: center;
   }
-  main .story-section .top-container {
+  main .story-section .story-container .top-container {
     grid-template-columns: repeat(1, minmax(100px, 1fr));
     grid-template-rows: 250px 1fr;
   }
-  main .story-section .top-container .image {
+  main .story-section .story-container .top-container .image {
     background-position-y: center;
   }
-  main .story-section .top-container .desc p {
+  main .story-section .story-container .top-container .desc p {
     font-size: clamp(1.15rem, 1.5vw, 1.5rem);
     text-align: justify;
   }
-  main .story-section .bottom-container {
+  main .story-section .story-container .bottom-container {
     grid-template-columns: repeat(1, minmax(100px, 1fr));
     gap: 20px;
     padding: 20px;
   }
-  main .story-section .bottom-container .box p {
+  main .story-section .story-container .bottom-container .box p {
     text-align: justify;
   }
   main .team-section {
