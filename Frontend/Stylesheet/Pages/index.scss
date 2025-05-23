@@ -265,6 +265,7 @@ main {
 
     .client-img {
       height: 140px;
+      width: auto;
 
       img {
         height: 100%;
@@ -281,11 +282,164 @@ main {
         transform: translateX(-50%);
       }
     }
+  }
 
-    // Responsive tweaks
-    @media (max-width: 768px) {
-      .client-img {
-        height: 100px;;
+
+
+  @include arrow();
+
+  @media (max-width: 1024px) {
+
+    .aboutus-section,
+    .businesses-section,
+    .products-section,
+    .performers-section,
+    .consultant-section {
+      margin: $tablet-spacing;
+    }
+
+    .intro-section {
+      @include hero-section();
+      padding: 0px;
+
+      .background {
+        padding: 150px 80px 50px 80px;
+
+        .text-container {
+          color: white;
+        }
+      }
+    }
+
+
+    .aboutus-section {
+      .aboutus-container {
+
+        .desc {
+          padding: 20px;
+          font-size: clamp(1rem, 1.5vw, 1.125rem);
+          border-radius: 0 40px 40px 0;
+        }
+
+        button {
+          @extend .white-button;
+          font-size: clamp(1rem, 1.5vw, 1.125rem);
+        }
+      }
+    }
+
+    .consultant-section {
+      .consultant-container {
+        gap: 20px;
+        padding: 20px;
+
+        .consult-button {
+          button {
+            @extend .white-button;
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+          }
+        }
+
+        .left-side {
+          padding: 20px;
+
+          .text {
+            p {
+              font-size: clamp(1rem, 1.5vw, 1.125rem);
+            }
+          }
+        }
+
+        .right-side {
+          gap: 20px;
+          padding: 20px;
+
+          .vertical-bar {
+            ul {
+              li {
+                font-size: clamp(1rem, 1.5vw, 1.125rem);
+              }
+            }
+          }
+        }
+
+        .consult-button {
+          button {
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+          }
+        }
+      }
+    }
+
+
+  }
+
+  @media (max-width: 720px) {
+
+    .aboutus-section,
+    .businesses-section,
+    .products-section,
+    .performers-section,
+    .consultant-section {
+      margin: $mobile-spacing;
+    }
+
+    .intro-section {
+      padding: 0px;
+
+      .background {
+        padding: 100px 40px 50px 40px;
+
+        .text-container {
+          color: white;
+        }
+      }
+    }
+
+
+    .aboutus-section {
+      .aboutus-container {
+        grid-template-columns: 1fr;
+        border-radius: 20px;
+
+        .image {
+          display: none;
+        }
+
+        .desc {
+          border-radius: 20px;
+        }
+
+      }
+    }
+
+    .consultant-section {
+      .consultant-container {
+        grid-template-columns: repeat(1, 100%);
+        grid-template-areas:
+          "left-side"
+          "right-side"
+          "button";
+        gap: 0px;
+        padding: 10px;
+
+        .left-side {
+          padding: 10px;
+        }
+
+        .right-side {
+          gap: 15px 30px;
+        }
+      }
+    }
+
+    .client-slider {
+      margin-top: 40px !important;
+    }
+
+    .client-img {
+        height: 80px !important;
+        
       }
 
       .client-images {
@@ -302,192 +456,6 @@ main {
           transform: translateX(-75%);
         }
       }
-
-      @media (max-width: 480px) {
-        .client-img {
-          height: 80px;
-        }
-
-        .client-images {
-          gap: 16px;
-          animation-duration: 20s;
-
-
-        }
-      }
-    }
-
-
-    @include arrow();
-
-    @media (max-width: 1024px) {
-
-      .aboutus-section,
-      .businesses-section,
-      .products-section,
-      .performers-section,
-      .consultant-section {
-        margin: $tablet-spacing;
-      }
-
-      .intro-section {
-        @include hero-section();
-        padding: 0px;
-
-        .background {
-          padding: 150px 80px 50px 80px;
-
-          .text-container {
-            color: white;
-          }
-        }
-      }
-
-
-      .aboutus-section {
-        .aboutus-container {
-
-          .desc {
-            padding: 20px;
-            font-size: clamp(1rem, 1.5vw, 1.125rem);
-            border-radius: 0 40px 40px 0;
-          }
-
-          button {
-            @extend .white-button;
-            font-size: clamp(1rem, 1.5vw, 1.125rem);
-          }
-        }
-      }
-
-      .consultant-section {
-        .consultant-container {
-          gap: 20px;
-          padding: 20px;
-
-          .consult-button {
-            button {
-              @extend .white-button;
-              font-size: clamp(1rem, 1.5vw, 1.125rem);
-            }
-          }
-
-          .left-side {
-            padding: 20px;
-
-            .text {
-              p {
-                font-size: clamp(1rem, 1.5vw, 1.125rem);
-              }
-            }
-          }
-
-          .right-side {
-            gap: 20px;
-            padding: 20px;
-
-            .vertical-bar {
-              ul {
-                li {
-                  font-size: clamp(1rem, 1.5vw, 1.125rem);
-                }
-              }
-            }
-          }
-
-          .consult-button {
-            button {
-              font-size: clamp(1rem, 1.5vw, 1.125rem);
-            }
-          }
-        }
-      }
-
-      .client-section {
-        padding: 40px 0px;
-
-        .client-slider {
-          margin-top: 40px;
-          overflow: hidden;
-          width: 100%;
-        }
-
-        .client-images {
-          gap: 20px;
-        }
-
-        .client-img {
-          height: 100px;
-        }
-      }
-    }
-
-    @media (max-width: 720px) {
-
-      .aboutus-section,
-      .businesses-section,
-      .products-section,
-      .performers-section,
-      .consultant-section {
-        margin: $mobile-spacing;
-      }
-
-      .intro-section {
-        padding: 0px;
-
-        .background {
-          padding: 100px 40px 50px 40px;
-
-          .text-container {
-            color: white;
-          }
-        }
-      }
-
-
-      .aboutus-section {
-        .aboutus-container {
-          grid-template-columns: 1fr;
-          border-radius: 20px;
-
-          .image {
-            display: none;
-          }
-
-          .desc {
-            border-radius: 20px;
-          }
-
-        }
-      }
-
-      .consultant-section {
-        .consultant-container {
-          grid-template-columns: repeat(1, 100%);
-          grid-template-areas:
-            "left-side"
-            "right-side"
-            "button";
-          gap: 0px;
-          padding: 10px;
-
-          .left-side {
-            padding: 10px;
-          }
-
-          .right-side {
-            gap: 15px 30px;
-          }
-        }
-      }
-
-      .client-section {
-
-        .client-img {
-          height: 80px;
-        }
-      }
-
-    }
   }
+
 }

@@ -1037,12 +1037,11 @@ main .client-section .client-images {
   width: max-content;
 }
 main .client-section .client-img {
-  flex-shrink: 0;
   height: 140px;
+  width: auto;
 }
 main .client-section .client-img img {
   height: 100%;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1052,26 +1051,6 @@ main .client-section .client-img img {
   }
   100% {
     transform: translateX(-50%);
-  }
-}
-@media (max-width: 768px) {
-  main .client-section .client-img {
-    height: 100px;
-    width: 100%;
-  }
-  main .client-section .client-images {
-    gap: 20px;
-    animation-duration: 20s;
-  }
-}
-@media (max-width: 480px) {
-  main .client-section .client-img {
-    height: 80px;
-    width: 100%;
-  }
-  main .client-section .client-images {
-    gap: 16px;
-    animation-duration: 20s;
   }
 }
 main #arrowBtn {
@@ -1204,20 +1183,6 @@ main #arrowBtn:hover {
   main .consultant-section .consultant-container .consult-button button {
     font-size: clamp(1rem, 1.5vw, 1.125rem);
   }
-  main .client-section {
-    padding: 40px 0px;
-  }
-  main .client-section .client-slider {
-    margin-top: 40px;
-    overflow: hidden;
-    width: 100%;
-  }
-  main .client-section .client-images {
-    gap: 20px;
-  }
-  main .client-section .client-img {
-    height: 100px;
-  }
 }
 @media (max-width: 720px) {
   main .aboutus-section,
@@ -1258,7 +1223,22 @@ main #arrowBtn:hover {
   main .consultant-section .consultant-container .right-side {
     gap: 15px 30px;
   }
-  main .client-section .client-img {
-    height: 80px;
+  main .client-slider {
+    margin-top: 40px !important;
+  }
+  main .client-img {
+    height: 80px !important;
+  }
+  main .client-images {
+    gap: 20px;
+    animation-duration: 20s;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-75%);
+    }
   }
 }/*# sourceMappingURL=index.css.map */
