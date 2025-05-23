@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         name: "SKA & MASH <br> DUO",
         description:
           "SKA & MASH Duo delivers high-energy performances that keep crowds moving. With infectious grooves, smooth harmonies, and a unique twist on classic and modern hits, they create an electrifying atmosphere that makes every event unforgettable.<br /><br />More than musicians, they are entertainers—blending talent and creativity to make music that connects with every audience, every time.",
-        image: "/Images/ArtistPage/SKA&Mash-Duo.webp",
+        image: "/Images/ArtistPage/Ska&Mash.jpg",
       },
     ],
     "band-swiper": [
@@ -37,14 +37,14 @@ document.addEventListener("DOMContentLoaded", function () {
         name: "ABC BAND PH ",
         description:
           "ABC Band PH channels raw passion into every note, blending rock, pop, and soul into music that speaks beyond words. Their sound isn’t just heard—it’s felt, carrying the highs and lows of their journey in every melody, every beat. <br /><br />More than a band, they are emotion in motion, turning life’s stories into songs that resonate with the soul.",
-        image: "/Images/ArtistPage/ABC-Ph.webp",
+        image: "/Images/ArtistPage/Abcph.jpg",
         link: "/Pages/artists/abc-ph.html",
       },
       {
         name: "DEF BAND PH",
         description:
           "DEF Band PH is the sound of fearless creativity—where dynamic rhythms, powerful vocals, and bold melodies collide. Their music isn’t just played; it’s unleashed, breaking boundaries and pulling listeners into something fresh and electrifying. <br /><br />More than a band, they are a movement—an invitation to feel, to move, and to get lost in the sound.",
-        image: "/Images/ArtistPage/Def-Ph.webp",
+        image: "/Images/ArtistPage/Defph.jpg",
         link: "/Pages/artists/def-ph.html",
       },
     ],
