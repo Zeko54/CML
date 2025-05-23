@@ -682,7 +682,7 @@ main .products-section .product-container .product-card .image {
 }
 main .products-section .product-container .product-card .image img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;

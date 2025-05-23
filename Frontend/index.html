@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./Stylesheet/Pages/index.css" />
   <link rel="icon" type="image/x-icon" href="./Images/Logo/CML.png">
 </head>
@@ -47,7 +48,7 @@
   <main>
     <section class="intro-section">
       <div class="background">
-      <div class="text-container">
+      <div class="text-container" data-aos="fade-up" data-aos-duration="3000">
         <div class="text-top">
           <h1>CML</h1>
           <hr>
@@ -70,7 +71,7 @@
       </div>
     </section>
 
-    <section class="aboutus-section">
+    <section class="aboutus-section" data-aos="fade-right" data-aos-duration="3000">
       <div class="heading">
         <h3 class="with-bg">ABOUT</h3>
         <h3 class="without-bg">US</h3>
@@ -566,5 +567,9 @@ To us, success isn’t just about numbers—it’s about people. The good relati
 <script src="./Javascript/linearBackground.js"></script>
 <script src="./Javascript/header.js"></script>
 <script src="./Javascript/scroll_up.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </html>
