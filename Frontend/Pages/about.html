@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="../Images/Logo/CML.png">
 </head>
 
@@ -45,7 +46,7 @@
   <main>
     <section class="intro-section">
       <div class="background">
-      <div class="text-container">
+      <div class="text-container" data-aos="fade-up" data-aos-duration="3000">
         <div class="text-top">
           <h1>Who are we</h1>
           <hr>
@@ -81,7 +82,8 @@ Every client, every event, every transaction is a chance to build something mean
 
       <hr />
 
-      <div class="top-container">
+      <div class="story-container" data-aos="fade-right" data-aos-duration="3000">
+        <div class="top-container">
         <div class="image">
         </div>
         <div class="desc">
@@ -104,6 +106,7 @@ Every client, every event, every transaction is a chance to build something mean
         </div>
 
       </div>
+      </div>
     </section>
 
     <section class="team-section">
@@ -114,7 +117,7 @@ Every client, every event, every transaction is a chance to build something mean
 
       <hr />
 
-      <div class="team-container">
+      <div class="team-container" data-aos="fade-up"  data-aos-duration="3000">
         <div class="team-info">
           <div class="image image-1">
             
@@ -139,7 +142,7 @@ Every client, every event, every transaction is a chance to build something mean
 
       <hr />
 
-      <div class="location-container">
+      <div class="location-container" data-aos="fade-down"  data-aos-duration="3000">
         <div class="desc">
           <p>
             CML International Consultancy Trades FZCO is strategically located in the heart of Dubai’s innovation hub—Dubai Digital Park, within the Dubai Silicon Oasis. Operating from Unit 101 A2 in the IFZA Building, our presence in this cutting-edge free zone positions us at the crossroads of technology, entrepreneurship, and global connectivity. This location not only enhances our accessibility to clients across the UAE and beyond but also reflects our commitment to operating in a forward-thinking, business-friendly environment.
@@ -153,7 +156,7 @@ Every client, every event, every transaction is a chance to build something mean
     </section>
 
     <section class="contact-section" id="contact">
-      <div class="contact-container">
+      <div class="contact-container" data-aos="zoom-in" data-aos-duration="2000">
         <h1>CONTACT US</h1>
         <form>
           <div class="first-row">
@@ -274,5 +277,9 @@ Every client, every event, every transaction is a chance to build something mean
 <script src="../Javascript/linearBackground.js"></script>
 <script src="../Javascript/header.js"></script>
 <script src="../Javascript/scroll_up.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </html>

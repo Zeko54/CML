@@ -34,7 +34,8 @@ main {
     @include heading();
     @include heading-underline();
 
-    .top-container {
+    .story-container{
+      .top-container {
       padding: 40px;
       padding-bottom: 0%;
       background: rgba(248, 73, 67, 0.4);
@@ -113,6 +114,7 @@ main {
           color: white;
         }
       }
+    }
     }
   }
 
