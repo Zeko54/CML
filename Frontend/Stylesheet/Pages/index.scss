@@ -226,271 +226,272 @@ main {
   }
 
   .client-section {
-  @include heading();
+    @include heading();
 
-  .heading {
-    justify-content: center;
-  }
+    .heading {
+      justify-content: center;
+    }
 
-  .with-bg {
-    background-color: #ff4545;
-    mix-blend-mode: normal;
-    color: nth($text-colors, 1);
-  }
+    .with-bg {
+      background-color: #ff4545;
+      mix-blend-mode: normal;
+      color: nth($text-colors, 1);
+    }
 
-  @include heading-underline();
+    @include heading-underline();
 
-  hr {
-    margin: 0 auto;
-    margin-top: 30px;
-    background-color: #ff4545;
-  }
+    hr {
+      margin: 0 auto;
+      margin-top: 30px;
+      background-color: #ff4545;
+    }
 
-  padding: 40px 0;
-  background-color: nth($text-colors, 1);
+    padding: 40px 0;
+    background-color: nth($text-colors, 1);
 
-  .client-slider {
-    margin-top: 80px;
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-  }
-
-  .client-images {
-    display: flex;
-    gap: 40px;
-    animation: scroll 20s linear infinite;
-    width: max-content;
-  }
-
-  .client-img {
-    flex-shrink: 0;
-    height: 140px;
-    
-    img {
-      height: 100%;
+    .client-slider {
+      margin-top: 80px;
+      overflow: hidden;
       width: 100%;
-      object-fit: cover;
-    }
-  }
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(0%);
-    }
-
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  // Responsive tweaks
-  @media (max-width: 768px) {
-    .client-img {
-      height: 100px;
-      width: 100%;
+      position: relative;
     }
 
     .client-images {
-      gap: 20px;
-      animation-duration: 20s;
+      display: flex;
+      gap: 40px;
+      animation: scroll 20s linear infinite;
+      width: max-content;
+    }
+
+    .client-img {
+      flex-shrink: 0;
+      height: 140px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
 
     @keyframes scroll {
-    0% {
-      transform: translateX(0%);
-    }
+      0% {
+        transform: translateX(0%);
+      }
 
-    100% {
-      transform: translateX(-75%);
-    }
-  }
-
-  @media (max-width: 480px) {
-    .client-img {
-      height: 80px;
-      width: 100%;
-    }
-
-    .client-images {
-      gap: 16px;
-      animation-duration: 20s;
-
-      
-    }
-  }
-}
-
-
-  @include arrow();
-
-  @media (max-width: 1024px) {
-
-    .aboutus-section,
-    .businesses-section,
-    .products-section,
-    .performers-section,
-    .consultant-section {
-      margin: $tablet-spacing;
-    }
-
-    .intro-section {
-      @include hero-section();
-      padding: 0px;
-
-      .background {
-        padding: 150px 80px 50px 80px;
-
-        .text-container {
-          color: white;
-        }
+      100% {
+        transform: translateX(-50%);
       }
     }
 
-
-    .aboutus-section {
-      .aboutus-container {
-
-        .desc {
-          padding: 20px;
-          font-size: clamp(1rem, 1.5vw, 1.125rem);
-          border-radius: 0 40px 40px 0;
-        }
-
-        button {
-          @extend .white-button;
-          font-size: clamp(1rem, 1.5vw, 1.125rem);
-        }
-      }
-    }
-
-    .consultant-section {
-      .consultant-container {
-        gap: 20px;
-        padding: 20px;
-
-        .consult-button {
-          button {
-            @extend .white-button;
-            font-size: clamp(1rem, 1.5vw, 1.125rem);
-          }
-        }
-
-        .left-side {
-          padding: 20px;
-
-          .text {
-            p {
-              font-size: clamp(1rem, 1.5vw, 1.125rem);
-            }
-          }
-        }
-
-        .right-side {
-          gap: 20px;
-          padding: 20px;
-
-          .vertical-bar {
-            ul {
-              li {
-                font-size: clamp(1rem, 1.5vw, 1.125rem);
-              }
-            }
-          }
-        }
-
-        .consult-button {
-          button {
-            font-size: clamp(1rem, 1.5vw, 1.125rem);
-          }
-        }
-      }
-    }
-
-    .client-section {
-      padding: 40px 0px;
-
-      .client-slider {
-        margin-top: 40px;
-        overflow: hidden;
+    // Responsive tweaks
+    @media (max-width: 768px) {
+      .client-img {
+        height: 100px;
         width: 100%;
       }
 
       .client-images {
         gap: 20px;
+        animation-duration: 20s;
       }
 
-      .client-img {
-        height: 100px;
+      @keyframes scroll {
+        0% {
+          transform: translateX(0%);
+        }
+
+        100% {
+          transform: translateX(-75%);
+        }
       }
-    }
-  }
 
-  @media (max-width: 720px) {
+      @media (max-width: 480px) {
+        .client-img {
+          height: 80px;
+          width: 100%;
+        }
 
-    .aboutus-section,
-    .businesses-section,
-    .products-section,
-    .performers-section,
-    .consultant-section {
-      margin: $mobile-spacing;
-    }
+        .client-images {
+          gap: 16px;
+          animation-duration: 20s;
 
-    .intro-section {
-      padding: 0px;
 
-      .background {
-        padding: 100px 40px 50px 40px;
-
-        .text-container {
-          color: white;
         }
       }
     }
 
 
-    .aboutus-section {
-      .aboutus-container {
-        grid-template-columns: 1fr;
-        border-radius: 20px;
+    @include arrow();
 
-        .image {
-          display: none;
+    @media (max-width: 1024px) {
+
+      .aboutus-section,
+      .businesses-section,
+      .products-section,
+      .performers-section,
+      .consultant-section {
+        margin: $tablet-spacing;
+      }
+
+      .intro-section {
+        @include hero-section();
+        padding: 0px;
+
+        .background {
+          padding: 150px 80px 50px 80px;
+
+          .text-container {
+            color: white;
+          }
+        }
+      }
+
+
+      .aboutus-section {
+        .aboutus-container {
+
+          .desc {
+            padding: 20px;
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+            border-radius: 0 40px 40px 0;
+          }
+
+          button {
+            @extend .white-button;
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+          }
+        }
+      }
+
+      .consultant-section {
+        .consultant-container {
+          gap: 20px;
+          padding: 20px;
+
+          .consult-button {
+            button {
+              @extend .white-button;
+              font-size: clamp(1rem, 1.5vw, 1.125rem);
+            }
+          }
+
+          .left-side {
+            padding: 20px;
+
+            .text {
+              p {
+                font-size: clamp(1rem, 1.5vw, 1.125rem);
+              }
+            }
+          }
+
+          .right-side {
+            gap: 20px;
+            padding: 20px;
+
+            .vertical-bar {
+              ul {
+                li {
+                  font-size: clamp(1rem, 1.5vw, 1.125rem);
+                }
+              }
+            }
+          }
+
+          .consult-button {
+            button {
+              font-size: clamp(1rem, 1.5vw, 1.125rem);
+            }
+          }
+        }
+      }
+
+      .client-section {
+        padding: 40px 0px;
+
+        .client-slider {
+          margin-top: 40px;
+          overflow: hidden;
+          width: 100%;
         }
 
-        .desc {
+        .client-images {
+          gap: 20px;
+        }
+
+        .client-img {
+          height: 100px;
+        }
+      }
+    }
+
+    @media (max-width: 720px) {
+
+      .aboutus-section,
+      .businesses-section,
+      .products-section,
+      .performers-section,
+      .consultant-section {
+        margin: $mobile-spacing;
+      }
+
+      .intro-section {
+        padding: 0px;
+
+        .background {
+          padding: 100px 40px 50px 40px;
+
+          .text-container {
+            color: white;
+          }
+        }
+      }
+
+
+      .aboutus-section {
+        .aboutus-container {
+          grid-template-columns: 1fr;
           border-radius: 20px;
+
+          .image {
+            display: none;
+          }
+
+          .desc {
+            border-radius: 20px;
+          }
+
         }
-
       }
-    }
 
-    .consultant-section {
-      .consultant-container {
-        grid-template-columns: repeat(1, 100%);
-        grid-template-areas:
-          "left-side"
-          "right-side"
-          "button";
-        gap: 0px;
-        padding: 10px;
-
-        .left-side {
+      .consultant-section {
+        .consultant-container {
+          grid-template-columns: repeat(1, 100%);
+          grid-template-areas:
+            "left-side"
+            "right-side"
+            "button";
+          gap: 0px;
           padding: 10px;
-        }
 
-        .right-side {
-          gap: 15px 30px;
+          .left-side {
+            padding: 10px;
+          }
+
+          .right-side {
+            gap: 15px 30px;
+          }
         }
       }
-    }
 
-    .client-section {
+      .client-section {
 
-      .client-img {
-        height: 80px;
+        .client-img {
+          height: 80px;
+        }
       }
-    }
 
+    }
   }
 }
