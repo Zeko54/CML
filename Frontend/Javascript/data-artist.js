@@ -29,6 +29,12 @@ const bandData = {
         description:
           "Taking part of Alyana's birthday @Jumeirah Creekside Hotel with the whole families & friends last September 2023.",
       },
+      {
+        src: "https://www.youtube.com/embed/8ggIJ08U47Y?si=OkzQrMpdegaFyVmY",
+        title: "Oasis Cantina Bar & Bistro",
+        description:
+          "We are regular every Saturday night from 10:30pm to 2:30am @ Radisson Red Hotel Dubai Silicon Oasis. 3 sets of non-stop live band music.",
+      },
     ],
   },
   "def-ph": {
@@ -53,6 +59,12 @@ const bandData = {
       },
       {
         src: "https://www.youtube.com/embed/YZ8mE7NU9yM?si=JDucm8CiUVRnZOhW",
+        title: "Mogao Bar and Restaurant",
+        description:
+          "Gig @ Mogao Bar and Restaurant Radisson Red Dubai Silicon Oasis.",
+      },
+      {
+        src: "https://www.youtube.com/embed/ZZX_FvnWHzM?si=Zfiz--EPUL8ZBGXk",
         title: "Mogao Bar and Restaurant",
         description:
           "Gig @ Mogao Bar and Restaurant Radisson Red Dubai Silicon Oasis.",
@@ -82,6 +94,12 @@ const bandData = {
       {
         src: "https://www.youtube.com/embed/t8losQM8O-M?si=jv37ZxfpWaqZbK_0",
         title: "Tattooed on my Mind (Bossa Nova)",
+        description:
+          "Performing live @ Rotary Club of Batangas (Dinner for a Cause) last April 13 2024.",
+      },
+      {
+        src: "https://www.youtube.com/embed/XiGzt0cXY9Y?si=To5X3PzG2VpOIO-q",
+        title: "Never mind Her",
         description:
           "Performing live @ Rotary Club of Batangas (Dinner for a Cause) last April 13 2024.",
       },
