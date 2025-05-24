@@ -16,17 +16,36 @@ main {
 
   .intro-section {
     @include hero-section();
+    background-image: url("/Frontend/Images/ProductsPage/Productbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      pointer-events: none;
+    }
+
     .text-container {
       gap: 30px;
+      position: relative;
+      z-index: 2;
 
       h1 {
         display: flex;
         flex-direction: column;
         line-height: 1;
+        color: nth($text-colors, 1);
       }
 
       p {
         text-align: justify;
+        color: nth($text-colors, 1);
       }
     }
   }
