@@ -1,12 +1,14 @@
 const bandData = {
   "abc-ph": {
     gallery: [
-      "/Images/ArtistProfile/Abcph/1st.webp",
-      "/Images/ArtistProfile/Abcph/2nd.webp",
-      "/Images/ArtistProfile/Abcph/3rd.webp",
-      "/Images/ArtistProfile/Abcph/4th.webp",
-      "/Images/ArtistProfile/Abcph/5th.webp",
-      "/Images/ArtistProfile/Abcph/6th.webp",
+      "/Images/ArtistProfile/Abcph/1st.jpg",
+      "/Images/ArtistProfile/Abcph/2nd.jpg",
+      "/Images/ArtistProfile/Abcph/3rd.jpg",
+      "/Images/ArtistProfile/Abcph/4th.jpg",
+      "/Images/ArtistProfile/Abcph/5th.jpg",
+      "/Images/ArtistProfile/Abcph/6th.jpg",
+      "/Images/ArtistProfile/Abcph/7th.jpg",
+      "/Images/ArtistProfile/Abcph/8th.jpg",
     ],
     videos: [
       {
@@ -31,9 +33,10 @@ const bandData = {
   },
   "def-ph": {
     gallery: [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR59Z01ub6p0FvGdPLtDOCHvZeruWf7DBfSeQ&s",
-      "https://wallpaper-house.com/data/out/6/wallpaper2you_82332.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSCIcG3ksnLKmolmk7j5eYnq_SDoWIPimevg&s",
+      "/Images/ArtistProfile/Defph/1st.jpg",
+      "/Images/ArtistProfile/Defph/2nd.jpg",
+      "/Images/ArtistProfile/Defph/3rd.jpg",
+      "/Images/ArtistProfile/Defph/4th.jpg",
     ],
     videos: [
       {
@@ -58,9 +61,10 @@ const bandData = {
   },
   "sweet-soul": {
     gallery: [
-      "https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2018/02/lake-kawaguchi-with-boat-800x500.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrmWtvuOKN3JjRWUBMVKSF_q1NIJapFDoAWQ&s",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSCIcG3ksnLKmolmk7j5eYnq_SDoWIPimevg&s",
+      "/Images/ArtistProfile/Sweetsoul/1st.jpg",
+      "/Images/ArtistProfile/Sweetsoul/2nd.jpg",
+      "/Images/ArtistProfile/Sweetsoul/3rd.jpg",
+      "/Images/ArtistProfile/Sweetsoul/4th.jpg",
     ],
     videos: [
       {
