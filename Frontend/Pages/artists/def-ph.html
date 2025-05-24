@@ -17,6 +17,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="../../Images/Logo/CML.png" />
   </head>
 
@@ -63,7 +64,7 @@
         class="intro-section"
         data-bg="/Images/ArtistProfile/Abcph/heroimg.png"
       >
-        <div class="text-container">
+        <div class="text-container" data-aos="fade-up" data-aos-duration="3000">
           <div class="text-top">
             <h1>
               DEF PH
@@ -90,7 +91,11 @@
         </div>
         <hr />
 
-        <div class="member-box">
+        <div
+          class="member-box"
+          data-aos="zoom-in-left"
+          data-aos-duration="1500"
+        >
           <div class="member-info">
             <h1>Sarah</h1>
             <p>
@@ -112,7 +117,11 @@
             <img src="\Images\ArtistProfile\Defph\sarah.jpg" alt="" />
           </div>
         </div>
-        <div class="member-box">
+        <div
+          class="member-box"
+          data-aos="zoom-in-right"
+          data-aos-duration="1500"
+        >
           <div class="member-info">
             <h1>Raphael</h1>
             <p>
@@ -133,7 +142,11 @@
             <img src="\Images\ArtistProfile\Defph\raphael.jpg" alt="" />
           </div>
         </div>
-        <div class="member-box">
+        <div
+          class="member-box"
+          data-aos="zoom-in-left"
+          data-aos-duration="1500"
+        >
           <div class="member-info">
             <h1>Kenneth</h1>
             <p>
@@ -153,7 +166,11 @@
             <img src="\Images\ArtistProfile\Defph\kenneth.jpg" alt="" />
           </div>
         </div>
-        <div class="member-box">
+        <div
+          class="member-box"
+          data-aos="zoom-in-right"
+          data-aos-duration="1500"
+        >
           <div class="member-info">
             <h1>James</h1>
             <p>
@@ -181,7 +198,11 @@
           <h3 class="with-bg">GALLERY</h3>
         </div>
         <hr />
-        <div class="gallery-container swiper">
+        <div
+          class="gallery-container swiper"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <div class="swiper-wrapper"></div>
           <div class="swiper-scrollbar gallery-scrollbar"></div>
         </div>
@@ -193,7 +214,11 @@
           <h3 class="with-bg">US</h3>
         </div>
         <hr />
-        <div class="video-container swiper">
+        <div
+          class="video-container swiper"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+        >
           <div class="swiper-wrapper"></div>
           <div class="swiper-pagination video-pagination"></div>
         </div>
@@ -294,4 +319,8 @@
   <script src="/Javascript/scroll_up.js"></script>
   <script type="module" src="/Javascript/bandData.js"></script>
   <script type="module" src="/Javascript/data-artist.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>
