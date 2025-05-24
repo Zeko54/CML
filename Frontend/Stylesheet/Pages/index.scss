@@ -46,10 +46,10 @@ main {
       @include shadow();
 
       .image {
-        background-image: url('/Images/Team/Owner.png');
+        background-image: url('../../Images/Team/Owner.png');
         background-size: cover;
         background-position: center;
-        background-position-y: top;
+        background-position-y: 20%;
       }
 
       .desc {

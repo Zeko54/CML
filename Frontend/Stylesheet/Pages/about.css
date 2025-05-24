@@ -476,7 +476,7 @@ main .story-section .story-container .top-container {
 }
 main .story-section .story-container .top-container .image {
   background-color: #e4e4e4;
-  background-image: url("/Images/Team/about.jpg");
+  background-image: url("../../Images/Team/about.jpg");
   overflow: hidden;
   max-width: 100%;
   height: 100%;
@@ -484,7 +484,7 @@ main .story-section .story-container .top-container .image {
   border-radius: 25px;
   background-size: cover;
   background-position-x: left;
-  background-position-y: 60%;
+  background-position-y: 30%;
 }
 main .story-section .story-container .top-container .image img {
   width: 100%;

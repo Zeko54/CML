@@ -54,7 +54,7 @@ main {
 
       .image {
         background-color: $header-footer-color;
-        background-image: url('/Images/Team/about.jpg');
+        background-image: url('../../Images/Team/about.jpg');
         overflow: hidden;
         max-width: 100%;
         height: 100%;
@@ -62,7 +62,7 @@ main {
         border-radius: 25px;
         background-size: cover;
         background-position-x:left;
-        background-position-y: 60%;
+        background-position-y: 30%;
 
         img {
           width: 100%;
