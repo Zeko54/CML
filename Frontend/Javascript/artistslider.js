@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "/Images/ArtistPage/bg-2.jpg",
     "/Images/ArtistPage/bg-3.jpg",
     "/Images/ArtistPage/bg-4.jpg",
+    "/Images/ArtistPage/bg-5.jpg",
+    "/Images/ArtistPage/bg-6.jpg",
   ];
 
   bgImages.forEach((img) => {
