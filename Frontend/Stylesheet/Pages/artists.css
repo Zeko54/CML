@@ -472,21 +472,27 @@ main .intro-section .text-container {
 @keyframes slideshow {
   0%, 16.66% {
     background-image: url("/Images/ArtistPage/bg-1.jpg");
+    background-position: center;
   }
   16.67%, 33.33% {
     background-image: url("/Images/ArtistPage/bg-2.jpg");
+    background-position: center;
   }
   33.34%, 50% {
     background-image: url("/Images/ArtistPage/bg-3.jpg");
+    background-position: top right;
   }
   50.01%, 66.66% {
     background-image: url("/Images/ArtistPage/bg-4.jpg");
+    background-position: center;
   }
   66.67%, 83.33% {
     background-image: url("/Images/ArtistPage/bg-5.jpg");
+    background-position: center;
   }
   83.34%, 100% {
     background-image: url("/Images/ArtistPage/bg-6.jpg");
+    background-position: center;
   }
 }
 main .performers-section {
