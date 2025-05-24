@@ -383,6 +383,7 @@ main .intro-section {
   padding: 150px 80px 50px 80px;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 main .intro-section h1 {
   font-size: clamp(3rem, 10vw, 6rem);
@@ -441,8 +442,18 @@ main .intro-section .text-container .text-bottom {
     font-size: clamp(0.9rem, 1.5vw, 1.5rem);
   }
 }
+main .intro-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  pointer-events: none;
+}
 main .intro-section .text-container {
   color: #fff;
+  position: relative;
+  z-index: 2;
 }
 main .intro-section .text-container h1 {
   display: flex;
