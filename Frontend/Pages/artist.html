@@ -242,16 +242,32 @@
           <div class="modal">
             <button class="modal-close">&times;</button>
             <div class="modal-whatsapp">
-              <img src="../Images/Icons/whatsapp-iicon.svg" alt="WhatsApp" />
-              <span>you can message us on Whatsapp</span>
+              <a
+                href="https://wa.me/971562309579"
+                target="_blank"
+                class="modal-whatsapp"
+                style="text-decoration: none"
+              >
+                <img src="../Images/Icons/whatsapp-iicon.svg" alt="WhatsApp" />
+                <span>you can message us on Whatsapp</span>
+              </a>
             </div>
-            <form class="modal-form">
+            <form
+              class="modal-form"
+              action="https://formspree.io/f/manogoez"
+              method="POST"
+            >
               <select name="band" id="bandSelect"></select>
 
               <input type="text" name="name" placeholder="Name" />
-              <input type="text" name="Email" placeholder="Email" />
-              <textarea placeholder="Write your message here..."></textarea>
+              <input type="email" name="email" placeholder="Email" />
+              <!-- Note: changed name="Email" to name="email" -->
+              <textarea
+                name="message"
+                placeholder="Write your message here..."
+              ></textarea>
 
+              <!-- If you want the selected option from the modal-options to be sent, you'll need extra JS. Otherwise, remove name from these. -->
               <div class="modal-options">
                 <button type="button" class="option-btn">
                   Special Occasion
@@ -260,12 +276,12 @@
                   Corporate Events
                 </button>
                 <button type="button" class="option-btn">
-                  winter theme festivals
+                  Winter Theme Festivals
                 </button>
                 <button type="button" class="option-btn">
-                  indoor/outdoor events
+                  Indoor/Outdoor Events
                 </button>
-                <button type="button" class="option-btn">Mall events</button>
+                <button type="button" class="option-btn">Mall Events</button>
               </div>
               <button type="submit" class="modal-submit">SUBMIT</button>
             </form>

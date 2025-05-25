@@ -1,310 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABOUT US</title>
+    <!-- Title of the page -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ABOUT US</title> <!-- Title of the page -->
+    <!-- Linking external stylesheets and libraries -->
+    <link rel="stylesheet" href="../Stylesheet/Pages/about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <!-- Linking external stylesheets and libraries -->
-  <link rel="stylesheet" href="../Stylesheet/Pages/about.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Favicon (logo on the tab) -->
+    <link rel="icon" type="image/x-icon" href="../Images/Logo/CML.png" />
+  </head>
 
-  <!-- Favicon (logo on the tab) -->
-  <link rel="icon" type="image/x-icon" href="../Images/Logo/CML.png">
-</head>
+  <body class="home-page">
+    <!-- Decorative animated background (circle effects) -->
+    <div class="circle-container"></div>
 
-<body class="home-page">
-  <!-- Decorative animated background (circle effects) -->
-  <div class="circle-container"></div>
-
-  <!-- Main site header including logo and navigation -->
-  <header id="header">
-    <!-- Company logo linked to homepage -->
-    <div class="logo">
-      <a href="../index.html"><img src="../Images/Logo/CML.png" alt="CML"></a>
-    </div>
-
-    <!-- Navigation menu for desktop and mobile -->
-    <nav class="nav-links" aria-label="Main Navigation">
-      <button class="close-btn" onclick="toggleMobileMenu()" aria-label="Close mobile menu">
-        <i class="fa fa-times"></i>
-      </button>
-      <!-- Navigation links to other pages -->
-      <div class="links">
-        <a href="../Pages/artist.html">ARTISTS</a>
-        <a href="../Pages/consulting.html">CONSULTING</a>
-        <a href="../Pages/Products.html">PRODUCTS</a>
-        <a href="../Pages/about.html">ABOUT US</a>
+    <!-- Main site header including logo and navigation -->
+    <header id="header">
+      <!-- Company logo linked to homepage -->
+      <div class="logo">
+        <a href="../index.html"
+          ><img src="../Images/Logo/CML.png" alt="CML"
+        /></a>
       </div>
-      <!-- Button for contact navigation -->
-      <div class="button">
-        <button onclick="location.href='#contact'">
-          CONTACT US
+
+      <!-- Navigation menu for desktop and mobile -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <button
+          class="close-btn"
+          onclick="toggleMobileMenu()"
+          aria-label="Close mobile menu"
+        >
+          <i class="fa fa-times"></i>
         </button>
-      </div>
-    </nav>
-
-    <!-- Hamburger button for mobile navigation toggle -->
-    <button class="hamburger" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">
-      <i class="fa fa-bars"></i>
-    </button>
-  </header>
-
-  <main>
-    <!-- Intro Section -->
-    <section class="intro-section">
-      <div class="background">
-      <div class="text-container" data-aos="fade-up" data-aos-duration="3000">
-        <div class="text-top">
-          <h1>Who are we</h1>
-          <hr>
-          <p>
-            We are more than a company—we are a team of passionate individuals united by a common purpose: to help others grow, connect, and thrive.
-With roots in consultancy, events management, and trading, we bring together deep expertise, creativity, and a spirit of service to every project we take on. <br><br>
-
-In consultancy, we serve as trusted partners, offering thoughtful guidance and strategies that unlock potential and fuel transformation.
-In event management, we turn visions into reality—crafting unforgettable experiences that bring people together, celebrate milestones, and spark new ideas.
-In general trading, we connect markets and people with integrity, delivering quality products and dependable service that customers can trust. <br><br>
-
-At our core, we believe in doing good business—with heart. We’re here to make an impact, not just a profit. We value good professional relationships over transactions, excellence over shortcuts, and purpose over routine.<br><br>
-
-Every client, every event, every transaction is a chance to build something meaningful—and we don’t take that lightly. We offer our after services to continue to build long term business relationships.
-
-          </p>
+        <!-- Navigation links to other pages -->
+        <div class="links">
+          <a href="../Pages/artist.html">ARTISTS</a>
+          <a href="../Pages/consulting.html">CONSULTING</a>
+          <a href="../Pages/Products.html">PRODUCTS</a>
+          <a href="../Pages/about.html">ABOUT US</a>
         </div>
-
-        <div class="text-bottom">
-          <button onclick="location.href='#contact'">
-            CONTACT US
-          </button>
+        <!-- Button for contact navigation -->
+        <div class="button">
+          <button onclick="location.href='#contact'">CONTACT US</button>
         </div>
-      </div>
-      </div>
-    </section>
+      </nav>
 
-    <!-- Story Section -->
-    <section class="story-section">
-      <div class="heading">
-        <h3 class="without-bg">OUR</h3>
-        <h3 class="with-bg">STORY</h3>
-      </div>
+      <!-- Hamburger button for mobile navigation toggle -->
+      <button
+        class="hamburger"
+        aria-label="Toggle mobile menu"
+        onclick="toggleMobileMenu()"
+      >
+        <i class="fa fa-bars"></i>
+      </button>
+    </header>
 
-      <hr />
+    <main>
+      <!-- Intro Section -->
+      <section class="intro-section">
+        <div class="background">
+          <div
+            class="text-container"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
+            <div class="text-top">
+              <h1>Who are we</h1>
+              <hr />
+              <p>
+                We are more than a company—we are a team of passionate
+                individuals united by a common purpose: to help others grow,
+                connect, and thrive. With roots in consultancy, events
+                management, and trading, we bring together deep expertise,
+                creativity, and a spirit of service to every project we take on.
+                <br /><br />
 
-      <div class="story-container" data-aos="fade-right" data-aos-duration="3000">
-        <div class="top-container">
-        <div class="image">
-        </div>
-        <div class="desc">
-          <h1>OUR MISSION</h1>
-          <p>
-            At the heart of our company lies a passion for empowering progress, connecting people, and creating meaningful impact. Through our consultancy, we guide businesses with integrity and insight; through our events, we craft experiences that inspire and unite; and through our trading ventures, we build bridges of opportunity across industries and borders. We are committed to excellence, innovation, and building lasting relationships—delivering value not just in what we do, but in how we do it: with heart, purpose, and unwavering dedication to those we serve.
-          </p>
-        </div>
-      </div>
+                In consultancy, we serve as trusted partners, offering
+                thoughtful guidance and strategies that unlock potential and
+                fuel transformation. In event management, we turn visions into
+                reality—crafting unforgettable experiences that bring people
+                together, celebrate milestones, and spark new ideas. In general
+                trading, we connect markets and people with integrity,
+                delivering quality products and dependable service that
+                customers can trust. <br /><br />
 
-      <div class="bottom-container">
-        <div class="box">
-          <h3>Empowering Growth with Purpose</h3>
-          <p>Our mission is to help people and businesses grow by providing smart solutions, unforgettable experiences, and meaningful connections. Whether it's guiding a business toward its next big step, curating a memorable event, or offering products that serve real needs—we lead with heart, integrity, and dedication every time.</p>
-        </div>
+                At our core, we believe in doing good business—with heart. We’re
+                here to make an impact, not just a profit. We value good
+                professional relationships over transactions, excellence over
+                shortcuts, and purpose over routine.<br /><br />
 
-        <div class="box">
-          <h3>Building Trust Through Impact</h3>
-          <p>To us, success goes beyond numbers. It’s about the people we serve, the relationships we nurture, and the positive impact we create. We believe in earning trust through consistent action and standing by our values in everything we do.</p>
-        </div>
+                Every client, every event, every transaction is a chance to
+                build something meaningful—and we don’t take that lightly. We
+                offer our after services to continue to build long term business
+                relationships.
+              </p>
+            </div>
 
-      </div>
-      </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team-section">
-      <div class="heading">
-        <h3 class="without-bg">OUR</h3>
-        <h3 class="with-bg">TEAM</h3>
-      </div>
-
-      <hr />
-
-      <div class="team-container" data-aos="fade-up"  data-aos-duration="3000">
-        <div class="team-info">
-          <div class="image image-1">
-            
+            <div class="text-bottom">
+              <button onclick="location.href='#contact'">CONTACT US</button>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="team-info">
-          <div class="image image-2">
-            
+      <!-- Story Section -->
+      <section class="story-section">
+        <div class="heading">
+          <h3 class="without-bg">OUR</h3>
+          <h3 class="with-bg">STORY</h3>
+        </div>
+
+        <hr />
+
+        <div
+          class="story-container"
+          data-aos="fade-right"
+          data-aos-duration="3000"
+        >
+          <div class="top-container">
+            <div class="image"></div>
+            <div class="desc">
+              <h1>OUR MISSION</h1>
+              <p>
+                At the heart of our company lies a passion for empowering
+                progress, connecting people, and creating meaningful impact.
+                Through our consultancy, we guide businesses with integrity and
+                insight; through our events, we craft experiences that inspire
+                and unite; and through our trading ventures, we build bridges of
+                opportunity across industries and borders. We are committed to
+                excellence, innovation, and building lasting
+                relationships—delivering value not just in what we do, but in
+                how we do it: with heart, purpose, and unwavering dedication to
+                those we serve.
+              </p>
+            </div>
+          </div>
+
+          <div class="bottom-container">
+            <div class="box">
+              <h3>Empowering Growth with Purpose</h3>
+              <p>
+                Our mission is to help people and businesses grow by providing
+                smart solutions, unforgettable experiences, and meaningful
+                connections. Whether it's guiding a business toward its next big
+                step, curating a memorable event, or offering products that
+                serve real needs—we lead with heart, integrity, and dedication
+                every time.
+              </p>
+            </div>
+
+            <div class="box">
+              <h3>Building Trust Through Impact</h3>
+              <p>
+                To us, success goes beyond numbers. It’s about the people we
+                serve, the relationships we nurture, and the positive impact we
+                create. We believe in earning trust through consistent action
+                and standing by our values in everything we do.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="team-section">
+        <div class="heading">
+          <h3 class="without-bg">OUR</h3>
+          <h3 class="with-bg">TEAM</h3>
+        </div>
+
+        <hr />
+
+        <div class="team-container" data-aos="fade-up" data-aos-duration="3000">
+          <div class="team-info">
+            <div class="image image-1"></div>
+          </div>
+
+          <div class="team-info">
+            <div class="image image-2"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Location Section -->
+      <section class="location-section">
+        <div class="heading">
+          <h3 class="without-bg">OUR</h3>
+          <h3 class="with-bg">LOCATION</h3>
+        </div>
+
+        <hr />
+
+        <div
+          class="location-container"
+          data-aos="fade-down"
+          data-aos-duration="3000"
+        >
+          <div class="desc">
+            <p>
+              CML International Consultancy Trades FZCO is strategically located
+              in the heart of Dubai’s innovation hub—Dubai Digital Park, within
+              the Dubai Silicon Oasis. Operating from Unit 101 A2 in the IFZA
+              Building, our presence in this cutting-edge free zone positions us
+              at the crossroads of technology, entrepreneurship, and global
+              connectivity. This location not only enhances our accessibility to
+              clients across the UAE and beyond but also reflects our commitment
+              to operating in a forward-thinking, business-friendly environment.
+            </p>
+          </div>
+
+          <div class="image">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.5050501399537!2d55.37514627516086!3d25.11861057776163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6f9f1fbfb607%3A0x4db0a2f5f59532d9!2sIFZA%20Business%20Park!5e0!3m2!1sen!2sae!4v1746967106749!5m2!1sen!2sae"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section" id="contact">
+        <div
+          class="contact-container"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+        >
+          <h1>CONTACT US</h1>
+          <form action="https://formspree.io/f/manogoez" method="POST">
+            <div class="first-row">
+              <label for="name">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="FULL NAME"
+                />
+                <div class="icon">
+                  <img src="../Images/Icons/profile.png" alt="" />
+                </div>
+              </label>
+
+              <label for="email">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="EMAIL ADDRESS"
+                />
+                <div class="icon">
+                  <img src="../Images/Icons/email.png" alt="" />
+                </div>
+              </label>
+            </div>
+
+            <div class="second-row">
+              <label for="subject">
+                <select id="subject" name="subject" required>
+                  <option value="">CHOOSE SUBJECT</option>
+                  <option value="Events Managing & Organizing">
+                    Events Managing & Organizing
+                  </option>
+                  <option value="Wellness & Beauty Products Dropshipping">
+                    Wellness & Beauty Products Dropshipping
+                  </option>
+                  <option value="Product Registration & Permits">
+                    Product Registration & Permits
+                  </option>
+                  <option value="Business Setup Advice">
+                    Business Setup Advice
+                  </option>
+                </select>
+                <div class="icon">
+                  <img src="../Images/Icons/down.png" alt="" />
+                </div>
+              </label>
+            </div>
+
+            <div class="third-row">
+              <label for="message">
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  placeholder="YOUR MESSAGE"
+                ></textarea>
+              </label>
+            </div>
+
+            <div class="buttons">
+              <button
+                type="button"
+                onclick="window.location.href='../index.html'"
+              >
+                BACK TO HOME
+              </button>
+              <input type="submit" value="SUBMIT NOW" id="submit" />
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Scroll to Top Button -->
+      <button onclick="topFunction()" id="arrowBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-top">
+        <div class="cml-logo">
+          <h1>CML</h1>
+        </div>
+        <div class="social-media">
+          <div class="app">
+            <a href="https://www.tiktok.com/@citrincollection06" target="_blank"
+              ><img src="../Images/Social Media/Tiktok logo.png" alt="Tiktok"
+            /></a>
+          </div>
+          <div class="app">
+            <a href="http://facebook.com/citrinsnappedupshop" target="_blank"
+              ><img
+                src="../Images/Social Media/Facebook logo.webp"
+                alt="Facebook"
+            /></a>
+          </div>
+          <div class="app">
+            <a
+              href="http://www.instagram.com/citrin_collections"
+              target="_blank"
+              ><img
+                src="../Images/Social Media/Instagram logo.webp"
+                alt="Instagram"
+            /></a>
           </div>
         </div>
       </div>
 
-      
-    </section>
-
-    <!-- Location Section -->
-    <section class="location-section">
-      <div class="heading">
-        <h3 class="without-bg">OUR</h3>
-        <h3 class="with-bg">LOCATION</h3>
-      </div>
-
-      <hr />
-
-      <div class="location-container" data-aos="fade-down"  data-aos-duration="3000">
-        <div class="desc">
-          <p>
-            CML International Consultancy Trades FZCO is strategically located in the heart of Dubai’s innovation hub—Dubai Digital Park, within the Dubai Silicon Oasis. Operating from Unit 101 A2 in the IFZA Building, our presence in this cutting-edge free zone positions us at the crossroads of technology, entrepreneurship, and global connectivity. This location not only enhances our accessibility to clients across the UAE and beyond but also reflects our commitment to operating in a forward-thinking, business-friendly environment.
-          </p>
+      <div class="footer-bottom">
+        <div class="service">
+          <h3>SERVICE WE PROVIDE</h3>
+          <ul>
+            <li>Wellness & Beauty Products Dropshipping</li>
+            <li>Events Managing & Organizing</li>
+            <li>Talent Sourcing Artist & Musicians</li>
+            <li>Product Registration & Permits</li>
+            <li>Business Setup Advice</li>
+          </ul>
         </div>
 
-        <div class="image">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.5050501399537!2d55.37514627516086!3d25.11861057776163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6f9f1fbfb607%3A0x4db0a2f5f59532d9!2sIFZA%20Business%20Park!5e0!3m2!1sen!2sae!4v1746967106749!5m2!1sen!2sae" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="company">
+          <h3>COMPANY</h3>
+          <ul>
+            <li>
+              <a href="mailto:cmlfzco@gmail.com" target="_blank"
+                >Email address: cmlfzco@gmail.com</a
+              >
+            </li>
+            <li>Mobile number: +971501816605</li>
+          </ul>
+        </div>
+
+        <div class="quick-links">
+          <h3>QUICK LINKS</h3>
+          <ul>
+            <li>
+              <a href="http://www.cmlartistfam.com" target="_blank"
+                >www.cmlartistfam.com</a
+              >
+            </li>
+            <li><a href="">www.cml-interntional.com</a></li>
+          </ul>
+        </div>
+
+        <div class="head-office">
+          <h3>HEAD OFFICE</h3>
+          <ul>
+            <li>CML International Consultancy Trades FZCO.</li>
+            <li>
+              Unit 101 A2 IFZA Building Dubai Digital Park Dubai Silicon Oasis
+              Dubai UAE
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-      <div class="contact-container" data-aos="zoom-in" data-aos-duration="2000">
-        <h1>CONTACT US</h1>
-        <form>
-          <div class="first-row">
-            <label for="name">
-              <input type="text" id="name" required placeholder="FULL NAME" />
-              <div class="icon">
-                <img src="../Images/Icons/profile.png" alt="" />
-              </div>
-            </label>
-
-            <label for="email">
-              <input type="email" id="email" required placeholder="EMAIL ADDRESS" />
-              <div class="icon">
-                <img src="../Images/Icons/email.png" alt="" />
-              </div>
-            </label>
-          </div>
-
-          <div class="second-row">
-            <label for="subject">
-              <select id="subject">
-                <option value="">CHOOSE SUBJECT</option>
-                <option value="Events Managing & Organizing">Events Managing & Organizing</option>
-                <option value="Wellness & Beauty Products Dropshipping">Wellness & Beauty Products Dropshipping</option>
-                <option value="Product Registration & Permits">Product Registration & Permits</option>
-                <option value="Business Setup Advice">Business Setup Advice</option>
-              </select>
-              <div class="icon">
-                <img src="../Images/Icons/down.png" alt="" />
-              </div>
-            </label>
-          </div>
-
-          <div class="third-row">
-            <label for="message">
-              <textarea id="message" required placeholder="YOUR MESSAGE
-                "></textarea>
-            </label>
-          </div>
-
-          <div class="buttons">
-            <button>
-              <a href="../index.html">BACK TO HOME</a>
-            </button>
-
-            <input type="submit" value="SUBMIT NOW" id="submit" />
-          </div>
-        </form>
+      <div class="copyright">
+        <p>&copy; CML</p>
       </div>
-    </section>
+    </footer>
+  </body>
+  <!-- JavaScript for animating or generating the linear background effect -->
+  <script src="../Javascript/linearBackground.js"></script>
 
-    <!-- Scroll to Top Button -->
-    <button onclick="topFunction()" id="arrowBtn" title="Go to top">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-  </main>
+  <!-- JavaScript for header interactions -->
+  <script src="../Javascript/header.js"></script>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-top">
-      <div class="cml-logo">
-        <h1>CML</h1>
-      </div>
-      <div class="social-media">
-        <div class="app">
-          <a href="https://www.tiktok.com/@citrincollection06" target="_blank"><img src="../Images/Social Media/Tiktok logo.png" alt="Tiktok"></a>
-        </div>
-        <div class="app">
-          <a href="http://facebook.com/citrinsnappedupshop" target="_blank"><img src="../Images/Social Media/Facebook logo.webp" alt="Facebook"></a>
-        </div>
-        <div class="app">
-          <a href="http://www.instagram.com/citrin_collections" target="_blank"><img src="../Images/Social Media/Instagram logo.webp" alt="Instagram"></a>
-        </div>
-      </div>
-    </div>
+  <!-- JavaScript for scroll-to-top button or scroll-up animation behavior -->
+  <script src="../Javascript/scroll_up.js"></script>
 
-    <div class="footer-bottom">
-
-      <div class="service">
-        <h3>SERVICE WE PROVIDE</h3>
-        <ul>
-          <li>Wellness & Beauty Products Dropshipping</li>
-          <li>Events Managing & Organizing</li>
-          <li>Talent Sourcing Artist & Musicians </li>
-          <li>Product Registration & Permits</li>
-          <li>Business Setup Advice </li>
-        </ul>
-      </div>
-
-      <div class="company">
-        <h3>COMPANY</h3>
-        <ul>
-          <li><a href="mailto:cmlfzco@gmail.com" target="_blank">Email address: cmlfzco@gmail.com</a></li>
-          <li>Mobile number: +971501816605</li>
-        </ul>
-      </div>
-
-      <div class="quick-links">
-        <h3>QUICK LINKS</h3>
-        <ul>
-          <li><a href="http://www.cmlartistfam.com" target="_blank">www.cmlartistfam.com</a></li>
-          <li><a href="">www.cml-interntional.com</a></li>
-        </ul>
-      </div>
-
-      <div class="head-office">
-        <h3>HEAD OFFICE</h3>
-        <ul>
-          <li>CML International Consultancy Trades FZCO.</li>
-          <li>Unit 101 A2 IFZA Building Dubai Digital Park Dubai Silicon Oasis Dubai UAE</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="copyright">
-      <p>&copy; CML</p>
-    </div>
-  </footer>
-</body>
-<!-- JavaScript for animating or generating the linear background effect -->
-<script src="../Javascript/linearBackground.js"></script>
-
-<!-- JavaScript for header interactions -->
-<script src="../Javascript/header.js"></script>
-
-<!-- JavaScript for scroll-to-top button or scroll-up animation behavior -->
-<script src="../Javascript/scroll_up.js"></script>
-
-<!-- AOS (Animate On Scroll) library for scroll-triggered animations -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
+  <!-- AOS (Animate On Scroll) library for scroll-triggered animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>
