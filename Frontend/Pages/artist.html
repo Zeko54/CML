@@ -385,4 +385,11 @@
   <script>
     AOS.init();
   </script>
+  <script>
+    window.addEventListener("pageshow", function (event) {
+      document.querySelectorAll("form").forEach(function (form) {
+        form.reset();
+      });
+    });
+  </script>
 </html>
