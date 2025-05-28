@@ -34,7 +34,7 @@ var swiper = new Swiper(".mySwiper", {
   scrollbar: {
     el: ".swiper-scrollbar",
     draggable: true,  // Allows user to drag scrollbar
-    dragSize: 50, // Optional: auto size drag based on visible area
+    dragSize: 50, 
   },
   initialSlide: 0,
 });
