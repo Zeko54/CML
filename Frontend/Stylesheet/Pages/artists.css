@@ -383,7 +383,6 @@ main .intro-section {
   min-height: 100svh;
   background-color: #e4e4e4;
   padding: 150px 80px 50px 80px;
-  position: relative;
 }
 main .intro-section h1 {
   font-size: clamp(3rem, 10vw, 6rem);
@@ -441,6 +440,9 @@ main .intro-section .text-container .text-bottom {
   main .intro-section .text-container .text-top p {
     font-size: clamp(0.9rem, 1.5vw, 1.5rem);
   }
+}
+main .intro-section {
+  position: relative;
 }
 main .intro-section .background-slideshow {
   position: absolute;
@@ -717,18 +719,14 @@ main .performers-modal .modal-overlay {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.7s ease;
-  -webkit-backdrop-filter: blur(0px);
-          backdrop-filter: blur(0px);
-  transition: -webkit-backdrop-filter 0.3s ease;
+  backdrop-filter: blur(0px);
   transition: backdrop-filter 0.3s ease;
-  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
 }
 main .performers-modal .modal-overlay.open-modal {
   opacity: 1;
   z-index: 1000;
   pointer-events: auto;
-  -webkit-backdrop-filter: blur(2.5px);
-          backdrop-filter: blur(2.5px);
+  backdrop-filter: blur(2.5px);
 }
 main .performers-modal .modal-overlay .modal {
   position: relative;

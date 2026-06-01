@@ -381,9 +381,6 @@ main .intro-section {
   min-height: 100svh;
   background-color: #e4e4e4;
   padding: 150px 80px 50px 80px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
 }
 main .intro-section h1 {
   font-size: clamp(3rem, 10vw, 6rem);
@@ -441,6 +438,11 @@ main .intro-section .text-container .text-bottom {
   main .intro-section .text-container .text-top p {
     font-size: clamp(0.9rem, 1.5vw, 1.5rem);
   }
+}
+main .intro-section {
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 main .intro-section::before {
   content: "";

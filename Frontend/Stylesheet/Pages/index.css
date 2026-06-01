@@ -359,11 +359,6 @@ main .intro-section {
   min-height: 100svh;
   background-color: #e4e4e4;
   padding: 150px 80px 50px 80px;
-  background-image: url("/Images/Location/Building.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 0px;
 }
 main .intro-section h1 {
   font-size: clamp(3rem, 10vw, 6rem);
@@ -422,6 +417,13 @@ main .intro-section .text-container .text-bottom {
     font-size: clamp(0.9rem, 1.5vw, 1.5rem);
   }
 }
+main .intro-section {
+  background-image: url("/Images/Location/Building.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0px;
+}
 main .intro-section .background {
   background-color: rgba(0, 0, 0, 0.4);
   min-height: 100svh;
@@ -474,8 +476,7 @@ main .aboutus-section .aboutus-container .image {
 main .aboutus-section .aboutus-container .desc {
   padding: 40px;
   background: rgba(248, 73, 67, 0.4);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   font-size: clamp(1rem, 3vw, 1.5rem);
   border-radius: 0 81px 81px 0;
   color: #fff;
@@ -666,8 +667,7 @@ main .products-section .product-container .product-card {
   grid-template-columns: repeat(2, minmax(100px, 1fr));
   padding: 40px;
   background: rgba(248, 73, 67, 0.4);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   border-radius: 24px;
   color: #fff;
   gap: 40px;
@@ -675,7 +675,6 @@ main .products-section .product-container .product-card {
 }
 main .products-section .product-container .product-card .image {
   grid-area: images;
-  background-color: aqua;
   border-radius: 20px;
 }
 main .products-section .product-container .product-card .image img {
@@ -805,8 +804,7 @@ main .performers-section .swiper-slide {
   align-items: center;
   position: relative;
   background: rgba(248, 73, 67, 0.4);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   border-radius: 24px;
   padding: 30px;
   height: 600px;
@@ -916,8 +914,7 @@ main .consultant-section hr {
 }
 main .consultant-section .consultant-container {
   background: rgba(248, 73, 67, 0.4);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(2, 50%);
@@ -982,8 +979,6 @@ main .consultant-section .consultant-container .right-side .bar-6 {
 }
 main .client-section {
   font-size: clamp(1.5rem, 4vw, 2rem);
-  padding: 40px 0;
-  background-color: #fff;
 }
 main .client-section .heading {
   display: flex;
@@ -1020,6 +1015,10 @@ main .client-section hr {
   margin: 0 auto;
   margin-top: 30px;
   background-color: #ff4545;
+}
+main .client-section {
+  padding: 40px 0;
+  background-color: #fff;
 }
 main .client-section .client-slider {
   margin-top: 80px;
@@ -1083,7 +1082,6 @@ main #arrowBtn:hover {
     min-height: 100svh;
     background-color: #e4e4e4;
     padding: 150px 80px 50px 80px;
-    padding: 0px;
   }
   main .intro-section h1 {
     font-size: clamp(3rem, 10vw, 6rem);
@@ -1105,6 +1103,9 @@ main #arrowBtn:hover {
   }
   main .intro-section .text-container .text-bottom {
     margin-top: 80px;
+  }
+  main .intro-section {
+    padding: 0px;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 1024px) {

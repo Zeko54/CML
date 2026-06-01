@@ -361,11 +361,6 @@ main .intro-section {
   min-height: 100svh;
   background-color: #e4e4e4;
   padding: 150px 80px 50px 80px;
-  background-image: url("/Images/Location/Building.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 0px;
 }
 main .intro-section h1 {
   font-size: clamp(3rem, 10vw, 6rem);
@@ -424,6 +419,13 @@ main .intro-section .text-container .text-bottom {
     font-size: clamp(0.9rem, 1.5vw, 1.5rem);
   }
 }
+main .intro-section {
+  background-image: url("/Images/Location/Building.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0px;
+}
 main .intro-section .background {
   background-color: rgba(0, 0, 0, 0.4);
   min-height: 100svh;
@@ -464,8 +466,7 @@ main .story-section .story-container .top-container {
   padding: 40px;
   padding-bottom: 0%;
   background: rgba(248, 73, 67, 0.4);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   margin-top: 40px;
   border-radius: 25px 25px 0px 0px;
   display: grid;
@@ -509,8 +510,7 @@ main .story-section .story-container .top-container .desc p {
 main .story-section .story-container .bottom-container {
   padding: 40px;
   background: rgba(248, 73, 67, 0.4);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   border-radius: 0px 0px 25px 25px;
   padding: auto 120px;
   padding-top: 40px;
@@ -619,8 +619,7 @@ main .location-section .location-container {
   padding: 40px;
   border-radius: 25px;
   background: rgba(248, 73, 67, 0.4);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
@@ -647,8 +646,7 @@ main .contact-section {
 }
 main .contact-section .contact-container {
   background: rgba(248, 73, 67, 0.3);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   padding: 80px 80px;
   border-radius: 20px;
   box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.25);
@@ -807,7 +805,6 @@ main #arrowBtn:hover {
     min-height: 100svh;
     background-color: #e4e4e4;
     padding: 150px 80px 50px 80px;
-    padding: 0px;
   }
   main .intro-section h1 {
     font-size: clamp(3rem, 10vw, 6rem);
@@ -829,6 +826,9 @@ main #arrowBtn:hover {
   }
   main .intro-section .text-container .text-bottom {
     margin-top: 80px;
+  }
+  main .intro-section {
+    padding: 0px;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 1024px) {
